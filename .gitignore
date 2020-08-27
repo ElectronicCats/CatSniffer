@@ -26,3 +26,7 @@ fp-info-cache
 *.csv
 
 .DS_Store
+
+sniffer_fw/Release/
+
+sniffer_fw/targetConfigs/
