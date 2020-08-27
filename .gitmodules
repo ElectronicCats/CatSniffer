@@ -1,6 +1,3 @@
 [submodule "cc2538-bsl"]
 	path = cc2538-bsl
 	url = https://github.com/JelmerT/cc2538-bsl
-[submodule "pyCCSniffer"]
-	path = pyCCSniffer
-	url = https://github.com/andrewdodd/pyCCSniffer
