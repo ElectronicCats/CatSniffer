@@ -1046,7 +1046,7 @@ $EndComp
 Wire Wire Line
 	2170 2675 2170 2825
 $Comp
-L cc1352-swim-thermo-rescue:CC1352R1F3RGZR-cc1352 U2
+L CatStick-rescue:CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue U2
 U 1 1 5B86A9A7
 P 3020 3475
 F 0 "U2" H 2970 3425 50  0000 L CNN
@@ -1440,7 +1440,7 @@ RFO_HF
 Text Notes 6025 2595 0    89   ~ 0
 ANTENNA MATCHING LORA
 $Comp
-L RFSW6062SR:RFSW6062SR U?
+L CatStick-rescue:RFSW6062SR-RFSW6062SR U?
 U 1 1 5F8B736E
 P 6900 9600
 F 0 "U?" H 6900 10470 50  0000 C CNN
@@ -1542,7 +1542,7 @@ F 3 "" H 10560 2985 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TLM-v1_2-rescue:ATSAMR34J18BT-TinyLoraModule-Symbol-Lib-TLM-v1-rescue U2
+L CatStick-rescue:ATSAMR34J18BT-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue U2
 U 1 1 5C1C01A6
 P 14385 1650
 F 0 "U2" H 14435 1800 59  0000 C CNN
@@ -1554,7 +1554,7 @@ F 4 "SAMR34J18B" H 14385 1650 50  0001 C CNN "Mfg"
 	1    0    0    -1  
 $EndComp
 $Comp
-L TLM-v1_2-rescue:SKY13373-460LF-TinyLoraModule-Symbol-Lib-TLM-v1-rescue U3
+L CatStick-rescue:SKY13373-460LF-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue U3
 U 1 1 5C1C085A
 P 16295 9300
 F 0 "U3" H 16120 9500 50  0000 L CNN
@@ -1578,7 +1578,7 @@ F 4 "ABS05-32.768-kHz-9-T" H 20460 1565 50  0001 C CNN "Mfg"
 	1    0    0    -1  
 $EndComp
 $Comp
-L TLM-v1_2-rescue:TYETBCSANF-32.000000-TinyLoraModule-Symbol-Lib-TLM-v1-rescue XC1
+L CatStick-rescue:TYETBCSANF-32.000000-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue XC1
 U 1 1 5C1C1914
 P 20165 3005
 F 0 "XC1" H 20240 3155 50  0000 C CNN
