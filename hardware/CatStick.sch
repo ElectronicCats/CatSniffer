@@ -5,13 +5,13 @@ $Descr A2 23386 16535
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "2020-08-14"
+Date "2021-01-23"
 Rev "1.0"
 Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
-Comment4 ""
+Comment4 "Andres Sabas"
 $EndDescr
 $Comp
 L Device:Crystal Y2
@@ -485,7 +485,7 @@ F 3 "" H 9555 5230 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_B_Micro J5
+L CatStick-rescue:USB_B_Micro-Connector J5
 U 1 1 5BABCCC6
 P 9470 3260
 F 0 "J5" H 9525 3727 50  0000 C CNN
@@ -1226,7 +1226,7 @@ F 3 "" H 1615 13000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:AP2112K-1.2 U?
+L CatStick-rescue:AP2112K-1.2-Regulator_Linear U?
 U 1 1 5F56F04D
 P 3835 12790
 F 0 "U?" H 3835 13132 50  0000 C CNN
@@ -2274,8 +2274,6 @@ Wire Wire Line
 Connection ~ 17585 1650
 Wire Wire Line
 	17585 1650 17585 1600
-Text GLabel 15685 2200 2    39   Output ~ 8
-VR_PA
 Wire Wire Line
 	15685 2200 15585 2200
 $Comp
@@ -2644,8 +2642,6 @@ Wire Wire Line
 	14920 8925 14920 8975
 Wire Wire Line
 	15345 8925 15345 8975
-Text GLabel 13170 8650 0    59   Input ~ 12
-PA_BOOST
 Wire Wire Line
 	13170 8650 13245 8650
 $Comp
@@ -2676,8 +2672,6 @@ Wire Wire Line
 	13170 9350 13595 9350
 Wire Wire Line
 	13595 9350 13595 9450
-Text GLabel 13170 9350 0    59   Input ~ 12
-VR_PA
 $Comp
 L Device:C_Small C24
 U 1 1 5C4363A0
@@ -2761,8 +2755,6 @@ Wire Wire Line
 	15635 4200 15585 4200
 Wire Wire Line
 	15635 4400 15585 4400
-Text GLabel 13170 10000 0    59   Input ~ 12
-RFO_HF
 $Comp
 L Device:C_Small C28
 U 1 1 5C4D08D5
@@ -2978,8 +2970,6 @@ Wire Wire Line
 	15895 9450 15895 9400
 Wire Wire Line
 	15895 9400 16195 9400
-Text GLabel 16470 10075 0    59   Input ~ 12
-BAND_SEL
 Wire Wire Line
 	16470 10225 16695 10225
 Wire Wire Line
@@ -3069,8 +3059,6 @@ F 4 "MLK0603L10NJT000" V 18045 9300 50  0001 C CNN "Mfg"
 	1    18045 9300
 	0    -1   -1   0   
 $EndComp
-Text GLabel 18245 9300 2    59   Output ~ 12
-RFI_HF
 Wire Wire Line
 	17195 9300 17420 9300
 Wire Wire Line
@@ -3123,8 +3111,6 @@ Wire Wire Line
 	15585 5200 15660 5200
 Wire Wire Line
 	13860 4000 14285 4000
-Text GLabel 16820 8600 2    59   BiDi ~ 12
-ANT_PAD
 Wire Wire Line
 	14210 5800 14285 5800
 Wire Wire Line
@@ -3302,8 +3288,6 @@ Wire Notes Line
 	15995 10450 15995 11000
 Wire Notes Line
 	15845 10450 15845 11000
-Text GLabel 17595 10650 2    59   Input ~ 12
-TCXO_PWR
 Wire Wire Line
 	16795 10325 17170 10325
 Wire Wire Line
@@ -3341,8 +3325,6 @@ F 3 "" H 17020 8825 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	17020 8825 16845 8825
-Text GLabel 16470 10225 0    59   Input ~ 12
-TXRX_RF
 $Comp
 L Jumper:SolderJumper_3_Bridged12 JP1
 U 1 1 5C80C37F
@@ -3507,4 +3489,22 @@ NoConn ~ 14210 4800
 NoConn ~ 14185 3600
 NoConn ~ 14185 3700
 NoConn ~ 14185 3800
+Text Label 13170 8650 2    50   ~ 0
+PA_BOOST
+Text Label 13170 9350 2    50   ~ 0
+VR_PA
+Text Label 13170 10000 2    50   ~ 0
+RFO_HF
+Text Label 16470 10225 2    50   ~ 0
+TXRX_RF
+Text Label 16470 10075 2    50   ~ 0
+BAND_SEL
+Text Label 16820 8600 0    50   ~ 0
+ANT_PAD
+Text Label 18245 9300 0    50   ~ 0
+RFI_HF
+Text Label 15685 2200 0    50   ~ 0
+VR_PA
+Text Label 17595 10650 0    50   ~ 0
+TCXO_PWR
 $EndSCHEMATC
