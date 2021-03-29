@@ -3554,4 +3554,8 @@ Wire Wire Line
 Wire Wire Line
 	2975 980  2975 1005
 Connection ~ 2680 980 
+Wire Wire Line
+	2670 1220 2670 980 
+Wire Wire Line
+	2670 980  2680 980 
 $EndSCHEMATC
