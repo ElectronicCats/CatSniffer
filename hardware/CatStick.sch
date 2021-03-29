@@ -485,7 +485,7 @@ F 3 "" H 9555 5230 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:USB_B_Micro-Connector J5
+L CatStick-rescue:USB_B_Micro-Connector-CatStick-rescue J5
 U 1 1 5BABCCC6
 P 9470 3260
 F 0 "J5" H 9525 3727 50  0000 C CNN
@@ -565,7 +565,7 @@ L Device:Crystal_GND24 Y1
 U 1 1 5B86AD1A
 P 2670 1425
 F 0 "Y1" H 2861 1471 50  0000 L CNN
-F 1 "Crystal_GND24" H 2861 1380 50  0000 L CNN
+F 1 "48MHz" H 2861 1380 50  0000 L CNN
 F 2 "cc1350:TSX-3225" H 2670 1425 50  0001 C CNN
 F 3 "~" H 2670 1425 50  0001 C CNN
 	1    2670 1425
@@ -1046,7 +1046,7 @@ $EndComp
 Wire Wire Line
 	2170 2675 2170 2825
 $Comp
-L CatStick-rescue:CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue U2
+L CatStick-rescue:CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue U2
 U 1 1 5B86A9A7
 P 3020 3475
 F 0 "U2" H 2970 3425 50  0000 L CNN
@@ -1226,7 +1226,7 @@ F 3 "" H 1615 13000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:AP2112K-1.2-Regulator_Linear U?
+L CatStick-rescue:AP2112K-1.2-Regulator_Linear-CatStick-rescue U?
 U 1 1 5F56F04D
 P 3835 12790
 F 0 "U?" H 3835 13132 50  0000 C CNN
@@ -1292,7 +1292,7 @@ Wire Wire Line
 	3970 3725 4060 3725
 NoConn ~ 3970 3525
 $Comp
-L Electronic_Cats:0900PC15A0036 U?
+L CatStick-rescue:0900PC15A0036-Electronic_Cats U?
 U 1 1 5F76883F
 P 7050 6505
 F 0 "U?" H 6950 6820 50  0000 C CNN
@@ -1362,7 +1362,7 @@ UBP_SUB-1_GHZ
 Text Label 3105 8295 0    50   ~ 0
 UBP_SUB-1_GHZ
 $Comp
-L Electronic_Cats:0900FM15D0039 U?
+L CatStick-rescue:0900FM15D0039-Electronic_Cats U?
 U 1 1 5F83FECE
 P 6845 3645
 F 0 "U?" H 6745 3960 50  0000 C CNN
@@ -1440,7 +1440,7 @@ RFO_HF
 Text Notes 6025 2595 0    89   ~ 0
 ANTENNA MATCHING LORA
 $Comp
-L CatStick-rescue:RFSW6062SR-RFSW6062SR U?
+L CatStick-rescue:RFSW6062SR-RFSW6062SR-CatStick-rescue U?
 U 1 1 5F8B736E
 P 6900 9600
 F 0 "U?" H 6900 10470 50  0000 C CNN
@@ -1542,7 +1542,7 @@ F 3 "" H 10560 2985 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:ATSAMR34J18BT-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue U2
+L CatStick-rescue:ATSAMR34J18BT-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue U2
 U 1 1 5C1C01A6
 P 14385 1650
 F 0 "U2" H 14435 1800 59  0000 C CNN
@@ -1554,7 +1554,7 @@ F 4 "SAMR34J18B" H 14385 1650 50  0001 C CNN "Mfg"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:SKY13373-460LF-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue U3
+L CatStick-rescue:SKY13373-460LF-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue U3
 U 1 1 5C1C085A
 P 16295 9300
 F 0 "U3" H 16120 9500 50  0000 L CNN
@@ -1578,7 +1578,7 @@ F 4 "ABS05-32.768-kHz-9-T" H 20460 1565 50  0001 C CNN "Mfg"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:TYETBCSANF-32.000000-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue XC1
+L CatStick-rescue:TYETBCSANF-32.000000-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue XC1
 U 1 1 5C1C1914
 P 20165 3005
 F 0 "XC1" H 20240 3155 50  0000 C CNN

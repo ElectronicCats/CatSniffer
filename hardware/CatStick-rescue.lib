@@ -1,11 +1,55 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# AP2112K-1.2-Regulator_Linear
+# 0900FM15D0039-Electronic_Cats
 #
-DEF AP2112K-1.2-Regulator_Linear U 0 10 Y Y 1 F N
+DEF 0900FM15D0039-Electronic_Cats U 0 40 Y Y 1 F N
+F0 "U" 500 200 50 H V C CNN
+F1 "0900FM15D0039-Electronic_Cats" -550 200 50 H V C CNN
+F2 "" -750 0 50 H I C CNN
+F3 "" -750 0 50 H I C CNN
+DRAW
+S -900 150 700 -450 0 1 0 N
+X RFO 1 800 50 100 L 50 50 1 1 I
+X GND 10 -1000 -350 100 R 50 50 1 1 I
+X GND 2 800 -250 100 L 50 50 1 1 I
+X RFI_N 3 800 -50 100 L 50 50 1 1 I
+X RFI_P 4 800 -150 100 L 50 50 1 1 I
+X GND 5 800 -350 100 L 50 50 1 1 I
+X SW_RFI 6 -1000 50 100 R 50 50 1 1 I
+X GND 7 -1000 -150 100 R 50 50 1 1 I
+X SW_RFO 8 -1000 -50 100 R 50 50 1 1 I
+X GND 9 -1000 -250 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# 0900PC15A0036-Electronic_Cats
+#
+DEF 0900PC15A0036-Electronic_Cats U 0 40 Y Y 1 F N
+F0 "U" 500 200 50 H V C CNN
+F1 "0900PC15A0036-Electronic_Cats" -550 200 50 H V C CNN
+F2 "" -750 0 50 H I C CNN
+F3 "" -750 0 50 H I C CNN
+DRAW
+S -900 150 700 -450 0 1 0 N
+X UBP_2_4_GHZ 1 800 50 100 L 50 50 1 1 I
+X GND 10 -1000 -350 100 R 50 50 1 1 I
+X GND 2 800 -350 100 L 50 50 1 1 I
+X GND 3 800 -250 100 L 50 50 1 1 I
+X UBP_SUB-1_GHZ 4 800 -50 100 L 50 50 1 1 I
+X RX_TX 5 800 -150 100 L 50 50 1 1 I
+X BP_SUB1-_GHZ_RF_N 6 -1000 50 100 R 50 50 1 1 I
+X BP_SUB1-_GHZ_RF_P 7 -1000 -50 100 R 50 50 1 1 I
+X BP_2_4_GHZ_RF_N 8 -1000 -150 100 R 50 50 1 1 I
+X BP_2_4_GHZ_RF_P 9 -1000 -250 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# AP2112K-1.2-Regulator_Linear-CatStick-rescue
+#
+DEF AP2112K-1.2-Regulator_Linear-CatStick-rescue U 0 10 Y Y 1 F N
 F0 "U" -200 225 50 H V L CNN
-F1 "AP2112K-1.2-Regulator_Linear" 0 225 50 H V L CNN
+F1 "AP2112K-1.2-Regulator_Linear-CatStick-rescue" 0 225 50 H V L CNN
 F2 "Package_TO_SOT_SMD:SOT-23-5" 0 325 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 $FPLIST
@@ -21,11 +65,11 @@ X VOUT 5 300 100 100 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# ATSAMR34J18BT-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue
+# ATSAMR34J18BT-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue
 #
-DEF ATSAMR34J18BT-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue U 0 40 Y Y 1 F N
+DEF ATSAMR34J18BT-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue U 0 40 Y Y 1 F N
 F0 "U" 50 150 59 H V C CNN
-F1 "ATSAMR34J18BT-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue" 550 -4350 50 H V C CNB
+F1 "ATSAMR34J18BT-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue" 550 -4350 50 H V C CNB
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -97,11 +141,11 @@ X VBAT_DIG H8 1200 0 100 L 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue
+# CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue
 #
-DEF CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue U 0 40 Y Y 1 F N
+DEF CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue U 0 40 Y Y 1 F N
 F0 "U" -50 -250 50 V V C CNN
-F1 "CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue" 100 -250 50 V V C CNN
+F1 "CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue" 100 -250 50 V V C CNN
 F2 "" 400 -750 50 H I C CNN
 F3 "" 400 -750 50 H I C CNN
 DRAW
@@ -158,11 +202,11 @@ X DIO_4 9 -850 -250 200 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# RFSW6062SR-RFSW6062SR
+# RFSW6062SR-RFSW6062SR-CatStick-rescue
 #
-DEF RFSW6062SR-RFSW6062SR U 0 40 Y Y 1 L N
+DEF RFSW6062SR-RFSW6062SR-CatStick-rescue U 0 40 Y Y 1 L N
 F0 "U" -706 745 50 H V L BNN
-F1 "RFSW6062SR-RFSW6062SR" -705 -863 50 H V L BNN
+F1 "RFSW6062SR-RFSW6062SR-CatStick-rescue" -705 -863 50 H V L BNN
 F2 "QFN40P200X200X60-15N" 0 0 50 H I L BNN
 F3 "IC RF SWITCH SPDT 20LGA" 0 0 50 H I L BNN
 F4 "Qorvo" 0 0 50 H I L BNN
@@ -190,11 +234,11 @@ X ANT 9 800 300 200 L 40 40 0 0 B
 ENDDRAW
 ENDDEF
 #
-# SKY13373-460LF-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue
+# SKY13373-460LF-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue
 #
-DEF SKY13373-460LF-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue U 0 40 Y Y 1 F N
+DEF SKY13373-460LF-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue U 0 40 Y Y 1 F N
 F0 "U" 50 250 50 H V C CNN
-F1 "SKY13373-460LF-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue" 900 -500 50 H V C CNN
+F1 "SKY13373-460LF-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue" 900 -500 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -215,11 +259,11 @@ X J2 9 900 0 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# TYETBCSANF-32.000000-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue
+# TYETBCSANF-32.000000-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue
 #
-DEF TYETBCSANF-32.000000-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue XC? 0 40 Y Y 1 F N
+DEF TYETBCSANF-32.000000-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue XC? 0 40 Y Y 1 F N
 F0 "XC?" 100 150 50 H V C CNN
-F1 "TYETBCSANF-32.000000-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue" 420 -350 50 H V C CNN
+F1 "TYETBCSANF-32.000000-TinyLoraModule-Symbol-Lib-TLM-v1-rescue-TLM-v1_2-rescue-CatStick-rescue" 420 -350 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -236,11 +280,11 @@ X VDD 4 -100 0 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# USB_B_Micro-Connector
+# USB_B_Micro-Connector-CatStick-rescue
 #
-DEF USB_B_Micro-Connector J 0 40 Y Y 1 F N
+DEF USB_B_Micro-Connector-CatStick-rescue J 0 40 Y Y 1 F N
 F0 "J" -200 450 50 H V L CNN
-F1 "USB_B_Micro-Connector" -200 350 50 H V L CNN
+F1 "USB_B_Micro-Connector-CatStick-rescue" -200 350 50 H V L CNN
 F2 "" 150 -50 50 H I C CNN
 F3 "" 150 -50 50 H I C CNN
 $FPLIST

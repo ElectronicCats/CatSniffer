@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name CatStick-rescue)(type Legacy)(uri ${KIPRJMOD}/CatStick-rescue.lib)(options "")(descr ""))
+)
