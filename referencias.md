@@ -19,8 +19,8 @@ https://www.ti.com/tool/download/PACKET-SNIFFER-2
 https://www.ti.com/lit/an/swra466c/swra466c.pdf
 
 ## Flash como uniflash
-https://electrolama.com/projects/zig-a-zig-ah/#flashing-using-bsl
-https://github.com/JelmerT/cc2538-bsl
+- https://electrolama.com/projects/zig-a-zig-ah/#flashing-using-bsl
+- https://github.com/JelmerT/cc2538-bsl
 
 ## Serial Port Settings for Snnifeer Agent:
 
