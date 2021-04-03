@@ -5,7 +5,7 @@ Es una placa de desarrollo de factor de forma "memoria USB" original multiprotoc
 ## Protocols
 
 - Thread, Zigbee, 
-- -Bluetooth 5 Low Energy, 
+- Bluetooth 5 Low Energy, 
 - IEEE 802.15.4g, 
 - Objetos inteligentes habilitados para IPv6 (6LoWPAN), 
 - Subanda 1Ghz y sistemas patentados
