@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name CatStick-rescue)(type Legacy)(uri ${KIPRJMOD}/CatStick-rescue.lib)(options "")(descr ""))
+  (lib (name SX1262IMLTRT)(type Legacy)(uri ${KIPRJMOD}/SX1262IMLTRT.lib)(options "")(descr ""))
 )
