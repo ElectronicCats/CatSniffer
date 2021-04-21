@@ -244,20 +244,6 @@ X Pin_9 9 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Antenna
-#
-DEF Device_Antenna AE 0 40 N N 1 F N
-F0 "AE" -75 75 50 H V R CNN
-F1 "Device_Antenna" -75 0 50 H V R CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 10 0 100 0 -150 N
-P 3 0 1 10 50 100 0 -100 -50 100 N
-X A 1 0 -200 100 U 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
 # Device_Battery
 #
 DEF Device_Battery BT 0 0 N N 1 F N
