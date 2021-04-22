@@ -1,4 +1,4 @@
-# CatStick
+# CatSniffer
 
 Es una placa de desarrollo de factor de forma "memoria USB" original multiprotocolo de Internet de las Cosas (IoT) con los chips CC1352R de nueva generación de TI y SAMR34 de Microchip.
 
