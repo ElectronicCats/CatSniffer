@@ -1,5 +1,9 @@
 # Documentos o links de referencia
 
+# Prerequisites
+- CCS version: The packet sniffer firmware has been tested with CCS 10.2.
+- [SimpleLink CC13x2 and CC26x2 SDK 4.40.04.04](https://www.ti.com/tool/download/SIMPLELINK-CC13X2-26X2-SDK/4.40.04.04)
+
 ## Sniffers
 
 - https://github.com/contiki-os/contiki/tree/master/examples/sensniff
