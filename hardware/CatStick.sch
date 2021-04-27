@@ -2617,17 +2617,6 @@ F 7 "Mouser" H 2850 7785 50  0001 C CNN "provedor"
 	1    2850 7785
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x06_Female J1
-U 1 1 60AB064F
-P 17800 4990
-F 0 "J1" H 17828 4966 50  0000 L CNN
-F 1 "Conn_01x06_Female" H 17828 4875 50  0000 L CNN
-F 2 "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical" H 17800 4990 50  0001 C CNN
-F 3 "~" H 17800 4990 50  0001 C CNN
-	1    17800 4990
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	17600 4790 17425 4790
 Wire Wire Line
@@ -2776,8 +2765,6 @@ Text Notes 20070 5720 2    89   ~ 0
 Tx/Rx Switch
 Wire Notes Line
 	15685 5565 15685 10120
-Wire Notes Line
-	18955 5565 18955 10120
 Wire Wire Line
 	7415 1755 7415 1705
 Wire Wire Line
@@ -2998,21 +2985,32 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR?
 U 1 1 610252E9
-P 12055 1475
-F 0 "#PWR?" H 12055 1325 50  0001 C CNN
-F 1 "+3V3" H 12070 1648 50  0000 C CNN
-F 2 "" H 12055 1475 50  0001 C CNN
-F 3 "" H 12055 1475 50  0001 C CNN
-	1    12055 1475
+P 12160 1425
+F 0 "#PWR?" H 12160 1275 50  0001 C CNN
+F 1 "+3V3" H 12175 1598 50  0000 C CNN
+F 2 "" H 12160 1425 50  0001 C CNN
+F 3 "" H 12160 1425 50  0001 C CNN
+	1    12160 1425
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	12055 1475 12055 1685
-Wire Wire Line
-	12055 1685 12160 1685
 Wire Wire Line
 	12660 4105 12255 4105
 Connection ~ 12255 4105
 Wire Wire Line
 	12255 4105 12255 3905
+Wire Wire Line
+	12160 1425 12160 1555
+Wire Notes Line
+	18955 470  18955 10120
+$Comp
+L Connector:Conn_01x06_Female J1
+U 1 1 60AB064F
+P 17800 4990
+F 0 "J1" H 17828 4966 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 17828 4875 50  0000 L CNN
+F 2 "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical" H 17800 4990 50  0001 C CNN
+F 3 "~" H 17800 4990 50  0001 C CNN
+	1    17800 4990
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
