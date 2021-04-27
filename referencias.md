@@ -7,6 +7,8 @@
 - https://github.com/andrewdodd/pyCCSniffer
 - https://github.com/andrewdodd/ccsniffpiper
 - https://github.com/mitshell/CC2531
+- https://github.com/nccgroup/Sniffle
+- https://hardwear.io/netherlands-2019/presentation/sniffle-talk-hardwear-io-nl-2019.pdf
 
 ## Zigbee
 - https://github.com/Koenkk/zigbee2mqtt
