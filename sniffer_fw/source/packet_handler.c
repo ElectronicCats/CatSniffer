@@ -96,7 +96,14 @@ uint16_t PacketHandler_constructDataPacket(DataPacket_Obj* dataPacket, uint16_t 
         uint8_t* status = (uint8_t*)(dataPacket->payload + payloadLength - 1);
         PacketHandler_convertStatusToCc1200FormatBle5Api(status);
     }
-    else
+    // For WBMS the status byte is followed by an 'extra sniffer info' byte at the end
+    else if(PhyManager_getRfApi() == WBMS)
+    {
+        uint8_t* status = (uint8_t*)(dataPacket->payload + payloadLength - 2);
+        PacketHandler_convertStatusToCc1200FormatPropApi(status);
+    }
+    // For other RF APIs
+    else 
     {
         uint8_t* status = (uint8_t*)(dataPacket->payload + payloadLength - 1);
         PacketHandler_convertStatusToCc1200FormatPropApi(status);

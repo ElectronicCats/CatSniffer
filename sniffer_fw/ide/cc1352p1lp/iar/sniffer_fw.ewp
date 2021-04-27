@@ -303,9 +303,8 @@
                 <option>
                     <name>IExtraOptions</name>
                     <state>-I$PROJ_DIR$</state>
-                    <state>-f$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/CC1352P1_LAUNCHXL/release/iar/compiler.opt.defs</state>
+                    <state>-f$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/cc13x2_cc26x2/release/iar/compiler.opt.defs</state>
                     <state>-DDeviceFamily_CC13X2</state>
-                    <state>-DCCFG_FORCE_VDDR_HH=0</state>
                     <state>-I$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/source</state>
                     <state>-I$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/source/ti/posix/iar</state>
                     <state>--debug</state>
@@ -360,6 +359,7 @@
                     <state>$PROJ_DIR$/../../../source/smartrf_settings/cc1352p1lp</state>
                     <state>$PROJ_DIR$/../../../source/phy</state>
                     <state>$PROJ_DIR$/../../../source/link_layer</state>
+                    <state>$PROJ_DIR$/../../../source/sysconfig/devices/cc1352p1lp</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -693,7 +693,7 @@
             <name>BUILDACTION</name>
             <archiveVersion>1</archiveVersion>
             <data>
-                <prebuild>iarbuild.exe $COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/CC1352P1_LAUNCHXL/release/iar/tirtos_builds_CC1352P1_LAUNCHXL_release.ewp Debug -log all</prebuild>
+                <prebuild>iarbuild.exe $COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/cc13x2_cc26x2/release/iar/tirtos_builds_cc13x2_cc26x2_release.ewp Debug -log all</prebuild>
                 <postbuild></postbuild>
             </data>
         </settings>
@@ -782,7 +782,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$/sniffer_fw_CC1352P1_LAUNCHXL_TIRTOS.icf</state>
+                    <state>$PROJ_DIR$\cc13x2_cc26x2_tirtos.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -818,7 +818,7 @@
                 </option>
                 <option>
                     <name>IlinkExtraOptions</name>
-                    <state>-f$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/CC1352P1_LAUNCHXL/release/iar/linker.cmd</state>
+                    <state>-f$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/cc13x2_cc26x2/release/iar/linker.cmd</state>
                     <state>$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/source/ti/display/lib/display.arm4f</state>
                     <state>$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/source/ti/grlib/lib/iar/m4f/grlib.a</state>
                     <state>$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/source/ti/drivers/rf/lib/rf_multiMode_cc13x2.arm4f</state>
@@ -1159,7 +1159,7 @@
                 </option>
                 <option>
                     <name>GenLowLevelInterface</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GEndianModeBE</name>
@@ -1380,9 +1380,8 @@
                 <option>
                     <name>IExtraOptions</name>
                     <state>-I$PROJ_DIR$</state>
-                    <state>-f$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/CC1352P1_LAUNCHXL/release/iar/compiler.opt.defs</state>
+                    <state>-f$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/cc13x2_cc26x2/release/iar/compiler.opt.defs</state>
                     <state>-DDeviceFamily_CC13X2</state>
-                    <state>-DCCFG_FORCE_VDDR_HH=0</state>
                     <state>-I$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/source</state>
                     <state>-I$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/source/ti/posix/iar</state>
                     <state>--debug</state>
@@ -1437,6 +1436,7 @@
                     <state>$PROJ_DIR$/../../../source/smartrf_settings/cc1352p1lp</state>
                     <state>$PROJ_DIR$/../../../source/phy</state>
                     <state>$PROJ_DIR$/../../../source/link_layer</state>
+                    <state>$PROJ_DIR$/../../../source/sysconfig/devices/cc1352p1lp</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1770,7 +1770,7 @@
             <name>BUILDACTION</name>
             <archiveVersion>1</archiveVersion>
             <data>
-                <prebuild>iarbuild.exe $COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/CC1352P1_LAUNCHXL/release/iar/tirtos_builds_CC1352P1_LAUNCHXL_release.ewp Debug -log all</prebuild>
+                <prebuild>iarbuild.exe $COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/cc13x2_cc26x2/release/iar/tirtos_builds_cc13x2_cc26x2_release.ewp Debug -log all</prebuild>
                 <postbuild></postbuild>
             </data>
         </settings>
@@ -1859,7 +1859,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$PROJ_DIR$/sniffer_fw_CC1352P1_LAUNCHXL_TIRTOS.icf</state>
+                    <state>$PROJ_DIR$\cc13x2_cc26x2_tirtos.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1895,7 +1895,7 @@
                 </option>
                 <option>
                     <name>IlinkExtraOptions</name>
-                    <state>-f$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/CC1352P1_LAUNCHXL/release/iar/linker.cmd</state>
+                    <state>-f$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/kernel/tirtos/builds/cc13x2_cc26x2/release/iar/linker.cmd</state>
                     <state>$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/source/ti/display/lib/display.arm4f</state>
                     <state>$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/source/ti/grlib/lib/iar/m4f/grlib.a</state>
                     <state>$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$/source/ti/drivers/rf/lib/rf_multiMode_cc13x2.arm4f</state>
@@ -2173,30 +2173,36 @@
         <group>
             <name>Header files</name>
             <group>
-                <name>Board_Config</name>
-                <file>
-                    <name>$PROJ_DIR$\Board.h</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\CC1350_LAUNCHXL.h</name>
-                </file>
-            </group>
-            <group>
                 <name>Link_Layer</name>
                 <group>
                     <name>BLE</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\source\link_layer\ble\ll_ble.h</name>
                     </file>
+                </group>
+                <group>
+                    <name>WBMS</name>
                     <file>
-                        <name>$PROJ_DIR$\..\..\..\source\link_layer\ble\ll_ble_timer.h</name>
+                        <name>$PROJ_DIR$\..\..\..\source\link_layer\wbms\ll_wbms.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\..\source\link_layer\wbms\ll_wbms_channel.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\..\source\link_layer\wbms\ll_wbms_frame.h</name>
                     </file>
                 </group>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\link_layer\ll_common.h</name>
+                </file>
                 <file>
                     <name>$PROJ_DIR$\..\..\..\source\link_layer\ll_default.h</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\..\..\source\link_layer\ll_manager.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\link_layer\ll_timer.h</name>
                 </file>
             </group>
             <group>
@@ -2214,6 +2220,9 @@
                     <name>$PROJ_DIR$\..\..\..\source\phy\phy_if_prop_15_4g.h</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\..\..\source\phy\phy_if_wbms.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\..\..\source\phy\phy_io_config.h</name>
                 </file>
                 <file>
@@ -2224,6 +2233,12 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\..\..\source\phy\phy_tables.h</name>
+                </file>
+            </group>
+            <group>
+                <name>SysConfig</name>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\sysconfig\devices\cc1352p1lp\ti_drivers_config.h</name>
                 </file>
             </group>
             <file>
@@ -2316,6 +2331,24 @@
                     <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_1.h</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_10.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_10.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_11.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_11.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_12.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_12.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_2.c</name>
                 </file>
                 <file>
@@ -2326,6 +2359,42 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_3.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_4.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_4.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_5.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_5.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_6.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_6.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_7.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_7.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_8.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_8.h</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_9.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\smartrf_settings\cc1352p1lp\15.4g\smartrf_settings_15_4g_9.h</name>
                 </file>
             </group>
             <group>
@@ -2359,36 +2428,36 @@
         <group>
             <name>Source files</name>
             <group>
-                <name>Board_Config</name>
-                <file>
-                    <name>$PROJ_DIR$\CC1352P1_LAUNCHXL.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\CC1352P1_LAUNCHXL_fxns.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\CC1352P1_LAUNCHXL_RF.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\ccfg.c</name>
-                </file>
-            </group>
-            <group>
                 <name>Link_Layer</name>
                 <group>
                     <name>BLE</name>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\source\link_layer\ble\ll_ble.c</name>
                     </file>
+                </group>
+                <group>
+                    <name>WBMS</name>
                     <file>
-                        <name>$PROJ_DIR$\..\..\..\source\link_layer\ble\ll_ble_timer.c</name>
+                        <name>$PROJ_DIR$\..\..\..\source\link_layer\wbms\ll_wbms.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\..\source\link_layer\wbms\ll_wbms_channel.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\..\source\link_layer\wbms\ll_wbms_frame.c</name>
                     </file>
                 </group>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\link_layer\ll_common.c</name>
+                </file>
                 <file>
                     <name>$PROJ_DIR$\..\..\..\source\link_layer\ll_default.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\..\..\source\link_layer\ll_manager.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\link_layer\ll_timer.c</name>
                 </file>
             </group>
             <group>
@@ -2415,7 +2484,33 @@
                     <name>$PROJ_DIR$\..\..\..\source\phy\phy_if_prop_15_4g.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\..\..\source\phy\phy_if_wbms.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\..\..\source\phy\phy_manager.c</name>
+                </file>
+            </group>
+            <group>
+                <name>SysConfig</name>
+                <file>
+                    <name>$PROJ_DIR$\ccfg.c</name>
+                    <excluded>
+                        <configuration>Debug</configuration>
+                        <configuration>Release</configuration>
+                    </excluded>
+                </file>
+                <file>
+                    <name>$COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR$\source\ti\devices\cc13x2_cc26x2\startup_files\ccfg.c</name>
+                    <excluded>
+                        <configuration>Debug</configuration>
+                        <configuration>Release</configuration>
+                    </excluded>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\sysconfig\devices\cc1352p1lp\ti_devices_config.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\..\source\sysconfig\devices\cc1352p1lp\ti_drivers_config.c</name>
                 </file>
             </group>
             <file>
@@ -2453,9 +2548,6 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\..\source\radio_if_dataqueue.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\sniffer_fw_CC1350_LAUNCHXL_TIRTOS.icf</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\..\source\task_event.c</name>

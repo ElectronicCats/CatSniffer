@@ -46,8 +46,9 @@ typedef void (*LL_reset)(void);
 // Link Layer types
 typedef enum LL_Type
 {
-    BLE=0,
-    DEFAULT=1,
+    LL_BLE=0,
+    LL_WBMS=1,
+    LL_DEFAULT=2,
 } LL_Type;
 
 
@@ -57,12 +58,6 @@ typedef struct LL_Obj
     LL_processPacket pProcessPacketFunc;
     LL_reset pResetFunc;
 } LL_Obj;
-
-
-//! \brief Initialize Link Layers 
-//!
-//! \return none 
-extern void LL_init(void);
 
 
 //! \brief Get the currently used Link Layer type 

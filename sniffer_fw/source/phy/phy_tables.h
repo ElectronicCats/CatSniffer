@@ -110,6 +110,17 @@ typedef struct Phy_Ble_5_Obj
 } Phy_Ble_5_Obj;
 
 
+// Struct definition for WBMS PHY settings
+typedef struct Phy_Wbms_Obj
+{
+    rfc_CMD_BLE5_RADIO_SETUP_t* pSetupCmd;
+    rfc_CMD_FS_t* pFsCmd;
+    rfc_CMD_PROP_RX_ADV_t* pRxCmd;
+    rfc_CMD_PROP_TX_ADV_t* pTxCmd;
+    RF_Mode* pRfMode;
+} Phy_Wbms_Obj;
+
+
 // Struct definition for a PHY (That is combination of RF API and PHY setting)
 typedef struct Phy_Obj
 {
@@ -129,6 +140,9 @@ extern const Phy_Ieee_15_4_Obj Phy_phyTableIeee_15_4[];
 
 // Table of BLE 5 PHY settings
 extern const Phy_Ble_5_Obj Phy_phyTableBle_5[];
+
+// Table of WBMS PHY settings
+extern const Phy_Wbms_Obj Phy_phyTableWbms[];
 
 // Table of all supported PHYs (Combinations of RF API and setting)
 extern const Phy_Obj Phy_supportedPhys[];
@@ -162,6 +176,11 @@ extern uint8_t Phy_getNumIeee_15_4_Phys(void);
 //!
 //! \return Number of IEEE BLE 5 PHY settings
 extern uint8_t Phy_getNumBle_5_Phys(void);
+
+//! \brief Get number of WBMS PHY settings 
+//!
+//! \return Number of WBMS PHY settings
+extern uint8_t Phy_getNumWbmsPhys(void);
 
 #endif
 

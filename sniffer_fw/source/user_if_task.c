@@ -43,20 +43,26 @@
 #include <ti/drivers/PIN.h>
 #include <xdc/runtime/System.h>
 #include <stdio.h>
-
-#include "Board.h"
-
 #include "host_if.h"
 #include "task_event.h"
 #include "version.h"
 
+/* Board Header files */
+#if defined DeviceFamily_CC13X0 || DeviceFamily_CC26X0
+#include "board.h"
+#else
+#include "ti_drivers_config.h"
+#endif
+
 // Period of user updates (1 second)
 #define USER_IF_TIMEOUT_PERIOD                  100000   // ticks of 10 us
+
+void UserIfTask_waitInitDone(void);
 
 // Pin table
 static PIN_Config UserIfTask_pinTable[] =
 {
-    Board_PIN_LED1 | PIN_GPIO_OUTPUT_EN | PIN_GPIO_LOW | PIN_PUSHPULL | PIN_DRVSTR_MAX,
+    CONFIG_PIN_GLED | PIN_GPIO_OUTPUT_EN | PIN_GPIO_LOW | PIN_PUSHPULL | PIN_DRVSTR_MAX,
     PIN_TERMINATE
 };
 static PIN_Handle UserIfTask_ledPin_Handle;
@@ -73,13 +79,12 @@ static const char UserIfTask_message[] = USER_MESSAGE VERSION_STRING "\n";
 //!        and blink an LED to inform the user that the sniffer is running. The
 //!        period of the user updates is set to once per second. This task will
 //!        run until the event EVENT_ID_USER_IF_TASK_END is received. This task
-//         will exit when receiving EVENT_ID_USER_IF_TASK_END.
+//!         will exit when receiving EVENT_ID_USER_IF_TASK_END.
 //!
 void userIfTask(UArg a0, UArg a1)
 {
-    // Initialize the modules to be used by this task
-    HostIF_init();
-    TaskEvent_init();
+    // Wait for initilization of common modules to be done
+    UserIfTask_waitInitDone();
 
     // Open LED pins
     UserIfTask_ledPin_Handle = PIN_open(&UserIfTask_ledPinState, UserIfTask_pinTable);
@@ -95,7 +100,7 @@ void userIfTask(UArg a0, UArg a1)
         
         // Update user interface
         HostIF_writeBuffer((uint8_t*)UserIfTask_message, sizeof(UserIfTask_message));
-        PIN_setOutputValue(UserIfTask_ledPin_Handle, Board_PIN_LED1,!PIN_getOutputValue(Board_PIN_LED1));
+        PIN_setOutputValue(UserIfTask_ledPin_Handle, CONFIG_PIN_GLED,!PIN_getOutputValue(CONFIG_PIN_GLED));
 
         // Wait for end task event
         UInt events = Event_pend(TaskEvent_Handle, EVENT_ID_USER_IF_TASK_END, Event_Id_NONE, BIOS_NO_WAIT);
@@ -106,4 +111,12 @@ void userIfTask(UArg a0, UArg a1)
             Task_exit();
         }
     }
+}
+
+
+//! \brief Wait for initilization of the common modules between tasks in the system to be done
+//! 
+void UserIfTask_waitInitDone(void)
+{
+    UInt events = Event_pend(TaskEvent_Handle, EVENT_ID_USER_IF_TASK_INIT_DONE, Event_Id_NONE, BIOS_WAIT_FOREVER);
 }

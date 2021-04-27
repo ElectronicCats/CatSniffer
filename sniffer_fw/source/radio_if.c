@@ -66,16 +66,14 @@ RadioIf_Timer_Obj RadioIf_timers[] =
     { NULL, -1, RF_RatChannel1 }                        // Timer 1
 };
 
-uint8_t RadioIF_numBufferOverflow = 0;
-RF_Object RadioIF_RF_Obj;
-RF_Handle RadioIF_Rf_Handle;
-RF_CmdHandle RadioIF_Cmd_Handle;
-RF_RatHandle RadioIF_ratOverFlowEventHandle = -1;
-
-static bool RadioIF_isInitialized = false;
+static uint8_t RadioIF_numBufferOverflow = 0;
+static RF_Object RadioIF_RF_Obj;
+static RF_Handle RadioIF_Rf_Handle;
+static RF_CmdHandle RadioIF_Cmd_Handle;
+static RF_RatHandle RadioIF_ratOverFlowEventHandle = -1;
 static ratOverflowCb RadioIF_ratCbFunc = NULL;
-
 static rfCoreEventCb RadioIF_rfCoreEventCbFunc = NULL;
+
 // Local functions
 static void RadioIF_ratCallback(RF_Handle h, RF_RatHandle rh, RF_EventMask e, uint32_t timeout);
 static void RadioIF_flushDataQueue(void);
@@ -87,12 +85,9 @@ static void RadioIF_registerRfCoreEventCbApiSpecific(rfCoreEventCb func);
 
 void RadioIF_init(void)
 {
-    if(!RadioIF_isInitialized)
-    {
-        RadioIF_dataQueueInit();
-        PhyManager_setPhy(DEFAULT_PHY_NUMBER);
-        RadioIF_isInitialized = true;
-    }
+    RadioIF_dataQueueInit();
+    PhyManager_init();
+    PhyManager_setPhy(DEFAULT_PHY_NUMBER);
 }
 
 
@@ -142,10 +137,6 @@ uint8_t RadioIF_getStatus(void)
 //! \return None
 void RadioIF_flushDataQueue(void)
 {
-    rfc_CMD_CLEAR_RX_t cmd;
-    cmd.commandNo = CMD_CLEAR_RX;
-    cmd.pQueue = RadioIF_dataQueueGet();
-    RF_runImmediateCmd(RadioIF_Rf_Handle, (uint32_t*)&cmd);
     RadioIF_resetDataQueue();
 }
 
@@ -332,6 +323,13 @@ void RadioIf_startRxCmd(void)
 {
     // Issue Rf Core RX command to start RX
     RadioIF_Cmd_Handle = RF_postCmd(RadioIF_Rf_Handle, PhyManager_getRxCmd(), RF_PriorityNormal, &RadioIF_rfCoreEventCallback, IRQ_RX_BUF_FULL | IRQ_RX_ENTRY_DONE);
+}
+
+
+void RadioIf_runFsCmd(void)
+{
+    // Run the CMD_FS
+    RF_postCmd(RadioIF_Rf_Handle, PhyManager_getFsCmd(), RF_PriorityNormal, NULL, 0);
 }
 
 

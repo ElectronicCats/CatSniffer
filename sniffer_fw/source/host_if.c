@@ -37,18 +37,24 @@
 ******************************************************************************/
 
 #include "host_if.h"
-#include "Board.h"
 #include <xdc/runtime/System.h>
 #include <ti/sysbios/knl/Semaphore.h>
 #include <ti/drivers/UART.h>
 #include <ti/sysbios/BIOS.h>
+#include <stdbool.h>
+
+/* Board Header files */
+#if defined DeviceFamily_CC13X0 || DeviceFamily_CC26X0
+#include "board.h"
+#else
+#include "ti_drivers_config.h"
+#endif
 
 static UART_Handle HostIF_Uart_Handle;
 static UART_Params HostIF_uartParams;
-static bool HostIF_isInitialized = false;
 
 // Semaphore that for protecting uart calls against simultanous access from
-// multiple tasks. Simulatanous access to uart from more than one task in same
+// multiple tasks. Simultaneous access to uart from more than one task in same
 // direction is not supported by the TI-RTOS driver.
 static Semaphore_Struct HostIF_semStructUart;
 static Semaphore_Handle HostIF_SemUart_Handle;
@@ -58,35 +64,30 @@ static Semaphore_Handle HostIF_SemUart_Handle;
 
 void HostIF_init()
 {
-    if(!HostIF_isInitialized)
+    UART_init();
+    UART_Params_init(&HostIF_uartParams);
+    HostIF_uartParams.writeDataMode = UART_DATA_BINARY;
+    HostIF_uartParams.readDataMode = UART_DATA_BINARY;
+    HostIF_uartParams.readReturnMode = UART_RETURN_FULL;
+    HostIF_uartParams.readEcho = UART_ECHO_OFF;
+    HostIF_uartParams.baudRate = 3000000; 
+    HostIF_uartParams.readTimeout = UART_READ_TIMEOUT_PERIOD;
+    HostIF_Uart_Handle = UART_open(CONFIG_UART_0, &HostIF_uartParams);
+
+    if (HostIF_Uart_Handle == NULL)
     {
-        UART_init();
-        UART_Params_init(&HostIF_uartParams);
-        HostIF_uartParams.writeDataMode = UART_DATA_BINARY;
-        HostIF_uartParams.readDataMode = UART_DATA_BINARY;
-        HostIF_uartParams.readReturnMode = UART_RETURN_FULL;
-        HostIF_uartParams.readEcho = UART_ECHO_OFF;
-        HostIF_uartParams.baudRate = 921600;
-        HostIF_uartParams.readTimeout = UART_READ_TIMEOUT_PERIOD;
-        HostIF_Uart_Handle = UART_open(Board_UART0, &HostIF_uartParams);
-
-        if (HostIF_Uart_Handle == NULL)
-        {
-            System_abort("Error opening the UART");
-        }
-
-        // Initialize the uart semaphore
-        Semaphore_Params semParams;
-
-        // Construct a new binary semaphore and initialize it to 1
-        Semaphore_Params_init(&semParams);
-        semParams.mode = Semaphore_Mode_BINARY;
-        Semaphore_construct(&HostIF_semStructUart, 1, &semParams);
-
-        HostIF_SemUart_Handle = Semaphore_handle(&HostIF_semStructUart);
-
-        HostIF_isInitialized = true;
+        System_abort("Error opening the UART");
     }
+
+    // Initialize the uart semaphore
+    Semaphore_Params semParams;
+
+    // Construct a new binary semaphore and initialize it to 1
+    Semaphore_Params_init(&semParams);
+    semParams.mode = Semaphore_Mode_BINARY;
+    Semaphore_construct(&HostIF_semStructUart, 1, &semParams);
+
+    HostIF_SemUart_Handle = Semaphore_handle(&HostIF_semStructUart);
 }
 
 

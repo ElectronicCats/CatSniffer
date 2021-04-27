@@ -43,6 +43,7 @@
 #include "phy_if_prop_15_4g.h"
 #include "phy_if_ieee_15_4.h"
 #include "phy_if_ble_5.h"
+#include "phy_if_wbms.h"
 #include "ll_manager.h"
 
 // Local functions
@@ -82,7 +83,8 @@ Phy_Api_Obj phyApis[] =
     {PhyIf_setFrequencyProp, PhyIf_configureSetupCmdProp, PhyIf_configureRxCmdProp, PhyIf_configureTxCmdProp},                          // PHY interface functions for RF Proprietary PHYs
     {PhyIf_setFrequencyProp_15_4g, PhyIf_configureSetupCmdProp_15_4g, PhyIf_configureRxCmdProp_15_4g, PhyIf_configureTxCmdProp_15_4g},  // PHY interface functions for PHYs using RF Proprietary in IEEE 802.15.4g mode
     {PhyIf_setFrequencyIeee_15_4, PhyIf_configureSetupCmdIeee_15_4, PhyIf_configureRxCmdIeee_15_4, PhyIf_configureTxCmdIeee_15_4},      // PHY interface functions for PHYs using IEEE 802.15.4 mode 
-    {PhyIf_setFrequencyBle_5, PhyIf_configureSetupCmdBle_5, PhyIf_configureRxCmdBle_5, PhyIf_configureTxCmdBle_5}                       // PHY interface functions for PHYs using BLE 5
+    {PhyIf_setFrequencyBle_5, PhyIf_configureSetupCmdBle_5, PhyIf_configureRxCmdBle_5, PhyIf_configureTxCmdBle_5},                      // PHY interface functions for PHYs using BLE 5
+    {PhyIf_setFrequencyWbms, PhyIf_configureSetupCmdWbms, PhyIf_configureRxCmdWbms, PhyIf_configureTxCmdWbms},                          // PHY interface functions for PHYs using WBMS
 };
 
 
@@ -111,9 +113,20 @@ bool PhyManager_setPhy(uint8_t phyNumber)
     Phy_configureIoPins(PhyManager_currentRfApi);
     
     // Set Link Layer for the currently selected RF API
-    // Use BLE link layer type for the BLE_5_1M RF API and the Default Link Layer type for the other RF APIs
-    (PhyManager_currentRfApi == BLE_5_1M) ? LL_setLLType(BLE) : LL_setLLType(DEFAULT);
-  
+    // Use BLE link layer type for the BLE_5_1M RF API, WBMS link layer for WBMS RF API and the Default Link Layer type for other RF APIs. 
+    switch(PhyManager_currentRfApi)
+    {
+        case BLE_5_1M:
+            LL_setLLType(LL_BLE);
+            break;
+        case WBMS:
+            LL_setLLType(LL_WBMS);
+            break;
+        default:
+            LL_setLLType(LL_DEFAULT);
+            break;
+    }
+    
     return true;
 }
 
@@ -142,6 +155,10 @@ RF_RadioSetup* PhyManager_getSetupCmd(void)
     {
         return (RF_RadioSetup*)Phy_phyTableBle_5[PhyManager_currentPhyIndex].pSetupCmd;
     }
+    else if(PhyManager_currentRfApi == WBMS)
+    {
+        return (RF_RadioSetup*)Phy_phyTableWbms[PhyManager_currentPhyIndex].pSetupCmd;
+    }
     
     return NULL;
 }
@@ -161,9 +178,13 @@ RF_Op* PhyManager_getFsCmd(void)
     {
         return (RF_Op*)Phy_phyTableIeee_15_4[PhyManager_currentPhyIndex].pFsCmd;
     }
-     else if(PhyManager_currentRfApi == BLE_5_1M)
+    else if(PhyManager_currentRfApi == BLE_5_1M)
     {
         return (RF_Op*)Phy_phyTableBle_5[PhyManager_currentPhyIndex].pFsCmd;
+    }
+    else if(PhyManager_currentRfApi == WBMS)
+    {
+        return (RF_Op*)Phy_phyTableWbms[PhyManager_currentPhyIndex].pFsCmd;
     }
     
     return NULL;
@@ -188,6 +209,10 @@ RF_Op* PhyManager_getRxCmd(void)
     {
         return (RF_Op*)Phy_phyTableBle_5[PhyManager_currentPhyIndex].pRxCmd;
     }
+    else if(PhyManager_currentRfApi == WBMS)
+    {
+        return (RF_Op*)Phy_phyTableWbms[PhyManager_currentPhyIndex].pRxCmd;
+    }
     
     return NULL;
 }
@@ -211,6 +236,10 @@ RF_Op* PhyManager_getTxCmd(void)
     {
         return (RF_Op*)Phy_phyTableBle_5[PhyManager_currentPhyIndex].pTxCmd;
     }
+    else if(PhyManager_currentRfApi == WBMS)
+    {
+        return (RF_Op*)Phy_phyTableWbms[PhyManager_currentPhyIndex].pTxCmd;
+    }
       
     return NULL;
 }
@@ -233,6 +262,10 @@ RF_Mode* PhyManager_getRfMode(void)
     else if(PhyManager_currentRfApi == BLE_5_1M)
     {
         return (RF_Mode*)Phy_phyTableBle_5[PhyManager_currentPhyIndex].pRfMode;
+    }
+    else if(PhyManager_currentRfApi == WBMS)
+    {
+        return (RF_Mode*)Phy_phyTableWbms[PhyManager_currentPhyIndex].pRfMode;
     }
     
     return NULL;
@@ -301,6 +334,10 @@ bool PhyManager_isPhyNumberValid(uint8_t phyNumber)
     else if(rfApi == BLE_5_1M)
     {
         status = phyIndex > (Phy_getNumBle_5_Phys() - 1) ? false : true;
+    }
+    else if(rfApi == WBMS)
+    {
+        status = phyIndex > (Phy_getNumWbmsPhys() - 1) ? false : true;
     }
     
     return status;

@@ -9,38 +9,66 @@
         </when>
     </applicability>
 
-    <import spec="${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/kernel/tirtos/builds/CC1352R1_LAUNCHXL/release/ccs/tirtos_builds_CC1352R1_LAUNCHXL_release_ccs.projectspec"/>
+    <import spec="${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/kernel/tirtos/builds/cc13x2_cc26x2/release/ccs/tirtos_builds_cc13x2_cc26x2_release_ccs.projectspec"/>
 
     <project
         title="Sniffer FW"
         name="sniffer_fw"
+        configurations="Debug"
         toolChain="TI"
         connection="TIXDS110_Connection.xml"
         device="Cortex M.CC1352R1F3"
         ignoreDefaultDeviceSettings="true"
-        references="tirtos_builds_CC1352R1_LAUNCHXL_release_ccs"
-        compilerBuildOptions="-DFW_ID=0x30 --c99 -I${PROJECT_ROOT} -I${PROJECT_ROOT}/source/smartrf_settings/cc13x2lp -I${PROJECT_ROOT}/source/phy -I${PROJECT_ROOT}/source/link_layer -DDeviceFamily_CC13X2 -DCCFG_FORCE_VDDR_HH=0 -I${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/source/ti/posix/ccs  --silicon_version=7M4 --code_state=16 --little_endian --display_error_number --diag_warning=255 --diag_wrap=off --gen_func_subsections=on --float_support=FPv4SPD16 --symdebug:dwarf"
-        linkerBuildOptions=" -l${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/source/ti/display/lib/display.aem4f -l${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/source/ti/grlib/lib/ccs/m4f/grlib.a -l${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/source/ti/drivers/rf/lib/rf_multiMode_cc13x2.aem4f -l${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/source/ti/drivers/lib/drivers_cc13x2.aem4f -l${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/kernel/tirtos/packages/ti/dpl/lib/dpl_cc13x2.aem4f -l${GENERATED_LIBRARIES} -l${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/source/ti/devices/cc13x2_cc26x2/driverlib/bin/ccs/driverlib.lib --warn_sections --display_error_number --diag_wrap=off --rom_model -i${CG_TOOL_ROOT}/lib -llibc.a"
-        description="Sniffer firmware for LAUNCHXL-CC1352R1."
-        hexBuildOptions="--memwidth=8 --romwidth=8 --intel">
+        ignoreDefaultCCSSettings="true"
+        references="tirtos_builds_cc13x2_cc26x2_release_ccs"
+        products="sysconfig"
+        compilerBuildOptions="
+            --c99
+            -I${PROJECT_ROOT}
+            -I${PROJECT_ROOT}/${ConfigName}
+            -DDeviceFamily_CC13X2
+            -I${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/source
+            -I${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/source/ti/posix/ccs
+            -DFW_ID=0x30 
+            -I${PROJECT_ROOT}/source/smartrf_settings/cc13x2lp 
+            -I${PROJECT_ROOT}/source/phy 
+            -I${PROJECT_ROOT}/source/link_layer 
+            --silicon_version=7M4
+            --code_state=16
+            --little_endian
+            --display_error_number
+            --diag_warning=255
+            --diag_wrap=off
+            --gen_func_subsections=on
+            --float_support=FPv4SPD16
+            --symdebug:dwarf
+            -I${CG_TOOL_ROOT}/include
+        "
+        linkerBuildOptions="
+            -i${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/source
+            -i${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/kernel/tirtos/packages
+            -i${PROJECT_BUILD_DIR}/syscfg/
+            -lti_utils_build_linker.cmd.genlibs
+            -l${GENERATED_LIBRARIES}
+            -lti/devices/cc13x2_cc26x2/driverlib/bin/ccs/driverlib.lib
+            --warn_sections
+            --display_error_number
+            --diag_wrap=off
+            --rom_model
+            -i${CG_TOOL_ROOT}/lib
+            -llibc.a
+        "
+        enableSysConfigTool="true"
+        sysConfigBuildOptions="
+            --product ${COM_TI_SIMPLELINK_CC13X2_26X2_SDK_INSTALL_DIR}/.metadata/product.json
+            --compiler ccs
+        "
+        description="Sniffer firmware for LAUNCHXL-CC1352R1">
 
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         
-        <file path="./CC1352R1_LAUNCHXL_TIRTOS.cmd" openOnCreation="false" excludeFromBuild="false" action="copy">
-        </file>
-        
-        <file path="../iar/CC1352R1_LAUNCHXL.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="." createVirtualFolders="true">
-        </file>
-        <file path="../iar/CC1352R1_LAUNCHXL_fxns.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="." createVirtualFolders="true">
-        </file>
-        <file path="../iar/CC1352R1_LAUNCHXL_RF.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="." createVirtualFolders="true">
-        </file>
-        <file path="../iar/CC1352R1_LAUNCHXL.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="." createVirtualFolders="true">
-        </file>
-        <file path="../iar/Board.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="." createVirtualFolders="true">
-        </file>
-        <file path="../iar/ccfg.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="." createVirtualFolders="true">
+        <file path="sniffer.syscfg" openOnCreation="false" excludeFromBuild="false" action="copy">
         </file>
 
         <file path="../../../source/packet_sniffer_fw.c" openOnCreation="true" excludeFromBuild="false" action="copy" targetDirectory="./source">
@@ -86,6 +114,8 @@
         </file>
         <file path="../../../source/phy/phy_if_ble_5.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/phy">
         </file>
+        <file path="../../../source/phy/phy_if_wbms.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/phy">
+        </file>
         <file path="../../../source/phy/phy_manager.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/phy">
         </file>
         
@@ -95,7 +125,15 @@
         </file>
         <file path="../../../source/link_layer/ble/ll_ble.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer/ble">
         </file>
-        <file path="../../../source/link_layer/ble/ll_ble_timer.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer/ble">
+        <file path="../../../source/link_layer/wbms/ll_wbms.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer/wbms">
+        </file>
+        <file path="../../../source/link_layer/wbms/ll_wbms_frame.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer/wbms">
+        </file>
+        <file path="../../../source/link_layer/wbms/ll_wbms_channel.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer/wbms">
+        </file>
+        <file path="../../../source/link_layer/ll_timer.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer">
+        </file>
+        <file path="../../../source/link_layer/ll_common.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer">
         </file>
         
         <file path="../../../source/command_handler.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source">
@@ -143,6 +181,8 @@
         </file>
         <file path="../../../source/phy/phy_if_prop_15_4g.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/phy">
         </file>
+        <file path="../../../source/phy/phy_if_wbms.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/phy">
+        </file>
         <file path="../../../source/phy/phy_manager.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/phy">
         </file>
         <file path="../../../source/phy/phy_rf_api.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/phy">
@@ -158,8 +198,17 @@
         </file>
         <file path="../../../source/link_layer/ble/ll_ble.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer/ble">
         </file>
-        <file path="../../../source/link_layer/ble/ll_ble_timer.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer/ble">
+        <file path="../../../source/link_layer/wbms/ll_wbms.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer/wbms">
         </file>
+        <file path="../../../source/link_layer/wbms/ll_wbms_frame.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer/wbms">
+        </file>
+        <file path="../../../source/link_layer/wbms/ll_wbms_channel.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer/wbms">
+        </file>
+        <file path="../../../source/link_layer/ll_timer.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer">
+        </file>
+        <file path="../../../source/link_layer/ll_common.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/link_layer">
+        </file>
+        
         
         <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_0.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
         </file>
@@ -168,6 +217,42 @@
         <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_1.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
         </file>
         <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_1.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_2.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_2.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_3.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_3.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_4.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_4.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_5.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_5.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_6.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_6.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_7.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_7.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_8.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_8.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_9.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_9.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_10.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/15.4g/smartrf_settings_15_4g_10.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/15.4g">
         </file>
         
         <file path="../../../source/smartrf_settings/cc13x2lp/rf_prop/smartrf_settings_rf_prop_0.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/rf_prop">
@@ -188,6 +273,15 @@
         </file>
         <file path="../../../source/smartrf_settings/cc13x2lp/ble5/smartrf_settings_ble5_0.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/ble5">
         </file>
+        
+        <file path="../../../source/smartrf_settings/cc13x2lp/wbms/smartrf_settings_wbms_0.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/wbms">
+        </file>
+        <file path="../../../source/smartrf_settings/cc13x2lp/wbms/smartrf_settings_wbms_0.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="./source/smartrf_settings/cc13x2lp/wbms">
+        </file>
+
+        <file path="cc13x2_cc26x2_tirtos.cmd" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        
     </project>
 </projectSpec>
 

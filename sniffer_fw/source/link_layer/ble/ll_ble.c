@@ -38,10 +38,11 @@
 
 #include "ll_ble.h"
 #include "../common.h"
+#include "ll_common.h"
 #include "phy_manager.h"
 #include "phy_if_ble_5.h"
 #include "../radio_if.h"
-#include "ll_ble_timer.h"
+#include "ll_timer.h"
 
 #define PDU_HEADER_TYPE_OFFSET                 0
 #define PDU_HEADER_TYPE_MASK                   0xF
@@ -96,11 +97,10 @@
 #define LL_CONTROL_CTRDATA_OFFSET               1               // Offset of LL Control CtrData field in data channel PDU payload
 
 #define INITIATOR_ADDRESS_LENGTH                6
-#define BITRATE                                 1000000  // 1 Mbps bit rate
+#define BITRATE_1_MBPS                          1000000         // 1 Mbps bit rate
 #define BITS_PER_BYTE                           8
 #define MICRO_SECONDS_PER_SECOND                1000000
 #define MICROSECONDS_PER_MILLISECOND            1000
-#define RADIO_TIMER_TICKS_PER_MICROSECOND       4
 #define BLE_TIME_UNIT                           1250 // 1.25 ms time unit used in connect_req packet
 
 #define CHANNEL_SWITCH_TIME_MEASURED            290  // The time in us from RAT timer callback function is called until RX is on (RFC_GPO0 is high) is measured to ~290 us (on both LAUNCHXL-CC2652R PG1.1 and LAUNCHXL-CC1352R1 PG1.1 boards) .
@@ -186,8 +186,6 @@ static uint8_t LLBle_startChannel = DEFAULT_CHANNEL;
 static void LLBle_setupDataConnection(uint8_t* pduData, uint16_t length, uint8_t* pTimestamp);
 static void LLBle_adjustAnchorPoint(uint8_t* pTimeStamp);
 static uint32_t LLBle_calculatePacketEndTime(uint8_t* timeStamp, uint16_t pduLength);
-static uint32_t LLBle_calculatePacketStartTime(uint8_t* timeStamp);
-static uint32_t LLBle_convertRadioTimeToUs(uint32_t timerValue);
 static void LLBle_connectionTimerEventHandler(uint32_t ratTime);
 static void LLBle_scheduleNextConnectionEvent(uint32_t nextConnEvent);
 static uint32_t LLBle_calculateMissedPacketTimeMargin(uint32_t missedConnEvents);
@@ -219,6 +217,7 @@ static void LLBle_supervisionTimerEventHandler(uint32_t ratTime);
 // BLE meta info 
 static uint16_t LLBle_prependPacketInfo(uint8_t* packet, uint16_t packetLength, uint8_t channel);
 static void LLBle_setDirInfo(uint16_t pduLength, uint8_t* pTimeStamp);
+
 
 uint16_t LLBle_processPacket(uint8_t* packetData, uint16_t packetLength)
 {
@@ -253,12 +252,12 @@ uint16_t LLBle_processPacket(uint8_t* packetData, uint16_t packetLength)
         // set the connection timeout according to spec.
         if (LLBle_pendingConnectionTimeoutUpdate)
         {
-            LLBle_supervisionTimerStart(LLBle_calculatePacketStartTime(pTimestamp), LLBle_connInterval);
+            LLBle_supervisionTimerStart(LLCommon_calculatePacketStartTime(pTimestamp), LLBle_connInterval);
             LLBle_pendingConnectionTimeoutUpdate = false;
         }
         else
         {
-            LLBle_supervisionTimerReset(LLBle_calculatePacketStartTime(pTimestamp), LLBle_connTimeout);
+            LLBle_supervisionTimerReset(LLCommon_calculatePacketStartTime(pTimestamp), LLBle_connTimeout);
         }
         
         // Set packet direction info
@@ -665,22 +664,14 @@ extern void LLBle_reset(void)
     LLBle_dirState.currentDirInfo = DirInfo_Non_Connected;
     LLBle_dirState.prevDirInfo = DirInfo_Non_Connected;
     LLBle_dirState.prevPacketEndTime = 0;
+    
+    // Register connection event timer callback
+    LLTimer_registerCb(CONNECTION_EVENT_TIMER, LLBle_connectionTimerEventHandler);
+    
+    // Register supervision timer callback
+    LLTimer_registerCb(SUPERVISION_TIMER, LLBle_supervisionTimerEventHandler);
 }
 
-
-//! \brief Initialize Link Layer
-//!
-//! \return none
-void LLBle_init(void)
-{
-    LLBle_reset();
-    
-    // Connection event timer
-    LLBleTimer_create(CONNECTION_EVENT_TIMER, LLBle_connectionTimerEventHandler);
-    
-    // Connection event timer
-    LLBleTimer_create(SUPERVISION_TIMER, LLBle_supervisionTimerEventHandler);
-}
 
 
 //! \brief Calculate time of a packet given timestamp and packet length
@@ -695,7 +686,7 @@ void LLBle_init(void)
 //! \return none
 uint32_t LLBle_calculatePacketEndTime(uint8_t* timeStamp, uint16_t pduLength)
 {
-    uint32_t packetDuration = (pduLength + PDU_HEADER_LENGTH + ACCESS_ADDRESS_LENGTH) * BITS_PER_BYTE * MICRO_SECONDS_PER_SECOND/BITRATE;
+    uint32_t packetDuration = (pduLength + PDU_HEADER_LENGTH + ACCESS_ADDRESS_LENGTH) * BITS_PER_BYTE * MICRO_SECONDS_PER_SECOND/BITRATE_1_MBPS;
     
     // convert Radio Timer (RAT) timestamp to microseconds
     uint32_t ratTime = Common_get32BitValueLE(timeStamp);
@@ -703,38 +694,6 @@ uint32_t LLBle_calculatePacketEndTime(uint8_t* timeStamp, uint16_t pduLength)
     
     // calcalute end of packet time
     return time + packetDuration;
-}
-
-
-//! \brief Calculate start time of a packet given the timestamp.
-//!        The time is an absolute value in microseconds from Radio timer start
-//!
-//! \param[in] timeStamp
-//!            Radio timer timestamp for the packet
-//! 
-//! \return none
-uint32_t LLBle_calculatePacketStartTime(uint8_t* timeStamp)
-{   
-    // convert Radio Timer (RAT) timestamp to microseconds
-    uint32_t ratTime = Common_get32BitValueLE(timeStamp);
-    uint32_t time = ratTime/RADIO_TIMER_TICKS_PER_MICROSECOND;
-    
-    return time;
-}
-
-
-//! \brief Convert value of radio timer to microseconds
-//!
-//! \param[in] timerValue
-//!            Value of radio timer
-//! 
-//! \return time in microseconds
-uint32_t LLBle_convertRadioTimeToUs(uint32_t timerValue)
-{   
-    // convert Radio Timer (RAT) timestamp to microseconds
-    uint32_t time = timerValue/RADIO_TIMER_TICKS_PER_MICROSECOND;
-    
-    return time;
 }
 
 
@@ -751,9 +710,9 @@ static void LLBle_scheduleNextConnectionEvent(uint32_t nextConnEvent)
     uint32_t defaultChannelSwitchTimeMargin = CHANNEL_SWITCH_TIME_MEASURED + CHANNEL_SWITCH_TIME_MARGIN + LLBle_windowWideningUs;
     nextConnEvent -= defaultChannelSwitchTimeMargin + (LLBle_missedConnEvents * LLBle_windowWideningUs);
     
-    LLBleTimer_stop(CONNECTION_EVENT_TIMER);
-    LLBleTimer_setTimeout(CONNECTION_EVENT_TIMER, nextConnEvent);
-    LLBleTimer_start(CONNECTION_EVENT_TIMER);
+    LLTimer_stop(CONNECTION_EVENT_TIMER);
+    LLTimer_setTimeout(CONNECTION_EVENT_TIMER, nextConnEvent);
+    LLTimer_start(CONNECTION_EVENT_TIMER);
 }
 
 
@@ -775,7 +734,7 @@ static void LLBle_adjustAnchorPoint(uint8_t* pTimeStamp)
         t0 = LLBle_connEventStart;
         
         // Get the captured timestamp for this packet
-        anchorAdjusted = LLBle_calculatePacketStartTime(pTimeStamp);
+        anchorAdjusted = LLCommon_calculatePacketStartTime(pTimeStamp);
         
         // Store current time for use later
         t1 = anchorAdjusted;
@@ -840,7 +799,7 @@ static void LLBle_adjustAnchorPoint(uint8_t* pTimeStamp)
 //! \return none
 void LLBle_setDirInfo(uint16_t pduLength, uint8_t* pTimeStamp)
 {
-    uint32_t packetStartTime = LLBle_calculatePacketStartTime(pTimeStamp);
+    uint32_t packetStartTime = LLCommon_calculatePacketStartTime(pTimeStamp);
     uint32_t packetEndTime = LLBle_calculatePacketEndTime(pTimeStamp, pduLength);
     
     // If anchor is not yet set, this is the first packet received in this connection event, and  
@@ -920,9 +879,9 @@ static void LLBle_supervisionTimerStart(uint32_t currentTime, uint32_t connInter
 {
     uint32_t nextTimeout = currentTime + 6 * connInterval * BLE_TIME_UNIT;
     
-    LLBleTimer_stop(SUPERVISION_TIMER);
-    LLBleTimer_setTimeout(SUPERVISION_TIMER, nextTimeout);
-    LLBleTimer_start(SUPERVISION_TIMER);
+    LLTimer_stop(SUPERVISION_TIMER);
+    LLTimer_setTimeout(SUPERVISION_TIMER, nextTimeout);
+    LLTimer_start(SUPERVISION_TIMER);
 }
 
 
@@ -941,9 +900,9 @@ static void LLBle_supervisionTimerReset(uint32_t currentTime, uint32_t supervisi
     // Add current time and supervision timeout (in multiple of 10ms)
     uint32_t nextTimeout = currentTime + supervisionTimeout * 10000;   
     
-    LLBleTimer_stop(SUPERVISION_TIMER);
-    LLBleTimer_setTimeout(SUPERVISION_TIMER, nextTimeout);
-    LLBleTimer_start(SUPERVISION_TIMER);
+    LLTimer_stop(SUPERVISION_TIMER);
+    LLTimer_setTimeout(SUPERVISION_TIMER, nextTimeout);
+    LLTimer_start(SUPERVISION_TIMER);
 }
 
 
@@ -964,7 +923,7 @@ void LLBle_connectionTimerEventHandler(uint32_t ratTime)
         
     if(LLBle_state == State_Connected)
     {
-        LLBle_connEventStart = LLBle_convertRadioTimeToUs(ratTime);
+        LLBle_connEventStart = LLCommon_convertRadioTimeToUs(ratTime);
             
         // Stop RX
         RadioIf_stopRxCmd();
@@ -1042,7 +1001,7 @@ void LLBle_supervisionTimerEventHandler(uint32_t ratTime)
 void LLBle_disconnect(void)
 {
     // Stop connection event timer
-    LLBleTimer_stop(CONNECTION_EVENT_TIMER);
+    LLTimer_stop(CONNECTION_EVENT_TIMER);
     
     // Stop RX
     RadioIf_stopRxCmd();

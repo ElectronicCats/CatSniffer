@@ -54,7 +54,8 @@
 #define PACKET_TYPE_COMMAND_RESUME                                      0x44
 #define PACKET_TYPE_COMMAND_CFG_FREQUENCY                               0x45
 #define PACKET_TYPE_COMMAND_CFG_PHY                                     0x47
-#define PACKET_TYPE_COMMAND_CGF_BLE_INITIATOR_ADDR                      0x70
+#define PACKET_TYPE_COMMAND_CFG_WBMS_CHANNEL_TABLE                      0x50
+#define PACKET_TYPE_COMMAND_CFG_BLE_INITIATOR_ADDR                      0x70
 
 // Test command packet types
 #define PACKET_TYPE_TEST_COMMAND_TRANSMIT_SEQUENCE                      0x60
@@ -70,7 +71,10 @@
 #define COMMAND_CFG_PHY_DATA_OFFSET                                     0       // Offset of PHY number field in command data
 #define COMMAND_CFG_BLE_INITIATOR_ADDR_LENGTH                           6
 #define COMMAND_CFG_BLE_INITIATOR_ADDR_OFFSET                           0       // Offset of initiator address in command data
-
+#define COMMAND_CFG_WBMS_CHANNEL_TABLE_LENGTH_FIELD_LENGHT              1
+#define COMMAND_CFG_WBMS_CHANNEL_TABLE_LENGTH_FIELD_OFFSET              0
+#define COMMAND_CFG_WBMS_CHANNEL_TABLE_FIELD_LENGHT                     37
+#define COMMAND_CFG_WBMS_CHANNEL_TABLE_FIELD_OFFSET                     1
 
 // Test Command packet payload fields
 #define TEST_COMMAND_TRANSMIT_SEQUENCE_REPETITIONS_SIZE                 2

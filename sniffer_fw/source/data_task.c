@@ -41,6 +41,7 @@
 #include <ti/sysbios/knl/Event.h>
 #include <ti/sysbios/BIOS.h>
 #include <xdc/runtime/System.h>
+#include "task_event.h"
 #include "host_if.h"
 #include "radio_if.h"
 #include "radio_if_dataqueue.h"
@@ -49,13 +50,12 @@
 #include "timestamp.h"
 #include "packet_queue.h"
 #include "ll_manager.h"
-#include <ti/drivers/PIN.h>
-#include "Board.h"
 
 #include <stdbool.h>
 
+static void DataTask_waitInitDone(void);
 static void DataTask_rfCoreEventCb(uint32_t rfCoreEvent);
-static void DataTask_initEventHandler(void);
+static void DataTask_initRfEventHandler(void);
 static void DataTask_processPacket(void);
 static void DataTask_handleBufferOverflow(void);
 
@@ -74,14 +74,14 @@ static Event_Handle DataTask_EventHandle;
 //!        out of the queue, processes the packet and forwards it to the host.
 //!
 void dataTask(UArg a0, UArg a1)
-{
-    // Initialize the modules to be used by this task
-    HostIF_init();
+{   
     Timestamp_init();
     PacketQueue_init();
-    LL_init();
+    
+    // Wait for initilization of common modules to be done
+    DataTask_waitInitDone();
         
-    DataTask_initEventHandler();
+    DataTask_initRfEventHandler();
     
     while (true)
     {
@@ -94,7 +94,7 @@ void dataTask(UArg a0, UArg a1)
             // Process all packets in the RX packet queue
             while(RadioIF_hasPacket())
             {             
-                DataTask_processPacket();          
+                DataTask_processPacket();
             }
         }
         
@@ -166,9 +166,9 @@ static void DataTask_handleBufferOverflow(void)
 }
 
 
-//! \brief Initialize event handling
+//! \brief Initialize radio event handling
 //! 
-void DataTask_initEventHandler(void)
+void DataTask_initRfEventHandler(void)
 {
     // Create event with default parameters 
     DataTask_EventHandle = Event_create(NULL, NULL);
@@ -201,5 +201,13 @@ void DataTask_rfCoreEventCb(uint32_t rfCoreEvent)
     {
         Event_post(DataTask_EventHandle, EVENT_ID_RX_BUFFER_FULL);
     }
+}
+
+
+//! \brief Wait for initilization of the common modules between tasks in the system to be done
+//! 
+void DataTask_waitInitDone(void)
+{
+    UInt events = Event_pend(TaskEvent_Handle, EVENT_ID_DATA_TASK_INIT_DONE, Event_Id_NONE, BIOS_WAIT_FOREVER);
 }
 
