@@ -1,8 +1,8 @@
 /**
  * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
  * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
- * @cliArgs --board "/ti/boards/CC1352P1_LAUNCHXL" --product "simplelink_cc13x2_26x2_sdk@4.30.00.54"
- * @versions {"data":"2020090214","timestamp":"2020090214","tool":"1.6.0+1543","templates":"2020090214"}
+ * @cliArgs --board "/ti/boards/CC1352P1_LAUNCHXL" --product "simplelink_cc13x2_26x2_sdk@4.40.04.04"
+ * @versions {"data":"2021010520","timestamp":"2021010520","tool":"1.7.0+1746","templates":null}
  */
 
 /**
@@ -27,6 +27,7 @@ CCFG.dioBootloaderBackdoor    = 15;
 CCFG.levelBootloaderBackdoor  = "Active low";
 CCFG.xoscCapArray             = true;
 CCFG.xoscCapArrayDelta        = 0xD5;
+CCFG.enableBootloader         = true;
 CCFG.ccfgTemplate.$name       = "ti_devices_CCFGTemplate0";
 
 GPIO1.$hardware         = system.deviceData.board.components.LED_GREEN;
@@ -53,9 +54,9 @@ UART1.rxPinInstance.$name = "CONFIG_PIN_1";
  */
 GPIO1.gpioPin.$suggestSolution    = "boosterpack.40";
 GPIO2.gpioPin.$suggestSolution    = "boosterpack.39";
-RF.rfAntennaPin0.$suggestSolution = "DIO_28";
-RF.rfAntennaPin1.$suggestSolution = "DIO_29";
-RF.rfAntennaPin2.$suggestSolution = "DIO_30";
+RF.rfAntennaPin0.$suggestSolution = "41";
+RF.rfAntennaPin1.$suggestSolution = "42";
+RF.rfAntennaPin2.$suggestSolution = "43";
 UART1.uart.$suggestSolution       = "UART0";
 UART1.uart.txPin.$suggestSolution = "boosterpack.4";
 UART1.uart.rxPin.$suggestSolution = "boosterpack.3";
