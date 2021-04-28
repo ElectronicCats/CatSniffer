@@ -30,3 +30,5 @@ fp-info-cache
 sniffer_fw/Release/
 
 sniffer_fw/targetConfigs/
+
+sniffer_fw/Debug/
