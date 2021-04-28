@@ -36,10 +36,6 @@ https://energia.nu/pinmaps/launchxl-cc1352/
 - https://electrolama.com/projects/zig-a-zig-ah/#flashing-using-bsl
 - https://github.com/JelmerT/cc2538-bsl
 
-## Serial Port Settings for Snnifeer Agent:
-
-- Serial Baud: 921600
-
 ## Device Data:
 - device_id:0x2bb4102f
 - wafer_id:0xbb41
