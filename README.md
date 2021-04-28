@@ -1,6 +1,6 @@
 # CatSniffer
 
-Es una placa de desarrollo de factor de forma "memoria USB" original multiprotocolo de Internet de las Cosas (IoT) con los chips CC1352R de nueva generación de TI y SAMR34 de Microchip.
+Es una placa de desarrollo de factor de forma "memoria USB" original multiprotocolo de Internet de las Cosas (IoT) con los chips CC1352R de nueva generación de TI y SX1276 Semtech and SAMD21E18 de Microchip.
 
 ## Protocols
 
@@ -22,9 +22,21 @@ encabezado de depuración cJTAG, en caso de que deshabilite BSL por accidente o 
 
 ## Compatible Software
 
-- [Oficial TI PACKET-SNIFFER-2](https://www.ti.com/tool/download/PACKET-SNIFFER-2)
+- [Oficial TI PACKET-SNIFFER-2 v1.9](https://www.ti.com/tool/download/PACKET-SNIFFER-2)
+- [Sniffle](https://github.com/nccgroup/Sniffle)
 - [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt)
 - [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware)
+
+## Prerequisites
+For Manual build
+
+- CCS version: The packet sniffer firmware has been tested with CCS 10.2.
+- [SimpleLink CC13x2 and CC26x2 SDK 4.40.04.04](https://www.ti.com/tool/download/SIMPLELINK-CC13X2-26X2-SDK/4.40.04.04)
+- Python 3
+
+## Serial Port Settings for Snnifeer Agent:
+
+- Serial Baud: 3000000
 
 ## Note
 This kit is designed to allow Product developers to evaluate electronic components, circuitry, or software associated with the kit to determine whether to incorporate such items in a finished product and Software developers to write software applications for use with the end product. This kit is a developer product and when assembled may not be resold or otherwise marketed unless all required FCC (or any other local authority) equipment authorizations are first obtained. Operation is subject to the condition that this product not cause harmful interference to licensed radio stations and that this product accept harmful interference.
