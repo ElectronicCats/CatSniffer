@@ -40,8 +40,8 @@
 
 
 #define MAJOR_VERSION                   1
-#define MINOR_VERSION                   8
-#define VERSION_STRING             "1.8.0"
+#define MINOR_VERSION                   9
+#define VERSION_STRING             "1.9.0"
 
 #endif
 

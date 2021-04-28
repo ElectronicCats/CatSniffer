@@ -42,12 +42,20 @@
 #include <xdc/runtime/System.h>
 #include <ti/sysbios/BIOS.h>
 #include <ti/sysbios/knl/Task.h>
-#include "Board.h"
 
 #include "host_if_task.h"
 #include "data_task.h"
 #include "user_if_task.h"
 #include "control_task.h"
+#include "task_event.h"
+
+/* Board Header files */
+#if defined DeviceFamily_CC13X0 || DeviceFamily_CC26X0
+#include "board.h"
+#else
+#include "ti_drivers_config.h"
+#endif
+
 
 /***** Defines *****/
 #define HOST_IF_TASK_PRIORITY           1
@@ -60,10 +68,11 @@ static Task_Params hostIfTaskParams;
 static Task_Params dataTaskParams;
 static Task_Params userIfTaskParams;
 static Task_Params controlTaskParams;
-   
+
 
 void task_init(void)
 {
+    // Create the tasks
     Task_Params_init(&hostIfTaskParams);
     hostIfTaskParams.priority = HOST_IF_TASK_PRIORITY;
     Task_create(hostIfTask, &hostIfTaskParams, NULL);
@@ -78,7 +87,12 @@ void task_init(void)
     
     Task_Params_init(&controlTaskParams);
     controlTaskParams.priority = CONTROL_TASK_PRIORITY;
+    // Increase stack size for the control task
+    controlTaskParams.stackSize = 768;
     Task_create(controlTask, &controlTaskParams, NULL);
+    
+    // Initialize task event module
+    TaskEvent_init();
 }
 
 
@@ -92,7 +106,7 @@ int main(void)
     // Initialize tasks
     task_init();
 #endif
-    
+        
     // Start BIOS
     BIOS_start();
 

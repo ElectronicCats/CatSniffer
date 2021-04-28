@@ -41,7 +41,12 @@
 
 #include <ti/sysbios/knl/Event.h>
 
-#define EVENT_ID_USER_IF_TASK_END       Event_Id_00
+// User IF task end event
+#define EVENT_ID_USER_IF_TASK_END                       Event_Id_00
+
+// Events to signal common initialization done for each of the tasks
+#define EVENT_ID_USER_IF_TASK_INIT_DONE                 Event_Id_01
+#define EVENT_ID_DATA_TASK_INIT_DONE                    Event_Id_02
 
 // Event handle to be shared between tasks
 extern Event_Handle TaskEvent_Handle;

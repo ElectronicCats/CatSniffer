@@ -41,7 +41,9 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#define RADIO_TIMER_MAX_VALUE_US                            0x3FFFFFFF           // Maximum value of timer in us     
 #define RADIO_TIMER_FREQUENCY_MHZ                           4 // 4 MHz
+#define RADIO_TIMER_TICKS_PER_MICROSECOND                   RADIO_TIMER_FREQUENCY_MHZ
 #define RADIO_TIMER_HALF_CYCLE_VALUE                        0x80000000
 #define RADIO_TIMER_FIRST_QUARTER_CYCLE_VALUE               0x40000000
 #define RADIO_TIMER_THIRD_QUARTER_CYCLE_VALUE               0xC0000000
@@ -208,6 +210,12 @@ extern void RadioIf_configureRatTimerEvent(RadioIf_TimerId timerId, uint32_t tim
 //!
 //! \return none
 extern void RadioIf_cancelRatTimerEvent(RadioIf_TimerId timerId);
+
+
+//! \brief Run CMD_FS 
+//!
+//! \return none
+extern void RadioIf_runFsCmd(void);
 
 #endif
 

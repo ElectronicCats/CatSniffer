@@ -45,6 +45,15 @@
 #include <15.4g/smartrf_settings_15_4g_1.h>
 #include <15.4g/smartrf_settings_15_4g_2.h>
 #include <15.4g/smartrf_settings_15_4g_3.h>
+#include <15.4g/smartrf_settings_15_4g_4.h>
+#include <15.4g/smartrf_settings_15_4g_5.h>
+#include <15.4g/smartrf_settings_15_4g_6.h>
+#include <15.4g/smartrf_settings_15_4g_7.h>
+#include <15.4g/smartrf_settings_15_4g_8.h>
+#include <15.4g/smartrf_settings_15_4g_9.h>
+#include <15.4g/smartrf_settings_15_4g_10.h>
+#include <15.4g/smartrf_settings_15_4g_11.h>
+#include <15.4g/smartrf_settings_15_4g_12.h>
 #include <15.4/smartrf_settings_15_4_0.h>
 #include <ble5/smartrf_settings_ble5_0.h>
 
@@ -74,6 +83,24 @@ const Phy_Prop_15_4_g_Obj Phy_phyTableProp_15_4_g[] =
     {(rfc_CMD_PROP_RADIO_DIV_SETUP_t*)&Ieee154g2_cmdPropRadioDivSetup, &Ieee154g2_cmdFs, &Ieee154g2_cmdPropRxAdv, &Ieee154g2_cmdPropTxAdv, &Ieee154g2_mode},
     // 5 kbps, SimpleLink Long Range, 433 Mhz band
     {(rfc_CMD_PROP_RADIO_DIV_SETUP_t*)&Ieee154g3_cmdPropRadioDivSetup, &Ieee154g3_cmdFs, &Ieee154g3_cmdPropRxAdv, &Ieee154g3_cmdPropTxAdv, &Ieee154g3_mode},
+    // 50 kbps, WiSUN mode #1a 
+    {(rfc_CMD_PROP_RADIO_DIV_SETUP_t*)&Ieee154g4_cmdPropRadioDivSetup, &Ieee154g4_cmdFs, &Ieee154g4_cmdPropRxAdv, &Ieee154g4_cmdPropTxAdv, &Ieee154g4_mode},
+    // 50 kbps, WiSUN mode #1b 
+    {(rfc_CMD_PROP_RADIO_DIV_SETUP_t*)&Ieee154g5_cmdPropRadioDivSetup, &Ieee154g5_cmdFs, &Ieee154g5_cmdPropRxAdv, &Ieee154g5_cmdPropTxAdv, &Ieee154g5_mode},
+    // 100 kbps, WiSUN mode #2a
+    {(rfc_CMD_PROP_RADIO_DIV_SETUP_t*)&Ieee154g6_cmdPropRadioDivSetup, &Ieee154g6_cmdFs, &Ieee154g6_cmdPropRxAdv, &Ieee154g6_cmdPropTxAdv, &Ieee154g6_mode},
+    // 100 kbps, WiSUN mode #2b
+    {(rfc_CMD_PROP_RADIO_DIV_SETUP_t*)&Ieee154g7_cmdPropRadioDivSetup, &Ieee154g7_cmdFs, &Ieee154g7_cmdPropRxAdv, &Ieee154g7_cmdPropTxAdv, &Ieee154g7_mode},
+    // 150 kbps, WiSUN mode #3
+    {(rfc_CMD_PROP_RADIO_DIV_SETUP_t*)&Ieee154g8_cmdPropRadioDivSetup, &Ieee154g8_cmdFs, &Ieee154g8_cmdPropRxAdv, &Ieee154g8_cmdPropTxAdv, &Ieee154g8_mode},
+    // 200 kbps, WiSUN mode #4a
+    {(rfc_CMD_PROP_RADIO_DIV_SETUP_t*)&Ieee154g9_cmdPropRadioDivSetup, &Ieee154g9_cmdFs, &Ieee154g9_cmdPropRxAdv, &Ieee154g9_cmdPropTxAdv, &Ieee154g9_mode},
+    // 200 kbps, WiSUN mode #4b
+    {(rfc_CMD_PROP_RADIO_DIV_SETUP_t*)&Ieee154g10_cmdPropRadioDivSetup, &Ieee154g10_cmdFs, &Ieee154g10_cmdPropRxAdv, &Ieee154g10_cmdPropTxAdv, &Ieee154g10_mode},
+    // 100 kbps, ZigBee R23 non N.A. region   
+    {(rfc_CMD_PROP_RADIO_DIV_SETUP_t*)&Ieee154g11_cmdPropRadioDivSetup, &Ieee154g11_cmdFs, &Ieee154g11_cmdPropRxAdv, &Ieee154g11_cmdPropTxAdv, &Ieee154g11_mode},
+    // 500 kbps, ZigBee R23 N.A. region   
+    {(rfc_CMD_PROP_RADIO_DIV_SETUP_t*)&Ieee154g12_cmdPropRadioDivSetup, &Ieee154g12_cmdFs, &Ieee154g12_cmdPropRxAdv, &Ieee154g12_cmdPropTxAdv, &Ieee154g12_mode},
     {NULL, NULL, NULL, NULL, NULL}
 };
 
@@ -98,6 +125,14 @@ const Phy_Ble_5_Obj Phy_phyTableBle_5[] =
 };
 
 
+// Table of WBMS PHY settings 
+const Phy_Wbms_Obj Phy_phyTableWbms[] = 
+{
+    // WBMS PHY is not supported for this device 
+    {NULL, NULL, NULL, NULL, NULL}
+};
+
+
 // Table of all supported Rf API and PHY setting combinations
 // Note: This table must match the PHY tables for each RF API 
 const Phy_Obj Phy_supportedPhys[] =
@@ -106,6 +141,15 @@ const Phy_Obj Phy_supportedPhys[] =
   {PROPRIETARY_15_4_G, 1},
   {PROPRIETARY_15_4_G, 2},
   {PROPRIETARY_15_4_G, 3},
+  {PROPRIETARY_15_4_G, 4},
+  {PROPRIETARY_15_4_G, 5},
+  {PROPRIETARY_15_4_G, 6},
+  {PROPRIETARY_15_4_G, 7},
+  {PROPRIETARY_15_4_G, 8},
+  {PROPRIETARY_15_4_G, 9},
+  {PROPRIETARY_15_4_G, 10},
+  {PROPRIETARY_15_4_G, 11},
+  {PROPRIETARY_15_4_G, 12},
   {PROPRIETARY, 0},
   {PROPRIETARY, 1},
   {PROPRIETARY, 2},
@@ -143,4 +187,10 @@ uint8_t Phy_getNumIeee_15_4_Phys(void)
 uint8_t Phy_getNumBle_5_Phys(void)
 {
     return (sizeof(Phy_phyTableBle_5)/sizeof(Phy_phyTableBle_5[0])) - 1;
+}
+
+
+uint8_t Phy_getNumWbmsPhys(void)
+{
+    return (sizeof(Phy_phyTableWbms)/sizeof(Phy_phyTableWbms[0])) - 1;
 }

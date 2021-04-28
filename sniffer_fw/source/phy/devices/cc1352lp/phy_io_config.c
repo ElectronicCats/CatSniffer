@@ -43,16 +43,16 @@
 #include <ti/drivers/PIN.h>
 
 /* Board Header files */
-#include "Board.h"
+#include "ti_drivers_config.h"
 
 /* Pin driver handle */
 static PIN_Handle Phy_pinHandle;
 static PIN_State Phy_pinState;
 
 // DIO 28, DIO 29 and DIO 30 are used to control the RF switch on the board
-#define RF_SWITCH_DIO28                         Board_RF_24GHZ
-#define RF_SWITCH_DIO29                         Board_RF_HIGH_PA
-#define RF_SWITCH_DIO30                         Board_RF_SUB1GHZ
+#define RF_SWITCH_DIO28                         CONFIG_RF_24GHZ
+#define RF_SWITCH_DIO29                         CONFIG_RF_HIGH_PA
+#define RF_SWITCH_DIO30                         CONFIG_RF_SUB1GHZ
 
 #define RF_SWITCH_DIO28_SETTING_1_GHZ           0
 #define RF_SWITCH_DIO29_SETTING_1_GHZ           0

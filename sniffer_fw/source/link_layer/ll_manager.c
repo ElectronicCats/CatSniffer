@@ -39,14 +39,16 @@
 #include "ll_manager.h"
 #include "ll_default.h"
 #include "ble/ll_ble.h"
+#include "wbms/ll_wbms.h"
 #include "../phy/phy_manager.h"
 
-// The currently used Link Layer type (BLE or Default)
-static LL_Type LLManager_currentLLType = DEFAULT;
+// The currently used Link Layer type (BLE, WBMS or Default)
+static LL_Type LLManager_currentLLType = LL_DEFAULT;
 
 const LL_Obj LL_table[] =
 {
     { LLBle_processPacket, LLBle_reset },               // BLE Link Layer
+    { LLWbms_processPacket, LLWbms_reset },             // wBMS Link Layer
     { LLDefault_processPacket, LLDefault_reset }        // Default Link Layer
 };
 
@@ -64,15 +66,6 @@ void LL_setLLType(LL_Type llType)
     LL_table[LLManager_currentLLType].pResetFunc();
 }
 
-
-void LL_init(void)
-{
-    if(PhyManager_isBlePhySupported())
-    {
-        // Only the BLE link layer have an init function
-        LLBle_init();
-    }
-}
 
 
 

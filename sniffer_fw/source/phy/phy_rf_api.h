@@ -46,6 +46,7 @@ typedef enum Phy_RfApi
     PROPRIETARY_15_4_G=1,
     IEEE_802_15_4=2,
     BLE_5_1M=3,
+    WBMS=4,
 } Phy_RfApi;
 
 

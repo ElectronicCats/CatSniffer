@@ -73,10 +73,5 @@ extern void LLBle_setInitiatorAddressFilterValue(uint8_t* initiatorAddr);
 extern void LLBle_reset(void);
 
 
-//! \brief Initialize Link Layer. This function must be called before the Link Layer is used. 
-//!
-//! \return none 
-extern void LLBle_init(void);
-
 #endif
 

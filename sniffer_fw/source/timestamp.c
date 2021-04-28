@@ -79,12 +79,23 @@ uint16_t Timestamp_getRatOverflowCounter(void)
 uint16_t Timestamp_extractTimestamp(uint8_t* packetBuffer, uint16_t length, DataPacket_Obj* dataPacket)
 {
     uint32_t radioTimestamp = 0;
+    bool bRemoveTimestampFromRawData = true;
     
     if((PhyManager_getRfApi() == IEEE_802_15_4) || (PhyManager_getRfApi() == BLE_5_1M))
     {
         // Handling for IEEE 802.15.4 and BLE 5 RF APIs
         int timestampIndex =  length - RADIO_IF_TIMESTAMP_LEN;
         radioTimestamp = Common_get32BitValueLE(&packetBuffer[timestampIndex]);
+    }
+    else if(PhyManager_getRfApi() == WBMS)
+    {
+        // Handling for WBMS RF APIs
+        int timestampIndex = (length - RADIO_IF_STATUS_LEN - RADIO_IF_TIMESTAMP_LEN);
+        radioTimestamp = Common_get32BitValueLE(&packetBuffer[timestampIndex]);
+        
+        // Do not remove timestamp bytes from raw data. For WBMS these shall be included in the packet
+        // sent to host. 
+        bRemoveTimestampFromRawData = false;
     }
     else
     {
@@ -102,8 +113,14 @@ uint16_t Timestamp_extractTimestamp(uint8_t* packetBuffer, uint16_t length, Data
     uint64_t timeStampUs = Timestamp_convertToUs(radioTimestamp, RADIO_TIMER_FREQUENCY_MHZ);
     Timestamp_setPacketTimestamp(timeStampUs, dataPacket);
 
-    // Return updated payload length after timestamp bytes are removed
-    return length -= RADIO_IF_TIMESTAMP_LEN;
+    // If timestamp bytes are removed, update the returned length
+    if(bRemoveTimestampFromRawData)
+    {
+        // Updated length after timestamp bytes are removed 
+        length -= RADIO_IF_TIMESTAMP_LEN;
+    }
+    
+    return length;
 }
 
 

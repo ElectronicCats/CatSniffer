@@ -45,7 +45,7 @@ uint32_t Ieee154_0_pOverrides[] =
 
 
 // Overrides for CMD_RADIO_SETUP_PA
-uint32_t pOverridesTxStd[] =
+uint32_t Ieee154_0_pOverridesTxStd[] =
 {
     // The TX Power element should always be the first in the list
     TX_STD_POWER_OVERRIDE(0x941E),
@@ -56,7 +56,7 @@ uint32_t pOverridesTxStd[] =
 
 
 // Overrides for CMD_RADIO_SETUP_PA
-uint32_t pOverridesTx20[] =
+uint32_t Ieee154_0_pOverridesTx20[] =
 {
     // The TX Power element should always be the first in the list
     TX20_POWER_OVERRIDE(0x003F5BB8),
@@ -88,8 +88,8 @@ rfc_CMD_RADIO_SETUP_PA_t Ieee154_0_cmdRadioSetup =
     .config.bNoFsPowerUp = 0x0,
     .txPower = 0x941E,
     .pRegOverride = Ieee154_0_pOverrides,
-    .pRegOverrideTxStd = pOverridesTxStd,
-    .pRegOverrideTx20 = pOverridesTx20
+    .pRegOverrideTxStd = Ieee154_0_pOverridesTxStd,
+    .pRegOverrideTx20 = Ieee154_0_pOverridesTx20
 };
 
 

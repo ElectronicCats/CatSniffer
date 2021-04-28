@@ -144,6 +144,14 @@ void RadioIF_resetDataQueue(void)
     // Set read pointer and data queue current entry pointer both to first entry
     RadioIF_dataQueue.pCurrEntry = firstEntry;
     RadioIF_readEntry = (rfc_dataEntryGeneral_t*)firstEntry;
+    
+    // Reset status for all entries
+    rfc_dataEntryGeneral_t* pEntry = RadioIF_readEntry;
+    for(int i = 0; i < NUM_DATA_ENTRIES; i++)
+    {
+        pEntry->status = DATA_ENTRY_PENDING;
+        pEntry = (rfc_dataEntryGeneral_t*)pEntry->pNextEntry;
+    }
 }
 
 
