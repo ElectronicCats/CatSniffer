@@ -21,8 +21,9 @@
 - APIMote Schematic https://github.com/riverloopsec/apimote
 
 ## Protocolo de TI sniffer 
-- Oficial de TI https://www.ti.com/tool/download/PACKET-SNIFFER-2
-- http://software-dl.ti.com/lprf/packet_sniffer_2/docs/user_guide/html/sniffer_fw/firmware/command_interface.html
+- [Sniffer Oficial de TI](https://www.ti.com/tool/download/PACKET-SNIFFER-2)
+- [Commmands Sniffer TI](http://software-dl.ti.com/lprf/packet_sniffer_2/docs/user_guide/html/sniffer_fw/firmware/command_interface.html)
+- [Build sniffer firmware](http://software-dl.ti.com/lprf/packet_sniffer_2/docs/user_guide/html/sniffer_fw/firmware/build.html)
 
 ## Bootloader TI CC1352 
 
