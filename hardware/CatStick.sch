@@ -214,47 +214,6 @@ F 3 "" H 7485 8975 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R3
-U 1 1 58CA3762
-P 8885 8675
-F 0 "R3" V 8965 8675 50  0000 C CNN
-F 1 "100K" V 8885 8675 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8815 8675 50  0001 C CNN
-F 3 "" H 8885 8675 50  0000 C CNN
-F 4 "C179820" H 8885 8675 50  0001 C CNN "LCSC#"
-F 5 "RT0603FRD07100KL" H 8885 8675 50  0001 C CNN "manf#"
-F 6 "LCSC" H 8885 8675 50  0001 C CNN "provedor"
-	1    8885 8675
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C21
-U 1 1 58CA3820
-P 8885 9275
-F 0 "C21" H 8910 9375 50  0000 L CNN
-F 1 "100nF" H 8910 9175 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 8923 9125 50  0001 C CNN
-F 3 "" H 8885 9275 50  0000 C CNN
-F 4 "C14663" H 8885 9275 50  0001 C CNN "LCSC#"
-F 5 "LCSC" H 8885 9275 50  0001 C CNN "provedor"
-F 6 "CC0603KRX7R9BB104" H 8885 9275 50  0001 C CNN "manf#"
-	1    8885 9275
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR047
-U 1 1 58CA38E4
-P 8885 9525
-F 0 "#PWR047" H 8885 9275 50  0001 C CNN
-F 1 "GND" H 8885 9375 50  0000 C CNN
-F 2 "" H 8885 9525 50  0000 C CNN
-F 3 "" H 8885 9525 50  0000 C CNN
-	1    8885 9525
-	1    0    0    -1  
-$EndComp
-Text Label 8735 9025 2    60   ~ 0
-RESET_N
-$Comp
 L power:GND #PWR035
 U 1 1 58CC4391
 P 3350 5900
@@ -279,8 +238,6 @@ F 6 "LCSC" H 4100 5900 50  0001 C CNN "provedor"
 	1    4100 5900
 	0    1    1    0   
 $EndComp
-Text Label 4350 5900 0    60   ~ 0
-SWITCH
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 58CCF366
@@ -333,8 +290,6 @@ Wire Wire Line
 Connection ~ 7485 8675
 Connection ~ 7485 8875
 Wire Wire Line
-	8185 8875 8885 8875
-Wire Wire Line
 	8185 8775 8285 8775
 Wire Wire Line
 	8285 8675 8185 8675
@@ -342,16 +297,6 @@ Wire Wire Line
 	8285 8575 8185 8575
 Wire Wire Line
 	8185 8475 8285 8475
-Wire Wire Line
-	8885 8475 8885 8525
-Wire Wire Line
-	8885 8825 8885 8875
-Wire Wire Line
-	8885 9425 8885 9525
-Connection ~ 8885 8875
-Wire Wire Line
-	8735 9025 8885 9025
-Connection ~ 8885 9025
 Wire Wire Line
 	4035 1250 4035 1350
 Wire Wire Line
@@ -371,10 +316,6 @@ Wire Wire Line
 Wire Wire Line
 	7485 8875 7485 8975
 Wire Wire Line
-	8885 8875 8885 9025
-Wire Wire Line
-	8885 9025 8885 9125
-Wire Wire Line
 	5945 1705 6165 1705
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J4
@@ -382,7 +323,7 @@ U 1 1 5B9358B4
 P 7885 8675
 F 0 "J4" H 7935 9092 50  0000 C CNN
 F 1 "Conn_02x05_Odd_Even" H 7935 9001 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_2x05_P1.00mm_Vertical" H 7885 8675 50  0001 C CNN
+F 2 "Connector:Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical" H 7885 8675 50  0001 C CNN
 F 3 "~" H 7885 8675 50  0001 C CNN
 	1    7885 8675
 	1    0    0    -1  
@@ -891,17 +832,6 @@ F 3 "" H 7385 8475 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7385 8475 7685 8475
-$Comp
-L power:VCC #PWR046
-U 1 1 5B9CE581
-P 8885 8475
-F 0 "#PWR046" H 8885 8325 50  0001 C CNN
-F 1 "VCC" H 8902 8648 50  0000 C CNN
-F 2 "" H 8885 8475 50  0001 C CNN
-F 3 "" H 8885 8475 50  0001 C CNN
-	1    8885 8475
-	1    0    0    -1  
-$EndComp
 Text Notes 485  5225 0    89   ~ 0
 CC1352
 Connection ~ 6165 1705
@@ -1889,8 +1819,6 @@ Text Label 19555 7135 2    50   ~ 0
 SW_RFI
 Text Label 14885 3765 0    50   ~ 0
 RESET_SX
-Text Label 14880 1765 0    50   ~ 0
-RTS
 Text Label 14880 1865 0    50   ~ 0
 CTS
 Wire Wire Line
@@ -2569,8 +2497,6 @@ Wire Wire Line
 	17425 4790 17425 4705
 Wire Wire Line
 	17600 4890 17520 4890
-Text Label 17515 4990 2    50   ~ 0
-RST
 Wire Wire Line
 	17600 4990 17515 4990
 Wire Wire Line
@@ -3002,11 +2928,7 @@ F 6 "LCSC" H 4575 7145 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2000 8135 1900 8135
-Text Label 1900 8135 2    60   ~ 0
-SWITCH
-Wire Wire Line
-	3150 9145 3150 9035
+	3150 9355 3150 9095
 Wire Wire Line
 	4575 7400 4575 7335
 $Comp
@@ -3032,10 +2954,8 @@ Connection ~ 4575 7335
 Wire Wire Line
 	4575 7335 4575 7295
 Wire Wire Line
-	4795 7260 4795 7335
-Wire Wire Line
 	4795 7335 4575 7335
-Text Label 3150 9145 3    50   ~ 0
+Text Label 3150 9355 3    50   ~ 0
 CTS
 NoConn ~ 3800 7935
 NoConn ~ 3800 8035
@@ -3063,6 +2983,35 @@ Wire Wire Line
 Text Label 14890 2265 0    50   ~ 0
 LED3
 NoConn ~ 14890 2765
-Text Label 4795 7260 0    50   ~ 0
+Text Label 4795 7155 0    50   ~ 0
+RESET_CC
+Text Label 17515 4990 2    50   ~ 0
+RESET
+Text Label 14880 1765 0    50   ~ 0
 RTS
+Text Label 5035 7340 0    50   ~ 0
+RTS
+Wire Wire Line
+	5035 7340 4795 7340
+Wire Wire Line
+	4795 7155 4795 7335
+Connection ~ 4795 7335
+Wire Wire Line
+	4795 7335 4795 7340
+Text Label 8295 8875 0    50   ~ 0
+RESET_CC
+Wire Wire Line
+	8295 8875 8185 8875
+Wire Wire Line
+	3150 9095 3005 9095
+Wire Wire Line
+	3005 9095 3005 9350
+Connection ~ 3150 9095
+Wire Wire Line
+	3150 9095 3150 9035
+NoConn ~ 2000 8135
+Text Label 4350 5900 0    50   ~ 0
+RESET_CC
+Text Label 3005 9350 3    50   ~ 0
+RESET_CC
 $EndSCHEMATC
