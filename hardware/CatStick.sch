@@ -882,7 +882,7 @@ Wire Notes Line
 Wire Notes Line
 	11760 5605 11760 5615
 NoConn ~ 3800 7235
-NoConn ~ 3450 6535
+NoConn ~ 2000 8335
 NoConn ~ 3050 9035
 NoConn ~ 2750 9035
 Text Label 17720 4090 2    50   ~ 0
@@ -1501,7 +1501,7 @@ F 3 "" H 19970 7795 50  0001 C CNN
 	1    19970 7795
 	-1   0    0    -1  
 $EndComp
-Text Label 19150 7135 2    50   ~ 0
+Text Label 19170 7135 2    50   ~ 0
 SW_RFO
 Text Label 19160 7335 2    50   ~ 0
 SW_RFI
@@ -2643,12 +2643,10 @@ F 7 "Mouser" H 2850 7785 50  0001 C CNN "provedor"
 	1    2850 7785
 	1    0    0    -1  
 $EndComp
-Text Label 1895 8335 2    50   ~ 0
+Text Label 3450 6430 1    50   ~ 0
 LED4
 NoConn ~ 2000 7935
 NoConn ~ 2000 8235
-Wire Wire Line
-	2000 8335 1895 8335
 Text Label 14675 2705 0    50   ~ 0
 LED3
 Text Label 4795 7155 0    50   ~ 0
@@ -2932,7 +2930,7 @@ Wire Wire Line
 Wire Wire Line
 	19510 7135 19670 7135
 Wire Wire Line
-	19150 7135 19210 7135
+	19170 7135 19210 7135
 $Comp
 L Switch:SW_Push SW1
 U 1 1 60AC93F3
@@ -2968,4 +2966,6 @@ Wire Wire Line
 	10155 1285 10125 1285
 Text Label 14675 3205 0    50   ~ 0
 U_SWITCH
+Wire Wire Line
+	3450 6430 3450 6535
 $EndSCHEMATC
