@@ -619,13 +619,13 @@ DCDC_SW
 Wire Wire Line
 	3900 7535 3800 7535
 Text Label 1900 7235 2    50   ~ 0
-RF_P_2_4_GHZ
+2_4_GHZ_RF_P
 Text Label 1900 7335 2    50   ~ 0
-RF_N_2_4_GHZ
+2_4_GHZ_RF_N
 Text Label 1900 7435 2    50   ~ 0
-RF_P_SUB_1_GHZ
+SUB_1_GHZ_RF_P
 Text Label 1900 7535 2    50   ~ 0
-RF_N_SUB_1_GHZ
+SUB_1_GHZ_RF_N
 Text Label 1900 7635 2    50   ~ 0
 RX_TX
 Wire Wire Line
@@ -650,14 +650,6 @@ Wire Wire Line
 	2950 9035 2950 9135
 Wire Wire Line
 	3250 9035 3250 9135
-Text Label 6790 6850 2    50   ~ 0
-RF_P_2_4_GHZ
-Text Label 6795 6750 2    50   ~ 0
-RF_N_2_4_GHZ
-Text Label 6790 6650 2    50   ~ 0
-RF_P_SUB_1_GHZ
-Text Label 6785 6550 2    50   ~ 0
-RF_N_SUB_1_GHZ
 Text Label 8995 6750 2    50   ~ 0
 RX_TX
 Text Label 3550 9035 0    60   ~ 0
@@ -2968,4 +2960,12 @@ Text Label 14675 3205 0    50   ~ 0
 U_SWITCH
 Wire Wire Line
 	3450 6430 3450 6535
+Text Label 6785 6550 2    50   ~ 0
+SUB_1_GHZ_RF_N
+Text Label 6790 6650 2    50   ~ 0
+SUB_1_GHZ_RF_P
+Text Label 6795 6750 2    50   ~ 0
+2_4_GHZ_RF_N
+Text Label 6790 6850 2    50   ~ 0
+2_4_GHZ_RF_P
 $EndSCHEMATC
