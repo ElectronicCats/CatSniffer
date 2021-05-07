@@ -992,15 +992,15 @@ Text Label 14675 3505 0    50   ~ 0
 NSS
 Text Label 14665 4105 0    50   ~ 0
 CIPO
-Text Label 14655 1905 0    50   ~ 0
-BUSY
-Text Label 14655 1605 0    50   ~ 0
-DIO1
 Text Label 14655 1705 0    50   ~ 0
-DIO2
+BUSY
 Text Label 14655 1805 0    50   ~ 0
+DIO1
+Text Label 14655 1905 0    50   ~ 0
+DIO2
+Text Label 14675 2605 0    50   ~ 0
 DIO3
-Text Label 14670 4605 0    50   ~ 0
+Text Label 14675 3305 0    50   ~ 0
 ANT_SW
 $Comp
 L CatStick-rescue:SW_Push-Switch RESET1
@@ -1497,7 +1497,7 @@ Text Label 19170 7135 2    50   ~ 0
 SW_RFO
 Text Label 19160 7335 2    50   ~ 0
 SW_RFI
-Text Label 14670 4205 0    50   ~ 0
+Text Label 14675 2505 0    50   ~ 0
 RESET_SX
 Text Label 14665 2305 0    50   ~ 0
 CTS
@@ -1642,11 +1642,11 @@ F 3 "" H 20540 8180 50  0001 C CNN
 	1    20540 8180
 	-1   0    0    -1  
 $EndComp
-Text Label 14675 2805 0    50   ~ 0
+Text Label 14675 2705 0    50   ~ 0
 CTF1
-Text Label 14675 3305 0    50   ~ 0
+Text Label 14675 2805 0    50   ~ 0
 CTF2
-Text Label 14680 3405 0    50   ~ 0
+Text Label 14675 3205 0    50   ~ 0
 CTF3
 $Comp
 L CatStick-rescue:C-Device C6
@@ -2129,9 +2129,9 @@ Wire Wire Line
 	1315 9250 1315 9355
 Wire Wire Line
 	1315 9640 1315 9555
-Text Label 14675 2505 0    50   ~ 0
+Text Label 14670 4505 0    50   ~ 0
 LED1
-Text Label 14675 2605 0    50   ~ 0
+Text Label 14670 4605 0    50   ~ 0
 LED2
 Wire Wire Line
 	20540 7920 20540 7875
@@ -2167,7 +2167,7 @@ Text Label 21280 7890 2    50   ~ 0
 DIO22
 Wire Wire Line
 	21280 7890 21465 7890
-Text Label 14670 4505 0    50   ~ 0
+Text Label 14680 3405 0    50   ~ 0
 DIO22
 Wire Wire Line
 	17800 3990 17625 3990
@@ -2639,7 +2639,7 @@ Text Label 3450 6430 1    50   ~ 0
 LED4
 NoConn ~ 2000 7935
 NoConn ~ 2000 8235
-Text Label 14675 2705 0    50   ~ 0
+Text Label 14655 1605 0    50   ~ 0
 LED3
 Text Label 4795 7155 0    50   ~ 0
 RESET_CC
@@ -2956,7 +2956,7 @@ Wire Wire Line
 	10155 1445 10155 1285
 Wire Wire Line
 	10155 1285 10125 1285
-Text Label 14675 3205 0    50   ~ 0
+Text Label 14670 4205 0    50   ~ 0
 U_SWITCH
 Wire Wire Line
 	3450 6430 3450 6535
