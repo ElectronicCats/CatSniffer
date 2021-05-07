@@ -1,6 +1,21 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# CatStick-rescue_+3V3-power
+#
+DEF CatStick-rescue_+3V3-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "CatStick-rescue_+3V3-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
 # CatStick-rescue_0900FM15D0039-Electronic_Cats
 #
 DEF CatStick-rescue_0900FM15D0039-Electronic_Cats U 0 40 Y Y 1 F N
@@ -113,6 +128,24 @@ X VDDA 9 -670 1210 200 R 40 40 1 1 W
 ENDDRAW
 ENDDEF
 #
+# CatStick-rescue_C-Device
+#
+DEF CatStick-rescue_C-Device C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "CatStick-rescue_C-Device" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # CatStick-rescue_CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue
 #
 DEF CatStick-rescue_CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue U 0 40 Y Y 1 F N
@@ -173,31 +206,29 @@ X DIO_4 9 -850 -250 200 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_RFSW8006QTR7-electroniccats
+# CatStick-rescue_C_Small-Device
 #
-DEF CatStick-rescue_RFSW8006QTR7-electroniccats U 0 40 Y Y 1 F N
-F0 "U" 0 50 50 H V C CNN
-F1 "CatStick-rescue_RFSW8006QTR7-electroniccats" 0 -50 50 H V C CNN
-F2 "Package_DFN_QFN:DFN-8-1EP_2x2mm_P0.5mm_EP0.9x1.3mm" 0 0 50 H I C CNN
+DEF CatStick-rescue_C_Small-Device C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "CatStick-rescue_C_Small-Device" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
 DRAW
-S -350 -100 400 -1100 0 1 0 f
-X VDD 1 500 -200 100 L 50 50 1 1 I
-X ANT 2 500 -600 100 L 50 50 1 1 I
-X CRF1 3 -450 -800 100 R 50 50 1 1 I
-X RF1 4 -450 -200 100 R 50 50 1 1 I
-X RF3 5 -450 -400 100 R 50 50 1 1 I
-X CRF3 6 -450 -1000 100 R 50 50 1 1 I
-X CRF2 7 -450 -900 100 R 50 50 1 1 I
-X RF2 8 -450 -300 100 R 50 50 1 1 I
+P 2 0 1 13 -60 -20 60 -20 N
+P 2 0 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Conn_01x06_Female
+# CatStick-rescue_Conn_01x06_Female-Connector
 #
-DEF Connector_Conn_01x06_Female J 0 40 Y N 1 F N
+DEF CatStick-rescue_Conn_01x06_Female-Connector J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "Connector_Conn_01x06_Female" 0 -400 50 H V C CNN
+F1 "CatStick-rescue_Conn_01x06_Female-Connector" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -225,36 +256,11 @@ X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Conn_Coaxial
+# CatStick-rescue_Conn_02x05_Odd_Even-Connector_Generic
 #
-DEF Connector_Conn_Coaxial J 0 40 Y N 1 F N
-F0 "J" 10 120 50 H V C CNN
-F1 "Connector_Conn_Coaxial" 115 0 50 V V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- *BNC*
- *SMA*
- *SMB*
- *SMC*
- *Cinch*
-$ENDFPLIST
-DRAW
-A -2 0 71 1636 0 0 1 10 N -70 20 70 0
-A -1 0 71 0 -1638 0 1 10 N 70 0 -70 -20
-C 0 0 20 0 1 8 N
-P 2 0 1 0 -100 0 -20 0 N
-P 2 0 1 0 0 -100 0 -70 N
-X In 1 -200 0 100 R 50 50 1 1 P
-X Ext 2 0 -200 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Connector_Generic_Conn_02x05_Odd_Even
-#
-DEF Connector_Generic_Conn_02x05_Odd_Even J 0 40 Y N 1 F N
+DEF CatStick-rescue_Conn_02x05_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 50 300 50 H V C CNN
-F1 "Connector_Generic_Conn_02x05_Odd_Even" 50 -300 50 H V C CNN
+F1 "CatStick-rescue_Conn_02x05_Odd_Even-Connector_Generic" 50 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -285,11 +291,347 @@ X Pin_9 9 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_USB_C_Plug_USB2.0
+# CatStick-rescue_Conn_Coaxial-Connector
 #
-DEF Connector_USB_C_Plug_USB2.0 P 0 40 Y Y 1 F N
+DEF CatStick-rescue_Conn_Coaxial-Connector J 0 40 Y N 1 F N
+F0 "J" 10 120 50 H V C CNN
+F1 "CatStick-rescue_Conn_Coaxial-Connector" 115 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *BNC*
+ *SMA*
+ *SMB*
+ *SMC*
+ *Cinch*
+$ENDFPLIST
+DRAW
+A -2 0 71 1636 0 0 1 10 N -70 20 70 0
+A -1 0 71 0 -1638 0 1 10 N 70 0 -70 -20
+C 0 0 20 0 1 8 N
+P 2 0 1 0 -100 0 -20 0 N
+P 2 0 1 0 0 -100 0 -70 N
+X In 1 -200 0 100 R 50 50 1 1 P
+X Ext 2 0 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_Crystal-Device
+#
+DEF CatStick-rescue_Crystal-Device Y 0 40 N N 1 F N
+F0 "Y" 0 150 50 H V C CNN
+F1 "CatStick-rescue_Crystal-Device" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Crystal*
+$ENDFPLIST
+DRAW
+S -45 100 45 -100 0 1 12 N
+P 2 0 1 0 -100 0 -75 0 N
+P 2 0 1 20 -75 -50 -75 50 N
+P 2 0 1 20 75 -50 75 50 N
+P 2 0 1 0 100 0 75 0 N
+X 1 1 -150 0 50 R 50 50 1 1 P
+X 2 2 150 0 50 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_Crystal_GND24-Device
+#
+DEF CatStick-rescue_Crystal_GND24-Device Y 0 40 Y N 1 F N
+F0 "Y" 125 200 50 H V L CNN
+F1 "CatStick-rescue_Crystal_GND24-Device" 125 125 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Crystal*
+$ENDFPLIST
+DRAW
+S -45 100 45 -100 0 1 12 N
+P 2 0 1 0 -100 0 -80 0 N
+P 2 0 1 20 -80 -50 -80 50 N
+P 2 0 1 0 0 -150 0 -140 N
+P 2 0 1 0 0 140 0 150 N
+P 2 0 1 20 80 -50 80 50 N
+P 2 0 1 0 80 0 100 0 N
+P 4 0 1 0 -100 -90 -100 -140 100 -140 100 -90 N
+P 4 0 1 0 -100 90 -100 140 100 140 100 90 N
+X 1 1 -150 0 50 R 50 50 1 1 P
+X 2 2 0 200 50 D 50 50 1 1 P
+X 3 3 150 0 50 L 50 50 1 1 P
+X 4 4 0 -200 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_Ferrite_Bead-Device
+#
+DEF CatStick-rescue_Ferrite_Bead-Device FB 0 0 N Y 1 F N
+F0 "FB" -150 25 50 V V C CNN
+F1 "CatStick-rescue_Ferrite_Bead-Device" 150 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Inductor_*
+ L_*
+ *Ferrite*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 0 -50 0 -48 N
+P 2 0 1 0 0 50 0 51 N
+P 5 0 1 0 -109 16 -67 89 109 -12 66 -85 -109 16 N
+X ~ 1 0 150 100 D 50 50 1 1 P
+X ~ 2 0 -150 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_Fuse_Small-Device
+#
+DEF CatStick-rescue_Fuse_Small-Device F 0 10 N N 1 F N
+F0 "F" 0 -60 50 H V C CNN
+F1 "CatStick-rescue_Fuse_Small-Device" 0 60 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ SM*
+$ENDFPLIST
+DRAW
+S -50 20 50 -20 0 1 0 N
+P 2 0 1 0 -50 0 50 0 N
+X ~ 1 -100 0 50 R 50 50 1 1 P
+X ~ 2 100 0 50 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_GND-power
+#
+DEF CatStick-rescue_GND-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "CatStick-rescue_GND-power" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_Jumper_3_Bridged12-Jumper
+#
+DEF CatStick-rescue_Jumper_3_Bridged12-Jumper JP 0 0 Y N 1 F N
+F0 "JP" -100 -100 50 H V C CNN
+F1 "CatStick-rescue_Jumper_3_Bridged12-Jumper" 0 110 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Jumper*
+ TestPoint*3Pads*
+ TestPoint*Bridge*
+$ENDFPLIST
+DRAW
+A -65 -50 89 1282 518 0 1 0 N -120 20 -10 20
+C -130 0 20 0 0 0 N
+C 0 0 20 0 0 0 N
+C 130 0 20 0 0 0 N
+P 2 0 1 0 0 -50 0 -20 N
+X A 1 -250 0 100 R 50 50 1 1 P
+X C 2 0 -150 100 U 50 50 1 1 I
+X B 3 250 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_L-Device
+#
+DEF CatStick-rescue_L-Device L 0 40 N N 1 F N
+F0 "L" -50 0 50 V V C CNN
+F1 "CatStick-rescue_L-Device" 75 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Choke_*
+ *Coil*
+ Inductor_*
+ L_*
+$ENDFPLIST
+DRAW
+A 0 -75 25 -899 899 0 1 0 N 0 -100 0 -50
+A 0 -25 25 -899 899 0 1 0 N 0 -50 0 0
+A 0 25 25 -899 899 0 1 0 N 0 0 0 50
+A 0 75 25 -899 899 0 1 0 N 0 50 0 100
+X 1 1 0 150 50 D 50 50 1 1 P
+X 2 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_LED_Small-Device
+#
+DEF CatStick-rescue_LED_Small-Device D 0 10 N N 1 F N
+F0 "D" -50 125 50 H V L CNN
+F1 "CatStick-rescue_LED_Small-Device" -175 -100 50 H V L CNN
+F2 "" 0 0 50 V I C CNN
+F3 "" 0 0 50 V I C CNN
+$FPLIST
+ LED*
+ LED_SMD:*
+ LED_THT:*
+$ENDFPLIST
+DRAW
+P 2 0 1 10 -30 -40 -30 40 N
+P 2 0 1 0 40 0 -30 0 N
+P 4 0 1 10 30 -40 -30 0 30 40 30 -40 N
+P 5 0 1 0 0 30 -20 50 -10 50 -20 50 -20 40 N
+P 5 0 1 0 20 50 0 70 10 70 0 70 0 60 N
+X K 1 -100 0 70 R 50 50 1 1 P
+X A 2 100 0 70 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_L_Small-Device
+#
+DEF CatStick-rescue_L_Small-Device L 0 10 N N 1 F N
+F0 "L" 30 40 50 H V L CNN
+F1 "CatStick-rescue_L_Small-Device" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Choke_*
+ *Coil*
+ Inductor_*
+ L_*
+$ENDFPLIST
+DRAW
+A 0 -60 20 -899 899 0 1 0 N 0 -80 0 -40
+A 0 -20 20 -899 899 0 1 0 N 0 -40 0 0
+A 0 20 20 -899 899 0 1 0 N 0 0 0 40
+A 0 60 20 -899 899 0 1 0 N 0 40 0 80
+X ~ 1 0 100 20 D 50 50 1 1 P
+X ~ 2 0 -100 20 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_MASWSS0115-RF_Switch
+#
+DEF CatStick-rescue_MASWSS0115-RF_Switch U 0 20 Y Y 1 F N
+F0 "U" -300 300 50 H V C CNN
+F1 "CatStick-rescue_MASWSS0115-RF_Switch" 150 300 50 H V C CNN
+F2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" 0 100 50 H I C CNN
+F3 "" 0 100 50 H I C CNN
+$FPLIST
+ SOT*363*
+$ENDFPLIST
+DRAW
+C -120 100 11 0 1 0 N
+C 120 0 11 0 1 0 N
+C 125 205 11 0 1 0 N
+S 300 -300 -300 250 0 1 10 f
+P 2 0 1 0 -125 -150 -100 -150 N
+P 2 0 1 0 -110 100 115 205 N
+P 2 0 1 0 -75 -150 -50 -150 N
+P 2 0 1 0 -25 -150 0 -150 N
+P 2 0 1 0 0 -125 0 -100 N
+P 2 0 1 0 0 -75 0 -50 N
+P 2 0 1 0 0 -25 0 0 N
+P 2 0 1 0 0 25 0 50 N
+P 2 0 1 0 0 75 0 100 N
+P 2 0 1 0 0 125 0 150 N
+X RF1 1 400 200 100 L 50 50 1 1 P
+X GND 2 100 -400 100 U 50 50 1 1 W
+X RF2 3 400 0 100 L 50 50 1 1 P
+X V2 4 -400 -200 100 R 50 50 1 1 I
+X RFC 5 -400 100 100 R 50 50 1 1 P
+X V1 6 -400 -100 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_PWR_FLAG-power
+#
+DEF CatStick-rescue_PWR_FLAG-power #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "CatStick-rescue_PWR_FLAG-power" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_R-Device
+#
+DEF CatStick-rescue_R-Device R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "CatStick-rescue_R-Device" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_RFSW8006QTR7-electroniccats
+#
+DEF CatStick-rescue_RFSW8006QTR7-electroniccats U 0 40 Y Y 1 F N
+F0 "U" 0 50 50 H V C CNN
+F1 "CatStick-rescue_RFSW8006QTR7-electroniccats" 0 -50 50 H V C CNN
+F2 "Package_DFN_QFN:DFN-8-1EP_2x2mm_P0.5mm_EP0.9x1.3mm" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -350 -100 400 -1100 0 1 0 f
+X VDD 1 500 -200 100 L 50 50 1 1 I
+X ANT 2 500 -600 100 L 50 50 1 1 I
+X CRF1 3 -450 -800 100 R 50 50 1 1 I
+X RF1 4 -450 -200 100 R 50 50 1 1 I
+X RF3 5 -450 -400 100 R 50 50 1 1 I
+X CRF3 6 -450 -1000 100 R 50 50 1 1 I
+X CRF2 7 -450 -900 100 R 50 50 1 1 I
+X RF2 8 -450 -300 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_R_Small-Device
+#
+DEF CatStick-rescue_R_Small-Device R 0 10 N N 1 F N
+F0 "R" 30 20 50 H V L CNN
+F1 "CatStick-rescue_R_Small-Device" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -30 70 30 -70 0 1 8 N
+X ~ 1 0 100 30 D 50 50 1 1 P
+X ~ 2 0 -100 30 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_SW_Push-Switch
+#
+DEF CatStick-rescue_SW_Push-Switch SW 0 40 N N 1 F N
+F0 "SW" 50 100 50 H V L CNN
+F1 "CatStick-rescue_SW_Push-Switch" 0 -60 50 H V C CNN
+F2 "" 0 200 50 H I C CNN
+F3 "" 0 200 50 H I C CNN
+DRAW
+C -80 0 20 0 1 0 N
+C 80 0 20 0 1 0 N
+P 2 0 1 0 0 50 0 120 N
+P 2 0 1 0 100 50 -100 50 N
+X 1 1 -200 0 100 R 50 50 0 1 P
+X 2 2 200 0 100 L 50 50 0 1 P
+ENDDRAW
+ENDDEF
+#
+# CatStick-rescue_USB_C_Plug_USB2.0-Connector
+#
+DEF CatStick-rescue_USB_C_Plug_USB2.0-Connector P 0 40 Y Y 1 F N
 F0 "P" -400 750 50 H V L CNN
-F1 "Connector_USB_C_Plug_USB2.0" 500 750 50 H V R CNN
+F1 "CatStick-rescue_USB_C_Plug_USB2.0-Connector" 500 750 50 H V R CNN
 F2 "" 150 0 50 H I C CNN
 F3 "" 150 0 50 H I C CNN
 $FPLIST
@@ -335,288 +677,18 @@ X SHIELD S1 -300 -900 200 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_C
+# CatStick-rescue_VCC-power
 #
-DEF Device_C C 0 10 N Y 1 F N
-F0 "C" 25 100 50 H V L CNN
-F1 "Device_C" 25 -100 50 H V L CNN
-F2 "" 38 -150 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- C_*
-$ENDFPLIST
-DRAW
-P 2 0 1 20 -80 -30 80 -30 N
-P 2 0 1 20 -80 30 80 30 N
-X ~ 1 0 150 110 D 50 50 1 1 P
-X ~ 2 0 -150 110 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_C_Small
-#
-DEF Device_C_Small C 0 10 N N 1 F N
-F0 "C" 10 70 50 H V L CNN
-F1 "Device_C_Small" 10 -80 50 H V L CNN
+DEF CatStick-rescue_VCC-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "CatStick-rescue_VCC-power" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
-$FPLIST
- C_*
-$ENDFPLIST
 DRAW
-P 2 0 1 13 -60 -20 60 -20 N
-P 2 0 1 12 -60 20 60 20 N
-X ~ 1 0 100 80 D 50 50 1 1 P
-X ~ 2 0 -100 80 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Crystal
-#
-DEF Device_Crystal Y 0 40 N N 1 F N
-F0 "Y" 0 150 50 H V C CNN
-F1 "Device_Crystal" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Crystal*
-$ENDFPLIST
-DRAW
-S -45 100 45 -100 0 1 12 N
-P 2 0 1 0 -100 0 -75 0 N
-P 2 0 1 20 -75 -50 -75 50 N
-P 2 0 1 20 75 -50 75 50 N
-P 2 0 1 0 100 0 75 0 N
-X 1 1 -150 0 50 R 50 50 1 1 P
-X 2 2 150 0 50 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Crystal_GND24
-#
-DEF Device_Crystal_GND24 Y 0 40 Y N 1 F N
-F0 "Y" 125 200 50 H V L CNN
-F1 "Device_Crystal_GND24" 125 125 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Crystal*
-$ENDFPLIST
-DRAW
-S -45 100 45 -100 0 1 12 N
-P 2 0 1 0 -100 0 -80 0 N
-P 2 0 1 20 -80 -50 -80 50 N
-P 2 0 1 0 0 -150 0 -140 N
-P 2 0 1 0 0 140 0 150 N
-P 2 0 1 20 80 -50 80 50 N
-P 2 0 1 0 80 0 100 0 N
-P 4 0 1 0 -100 -90 -100 -140 100 -140 100 -90 N
-P 4 0 1 0 -100 90 -100 140 100 140 100 90 N
-X 1 1 -150 0 50 R 50 50 1 1 P
-X 2 2 0 200 50 D 50 50 1 1 P
-X 3 3 150 0 50 L 50 50 1 1 P
-X 4 4 0 -200 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Ferrite_Bead
-#
-DEF Device_Ferrite_Bead FB 0 0 N Y 1 F N
-F0 "FB" -150 25 50 V V C CNN
-F1 "Device_Ferrite_Bead" 150 0 50 V V C CNN
-F2 "" -70 0 50 V I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Inductor_*
- L_*
- *Ferrite*
-$ENDFPLIST
-DRAW
-P 2 0 1 0 0 -50 0 -48 N
-P 2 0 1 0 0 50 0 51 N
-P 5 0 1 0 -109 16 -67 89 109 -12 66 -85 -109 16 N
-X ~ 1 0 150 100 D 50 50 1 1 P
-X ~ 2 0 -150 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Fuse_Small
-#
-DEF Device_Fuse_Small F 0 10 N N 1 F N
-F0 "F" 0 -60 50 H V C CNN
-F1 "Device_Fuse_Small" 0 60 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- SM*
-$ENDFPLIST
-DRAW
-S -50 20 50 -20 0 1 0 N
-P 2 0 1 0 -50 0 50 0 N
-X ~ 1 -100 0 50 R 50 50 1 1 P
-X ~ 2 100 0 50 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_L
-#
-DEF Device_L L 0 40 N N 1 F N
-F0 "L" -50 0 50 V V C CNN
-F1 "Device_L" 75 0 50 V V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Choke_*
- *Coil*
- Inductor_*
- L_*
-$ENDFPLIST
-DRAW
-A 0 -75 25 -899 899 0 1 0 N 0 -100 0 -50
-A 0 -25 25 -899 899 0 1 0 N 0 -50 0 0
-A 0 25 25 -899 899 0 1 0 N 0 0 0 50
-A 0 75 25 -899 899 0 1 0 N 0 50 0 100
-X 1 1 0 150 50 D 50 50 1 1 P
-X 2 2 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_LED_Small
-#
-DEF Device_LED_Small D 0 10 N N 1 F N
-F0 "D" -50 125 50 H V L CNN
-F1 "Device_LED_Small" -175 -100 50 H V L CNN
-F2 "" 0 0 50 V I C CNN
-F3 "" 0 0 50 V I C CNN
-$FPLIST
- LED*
- LED_SMD:*
- LED_THT:*
-$ENDFPLIST
-DRAW
-P 2 0 1 10 -30 -40 -30 40 N
-P 2 0 1 0 40 0 -30 0 N
-P 4 0 1 10 30 -40 -30 0 30 40 30 -40 N
-P 5 0 1 0 0 30 -20 50 -10 50 -20 50 -20 40 N
-P 5 0 1 0 20 50 0 70 10 70 0 70 0 60 N
-X K 1 -100 0 70 R 50 50 1 1 P
-X A 2 100 0 70 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_L_Small
-#
-DEF Device_L_Small L 0 10 N N 1 F N
-F0 "L" 30 40 50 H V L CNN
-F1 "Device_L_Small" 30 -40 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Choke_*
- *Coil*
- Inductor_*
- L_*
-$ENDFPLIST
-DRAW
-A 0 -60 20 -899 899 0 1 0 N 0 -80 0 -40
-A 0 -20 20 -899 899 0 1 0 N 0 -40 0 0
-A 0 20 20 -899 899 0 1 0 N 0 0 0 40
-A 0 60 20 -899 899 0 1 0 N 0 40 0 80
-X ~ 1 0 100 20 D 50 50 1 1 P
-X ~ 2 0 -100 20 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_R
-#
-DEF Device_R R 0 0 N Y 1 F N
-F0 "R" 80 0 50 V V C CNN
-F1 "Device_R" 0 0 50 V V C CNN
-F2 "" -70 0 50 V I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- R_*
-$ENDFPLIST
-DRAW
-S -40 -100 40 100 0 1 10 N
-X ~ 1 0 150 50 D 50 50 1 1 P
-X ~ 2 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_R_Small
-#
-DEF Device_R_Small R 0 10 N N 1 F N
-F0 "R" 30 20 50 H V L CNN
-F1 "Device_R_Small" 30 -40 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- R_*
-$ENDFPLIST
-DRAW
-S -30 70 30 -70 0 1 8 N
-X ~ 1 0 100 30 D 50 50 1 1 P
-X ~ 2 0 -100 30 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Jumper_Jumper_3_Bridged12
-#
-DEF Jumper_Jumper_3_Bridged12 JP 0 0 Y N 1 F N
-F0 "JP" -100 -100 50 H V C CNN
-F1 "Jumper_Jumper_3_Bridged12" 0 110 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Jumper*
- TestPoint*3Pads*
- TestPoint*Bridge*
-$ENDFPLIST
-DRAW
-A -65 -50 89 1282 518 0 1 0 N -120 20 -10 20
-C -130 0 20 0 0 0 N
-C 0 0 20 0 0 0 N
-C 130 0 20 0 0 0 N
-P 2 0 1 0 0 -50 0 -20 N
-X A 1 -250 0 100 R 50 50 1 1 P
-X C 2 0 -150 100 U 50 50 1 1 I
-X B 3 250 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# RF_Switch_MASWSS0115
-#
-DEF RF_Switch_MASWSS0115 U 0 20 Y Y 1 F N
-F0 "U" -300 300 50 H V C CNN
-F1 "RF_Switch_MASWSS0115" 150 300 50 H V C CNN
-F2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" 0 100 50 H I C CNN
-F3 "" 0 100 50 H I C CNN
-ALIAS MASWSS0115 MASWSS0143 MASWSS0166 MASW-007221 MASWSS0192 MASWSS0151 MASWSS0176
-$FPLIST
- SOT*363*
-$ENDFPLIST
-DRAW
-C -120 100 11 0 1 0 N
-C 120 0 11 0 1 0 N
-C 125 205 11 0 1 0 N
-S 300 -300 -300 250 0 1 10 f
-P 2 0 1 0 -125 -150 -100 -150 N
-P 2 0 1 0 -110 100 115 205 N
-P 2 0 1 0 -75 -150 -50 -150 N
-P 2 0 1 0 -25 -150 0 -150 N
-P 2 0 1 0 0 -125 0 -100 N
-P 2 0 1 0 0 -75 0 -50 N
-P 2 0 1 0 0 -25 0 0 N
-P 2 0 1 0 0 25 0 50 N
-P 2 0 1 0 0 75 0 100 N
-P 2 0 1 0 0 125 0 150 N
-X RF1 1 400 200 100 L 50 50 1 1 P
-X GND 2 100 -400 100 U 50 50 1 1 W
-X RF2 3 400 0 100 L 50 50 1 1 P
-X V2 4 -400 -200 100 R 50 50 1 1 I
-X RFC 5 -400 100 100 R 50 50 1 1 P
-X V1 6 -400 -100 100 R 50 50 1 1 I
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X VCC 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
@@ -657,80 +729,6 @@ X DIO3 6 800 -600 200 L 40 40 0 0 B
 X VREG 7 800 600 200 L 40 40 0 0 O
 X GND 8 800 -1100 200 L 40 40 0 0 W
 X DCC_SW 9 800 100 200 L 40 40 0 0 O
-ENDDRAW
-ENDDEF
-#
-# Switch_SW_Push
-#
-DEF Switch_SW_Push SW 0 40 N N 1 F N
-F0 "SW" 50 100 50 H V L CNN
-F1 "Switch_SW_Push" 0 -60 50 H V C CNN
-F2 "" 0 200 50 H I C CNN
-F3 "" 0 200 50 H I C CNN
-DRAW
-C -80 0 20 0 1 0 N
-C 80 0 20 0 1 0 N
-P 2 0 1 0 0 50 0 120 N
-P 2 0 1 0 100 50 -100 50 N
-X 1 1 -200 0 100 R 50 50 0 1 P
-X 2 2 200 0 100 L 50 50 0 1 P
-ENDDRAW
-ENDDEF
-#
-# power_+3V3
-#
-DEF power_+3V3 #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+3V3" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS +3.3V
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_GND
-#
-DEF power_GND #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power_GND" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_PWR_FLAG
-#
-DEF power_PWR_FLAG #FLG 0 0 N N 1 F P
-F0 "#FLG" 0 75 50 H I C CNN
-F1 "power_PWR_FLAG" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
-X pwr 1 0 0 0 U 50 50 0 0 w
-ENDDRAW
-ENDDEF
-#
-# power_VCC
-#
-DEF power_VCC #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_VCC" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X VCC 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #

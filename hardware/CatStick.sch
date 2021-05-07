@@ -14,12 +14,12 @@ Comment3 "Edgar Herrera"
 Comment4 "Andres Sabas"
 $EndDescr
 $Comp
-L Device:Crystal Y2
+L CatStick-rescue:Crystal-Device Y2
 U 1 1 58C3FC84
 P 1300 7985
 F 0 "Y2" H 1300 8135 50  0000 C CNN
 F 1 "32.768kHz" H 1300 7835 50  0000 C CNN
-F 2 "Crystal:Crystal_SMD_2012-2Pin_2.0x1.2mm_HandSoldering" H 1300 7985 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_2012-2Pin_2.0x1.2mm" H 1300 7985 50  0001 C CNN
 F 3 "" H 1300 7985 50  0000 C CNN
 F 4 "C97603" H 1300 7985 50  0001 C CNN "LCSC#"
 F 5 "SC-20S,32.768kHz,20PPM,9pF" H 1300 7985 50  0001 C CNN "manf#"
@@ -28,7 +28,7 @@ F 6 "LCSC" H 1300 7985 50  0001 C CNN "provedor"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C36
+L CatStick-rescue:C-Device C36
 U 1 1 58C3FE11
 P 1050 7735
 F 0 "C36" H 850 7835 50  0000 L CNN
@@ -43,7 +43,7 @@ F 7 "" H 1050 7735 50  0001 C CNN "Mouser#"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C38
+L CatStick-rescue:C-Device C38
 U 1 1 58C3FE5B
 P 1050 8235
 F 0 "C38" H 1075 8335 50  0000 L CNN
@@ -57,7 +57,7 @@ F 6 "C1642" H 1050 8235 50  0001 C CNN "LCSC#"
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR053
+L CatStick-rescue:GND-power #PWR053
 U 1 1 58C3FEDB
 P 850 7735
 F 0 "#PWR053" H 850 7485 50  0001 C CNN
@@ -68,7 +68,7 @@ F 3 "" H 850 7735 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR058
+L CatStick-rescue:GND-power #PWR058
 U 1 1 58C3FF1C
 P 850 8235
 F 0 "#PWR058" H 850 7985 50  0001 C CNN
@@ -79,12 +79,12 @@ F 3 "" H 850 8235 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Ferrite_Bead L1
+L CatStick-rescue:Ferrite_Bead-Device L1
 U 1 1 58C5CF90
 P 1700 4015
 F 0 "L1" V 1550 4040 50  0000 C CNN
 F 1 "BLM18HE152SN1D " V 1850 4015 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1630 4015 50  0001 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" V 1630 4015 50  0001 C CNN
 F 3 "" H 1700 4015 50  0000 C CNN
 F 4 "81-BLM18HE152SN1D " H 1700 4015 50  0001 C CNN "Mouser#"
 F 5 "BLM18HE152SN1D " H 1700 4015 50  0001 C CNN "manf#"
@@ -109,7 +109,7 @@ JTAG_TDI
 Text Label 8285 8475 0    60   ~ 0
 JTAG_TMSC
 $Comp
-L power:GND #PWR062
+L CatStick-rescue:GND-power #PWR062
 U 1 1 58CA0220
 P 7485 8975
 F 0 "#PWR062" H 7485 8725 50  0001 C CNN
@@ -120,7 +120,7 @@ F 3 "" H 7485 8975 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR02
+L CatStick-rescue:GND-power #PWR02
 U 1 1 58CC4391
 P 7830 1290
 F 0 "#PWR02" H 7830 1040 50  0001 C CNN
@@ -131,7 +131,7 @@ F 3 "" H 7830 1290 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG02
+L CatStick-rescue:PWR_FLAG-power #FLG02
 U 1 1 58CD2351
 P 2000 4015
 F 0 "#FLG02" H 2000 4110 50  0001 C CNN
@@ -187,7 +187,7 @@ Wire Wire Line
 Wire Wire Line
 	7485 8875 7485 8975
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J3
+L CatStick-rescue:Conn_02x05_Odd_Even-Connector_Generic J3
 U 1 1 5B9358B4
 P 7885 8675
 F 0 "J3" H 7935 9092 50  0000 C CNN
@@ -207,7 +207,7 @@ NoConn ~ 7685 8775
 Wire Wire Line
 	7485 8875 7685 8875
 $Comp
-L Switch:SW_Push RESET_CC1
+L CatStick-rescue:SW_Push-Switch RESET_CC1
 U 1 1 5BAA6E6C
 P 8130 1290
 F 0 "RESET_CC1" H 8130 1575 50  0000 C CNN
@@ -228,7 +228,7 @@ VDDS
 Wire Wire Line
 	2000 4015 2200 4015
 $Comp
-L Device:C C13
+L CatStick-rescue:C-Device C13
 U 1 1 5B7C73B0
 P 2300 4215
 F 0 "C13" H 2415 4261 50  0000 L CNN
@@ -242,7 +242,7 @@ F 6 "C1642" H 2300 4215 50  0001 C CNN "LCSC#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR027
+L CatStick-rescue:GND-power #PWR027
 U 1 1 5B7C748E
 P 2300 4465
 F 0 "#PWR027" H 2300 4215 50  0001 C CNN
@@ -253,7 +253,7 @@ F 3 "" H 2300 4465 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C14
+L CatStick-rescue:C-Device C14
 U 1 1 5B7C7538
 P 2600 4215
 F 0 "C14" H 2715 4261 50  0000 L CNN
@@ -267,7 +267,7 @@ F 6 "CC0603KRX7R9BB104" H 2600 4215 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR028
+L CatStick-rescue:GND-power #PWR028
 U 1 1 5B7C75EF
 P 2600 4465
 F 0 "#PWR028" H 2600 4215 50  0001 C CNN
@@ -278,7 +278,7 @@ F 3 "" H 2600 4465 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C15
+L CatStick-rescue:C-Device C15
 U 1 1 5B7C795C
 P 2900 4215
 F 0 "C15" H 3015 4261 50  0000 L CNN
@@ -292,7 +292,7 @@ F 6 "C1642" H 2900 4215 50  0001 C CNN "LCSC#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR029
+L CatStick-rescue:GND-power #PWR029
 U 1 1 5B7C7A13
 P 2900 4465
 F 0 "#PWR029" H 2900 4215 50  0001 C CNN
@@ -303,7 +303,7 @@ F 3 "" H 2900 4465 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C16
+L CatStick-rescue:C-Device C16
 U 1 1 5B7C7AC3
 P 3200 4215
 F 0 "C16" H 3315 4261 50  0000 L CNN
@@ -317,7 +317,7 @@ F 6 "CC0603KRX7R9BB104" H 3200 4215 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C17
+L CatStick-rescue:C-Device C17
 U 1 1 5B7C7B7E
 P 3500 4215
 F 0 "C17" H 3615 4261 50  0000 L CNN
@@ -331,7 +331,7 @@ F 6 "CC0603KRX7R9BB104" H 3500 4215 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C18
+L CatStick-rescue:C-Device C18
 U 1 1 5B7CD218
 P 3800 4215
 F 0 "C18" H 3915 4261 50  0000 L CNN
@@ -345,7 +345,7 @@ F 6 "LCSC" H 3800 4215 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C19
+L CatStick-rescue:C-Device C19
 U 1 1 5B7CD2DA
 P 4100 4215
 F 0 "C19" H 4215 4261 50  0000 L CNN
@@ -359,7 +359,7 @@ F 6 "CC0603KRX7R9BB104" H 4100 4215 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR030
+L CatStick-rescue:GND-power #PWR030
 U 1 1 5B7CD43F
 P 3200 4465
 F 0 "#PWR030" H 3200 4215 50  0001 C CNN
@@ -370,7 +370,7 @@ F 3 "" H 3200 4465 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR031
+L CatStick-rescue:GND-power #PWR031
 U 1 1 5B7CD4FB
 P 3500 4465
 F 0 "#PWR031" H 3500 4215 50  0001 C CNN
@@ -381,7 +381,7 @@ F 3 "" H 3500 4465 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR032
+L CatStick-rescue:GND-power #PWR032
 U 1 1 5B7CD5B7
 P 3800 4465
 F 0 "#PWR032" H 3800 4215 50  0001 C CNN
@@ -392,7 +392,7 @@ F 3 "" H 3800 4465 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR033
+L CatStick-rescue:GND-power #PWR033
 U 1 1 5B7CD673
 P 4100 4465
 F 0 "#PWR033" H 4100 4215 50  0001 C CNN
@@ -456,12 +456,12 @@ Wire Wire Line
 Text Label 6745 4055 2    50   ~ 0
 DCDC_SW
 $Comp
-L Device:L L2
+L CatStick-rescue:L-Device L2
 U 1 1 5B83C026
 P 7295 4055
 F 0 "L2" V 7485 4055 50  0000 C CNN
 F 1 "6.8uH" V 7394 4055 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7295 4055 50  0001 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 7295 4055 50  0001 C CNN
 F 3 "~" H 7295 4055 50  0001 C CNN
 F 4 "C75929" H 7295 4055 50  0001 C CNN "LCSC#"
 F 5 "SDFL1608S6R8KTF" H 7295 4055 50  0001 C CNN "manf#"
@@ -470,7 +470,7 @@ F 6 "LCSC" H 7295 4055 50  0001 C CNN "provedor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C10
+L CatStick-rescue:C-Device C10
 U 1 1 5B83C159
 P 7645 4205
 F 0 "C10" H 7760 4251 50  0000 L CNN
@@ -486,7 +486,7 @@ $EndComp
 Text Label 7845 3955 1    50   ~ 0
 VDDR
 $Comp
-L Device:C C11
+L CatStick-rescue:C-Device C11
 U 1 1 5B83C352
 P 8045 4205
 F 0 "C11" H 8160 4251 50  0000 L CNN
@@ -500,7 +500,7 @@ F 6 "CC0603KRX7R9BB104" H 8045 4205 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C12
+L CatStick-rescue:C-Device C12
 U 1 1 5B83C423
 P 8345 4205
 F 0 "C12" H 8460 4251 50  0000 L CNN
@@ -514,7 +514,7 @@ F 6 "CC0603KRX7R9BB104" H 8345 4205 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR025
+L CatStick-rescue:GND-power #PWR025
 U 1 1 5B851F2E
 P 8345 4455
 F 0 "#PWR025" H 8345 4205 50  0001 C CNN
@@ -525,7 +525,7 @@ F 3 "" H 8345 4455 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR024
+L CatStick-rescue:GND-power #PWR024
 U 1 1 5B851FF6
 P 8045 4455
 F 0 "#PWR024" H 8045 4205 50  0001 C CNN
@@ -536,7 +536,7 @@ F 3 "" H 8045 4455 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR023
+L CatStick-rescue:GND-power #PWR023
 U 1 1 5B8520BE
 P 7645 4455
 F 0 "#PWR023" H 7645 4205 50  0001 C CNN
@@ -571,7 +571,7 @@ Connection ~ 1300 7735
 Wire Wire Line
 	1300 8235 1500 8235
 $Comp
-L power:GND #PWR066
+L CatStick-rescue:GND-power #PWR066
 U 1 1 5B9B4C84
 P 3350 9435
 F 0 "#PWR066" H 3350 9185 50  0001 C CNN
@@ -596,7 +596,7 @@ VDDR
 Text Label 2650 6435 1    50   ~ 0
 VDDR
 $Comp
-L power:GND #PWR035
+L CatStick-rescue:GND-power #PWR035
 U 1 1 5BA8D03B
 P 1085 6085
 F 0 "#PWR035" H 1085 5835 50  0001 C CNN
@@ -655,7 +655,7 @@ RX_TX
 Text Label 3550 9035 0    60   ~ 0
 JTAG_TMSC
 $Comp
-L power:PWR_FLAG #FLG03
+L CatStick-rescue:PWR_FLAG-power #FLG03
 U 1 1 5BEB61FB
 P 6945 4055
 F 0 "#FLG03" H 6945 4130 50  0001 C CNN
@@ -733,7 +733,7 @@ Connection ~ 8860 6950
 Wire Wire Line
 	8860 6950 8860 7065
 $Comp
-L power:GND #PWR048
+L CatStick-rescue:GND-power #PWR048
 U 1 1 5F7FB018
 P 6905 7140
 F 0 "#PWR048" H 6905 6890 50  0001 C CNN
@@ -744,7 +744,7 @@ F 3 "" H 6905 7140 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR046
+L CatStick-rescue:GND-power #PWR046
 U 1 1 5F7FBDBF
 P 8860 7065
 F 0 "#PWR046" H 8860 6815 50  0001 C CNN
@@ -791,7 +791,7 @@ Connection ~ 18315 7365
 Wire Wire Line
 	18315 7365 18315 7465
 $Comp
-L power:GND #PWR052
+L CatStick-rescue:GND-power #PWR052
 U 1 1 5F869CDA
 P 18315 7635
 F 0 "#PWR052" H 18315 7385 50  0001 C CNN
@@ -811,7 +811,7 @@ Connection ~ 16340 7465
 Wire Wire Line
 	16340 7465 16340 7595
 $Comp
-L power:GND #PWR051
+L CatStick-rescue:GND-power #PWR051
 U 1 1 5F87BE58
 P 16340 7595
 F 0 "#PWR051" H 16340 7345 50  0001 C CNN
@@ -846,7 +846,7 @@ UBP_2_4_GHZ
 Text Label 19630 3050 2    50   ~ 0
 UBP_SUB-1_GHZ
 $Comp
-L power:+3V3 #PWR017
+L CatStick-rescue:+3V3-power #PWR017
 U 1 1 5F9497BA
 P 21580 2615
 F 0 "#PWR017" H 21580 2465 50  0001 C CNN
@@ -859,7 +859,7 @@ $EndComp
 Text Notes 20460 860  0    89   ~ 0
 MAIN RF SWITCH
 $Comp
-L power:VCC #PWR01
+L CatStick-rescue:VCC-power #PWR01
 U 1 1 5FA2D547
 P 2710 1110
 F 0 "#PWR01" H 2710 960 50  0001 C CNN
@@ -882,7 +882,7 @@ SWDIO
 Text Label 17720 4290 2    50   ~ 0
 SWCLK
 $Comp
-L power:GND #PWR026
+L CatStick-rescue:GND-power #PWR026
 U 1 1 5F6EDB31
 P 17570 4455
 F 0 "#PWR026" H 17570 4205 50  0001 C CNN
@@ -893,7 +893,7 @@ F 3 "" H 17570 4455 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR021
+L CatStick-rescue:+3V3-power #PWR021
 U 1 1 5F6EEDB7
 P 17625 3905
 F 0 "#PWR021" H 17625 3755 50  0001 C CNN
@@ -910,7 +910,7 @@ Wire Notes Line
 Wire Notes Line
 	6695 8035 6675 8035
 $Comp
-L Device:C C20
+L CatStick-rescue:C-Device C20
 U 1 1 6072341E
 P 1360 6540
 F 0 "C20" H 1490 6540 50  0000 L CNN
@@ -946,7 +946,7 @@ Wire Wire Line
 	780  6285 875  6285
 Connection ~ 875  6285
 $Comp
-L Device:C C21
+L CatStick-rescue:C-Device C21
 U 1 1 6075538A
 P 780 6550
 F 0 "C21" H 570 6570 50  0000 L CNN
@@ -976,7 +976,7 @@ SWCLK
 Text Label 14675 3605 0    50   ~ 0
 COPI
 $Comp
-L power:GND #PWR034
+L CatStick-rescue:GND-power #PWR034
 U 1 1 5FCEF6CB
 P 12040 4635
 F 0 "#PWR034" H 12040 4385 50  0001 C CNN
@@ -1003,7 +1003,7 @@ DIO3
 Text Label 14670 4605 0    50   ~ 0
 ANT_SW
 $Comp
-L Switch:SW_Push RESET1
+L CatStick-rescue:SW_Push-Switch RESET1
 U 1 1 5FD003C3
 P 9750 2005
 F 0 "RESET1" H 9750 2290 50  0000 C CNN
@@ -1021,7 +1021,7 @@ RESET
 Wire Wire Line
 	9400 2005 9550 2005
 $Comp
-L power:GND #PWR09
+L CatStick-rescue:GND-power #PWR09
 U 1 1 5FD0172F
 P 10055 2060
 F 0 "#PWR09" H 10055 1810 50  0001 C CNN
@@ -1062,7 +1062,7 @@ Wire Wire Line
 Wire Wire Line
 	14075 8760 14075 8795
 $Comp
-L power:GND #PWR061
+L CatStick-rescue:GND-power #PWR061
 U 1 1 60CD8761
 P 14075 8795
 F 0 "#PWR061" H 14075 8545 50  0001 C CNN
@@ -1079,7 +1079,7 @@ RFI_N
 Text Label 14065 7260 0    50   ~ 0
 RFO
 $Comp
-L Device:C_Small C23
+L CatStick-rescue:C_Small-Device C23
 U 1 1 60CDB4D1
 P 14720 6585
 F 0 "C23" H 14812 6631 50  0000 L CNN
@@ -1093,7 +1093,7 @@ F 6 "LCSC" H 14720 6585 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C24
+L CatStick-rescue:C_Small-Device C24
 U 1 1 60CDC9AC
 P 14935 6585
 F 0 "C24" H 15027 6631 50  0000 L CNN
@@ -1107,12 +1107,12 @@ F 6 "CC0603FRNPO9BN470" H 14935 6585 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L_Small L4
+L CatStick-rescue:L_Small-Device L4
 U 1 1 60CDE29A
 P 15205 6585
 F 0 "L4" H 15253 6631 50  0000 L CNN
 F 1 "47nH" H 15253 6540 50  0000 L CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 15205 6585 50  0001 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 15205 6585 50  0001 C CNN
 F 3 "~" H 15205 6585 50  0001 C CNN
 F 4 "C433019" H 15205 6585 50  0001 C CNN "LCSC#"
 F 5 "MLG0603P47NHT000" H 15205 6585 50  0001 C CNN "manf#"
@@ -1163,7 +1163,7 @@ Wire Wire Line
 Text Label 15305 6790 0    50   ~ 0
 RFO
 $Comp
-L Device:Crystal_GND24 Y3
+L CatStick-rescue:Crystal_GND24-Device Y3
 U 1 1 60D9622F
 P 11520 8550
 F 0 "Y3" H 11714 8596 50  0000 L CNN
@@ -1191,7 +1191,7 @@ Wire Wire Line
 Wire Wire Line
 	11520 8240 11295 8240
 $Comp
-L power:GND #PWR059
+L CatStick-rescue:GND-power #PWR059
 U 1 1 60DD13FF
 P 11295 8240
 F 0 "#PWR059" H 11295 7990 50  0001 C CNN
@@ -1202,7 +1202,7 @@ F 3 "" H 11295 8240 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR063
+L CatStick-rescue:GND-power #PWR063
 U 1 1 60DD22B9
 P 11520 8990
 F 0 "#PWR063" H 11520 8740 50  0001 C CNN
@@ -1215,7 +1215,7 @@ $EndComp
 Wire Wire Line
 	11520 8750 11520 8990
 $Comp
-L Device:C_Small C40
+L CatStick-rescue:C_Small-Device C40
 U 1 1 60DE769A
 P 12275 9045
 F 0 "C40" H 12367 9091 50  0000 L CNN
@@ -1229,7 +1229,7 @@ F 6 "LCSC" H 12275 9045 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C39
+L CatStick-rescue:C_Small-Device C39
 U 1 1 60DE8660
 P 11945 9040
 F 0 "C39" H 12037 9086 50  0000 L CNN
@@ -1247,7 +1247,7 @@ Wire Wire Line
 Wire Wire Line
 	14935 6685 14935 6720
 $Comp
-L power:GND #PWR039
+L CatStick-rescue:GND-power #PWR039
 U 1 1 60E10940
 P 14935 6720
 F 0 "#PWR039" H 14935 6470 50  0001 C CNN
@@ -1258,7 +1258,7 @@ F 3 "" H 14935 6720 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR038
+L CatStick-rescue:GND-power #PWR038
 U 1 1 60E117C9
 P 14720 6715
 F 0 "#PWR038" H 14720 6465 50  0001 C CNN
@@ -1278,7 +1278,7 @@ Wire Wire Line
 Wire Wire Line
 	11945 9140 11945 9170
 $Comp
-L power:GND #PWR065
+L CatStick-rescue:GND-power #PWR065
 U 1 1 60E62524
 P 12275 9185
 F 0 "#PWR065" H 12275 8935 50  0001 C CNN
@@ -1289,7 +1289,7 @@ F 3 "" H 12275 9185 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR064
+L CatStick-rescue:GND-power #PWR064
 U 1 1 60E6344C
 P 11945 9170
 F 0 "#PWR064" H 11945 8920 50  0001 C CNN
@@ -1314,7 +1314,7 @@ Wire Wire Line
 Wire Wire Line
 	11735 7060 12370 7060
 $Comp
-L Device:C_Small C31
+L CatStick-rescue:C_Small-Device C31
 U 1 1 60EA4035
 P 11735 7155
 F 0 "C31" H 11827 7201 50  0000 L CNN
@@ -1333,7 +1333,7 @@ Wire Wire Line
 Wire Wire Line
 	11735 7255 11735 7285
 $Comp
-L power:GND #PWR049
+L CatStick-rescue:GND-power #PWR049
 U 1 1 60EBA075
 P 11735 7285
 F 0 "#PWR049" H 11735 7035 50  0001 C CNN
@@ -1344,7 +1344,7 @@ F 3 "" H 11735 7285 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR037
+L CatStick-rescue:+3V3-power #PWR037
 U 1 1 60EBD486
 P 11735 6520
 F 0 "#PWR037" H 11735 6370 50  0001 C CNN
@@ -1355,12 +1355,12 @@ F 3 "" H 11735 6520 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L_Small L5
+L CatStick-rescue:L_Small-Device L5
 U 1 1 60ED94D0
 P 14160 7560
 F 0 "L5" V 14345 7560 50  0000 C CNN
 F 1 "15uH" V 14254 7560 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 14160 7560 50  0001 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 14160 7560 50  0001 C CNN
 F 3 "~" H 14160 7560 50  0001 C CNN
 F 4 "C57838" H 14160 7560 50  0001 C CNN "LCSC#"
 F 5 "SDFL1608T150KTF" H 14160 7560 50  0001 C CNN "manf#"
@@ -1375,7 +1375,7 @@ Wire Wire Line
 Wire Wire Line
 	13970 7060 14490 7060
 $Comp
-L Device:C_Small C35
+L CatStick-rescue:C_Small-Device C35
 U 1 1 60EF23CD
 P 14490 7685
 F 0 "C35" H 14582 7731 50  0000 L CNN
@@ -1395,7 +1395,7 @@ Connection ~ 14490 7560
 Wire Wire Line
 	14490 7785 14490 7820
 $Comp
-L power:GND #PWR056
+L CatStick-rescue:GND-power #PWR056
 U 1 1 60F1E2C1
 P 14490 7820
 F 0 "#PWR056" H 14490 7570 50  0001 C CNN
@@ -1415,7 +1415,7 @@ Wire Wire Line
 	13970 6860 14165 6860
 Connection ~ 14165 6760
 $Comp
-L power:+3V3 #PWR036
+L CatStick-rescue:+3V3-power #PWR036
 U 1 1 60F4A29D
 P 14165 6325
 F 0 "#PWR036" H 14165 6175 50  0001 C CNN
@@ -1426,7 +1426,7 @@ F 3 "" H 14165 6325 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C26
+L CatStick-rescue:C_Small-Device C26
 U 1 1 60F4B84E
 P 14300 6750
 F 0 "C26" H 14392 6796 50  0000 L CNN
@@ -1447,7 +1447,7 @@ Wire Wire Line
 Wire Wire Line
 	14300 6850 14300 6875
 $Comp
-L power:GND #PWR043
+L CatStick-rescue:GND-power #PWR043
 U 1 1 60F77FAE
 P 14300 6875
 F 0 "#PWR043" H 14300 6625 50  0001 C CNN
@@ -1465,7 +1465,7 @@ Connection ~ 12275 8885
 Wire Wire Line
 	12275 8885 11295 8885
 $Comp
-L RF_Switch:MASWSS0115 U6
+L CatStick-rescue:MASWSS0115-RF_Switch U6
 U 1 1 60FA8E32
 P 20070 7335
 F 0 "U6" H 20070 7760 50  0000 C CNN
@@ -1483,7 +1483,7 @@ Wire Wire Line
 Wire Wire Line
 	19970 7735 19970 7795
 $Comp
-L power:GND #PWR055
+L CatStick-rescue:GND-power #PWR055
 U 1 1 61035CAB
 P 19970 7795
 F 0 "#PWR055" H 19970 7545 50  0001 C CNN
@@ -1527,12 +1527,12 @@ DIO2
 Text Label 21855 6565 0    50   ~ 0
 LORA_O
 $Comp
-L Device:R_Small R8
+L CatStick-rescue:R_Small-Device R8
 U 1 1 60C3106A
 P 20780 7875
 F 0 "R8" V 20715 7875 50  0000 C CNN
 F 1 "100R" V 20855 7875 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 20780 7875 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 20780 7875 50  0001 C CNN
 F 3 "~" H 20780 7875 50  0001 C CNN
 F 4 "C700506" H 20780 7875 50  0001 C CNN "LCSC#"
 F 5 "RT0603DRD07100RL" H 20780 7875 50  0001 C CNN "manf#"
@@ -1541,7 +1541,7 @@ F 6 "LCSC" H 20780 7875 50  0001 C CNN "provedor"
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:C_Small C37
+L CatStick-rescue:C_Small-Device C37
 U 1 1 60C3194C
 P 20540 8020
 F 0 "C37" H 20632 8066 50  0000 L CNN
@@ -1555,7 +1555,7 @@ F 6 "CL10B102KB8NNNC" H 20540 8020 50  0001 C CNN "manf#"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR050
+L CatStick-rescue:GND-power #PWR050
 U 1 1 60C33391
 P 21050 7530
 F 0 "#PWR050" H 21050 7280 50  0001 C CNN
@@ -1570,12 +1570,12 @@ Wire Wire Line
 Text Label 21415 7280 0    50   ~ 0
 ANT_SW
 $Comp
-L Device:R_Small R7
+L CatStick-rescue:R_Small-Device R7
 U 1 1 60CF4518
 P 21270 7280
 F 0 "R7" V 21205 7280 50  0000 C CNN
 F 1 "100R" V 21345 7280 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 21270 7280 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 21270 7280 50  0001 C CNN
 F 3 "~" H 21270 7280 50  0001 C CNN
 F 4 "C700506" H 21270 7280 50  0001 C CNN "LCSC#"
 F 5 "RT0603DRD07100RL" H 21270 7280 50  0001 C CNN "manf#"
@@ -1584,7 +1584,7 @@ F 6 "LCSC" H 21270 7280 50  0001 C CNN "provedor"
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:C_Small C33
+L CatStick-rescue:C_Small-Device C33
 U 1 1 60CF4963
 P 21050 7405
 F 0 "C33" H 21142 7451 50  0000 L CNN
@@ -1632,7 +1632,7 @@ Wire Wire Line
 Wire Wire Line
 	20425 3460 20510 3460
 $Comp
-L power:GND #PWR057
+L CatStick-rescue:GND-power #PWR057
 U 1 1 60F61A1B
 P 20540 8180
 F 0 "#PWR057" H 20540 7930 50  0001 C CNN
@@ -1649,7 +1649,7 @@ CTF2
 Text Label 14680 3405 0    50   ~ 0
 CTF3
 $Comp
-L Device:C C6
+L CatStick-rescue:C-Device C6
 U 1 1 60FC860A
 P 19640 2605
 F 0 "C6" V 19860 2575 50  0000 L CNN
@@ -1663,7 +1663,7 @@ F 6 "CL10C101JB8NNNC" H 19640 2605 50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C7
+L CatStick-rescue:C-Device C7
 U 1 1 60FCA2D7
 P 20005 2785
 F 0 "C7" V 20070 2590 50  0000 L CNN
@@ -1677,7 +1677,7 @@ F 6 "CL10C101JB8NNNC" H 20005 2785 50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C8
+L CatStick-rescue:C-Device C8
 U 1 1 60FCB41C
 P 19915 3050
 F 0 "C8" V 19960 2840 50  0000 L CNN
@@ -1709,7 +1709,7 @@ Wire Wire Line
 Wire Wire Line
 	20355 3050 20355 2860
 $Comp
-L Device:C C9
+L CatStick-rescue:C-Device C9
 U 1 1 6106C6E9
 P 21705 3060
 F 0 "C9" V 21775 2875 50  0000 L CNN
@@ -1725,7 +1725,7 @@ $EndComp
 Wire Wire Line
 	21555 3060 21460 3060
 $Comp
-L Device:C C25
+L CatStick-rescue:C-Device C25
 U 1 1 6086464D
 P 9295 6650
 F 0 "C25" V 9230 6735 50  0000 L CNN
@@ -1739,7 +1739,7 @@ F 6 "CL10C101JB8NNNC" H 9295 6650 50  0001 C CNN "manf#"
 	0    1    -1   0   
 $EndComp
 $Comp
-L Device:C C29
+L CatStick-rescue:C-Device C29
 U 1 1 60865A23
 P 9075 6920
 F 0 "C29" H 9090 6840 50  0000 L CNN
@@ -1759,7 +1759,7 @@ Wire Wire Line
 Wire Wire Line
 	8770 6750 9075 6750
 $Comp
-L power:GND #PWR047
+L CatStick-rescue:GND-power #PWR047
 U 1 1 608E4FD3
 P 9075 7105
 F 0 "#PWR047" H 9075 6855 50  0001 C CNN
@@ -1776,7 +1776,7 @@ LORA_O
 Text Label 22040 3060 0    50   ~ 0
 ANT
 $Comp
-L Device:C C28
+L CatStick-rescue:C-Device C28
 U 1 1 609D5615
 P 21235 6765
 F 0 "C28" H 20985 6830 50  0000 L CNN
@@ -1790,12 +1790,12 @@ F 6 "C162225" H 21235 6765 50  0001 C CNN "LCSC#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L3
+L CatStick-rescue:L-Device L3
 U 1 1 609D5E2C
 P 21450 6565
 F 0 "L3" V 21610 6565 50  0000 C CNN
 F 1 "9.1nH" V 21525 6565 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 21450 6565 50  0001 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 21450 6565 50  0001 C CNN
 F 3 "" H 21450 6565 50  0000 C CNN
 F 4 "C395094" H 21450 6565 50  0001 C CNN "LCSC#"
 F 5 " " H 21450 6565 50  0001 C CNN "Mouser#"
@@ -1805,7 +1805,7 @@ F 7 "LCSC" H 21450 6565 50  0001 C CNN "provedor"
 	0    1    -1   0   
 $EndComp
 $Comp
-L Device:C C22
+L CatStick-rescue:C-Device C22
 U 1 1 60A2D10F
 P 20910 6565
 F 0 "C22" H 21035 6585 50  0000 L CNN
@@ -1819,7 +1819,7 @@ F 6 "CL10C101JB8NNNC" H 20910 6565 50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C27
+L CatStick-rescue:C-Device C27
 U 1 1 60A2FA32
 P 21735 6755
 F 0 "C27" H 21485 6820 50  0000 L CNN
@@ -1848,7 +1848,7 @@ Wire Wire Line
 Wire Wire Line
 	20570 6565 20570 7235
 $Comp
-L power:GND #PWR045
+L CatStick-rescue:GND-power #PWR045
 U 1 1 60B04131
 P 21235 6950
 F 0 "#PWR045" H 21235 6700 50  0001 C CNN
@@ -1861,7 +1861,7 @@ $EndComp
 Wire Wire Line
 	21235 6950 21235 6915
 $Comp
-L power:GND #PWR044
+L CatStick-rescue:GND-power #PWR044
 U 1 1 60B22EB7
 P 21735 6940
 F 0 "#PWR044" H 21735 6690 50  0001 C CNN
@@ -1879,7 +1879,7 @@ Connection ~ 21735 6565
 Text Notes 10810 5745 0    89   ~ 0
 SX1262 AND RF SWITCH\n
 $Comp
-L power:GND #PWR019
+L CatStick-rescue:GND-power #PWR019
 U 1 1 6083ACE2
 P 1275 2950
 F 0 "#PWR019" H 1275 2700 50  0001 C CNN
@@ -1896,7 +1896,7 @@ D+
 Text Label 2060 1865 0    50   ~ 0
 D-
 $Comp
-L Connector:USB_C_Plug_USB2.0 P1
+L CatStick-rescue:USB_C_Plug_USB2.0-Connector P1
 U 1 1 609EE31D
 P 1275 1965
 F 0 "P1" H 1382 2832 50  0000 C CNN
@@ -1916,12 +1916,12 @@ Wire Wire Line
 Wire Wire Line
 	2710 1365 2710 1110
 $Comp
-L Device:R_Small R1
+L CatStick-rescue:R_Small-Device R1
 U 1 1 60AD7135
 P 2115 1565
 F 0 "R1" V 1990 1455 50  0000 L CNN
 F 1 "5k1" V 2050 1445 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 2115 1565 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2115 1565 50  0001 C CNN
 F 3 "~" H 2115 1565 50  0001 C CNN
 F 4 "C319561" H 2115 1565 50  0001 C CNN "LCSC#"
 F 5 "AR03DTCX5101" H 2115 1565 50  0001 C CNN "manf#"
@@ -1930,12 +1930,12 @@ F 6 "LCSC" H 2115 1565 50  0001 C CNN "provedor"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R2
+L CatStick-rescue:R_Small-Device R2
 U 1 1 60AD852A
 P 2370 1665
 F 0 "R2" V 2440 1615 50  0000 L CNN
 F 1 "5k1" V 2305 1600 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 2370 1665 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2370 1665 50  0001 C CNN
 F 3 "~" H 2370 1665 50  0001 C CNN
 F 4 "C319561" H 2370 1665 50  0001 C CNN "LCSC#"
 F 5 "AR03DTCX5101" H 2370 1665 50  0001 C CNN "manf#"
@@ -1944,7 +1944,7 @@ F 6 "LCSC" H 2370 1665 50  0001 C CNN "provedor"
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR04
+L CatStick-rescue:GND-power #PWR04
 U 1 1 60AD8CC8
 P 2660 1710
 F 0 "#PWR04" H 2660 1460 50  0001 C CNN
@@ -1969,7 +1969,7 @@ Wire Wire Line
 	2660 1665 2660 1710
 NoConn ~ 975  2865
 $Comp
-L Device:Fuse_Small F1
+L CatStick-rescue:Fuse_Small-Device F1
 U 1 1 60BA6CB5
 P 2255 1365
 F 0 "F1" H 2255 1550 50  0000 C CNN
@@ -1989,7 +1989,7 @@ Wire Wire Line
 Text Notes 8665 645  0    89   ~ 0
 BUTTONS\n
 $Comp
-L Device:LED_Small D3
+L CatStick-rescue:LED_Small-Device D3
 U 1 1 6087770B
 P 17085 2010
 F 0 "D3" V 17131 1940 50  0000 R CNN
@@ -2003,12 +2003,12 @@ F 6 "LCSC" H 17085 2010 50  0001 C CNN "provedor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Small R5
+L CatStick-rescue:R_Small-Device R5
 U 1 1 60877B07
 P 17085 2325
 F 0 "R5" H 16965 2285 50  0000 C CNN
 F 1 "330" H 16970 2365 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 17085 2325 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 17085 2325 50  0001 C CNN
 F 3 "~" H 17085 2325 50  0001 C CNN
 F 4 "C325681" H 17085 2325 50  0001 C CNN "LCSC#"
 F 5 "RMC0603301%N" H 17085 2325 50  0001 C CNN "manf#"
@@ -2017,7 +2017,7 @@ F 6 "LCSC" H 17085 2325 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR014
+L CatStick-rescue:GND-power #PWR014
 U 1 1 6089575C
 P 17085 2490
 F 0 "#PWR014" H 17085 2240 50  0001 C CNN
@@ -2036,7 +2036,7 @@ LED1
 Wire Wire Line
 	17085 1785 17085 1910
 $Comp
-L Device:LED_Small D2
+L CatStick-rescue:LED_Small-Device D2
 U 1 1 6092AB5A
 P 17475 2000
 F 0 "D2" V 17521 1930 50  0000 R CNN
@@ -2050,12 +2050,12 @@ F 6 "LCSC" H 17475 2000 50  0001 C CNN "provedor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Small R4
+L CatStick-rescue:R_Small-Device R4
 U 1 1 6092AF39
 P 17475 2315
 F 0 "R4" H 17365 2280 50  0000 C CNN
 F 1 "330" H 17360 2365 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 17475 2315 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 17475 2315 50  0001 C CNN
 F 3 "~" H 17475 2315 50  0001 C CNN
 F 4 "C325681" H 17475 2315 50  0001 C CNN "LCSC#"
 F 5 "RMC0603301%N" H 17475 2315 50  0001 C CNN "manf#"
@@ -2064,7 +2064,7 @@ F 6 "LCSC" H 17475 2315 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR015
+L CatStick-rescue:GND-power #PWR015
 U 1 1 6092B333
 P 17475 2490
 F 0 "#PWR015" H 17475 2240 50  0001 C CNN
@@ -2079,7 +2079,7 @@ LED2
 Text Label 1315 8890 1    50   ~ 0
 LED4
 $Comp
-L Device:LED_Small D4
+L CatStick-rescue:LED_Small-Device D4
 U 1 1 6092B5D1
 P 1315 9150
 F 0 "D4" V 1361 9080 50  0000 R CNN
@@ -2093,12 +2093,12 @@ F 6 "LCSC" H 1315 9150 50  0001 C CNN "provedor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Small R9
+L CatStick-rescue:R_Small-Device R9
 U 1 1 6092BA07
 P 1315 9455
 F 0 "R9" H 1195 9415 50  0000 C CNN
 F 1 "330" H 1190 9495 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 1315 9455 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1315 9455 50  0001 C CNN
 F 3 "~" H 1315 9455 50  0001 C CNN
 F 4 "C325681" H 1315 9455 50  0001 C CNN "LCSC#"
 F 5 "RMC0603301%N" H 1315 9455 50  0001 C CNN "manf#"
@@ -2107,7 +2107,7 @@ F 6 "LCSC" H 1315 9455 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR067
+L CatStick-rescue:GND-power #PWR067
 U 1 1 6092BD69
 P 1315 9640
 F 0 "#PWR067" H 1315 9390 50  0001 C CNN
@@ -2143,7 +2143,7 @@ Wire Wire Line
 	20540 7535 20540 7875
 Connection ~ 20540 7875
 $Comp
-L Jumper:Jumper_3_Bridged12 JP1
+L CatStick-rescue:Jumper_3_Bridged12-Jumper JP1
 U 1 1 60AA3251
 P 21715 7890
 F 0 "JP1" H 21715 8094 50  0000 C CNN
@@ -2187,7 +2187,7 @@ NoConn ~ 17800 4490
 Wire Wire Line
 	22395 3380 22395 3260
 $Comp
-L Connector:Conn_Coaxial J1
+L CatStick-rescue:Conn_Coaxial-Connector J1
 U 1 1 5BA656F9
 P 22395 3060
 F 0 "J1" H 22494 3036 50  0000 L CNN
@@ -2201,7 +2201,7 @@ F 6 "LCSC" H 22395 3060 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR020
+L CatStick-rescue:GND-power #PWR020
 U 1 1 5B7347AD
 P 22395 3380
 F 0 "#PWR020" H 22395 3130 50  0001 C CNN
@@ -2227,7 +2227,7 @@ F 5 "Mauser" H 13115 3205 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR042
+L CatStick-rescue:GND-power #PWR042
 U 1 1 61025FF6
 P 780 6775
 F 0 "#PWR042" H 780 6525 50  0001 C CNN
@@ -2240,7 +2240,7 @@ $EndComp
 Wire Wire Line
 	780  6700 780  6775
 $Comp
-L power:GND #PWR040
+L CatStick-rescue:GND-power #PWR040
 U 1 1 61044B56
 P 1360 6765
 F 0 "#PWR040" H 1360 6515 50  0001 C CNN
@@ -2259,7 +2259,7 @@ X48M_N
 Text Label 875  5835 3    50   ~ 0
 X48M_N
 $Comp
-L Device:Crystal_GND24 Y1
+L CatStick-rescue:Crystal_GND24-Device Y1
 U 1 1 5B86AD1A
 P 1085 6285
 F 0 "Y1" H 975 6110 50  0000 L CNN
@@ -2273,7 +2273,7 @@ F 6 "LCSC" H 1085 6285 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR041
+L CatStick-rescue:GND-power #PWR041
 U 1 1 61110217
 P 1085 6770
 F 0 "#PWR041" H 1085 6520 50  0001 C CNN
@@ -2366,7 +2366,7 @@ Wire Wire Line
 Wire Wire Line
 	14670 4605 14515 4605
 $Comp
-L Device:LED_Small D1
+L CatStick-rescue:LED_Small-Device D1
 U 1 1 60C43107
 P 17880 1985
 F 0 "D1" V 17926 1915 50  0000 R CNN
@@ -2380,12 +2380,12 @@ F 6 "LCSC" H 17880 1985 50  0001 C CNN "provedor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Small R3
+L CatStick-rescue:R_Small-Device R3
 U 1 1 60C4376C
 P 17880 2300
 F 0 "R3" H 17760 2260 50  0000 C CNN
 F 1 "330" H 17755 2340 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 17880 2300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 17880 2300 50  0001 C CNN
 F 3 "~" H 17880 2300 50  0001 C CNN
 F 4 "C325681" H 17880 2300 50  0001 C CNN "LCSC#"
 F 5 "RMC0603301%N" H 17880 2300 50  0001 C CNN "manf#"
@@ -2394,7 +2394,7 @@ F 6 "LCSC" H 17880 2300 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR016
+L CatStick-rescue:GND-power #PWR016
 U 1 1 60C43D9A
 P 17880 2500
 F 0 "#PWR016" H 17880 2250 50  0001 C CNN
@@ -2419,7 +2419,7 @@ Wire Wire Line
 Wire Wire Line
 	12325 1705 12445 1705
 $Comp
-L Device:C_Small C3
+L CatStick-rescue:C_Small-Device C3
 U 1 1 60D6C661
 P 11720 2195
 F 0 "C3" V 11491 2195 50  0000 C CNN
@@ -2439,7 +2439,7 @@ Wire Wire Line
 Wire Wire Line
 	12040 4345 12445 4345
 $Comp
-L power:GND #PWR010
+L CatStick-rescue:GND-power #PWR010
 U 1 1 60E2B27F
 P 11720 2345
 F 0 "#PWR010" H 11720 2095 50  0001 C CNN
@@ -2452,7 +2452,7 @@ $EndComp
 Wire Wire Line
 	11720 2345 11720 2295
 $Comp
-L Device:C_Small C4
+L CatStick-rescue:C_Small-Device C4
 U 1 1 60E51F71
 P 11945 2295
 F 0 "C4" H 11805 2220 50  0000 C CNN
@@ -2478,7 +2478,7 @@ Connection ~ 11945 1995
 Wire Wire Line
 	11945 1995 12445 1995
 $Comp
-L Device:C_Small C5
+L CatStick-rescue:C_Small-Device C5
 U 1 1 60F84D56
 P 12310 2410
 F 0 "C5" H 12165 2360 50  0000 C CNN
@@ -2496,7 +2496,7 @@ Wire Wire Line
 Wire Wire Line
 	12310 2275 12310 2310
 $Comp
-L power:GND #PWR018
+L CatStick-rescue:GND-power #PWR018
 U 1 1 60FAE6B9
 P 12130 2620
 F 0 "#PWR018" H 12130 2370 50  0001 C CNN
@@ -2518,7 +2518,7 @@ Connection ~ 12130 2545
 Wire Wire Line
 	12130 2545 11945 2545
 $Comp
-L power:+3V3 #PWR07
+L CatStick-rescue:+3V3-power #PWR07
 U 1 1 610252E9
 P 11945 1865
 F 0 "#PWR07" H 11945 1715 50  0001 C CNN
@@ -2538,7 +2538,7 @@ Wire Wire Line
 Wire Notes Line
 	18840 480  18840 10130
 $Comp
-L Connector:Conn_01x06_Female J2
+L CatStick-rescue:Conn_01x06_Female-Connector J2
 U 1 1 60AB064F
 P 18000 4190
 F 0 "J2" H 18028 4166 50  0000 L CNN
@@ -2549,7 +2549,7 @@ F 3 "~" H 18000 4190 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C41
+L CatStick-rescue:C-Device C41
 U 1 1 5B9B4BB0
 P 3350 9235
 F 0 "C41" H 3465 9281 50  0000 L CNN
@@ -2563,7 +2563,7 @@ F 6 "C108343" H 3350 9235 50  0001 C CNN "LCSC#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C34
+L CatStick-rescue:C-Device C34
 U 1 1 608CAAE2
 P 4575 7550
 F 0 "C34" H 4690 7596 50  0000 L CNN
@@ -2577,12 +2577,12 @@ F 6 "C108343" H 4575 7550 50  0001 C CNN "LCSC#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R6
+L CatStick-rescue:R-Device R6
 U 1 1 608CB095
 P 4575 7145
 F 0 "R6" V 4655 7145 50  0000 C CNN
 F 1 "100K" V 4490 7145 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4505 7145 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4505 7145 50  0001 C CNN
 F 3 "" H 4575 7145 50  0000 C CNN
 F 4 "C179820" H 4575 7145 50  0001 C CNN "LCSC#"
 F 5 "RT0603FRD07100KL" H 4575 7145 50  0001 C CNN "manf#"
@@ -2593,7 +2593,7 @@ $EndComp
 Wire Wire Line
 	4575 7400 4575 7335
 $Comp
-L power:GND #PWR054
+L CatStick-rescue:GND-power #PWR054
 U 1 1 6092EE43
 P 4575 7760
 F 0 "#PWR054" H 4575 7510 50  0001 C CNN
@@ -2698,7 +2698,7 @@ Wire Wire Line
 Wire Wire Line
 	5200 2350 5200 2385
 $Comp
-L power:+3V3 #PWR05
+L CatStick-rescue:+3V3-power #PWR05
 U 1 1 5F58491C
 P 6295 1725
 F 0 "#PWR05" H 6295 1575 50  0001 C CNN
@@ -2723,7 +2723,7 @@ F 6 "LCSC" H 5200 2050 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR06
+L CatStick-rescue:VCC-power #PWR06
 U 1 1 5F504C04
 P 3805 1860
 F 0 "#PWR06" H 3805 1710 50  0001 C CNN
@@ -2745,7 +2745,7 @@ Wire Wire Line
 Wire Wire Line
 	4470 2350 4470 2250
 $Comp
-L power:PWR_FLAG #FLG01
+L CatStick-rescue:PWR_FLAG-power #FLG01
 U 1 1 58CCF366
 P 4250 1850
 F 0 "#FLG01" H 4250 1945 50  0001 C CNN
@@ -2756,7 +2756,7 @@ F 3 "" H 4250 1850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR013
+L CatStick-rescue:GND-power #PWR013
 U 1 1 58C79B72
 P 5720 2400
 F 0 "#PWR013" H 5720 2150 50  0001 C CNN
@@ -2767,7 +2767,7 @@ F 3 "" H 5720 2400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR011
+L CatStick-rescue:GND-power #PWR011
 U 1 1 58C79AC5
 P 4470 2350
 F 0 "#PWR011" H 4470 2100 50  0001 C CNN
@@ -2778,7 +2778,7 @@ F 3 "" H 4470 2350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR012
+L CatStick-rescue:GND-power #PWR012
 U 1 1 58C799E1
 P 5200 2385
 F 0 "#PWR012" H 5200 2135 50  0001 C CNN
@@ -2789,7 +2789,7 @@ F 3 "" H 5200 2385 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C2
+L CatStick-rescue:C-Device C2
 U 1 1 58C7992F
 P 5720 2150
 F 0 "C2" H 5745 2250 50  0000 L CNN
@@ -2803,7 +2803,7 @@ F 6 "CC0603KRX7R9BB104" H 5720 2150 50  0001 C CNN "manf#"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C C1
+L CatStick-rescue:C-Device C1
 U 1 1 58C79871
 P 4470 2100
 F 0 "C1" H 4495 2200 50  0000 L CNN
@@ -2817,7 +2817,7 @@ F 6 "C108343" H 4470 2100 50  0001 C CNN "LCSC#"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Switch:SW_Push BOOT1
+L CatStick-rescue:SW_Push-Switch BOOT1
 U 1 1 60C2B98F
 P 8185 1965
 F 0 "BOOT1" H 8185 2250 50  0000 C CNN
@@ -2831,7 +2831,7 @@ F 6 "LCSC" H 8185 1965 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR08
+L CatStick-rescue:GND-power #PWR08
 U 1 1 60C4D0C5
 P 7890 2045
 F 0 "#PWR08" H 7890 1795 50  0001 C CNN
@@ -2866,7 +2866,7 @@ Wire Notes Line
 Text Notes 17220 850  0    89   ~ 0
 LEDS
 $Comp
-L power:+3V3 #PWR022
+L CatStick-rescue:+3V3-power #PWR022
 U 1 1 60C1A6B6
 P 1450 4015
 F 0 "#PWR022" H 1450 3865 50  0001 C CNN
@@ -2877,7 +2877,7 @@ F 3 "" H 1450 4015 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR060
+L CatStick-rescue:+3V3-power #PWR060
 U 1 1 60C1D5F0
 P 7385 8475
 F 0 "#PWR060" H 7385 8325 50  0001 C CNN
@@ -2888,7 +2888,7 @@ F 3 "" H 7385 8475 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C30
+L CatStick-rescue:C-Device C30
 U 1 1 60977A2F
 P 19360 7135
 F 0 "C30" V 19505 6965 50  0000 L CNN
@@ -2902,7 +2902,7 @@ F 6 "CC0603FRNPO9BN470" H 19360 7135 50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C32
+L CatStick-rescue:C-Device C32
 U 1 1 60977E80
 P 19370 7335
 F 0 "C32" V 19325 7125 50  0000 L CNN
@@ -2924,7 +2924,7 @@ Wire Wire Line
 Wire Wire Line
 	19170 7135 19210 7135
 $Comp
-L Switch:SW_Push SW1
+L CatStick-rescue:SW_Push-Switch SW1
 U 1 1 60AC93F3
 P 9925 1285
 F 0 "SW1" H 9925 1570 50  0000 C CNN
@@ -2940,7 +2940,7 @@ $EndComp
 Text Label 9515 1285 2    50   ~ 0
 U_SWITCH
 $Comp
-L power:GND #PWR03
+L CatStick-rescue:GND-power #PWR03
 U 1 1 60AC9DB0
 P 10155 1445
 F 0 "#PWR03" H 10155 1195 50  0001 C CNN
