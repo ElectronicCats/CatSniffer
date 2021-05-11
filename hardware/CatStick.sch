@@ -1642,11 +1642,11 @@ F 3 "" H 20540 8180 50  0001 C CNN
 	1    20540 8180
 	-1   0    0    -1  
 $EndComp
-Text Label 14675 2705 0    50   ~ 0
+Text Label 14675 3205 0    50   ~ 0
 CTF1
 Text Label 14675 2805 0    50   ~ 0
 CTF2
-Text Label 14675 3205 0    50   ~ 0
+Text Label 14675 2705 0    50   ~ 0
 CTF3
 $Comp
 L CatStick-rescue:C-Device C6
