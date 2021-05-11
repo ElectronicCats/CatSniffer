@@ -992,11 +992,11 @@ Text Label 14675 3505 0    50   ~ 0
 NSS
 Text Label 14665 4105 0    50   ~ 0
 CIPO
-Text Label 14655 1705 0    50   ~ 0
-BUSY
 Text Label 14655 1805 0    50   ~ 0
-DIO1
+BUSY
 Text Label 14655 1905 0    50   ~ 0
+DIO1
+Text Label 14665 2205 0    50   ~ 0
 DIO2
 Text Label 14675 2605 0    50   ~ 0
 DIO3
@@ -2645,7 +2645,7 @@ Text Label 4795 7155 0    50   ~ 0
 RESET_CC
 Text Label 17715 4190 2    50   ~ 0
 RESET
-Text Label 14665 2205 0    50   ~ 0
+Text Label 14655 1705 0    50   ~ 0
 RTS
 Text Label 5035 7340 0    50   ~ 0
 RTS
