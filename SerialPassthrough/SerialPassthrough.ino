@@ -17,57 +17,37 @@
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+unsigned long baud = 500000;
 
-unsigned long baud = 115200;
-
-int rts = -1;
-int dtr = -1;
-#define NINA_GPIO0 13
-#define NINA_RESETN 14
+#define Pin_Reset (1)
+#define Pin_Boot (7)
 
 void setup() {
+  // put your setup code here, to run once:
   Serial.begin(baud);
-
   Serial1.begin(baud);
-
-  pinMode(NINA_GPIO0, OUTPUT);
-  pinMode(NINA_RESETN, OUTPUT);
+  //while(!Serial);
+  
+  pinMode(Pin_Reset, OUTPUT);
+  pinMode(Pin_Boot, OUTPUT);
+    
+  digitalWrite(Pin_Boot, LOW);
+  delay(100);
+  digitalWrite(Pin_Reset, LOW);
+  delay(100);
+  digitalWrite(Pin_Reset, HIGH);
+  delay(100);
+  digitalWrite(Pin_Boot, HIGH);
+  
 }
 
 void loop() {
-#ifndef ARDUINO_AVR_UNO_WIFI_REV2
-  if (rts != Serial.rts()) {
-#ifdef defined(ARDUINO_SAMD_NANO_33_IOT)
-    digitalWrite(NINA_RESETN, Serial.rts() ? LOW : HIGH);
-#else
-    digitalWrite(NINA_RESETN, Serial.rts());
-#endif
-    rts = Serial.rts();
+  if (Serial.available()) {      // If anything comes in Serial (USB),
+    Serial1.write(Serial.read());   // read it and send it out Serial1 (pins 0 & 1)
   }
 
-  if (dtr != Serial.dtr()) {
-    digitalWrite(NINA_GPIO0, (Serial.dtr() == 0) ? HIGH : LOW);
-    dtr = Serial.dtr();
-  }
-#endif
-
-  if (Serial.available()) {
-    Serial1.write(Serial.read());
+  if (Serial1.available()) {     // If anything comes in Serial1 (pins 0 & 1)
+    Serial.write(Serial1.read());   // read it and send it out Serial (USB)
   }
 
-  if (Serial1.available()) {
-    Serial.write(Serial1.read());
-  }
-
-#ifndef ARDUINO_AVR_UNO_WIFI_REV2
-  // check if the USB virtual serial wants a new baud rate
-  if (Serial.baud() != baud) {
-    rts = -1;
-    dtr = -1;
-
-    baud = Serial.baud();
-
-    Serial1.begin(baud);
-  }
-#endif
 }
