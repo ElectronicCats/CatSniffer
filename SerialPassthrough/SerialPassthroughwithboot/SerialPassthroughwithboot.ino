@@ -17,7 +17,9 @@
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-unsigned long baud = 500000;
+//unsigned long baud = 500000;
+//unsigned long baud = 115200;//Baud for Zigbee2MQTT
+unsigned long baud = 57600;//Baud for Zigbee2MQTT
 
 #define Pin_Reset (1)
 #define Pin_Boot (7)
