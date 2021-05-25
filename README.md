@@ -2,6 +2,8 @@
 
 Es una placa de desarrollo de factor de forma "memoria USB" original multiprotocolo de Internet de las Cosas (IoT) con los chips CC1352R de nueva generación de TI y SX1276 Semtech y SAMD21E18 de Microchip.
 
+Este trabajo esta inspirado en el trabajo de nuestro gran amigo [Michael Ossmann](https://twitter.com/michaelossmann) como tributo a su gran trabajo en [Greatscott Gadgets](https://greatscottgadgets.com/) creando YardStick, GreatFET, HackRF y Ubertooth, gracias.
+
 ## Protocols
 
 - Thread, Zigbee, 
