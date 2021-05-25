@@ -17,11 +17,11 @@
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-//unsigned long baud = 921600;//Baud for SmartRF Sniffer 2 also works with Smart RF Flash Programmer 2
-unsigned long baud = 115200;//Baud for Zigbee2MQTT
+unsigned long baud = 921600;//Baud for SmartRF Sniffer 2 also works with Smart RF Flash Programmer 2
+//unsigned long baud = 115200;//Baud for Zigbee2MQTT
 
 void setup() {
-  // put your setup code here, to run once:
+  //Begin Serial ports
   Serial.begin(baud);
   Serial1.begin(baud);
   
@@ -36,7 +36,7 @@ void loop() {
     Serial.write(Serial1.read());   // read it and send it out Serial (USB)
   }
 
-  if(Serial.baud() != baud){
+  if(Serial.baud() != baud){//Check if the Serial port needs a new baud rate
     baud = Serial.baud();
 
     Serial1.begin(baud);

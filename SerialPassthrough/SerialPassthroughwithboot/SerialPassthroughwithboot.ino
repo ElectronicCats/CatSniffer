@@ -18,21 +18,24 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 //unsigned long baud = 500000;
-//unsigned long baud = 115200;//Baud for Zigbee2MQTT
-unsigned long baud = 57600;//Baud for Zigbee2MQTT
 
+//unsigned long baud = 57600;//Baud for Zigbee2MQTT
+unsigned long baud = 115200;//Baud for Zigbee2MQTT
+
+//Pin declaration to enter bootloader mode on CC1352
 #define Pin_Reset (1)
 #define Pin_Boot (7)
 
 void setup() {
-  // put your setup code here, to run once:
+  //Begin Serial ports
   Serial.begin(baud);
   Serial1.begin(baud);
-  //while(!Serial);
-  
+
+  //Assign the attribute of OUTPUT to our pins
   pinMode(Pin_Reset, OUTPUT);
   pinMode(Pin_Boot, OUTPUT);
-    
+
+  //Enter bootloader mode function
   digitalWrite(Pin_Boot, LOW);
   delay(100);
   digitalWrite(Pin_Reset, LOW);
@@ -44,6 +47,7 @@ void setup() {
 }
 
 void loop() {
+  //SerialPassthrough
   if (Serial.available()) {      // If anything comes in Serial (USB),
     Serial1.write(Serial.read());   // read it and send it out Serial1 (pins 0 & 1)
   }
