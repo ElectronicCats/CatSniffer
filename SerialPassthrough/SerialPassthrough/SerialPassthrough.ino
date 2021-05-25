@@ -20,10 +20,6 @@
 //unsigned long baud = 921600;//Baud for SmartRF Sniffer 2 also works with Smart RF Flash Programmer 2
 unsigned long baud = 115200;//Baud for Zigbee2MQTT
 
-
-#define Pin_Reset (1)
-#define Pin_Boot (7)
-
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(baud);
