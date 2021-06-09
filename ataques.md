@@ -1,6 +1,6 @@
-# Vunerabilidades
+# Ataques a protocolos IoT
 
-## LoRa
+## LoRa/LoRaWAN
 
 - Bit flipping:
 
@@ -12,3 +12,12 @@
 
 ## Zigbee
 - https://www.opencve.io/cve?vendor=mi&product=dgnwg03lm
+
+## Thread
+- 
+
+## IEEE 802.15.4g,
+-
+
+### 6LoWPAN
+- 
