@@ -79,11 +79,11 @@ F 6 "Mouser" H 1855 4050 50  0001 C CNN "provedor"
 	0    1    1    0   
 $EndComp
 Text Label 3900 8335 0    60   ~ 0
-cJTAG_TCKC
+cJTAG_TCK
 Text Notes 6990 8095 0    99   ~ 0
 cJTAG - Matching CC1350
 Text Label 7375 8975 2    60   ~ 0
-cJTAG_TDO
+cJTAG_TCK
 Text Label 7375 8775 2    60   ~ 0
 cJTAG_TMSC
 $Comp
