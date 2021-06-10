@@ -78,31 +78,14 @@ F 6 "Mouser" H 1855 4050 50  0001 C CNN "provedor"
 	1    1855 4050
 	0    1    1    0   
 $EndComp
-Text Label 3900 8235 0    60   ~ 0
-JTAG_TDO
 Text Label 3900 8335 0    60   ~ 0
-JTAG_TCKC
+cJTAG_TCKC
 Text Notes 6990 8095 0    99   ~ 0
-JTAG - Matching CC1350
-Text Label 8285 8575 0    60   ~ 0
-JTAG_TCKC
-Text Label 8285 8675 0    60   ~ 0
-JTAG_TDO
-Text Label 8285 8775 0    60   ~ 0
-JTAG_TDI
-Text Label 8285 8475 0    60   ~ 0
-JTAG_TMSC
-$Comp
-L CatStick-rescue:GND-power #PWR060
-U 1 1 58CA0220
-P 7485 8975
-F 0 "#PWR060" H 7485 8725 50  0001 C CNN
-F 1 "GND" H 7485 8825 50  0000 C CNN
-F 2 "" H 7485 8975 50  0000 C CNN
-F 3 "" H 7485 8975 50  0000 C CNN
-	1    7485 8975
-	1    0    0    -1  
-$EndComp
+cJTAG - Matching CC1350
+Text Label 7375 8975 2    60   ~ 0
+cJTAG_TDO
+Text Label 7375 8775 2    60   ~ 0
+cJTAG_TMSC
 $Comp
 L CatStick-rescue:GND-power #PWR02
 U 1 1 58CC4391
@@ -128,21 +111,7 @@ Wire Wire Line
 Wire Wire Line
 	3800 8335 3900 8335
 Wire Wire Line
-	3800 8235 3900 8235
-Wire Wire Line
 	3550 9035 3450 9035
-Wire Wire Line
-	7485 8575 7485 8675
-Connection ~ 7485 8675
-Connection ~ 7485 8875
-Wire Wire Line
-	8185 8775 8285 8775
-Wire Wire Line
-	8285 8675 8185 8675
-Wire Wire Line
-	8285 8575 8185 8575
-Wire Wire Line
-	8185 8475 8285 8475
 Wire Wire Line
 	7830 1290 7930 1290
 Wire Wire Line
@@ -151,30 +120,6 @@ Wire Wire Line
 	1300 8235 1200 8235
 Wire Wire Line
 	1300 7735 1300 7835
-Wire Wire Line
-	7485 8675 7485 8875
-Wire Wire Line
-	7485 8875 7485 8975
-$Comp
-L CatStick-rescue:Conn_02x05_Odd_Even-Connector_Generic J3
-U 1 1 5B9358B4
-P 7885 8675
-F 0 "J3" H 7935 9092 50  0000 C CNN
-F 1 "JTAG" H 7935 9001 50  0000 C CNN
-F 2 "Connector:Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical" H 7885 8675 50  0001 C CNN
-F 3 "~" H 7885 8675 50  0001 C CNN
-F 4 "TC2050-IDC-ND" H 7885 8675 50  0001 C CNN "manf#"
-F 5 "Digikey" H 7885 8675 50  0001 C CNN "provedor"
-	1    7885 8675
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7485 8575 7685 8575
-Wire Wire Line
-	7485 8675 7685 8675
-NoConn ~ 7685 8775
-Wire Wire Line
-	7485 8875 7685 8875
 $Comp
 L CatStick-rescue:SW_Push-Switch RESET_CC1
 U 1 1 5BAA6E6C
@@ -499,7 +444,7 @@ Wire Wire Line
 Text Label 8995 6750 2    50   ~ 0
 RX_TX
 Text Label 3550 9035 0    60   ~ 0
-JTAG_TMSC
+cJTAG_TMSC
 NoConn ~ 3800 7635
 NoConn ~ 3800 7735
 NoConn ~ 2000 8035
@@ -512,8 +457,6 @@ NoConn ~ 3050 6535
 NoConn ~ 3150 6535
 NoConn ~ 3250 6535
 NoConn ~ 3350 6535
-Wire Wire Line
-	7385 8475 7685 8475
 Text Notes 485  5225 0    89   ~ 0
 CC1352
 Text Notes 3965 740  0    89   ~ 0
@@ -1004,10 +947,10 @@ F 3 "" H 11475 9310 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C38
+L CatStick-rescue:C_Small-Device C37
 U 1 1 60DE769A
 P 11920 9175
-F 0 "C38" H 12012 9221 50  0000 L CNN
+F 0 "C37" H 12012 9221 50  0000 L CNN
 F 1 "10pF" H 12012 9130 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 11920 9175 50  0001 C CNN
 F 3 "~" H 11920 9175 50  0001 C CNN
@@ -1018,10 +961,10 @@ F 6 "LCSC" H 11920 9175 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C37
+L CatStick-rescue:C_Small-Device C38
 U 1 1 60DE8660
 P 11105 9180
-F 0 "C37" H 11197 9226 50  0000 L CNN
+F 0 "C38" H 11197 9226 50  0000 L CNN
 F 1 "10pF" H 11175 9130 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 11105 9180 50  0001 C CNN
 F 3 "~" H 11105 9180 50  0001 C CNN
@@ -1058,10 +1001,10 @@ F 3 "" H 14720 6715 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR063
+L CatStick-rescue:GND-power #PWR062
 U 1 1 60E62524
 P 11920 9320
-F 0 "#PWR063" H 11920 9070 50  0001 C CNN
+F 0 "#PWR062" H 11920 9070 50  0001 C CNN
 F 1 "GND" H 11925 9147 50  0000 C CNN
 F 2 "" H 11920 9320 50  0001 C CNN
 F 3 "" H 11920 9320 50  0001 C CNN
@@ -1069,10 +1012,10 @@ F 3 "" H 11920 9320 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR062
+L CatStick-rescue:GND-power #PWR063
 U 1 1 60E6344C
 P 11105 9325
-F 0 "#PWR062" H 11105 9075 50  0001 C CNN
+F 0 "#PWR063" H 11105 9075 50  0001 C CNN
 F 1 "GND" H 11110 9152 50  0000 C CNN
 F 2 "" H 11105 9325 50  0001 C CNN
 F 3 "" H 11105 9325 50  0001 C CNN
@@ -2428,10 +2371,8 @@ Wire Wire Line
 Connection ~ 4795 7335
 Wire Wire Line
 	4795 7335 4795 7340
-Text Label 8295 8875 0    50   ~ 0
+Text Label 7370 8875 2    50   ~ 0
 RESET_CC
-Wire Wire Line
-	8295 8875 8185 8875
 NoConn ~ 2000 8135
 Text Label 8430 1290 0    50   ~ 0
 RESET_CC
@@ -2651,12 +2592,12 @@ $EndComp
 $Comp
 L CatStick-rescue:+3V3-power #PWR058
 U 1 1 60C1D5F0
-P 7385 8475
-F 0 "#PWR058" H 7385 8325 50  0001 C CNN
-F 1 "+3V3" H 7400 8648 50  0000 C CNN
-F 2 "" H 7385 8475 50  0001 C CNN
-F 3 "" H 7385 8475 50  0001 C CNN
-	1    7385 8475
+P 7425 8610
+F 0 "#PWR058" H 7425 8460 50  0001 C CNN
+F 1 "+3V3" H 7440 8783 50  0000 C CNN
+F 2 "" H 7425 8610 50  0001 C CNN
+F 3 "" H 7425 8610 50  0001 C CNN
+	1    7425 8610
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2818,10 +2759,6 @@ Text Notes 7615 4045 0    50   ~ 0
 Pin 45\n
 Text Notes 8115 4050 0    50   ~ 0
 Pin 48\n
-Text Label 3900 8135 0    60   ~ 0
-JTAG_TDI
-Wire Wire Line
-	3800 8135 3900 8135
 $Comp
 L CatStick-rescue:C-Device C36
 U 1 1 58C3FE5B
@@ -2839,10 +2776,10 @@ $EndComp
 Wire Wire Line
 	11475 9310 11475 9205
 $Comp
-L CatStick-rescue:GND-power #PWR?
+L CatStick-rescue:GND-power #PWR057
 U 1 1 6122AE32
 P 11350 8580
-F 0 "#PWR?" H 11350 8330 50  0001 C CNN
+F 0 "#PWR057" H 11350 8330 50  0001 C CNN
 F 1 "GND" H 11355 8407 50  0000 C CNN
 F 2 "" H 11350 8580 50  0001 C CNN
 F 3 "" H 11350 8580 50  0001 C CNN
@@ -2903,4 +2840,43 @@ Wire Wire Line
 	11350 8545 11475 8545
 Wire Wire Line
 	11475 8545 11475 8805
+NoConn ~ 3800 8135
+NoConn ~ 3800 8235
+$Comp
+L CatStick-rescue:Conn_01x06_Female-Connector J3
+U 1 1 614DC058
+P 7760 8875
+F 0 "J3" H 7788 8851 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 7788 8760 50  0000 L CNN
+F 2 "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical" H 7760 8875 50  0001 C CNN
+F 3 "~" H 7760 8875 50  0001 C CNN
+	1    7760 8875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7560 8675 7425 8675
+Wire Wire Line
+	7425 8675 7425 8610
+$Comp
+L CatStick-rescue:GND-power #PWR060
+U 1 1 614FE81A
+P 7325 9150
+F 0 "#PWR060" H 7325 8900 50  0001 C CNN
+F 1 "GND" H 7325 9000 50  0000 C CNN
+F 2 "" H 7325 9150 50  0000 C CNN
+F 3 "" H 7325 9150 50  0000 C CNN
+	1    7325 9150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7560 8775 7375 8775
+Wire Wire Line
+	7370 8875 7560 8875
+Wire Wire Line
+	7375 8975 7560 8975
+Wire Wire Line
+	7325 9150 7325 9075
+Wire Wire Line
+	7325 9075 7560 9075
+NoConn ~ 7560 9175
 $EndSCHEMATC
