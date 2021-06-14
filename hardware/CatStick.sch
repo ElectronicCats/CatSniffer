@@ -140,7 +140,7 @@ Wire Wire Line
 	4480 4490 4480 4405
 Text Label 6335 4080 2    50   ~ 0
 DCDC_SW
-Text Label 7490 3825 1    50   ~ 0
+Text Label 7490 3830 1    50   ~ 0
 VDDR
 $Comp
 L CatStick-rescue:GND-power #PWR029
