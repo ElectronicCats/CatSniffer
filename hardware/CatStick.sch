@@ -1724,15 +1724,11 @@ F 3 "" H 11350 8580 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	11325 9005 11195 9005
-Wire Wire Line
 	11105 9005 11105 9080
 Wire Wire Line
 	11105 9325 11105 9280
 Wire Wire Line
 	11920 9320 11920 9275
-Wire Wire Line
-	11625 9005 11805 9005
 Wire Wire Line
 	11920 9005 11920 9075
 Text Label 11805 8755 0    50   ~ 0
@@ -2558,20 +2554,6 @@ F 6 "LCSC" H 11105 9180 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:Crystal_GND24-Device Y3
-U 1 1 60D9622F
-P 11475 9005
-F 0 "Y3" H 11645 9055 50  0000 L CNN
-F 1 "32Mhz" H 11590 8955 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 11475 9005 50  0001 C CNN
-F 3 "~" H 11475 9005 50  0001 C CNN
-F 4 "C255969" H 11475 9005 50  0001 C CNN "LCSC#"
-F 5 "Q24FA20H0021700" H 11475 9005 50  0001 C CNN "manf#"
-F 6 "LCSC" H 11475 9005 50  0001 C CNN "provedor"
-	1    11475 9005
-	1    0    0    -1  
-$EndComp
-$Comp
 L CatStick-rescue:L_Small-Device L4
 U 1 1 60CDE29A
 P 15205 6585
@@ -2881,4 +2863,118 @@ F 6 "LCSC" H 11920 9175 50  0001 C CNN "provedor"
 	1    11920 9175
 	1    0    0    -1  
 $EndComp
+Text Notes 20930 3995 0    50   ~ 0
+Condition
+Text Notes 20185 3995 0    50   ~ 0
+CRF1
+Text Notes 20435 3995 0    50   ~ 0
+CRF2
+Text Notes 20685 4000 0    50   ~ 0
+CRF3
+Text Notes 20250 4100 0    50   ~ 0
+1
+Text Notes 20505 4100 0    50   ~ 0
+0
+Text Notes 20755 4105 0    50   ~ 0
+0
+Text Notes 20510 4225 0    50   ~ 0
+1
+Text Notes 20255 4225 0    50   ~ 0
+0
+Text Notes 20755 4230 0    50   ~ 0
+0
+Text Notes 20760 4355 0    50   ~ 0
+1
+Text Notes 20505 4360 0    50   ~ 0
+0
+Text Notes 20255 4360 0    50   ~ 0
+0
+Text Notes 20945 4100 0    50   ~ 0
+RF1 to ANT
+Text Notes 20940 4230 0    50   ~ 0
+RF1 to ANT
+Text Notes 20945 4355 0    50   ~ 0
+RF1 to ANT
+Wire Notes Line
+	20185 4390 20185 3905
+Wire Notes Line
+	20400 3905 20400 4390
+Wire Notes Line
+	20655 3905 20655 4390
+Wire Notes Line
+	20910 3905 20910 4390
+Wire Notes Line
+	21410 3905 21410 4390
+Text Notes 21430 3990 0    50   ~ 0
+Technology
+Text Notes 21440 4105 0    50   ~ 0
+LoRa
+Text Notes 21445 4230 0    50   ~ 0
+2.4Ghz
+Text Notes 21445 4380 0    50   ~ 0
+Sub-Gig
+Wire Notes Line
+	21910 4390 21910 3905
+Wire Notes Line
+	20185 3905 21910 3905
+Wire Notes Line
+	20185 4390 21910 4390
+Wire Notes Line
+	20185 3995 21910 3995
+Wire Notes Line
+	20185 4120 21915 4120
+Wire Notes Line
+	20185 4250 21910 4250
+Text Notes 20045 8675 0    50   ~ 0
+Condition
+Text Notes 19550 8675 0    50   ~ 0
+RF1
+Text Notes 19800 8680 0    50   ~ 0
+RF2
+Text Notes 19620 8780 0    50   ~ 0
+1
+Text Notes 19870 8785 0    50   ~ 0
+0
+Text Notes 19625 8905 0    50   ~ 0
+0
+Text Notes 19870 8910 0    50   ~ 0
+1
+Text Notes 20060 8780 0    50   ~ 0
+Tx to ANT
+Text Notes 20055 8910 0    50   ~ 0
+Rx to ANT
+Wire Wire Line
+	11325 9005 11195 9005
+Wire Wire Line
+	11625 9005 11805 9005
+$Comp
+L CatStick-rescue:Crystal_GND24-Device Y3
+U 1 1 60D9622F
+P 11475 9005
+F 0 "Y3" H 11645 9055 50  0000 L CNN
+F 1 "32Mhz" H 11590 8955 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm" H 11475 9005 50  0001 C CNN
+F 3 "~" H 11475 9005 50  0001 C CNN
+F 4 "C255969" H 11475 9005 50  0001 C CNN "LCSC#"
+F 5 "Q24FA20H0021700" H 11475 9005 50  0001 C CNN "manf#"
+F 6 "LCSC" H 11475 9005 50  0001 C CNN "provedor"
+	1    11475 9005
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	19530 8595 20455 8595
+Wire Notes Line
+	19530 8925 19530 8595
+Wire Notes Line
+	19530 8680 20455 8680
+Wire Notes Line
+	20455 8595 20455 8925
+Wire Notes Line
+	19995 8595 19995 8920
+Wire Notes Line
+	19745 8595 19745 8925
+Wire Notes Line
+	19530 8925 20455 8925
+Wire Notes Line
+	19535 8810 20455 8810
 $EndSCHEMATC
