@@ -997,7 +997,6 @@ Wire Wire Line
 Connection ~ 2660 1665
 Wire Wire Line
 	2660 1665 2660 1710
-NoConn ~ 975  2865
 Wire Wire Line
 	2355 1365 2710 1365
 Wire Wire Line
@@ -1891,8 +1890,8 @@ U 1 1 5B86A9A7
 P 2850 7785
 F 0 "U8" H 2800 7735 50  0000 L CNN
 F 1 "CC1352R1F3RGZR" H 2500 7485 50  0000 L CNN
-F 2 "Package_DFN_QFN:VQFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm" H 3250 7035 50  0001 C CNN
-F 3 "" H 3250 7035 50  0001 C CNN
+F 2 "Package_DFN_QFN:VQFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm_ThermalVias" H 3250 7035 50  0001 C CNN
+F 3 "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=26&gotoUrl=http://www.ti.com/lit/ds/symlink/cc1352r.pdf" H 3250 7035 50  0001 C CNN
 F 4 "" H 2850 7785 50  0001 C CNN "LCSC#"
 F 5 "595-CC1352R1F3RGZR" H 2850 7785 50  0001 C CNN "Mouser#"
 F 6 "CC1352R1F3RGZR " H 2850 7785 50  0001 C CNN "manf#"
@@ -2916,4 +2915,32 @@ Wire Wire Line
 	11215 8845 11335 8845
 Wire Wire Line
 	11790 8845 11635 8845
+$Comp
+L CatStick-rescue:GND-power #PWR0101
+U 1 1 60D2D5BC
+P 975 2950
+F 0 "#PWR0101" H 975 2700 50  0001 C CNN
+F 1 "GND" H 980 2777 50  0000 C CNN
+F 2 "" H 975 2950 50  0001 C CNN
+F 3 "" H 975 2950 50  0001 C CNN
+	1    975  2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	975  2950 975  2865
+$Comp
+L CatStick-rescue:GND-power #PWR0102
+U 1 1 60D8DF02
+P 1990 8605
+F 0 "#PWR0102" H 1990 8355 50  0001 C CNN
+F 1 "GND" H 1995 8432 50  0000 C CNN
+F 2 "" H 1990 8605 50  0001 C CNN
+F 3 "" H 1990 8605 50  0001 C CNN
+	1    1990 8605
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1990 8605 1990 8485
+Wire Wire Line
+	1990 8485 2100 8485
 $EndSCHEMATC
