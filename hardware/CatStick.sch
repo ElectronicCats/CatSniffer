@@ -284,9 +284,9 @@ Text Notes 1355 660  0    89   ~ 0
 USB
 Wire Wire Line
 	2850 9035 2850 9135
-Text Label 2850 9135 3    50   ~ 0
-RXD
 Text Label 2950 9135 3    50   ~ 0
+RXD
+Text Label 2850 9135 3    50   ~ 0
 TXD
 NoConn ~ 3800 7835
 Wire Wire Line
