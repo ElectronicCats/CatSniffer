@@ -1,6 +1,8 @@
 # CatSniffer
 
-Es una placa de desarrollo de factor de forma "memoria USB" original multiprotocolo de Internet de las Cosas (IoT) con los chips CC1352R de nueva generación de TI y SX1276 Semtech y SAMD21E18 de Microchip.
+CatSniffer es una placa de desarrollo original multiprotocolo para el Internet de las Cosas (IoT). Cuenta con un diseño tipo “memoria usb” que facilita el transporte y uso en cualquier momento. Integra un chip CC1352 de TI, un SX1276 y el SAMD21E18 todos de última generación. 
+
+Esta placa es una herramienta auditora para dispositivos de red inalámbrica, que permite al usuario detectar grandes consumos de ancho de banda para así poder tomar medidas oportunas ante agentes malignos. 
 
 Este trabajo esta inspirado en el trabajo de nuestro gran amigo [Michael Ossmann](https://twitter.com/michaelossmann) como tributo a su gran trabajo en [Greatscott Gadgets](https://greatscottgadgets.com/) creando YardStick, GreatFET, HackRF y Ubertooth, gracias.
 
