@@ -14,7 +14,7 @@ Comment3 "Edgar Herrera"
 Comment4 "Andres Sabas"
 $EndDescr
 $Comp
-L CatStick-rescue:GND-power #PWR051
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR051
 U 1 1 58C3FEDB
 P 850 7735
 F 0 "#PWR051" H 850 7485 50  0001 C CNN
@@ -25,7 +25,7 @@ F 3 "" H 850 7735 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR056
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR056
 U 1 1 58C3FF1C
 P 850 8235
 F 0 "#PWR056" H 850 7985 50  0001 C CNN
@@ -44,7 +44,7 @@ cJTAG_TCK
 Text Label 7375 8775 2    60   ~ 0
 cJTAG_TMSC
 $Comp
-L CatStick-rescue:GND-power #PWR02
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR02
 U 1 1 58CC4391
 P 7830 1290
 F 0 "#PWR02" H 7830 1040 50  0001 C CNN
@@ -82,7 +82,7 @@ ANTENNA MATCHING 2.4 AND 1 GHZ
 Text Label 2130 3890 0    60   ~ 0
 VDDS
 $Comp
-L CatStick-rescue:GND-power #PWR023
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR023
 U 1 1 5B7C75EF
 P 2620 4455
 F 0 "#PWR023" H 2620 4205 50  0001 C CNN
@@ -93,7 +93,7 @@ F 3 "" H 2620 4455 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR025
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR025
 U 1 1 5B7CD43F
 P 3080 4460
 F 0 "#PWR025" H 3080 4210 50  0001 C CNN
@@ -104,7 +104,7 @@ F 3 "" H 3080 4460 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR026
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR026
 U 1 1 5B7CD4FB
 P 3530 4470
 F 0 "#PWR026" H 3530 4220 50  0001 C CNN
@@ -115,7 +115,7 @@ F 3 "" H 3530 4470 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR027
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR027
 U 1 1 5B7CD5B7
 P 4010 4475
 F 0 "#PWR027" H 4010 4225 50  0001 C CNN
@@ -126,7 +126,7 @@ F 3 "" H 4010 4475 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR028
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR028
 U 1 1 5B7CD673
 P 4480 4490
 F 0 "#PWR028" H 4480 4240 50  0001 C CNN
@@ -143,7 +143,7 @@ DCDC_SW
 Text Label 7490 3830 1    50   ~ 0
 VDDR
 $Comp
-L CatStick-rescue:GND-power #PWR029
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR029
 U 1 1 5B851F2E
 P 8260 4500
 F 0 "#PWR029" H 8260 4250 50  0001 C CNN
@@ -154,7 +154,7 @@ F 3 "" H 8260 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR031
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR031
 U 1 1 5B851FF6
 P 7765 4505
 F 0 "#PWR031" H 7765 4255 50  0001 C CNN
@@ -165,7 +165,7 @@ F 3 "" H 7765 4505 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR030
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR030
 U 1 1 5B8520BE
 P 7100 4505
 F 0 "#PWR030" H 7100 4255 50  0001 C CNN
@@ -179,7 +179,7 @@ Connection ~ 1300 7735
 Wire Wire Line
 	1300 8235 1500 8235
 $Comp
-L CatStick-rescue:GND-power #PWR062
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR062
 U 1 1 5B9B4C84
 P 3350 9435
 F 0 "#PWR062" H 3350 9185 50  0001 C CNN
@@ -204,7 +204,7 @@ VDDR
 Text Label 2650 6435 1    50   ~ 0
 VDDR
 $Comp
-L CatStick-rescue:GND-power #PWR033
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR033
 U 1 1 5BA8D03B
 P 1330 5820
 F 0 "#PWR033" H 1330 5570 50  0001 C CNN
@@ -311,7 +311,7 @@ Connection ~ 8860 6950
 Wire Wire Line
 	8860 6950 8860 7065
 $Comp
-L CatStick-rescue:GND-power #PWR046
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR046
 U 1 1 5F7FB018
 P 6905 7140
 F 0 "#PWR046" H 6905 6890 50  0001 C CNN
@@ -322,7 +322,7 @@ F 3 "" H 6905 7140 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR044
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR044
 U 1 1 5F7FBDBF
 P 8860 7065
 F 0 "#PWR044" H 8860 6815 50  0001 C CNN
@@ -355,7 +355,7 @@ Connection ~ 18315 7365
 Wire Wire Line
 	18315 7365 18315 7465
 $Comp
-L CatStick-rescue:GND-power #PWR050
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR050
 U 1 1 5F869CDA
 P 18315 7635
 F 0 "#PWR050" H 18315 7385 50  0001 C CNN
@@ -375,7 +375,7 @@ Connection ~ 16340 7465
 Wire Wire Line
 	16340 7465 16340 7595
 $Comp
-L CatStick-rescue:GND-power #PWR049
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR049
 U 1 1 5F87BE58
 P 16340 7595
 F 0 "#PWR049" H 16340 7345 50  0001 C CNN
@@ -410,7 +410,7 @@ UBP_2_4_GHZ
 Text Label 19630 3050 2    50   ~ 0
 UBP_SUB-1_GHZ
 $Comp
-L CatStick-rescue:+3V3-power #PWR017
+L CatSniffer-rescue:+3V3-power-CatStick-rescue #PWR017
 U 1 1 5F9497BA
 P 21580 2615
 F 0 "#PWR017" H 21580 2465 50  0001 C CNN
@@ -423,7 +423,7 @@ $EndComp
 Text Notes 20460 860  0    89   ~ 0
 MAIN RF SWITCH
 $Comp
-L CatStick-rescue:VCC-power #PWR01
+L CatSniffer-rescue:VCC-power-CatStick-rescue #PWR01
 U 1 1 5FA2D547
 P 2710 1110
 F 0 "#PWR01" H 2710 960 50  0001 C CNN
@@ -444,7 +444,7 @@ SWDIO
 Text Label 17720 4290 2    50   ~ 0
 SWCLK
 $Comp
-L CatStick-rescue:GND-power #PWR024
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR024
 U 1 1 5F6EDB31
 P 17570 4455
 F 0 "#PWR024" H 17570 4205 50  0001 C CNN
@@ -455,7 +455,7 @@ F 3 "" H 17570 4455 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:+3V3-power #PWR021
+L CatSniffer-rescue:+3V3-power-CatStick-rescue #PWR021
 U 1 1 5F6EEDB7
 P 17625 3905
 F 0 "#PWR021" H 17625 3755 50  0001 C CNN
@@ -510,7 +510,7 @@ SWCLK
 Text Label 14675 3605 0    50   ~ 0
 COPI
 $Comp
-L CatStick-rescue:GND-power #PWR032
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR032
 U 1 1 5FCEF6CB
 P 12040 4635
 F 0 "#PWR032" H 12040 4385 50  0001 C CNN
@@ -541,7 +541,7 @@ RESET
 Wire Wire Line
 	9400 2005 9550 2005
 $Comp
-L CatStick-rescue:GND-power #PWR09
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR09
 U 1 1 5FD0172F
 P 10055 2060
 F 0 "#PWR09" H 10055 1810 50  0001 C CNN
@@ -568,7 +568,7 @@ Wire Wire Line
 Wire Wire Line
 	14075 8760 14075 8795
 $Comp
-L CatStick-rescue:GND-power #PWR059
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR059
 U 1 1 60CD8761
 P 14075 8795
 F 0 "#PWR059" H 14075 8545 50  0001 C CNN
@@ -627,7 +627,7 @@ Wire Wire Line
 Text Label 15305 6790 0    50   ~ 0
 RFO
 $Comp
-L CatStick-rescue:GND-power #PWR061
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR061
 U 1 1 60DD22B9
 P 11485 9150
 F 0 "#PWR061" H 11485 8900 50  0001 C CNN
@@ -642,7 +642,7 @@ Wire Wire Line
 Wire Wire Line
 	14935 6685 14935 6720
 $Comp
-L CatStick-rescue:GND-power #PWR040
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR040
 U 1 1 60E10940
 P 14935 6720
 F 0 "#PWR040" H 14935 6470 50  0001 C CNN
@@ -653,7 +653,7 @@ F 3 "" H 14935 6720 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR039
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR039
 U 1 1 60E117C9
 P 14720 6715
 F 0 "#PWR039" H 14720 6465 50  0001 C CNN
@@ -683,7 +683,7 @@ Wire Wire Line
 Wire Wire Line
 	11735 7255 11735 7285
 $Comp
-L CatStick-rescue:GND-power #PWR047
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR047
 U 1 1 60EBA075
 P 11735 7285
 F 0 "#PWR047" H 11735 7035 50  0001 C CNN
@@ -694,7 +694,7 @@ F 3 "" H 11735 7285 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:+3V3-power #PWR038
+L CatSniffer-rescue:+3V3-power-CatStick-rescue #PWR038
 U 1 1 60EBD486
 P 11735 6520
 F 0 "#PWR038" H 11735 6370 50  0001 C CNN
@@ -716,7 +716,7 @@ Connection ~ 14490 7560
 Wire Wire Line
 	14490 7785 14490 7820
 $Comp
-L CatStick-rescue:GND-power #PWR054
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR054
 U 1 1 60F1E2C1
 P 14490 7820
 F 0 "#PWR054" H 14490 7570 50  0001 C CNN
@@ -736,7 +736,7 @@ Wire Wire Line
 	13970 6860 14165 6860
 Connection ~ 14165 6760
 $Comp
-L CatStick-rescue:+3V3-power #PWR034
+L CatSniffer-rescue:+3V3-power-CatStick-rescue #PWR034
 U 1 1 60F4A29D
 P 14165 6325
 F 0 "#PWR034" H 14165 6175 50  0001 C CNN
@@ -754,7 +754,7 @@ Wire Wire Line
 Wire Wire Line
 	14300 6850 14300 6875
 $Comp
-L CatStick-rescue:GND-power #PWR041
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR041
 U 1 1 60F77FAE
 P 14300 6875
 F 0 "#PWR041" H 14300 6625 50  0001 C CNN
@@ -769,7 +769,7 @@ Wire Wire Line
 Wire Wire Line
 	19970 7735 19970 7795
 $Comp
-L CatStick-rescue:GND-power #PWR053
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR053
 U 1 1 61035CAB
 P 19970 7795
 F 0 "#PWR053" H 19970 7545 50  0001 C CNN
@@ -798,7 +798,7 @@ DIO2
 Text Label 21855 6565 0    50   ~ 0
 LORA_O
 $Comp
-L CatStick-rescue:GND-power #PWR048
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR048
 U 1 1 60C33391
 P 21050 7530
 F 0 "#PWR048" H 21050 7280 50  0001 C CNN
@@ -845,7 +845,7 @@ Wire Wire Line
 Wire Wire Line
 	20425 3460 20510 3460
 $Comp
-L CatStick-rescue:GND-power #PWR055
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR055
 U 1 1 60F61A1B
 P 20540 8180
 F 0 "#PWR055" H 20540 7930 50  0001 C CNN
@@ -888,7 +888,7 @@ Wire Wire Line
 Wire Wire Line
 	8770 6750 9075 6750
 $Comp
-L CatStick-rescue:GND-power #PWR045
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR045
 U 1 1 608E4FD3
 P 9075 7105
 F 0 "#PWR045" H 9075 6855 50  0001 C CNN
@@ -920,7 +920,7 @@ Wire Wire Line
 Wire Wire Line
 	20570 6565 20570 7235
 $Comp
-L CatStick-rescue:GND-power #PWR043
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR043
 U 1 1 60B04131
 P 21235 6950
 F 0 "#PWR043" H 21235 6700 50  0001 C CNN
@@ -933,7 +933,7 @@ $EndComp
 Wire Wire Line
 	21235 6950 21235 6915
 $Comp
-L CatStick-rescue:GND-power #PWR042
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR042
 U 1 1 60B22EB7
 P 21735 6940
 F 0 "#PWR042" H 21735 6690 50  0001 C CNN
@@ -951,7 +951,7 @@ Connection ~ 21735 6565
 Text Notes 10810 5745 0    89   ~ 0
 SX1262 AND RF SWITCH\n
 $Comp
-L CatStick-rescue:GND-power #PWR019
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR019
 U 1 1 6083ACE2
 P 1275 2950
 F 0 "#PWR019" H 1275 2700 50  0001 C CNN
@@ -974,7 +974,7 @@ Wire Wire Line
 Wire Wire Line
 	2710 1365 2710 1110
 $Comp
-L CatStick-rescue:GND-power #PWR04
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR04
 U 1 1 60AD8CC8
 P 2660 1710
 F 0 "#PWR04" H 2660 1460 50  0001 C CNN
@@ -1004,7 +1004,7 @@ Wire Wire Line
 Text Notes 8665 645  0    89   ~ 0
 BUTTONS\n
 $Comp
-L CatStick-rescue:GND-power #PWR014
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR014
 U 1 1 6089575C
 P 17085 2490
 F 0 "#PWR014" H 17085 2240 50  0001 C CNN
@@ -1023,7 +1023,7 @@ LED1
 Wire Wire Line
 	17085 1785 17085 1910
 $Comp
-L CatStick-rescue:GND-power #PWR015
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR015
 U 1 1 6092B333
 P 17475 2490
 F 0 "#PWR015" H 17475 2240 50  0001 C CNN
@@ -1038,7 +1038,7 @@ LED2
 Text Label 1315 8890 1    50   ~ 0
 LED4
 $Comp
-L CatStick-rescue:GND-power #PWR063
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR063
 U 1 1 6092BD69
 P 1315 9640
 F 0 "#PWR063" H 1315 9390 50  0001 C CNN
@@ -1107,7 +1107,7 @@ NoConn ~ 17800 4490
 Wire Wire Line
 	22395 3380 22395 3260
 $Comp
-L CatStick-rescue:GND-power #PWR020
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR020
 U 1 1 5B7347AD
 P 22395 3380
 F 0 "#PWR020" H 22395 3130 50  0001 C CNN
@@ -1120,7 +1120,7 @@ $EndComp
 Wire Wire Line
 	21855 3060 22195 3060
 $Comp
-L CatStick-rescue:GND-power #PWR037
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR037
 U 1 1 61025FF6
 P 1025 6510
 F 0 "#PWR037" H 1025 6260 50  0001 C CNN
@@ -1133,7 +1133,7 @@ $EndComp
 Wire Wire Line
 	1025 6435 1025 6510
 $Comp
-L CatStick-rescue:GND-power #PWR035
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR035
 U 1 1 61044B56
 P 1605 6500
 F 0 "#PWR035" H 1605 6250 50  0001 C CNN
@@ -1152,7 +1152,7 @@ X48M_N
 Text Label 1120 5570 3    50   ~ 0
 X48M_N
 $Comp
-L CatStick-rescue:GND-power #PWR036
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR036
 U 1 1 61110217
 P 1330 6505
 F 0 "#PWR036" H 1330 6255 50  0001 C CNN
@@ -1245,7 +1245,7 @@ Wire Wire Line
 Wire Wire Line
 	14670 4605 14515 4605
 $Comp
-L CatStick-rescue:GND-power #PWR016
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR016
 U 1 1 60C43D9A
 P 17880 2500
 F 0 "#PWR016" H 17880 2250 50  0001 C CNN
@@ -1276,7 +1276,7 @@ Wire Wire Line
 Wire Wire Line
 	12040 4345 12445 4345
 $Comp
-L CatStick-rescue:GND-power #PWR010
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR010
 U 1 1 60E2B27F
 P 11720 2345
 F 0 "#PWR010" H 11720 2095 50  0001 C CNN
@@ -1305,7 +1305,7 @@ Wire Wire Line
 Wire Wire Line
 	12310 2275 12310 2310
 $Comp
-L CatStick-rescue:GND-power #PWR018
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR018
 U 1 1 60FAE6B9
 P 12130 2620
 F 0 "#PWR018" H 12130 2370 50  0001 C CNN
@@ -1327,7 +1327,7 @@ Connection ~ 12130 2545
 Wire Wire Line
 	12130 2545 11945 2545
 $Comp
-L CatStick-rescue:+3V3-power #PWR07
+L CatSniffer-rescue:+3V3-power-CatStick-rescue #PWR07
 U 1 1 610252E9
 P 11945 1865
 F 0 "#PWR07" H 11945 1715 50  0001 C CNN
@@ -1349,7 +1349,7 @@ Wire Notes Line
 Wire Wire Line
 	4575 7400 4575 7335
 $Comp
-L CatStick-rescue:GND-power #PWR052
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR052
 U 1 1 6092EE43
 P 4575 7760
 F 0 "#PWR052" H 4575 7510 50  0001 C CNN
@@ -1437,7 +1437,7 @@ Wire Wire Line
 Wire Wire Line
 	5200 2350 5200 2385
 $Comp
-L CatStick-rescue:+3V3-power #PWR05
+L CatSniffer-rescue:+3V3-power-CatStick-rescue #PWR05
 U 1 1 5F58491C
 P 6295 1725
 F 0 "#PWR05" H 6295 1575 50  0001 C CNN
@@ -1448,7 +1448,7 @@ F 3 "" H 6295 1725 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:VCC-power #PWR06
+L CatSniffer-rescue:VCC-power-CatStick-rescue #PWR06
 U 1 1 5F504C04
 P 3805 1860
 F 0 "#PWR06" H 3805 1710 50  0001 C CNN
@@ -1470,7 +1470,7 @@ Wire Wire Line
 Wire Wire Line
 	4470 2350 4470 2250
 $Comp
-L CatStick-rescue:PWR_FLAG-power #FLG01
+L CatSniffer-rescue:PWR_FLAG-power-CatStick-rescue #FLG01
 U 1 1 58CCF366
 P 4250 1850
 F 0 "#FLG01" H 4250 1945 50  0001 C CNN
@@ -1481,7 +1481,7 @@ F 3 "" H 4250 1850 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR013
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR013
 U 1 1 58C79B72
 P 5720 2400
 F 0 "#PWR013" H 5720 2150 50  0001 C CNN
@@ -1492,7 +1492,7 @@ F 3 "" H 5720 2400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR011
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR011
 U 1 1 58C79AC5
 P 4470 2350
 F 0 "#PWR011" H 4470 2100 50  0001 C CNN
@@ -1503,7 +1503,7 @@ F 3 "" H 4470 2350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR012
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR012
 U 1 1 58C799E1
 P 5200 2385
 F 0 "#PWR012" H 5200 2135 50  0001 C CNN
@@ -1514,7 +1514,7 @@ F 3 "" H 5200 2385 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:GND-power #PWR08
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR08
 U 1 1 60C4D0C5
 P 7890 2045
 F 0 "#PWR08" H 7890 1795 50  0001 C CNN
@@ -1549,7 +1549,7 @@ Wire Notes Line
 Text Notes 17220 850  0    89   ~ 0
 LEDS
 $Comp
-L CatStick-rescue:+3V3-power #PWR022
+L CatSniffer-rescue:+3V3-power-CatStick-rescue #PWR022
 U 1 1 60C1A6B6
 P 1605 4050
 F 0 "#PWR022" H 1605 3900 50  0001 C CNN
@@ -1560,7 +1560,7 @@ F 3 "" H 1605 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:+3V3-power #PWR058
+L CatSniffer-rescue:+3V3-power-CatStick-rescue #PWR058
 U 1 1 60C1D5F0
 P 7425 8610
 F 0 "#PWR058" H 7425 8460 50  0001 C CNN
@@ -1581,7 +1581,7 @@ Wire Wire Line
 Text Label 9515 1285 2    50   ~ 0
 U_SWITCH
 $Comp
-L CatStick-rescue:GND-power #PWR03
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR03
 U 1 1 60AC9DB0
 P 10155 1445
 F 0 "#PWR03" H 10155 1195 50  0001 C CNN
@@ -1690,7 +1690,7 @@ Pin 48\n
 Wire Wire Line
 	11485 9150 11485 9045
 $Comp
-L CatStick-rescue:GND-power #PWR057
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR057
 U 1 1 6122AE32
 P 11360 8420
 F 0 "#PWR057" H 11360 8170 50  0001 C CNN
@@ -1725,7 +1725,7 @@ Wire Wire Line
 Wire Wire Line
 	7425 8675 7425 8610
 $Comp
-L CatStick-rescue:GND-power #PWR060
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR060
 U 1 1 614FE81A
 P 7325 9150
 F 0 "#PWR060" H 7325 8900 50  0001 C CNN
@@ -1747,7 +1747,7 @@ Wire Wire Line
 	7325 9075 7560 9075
 NoConn ~ 7560 9175
 $Comp
-L CatStick-rescue:Conn_01x06_Female-Connector J3
+L CatSniffer-rescue:Conn_01x06_Female-Connector-CatStick-rescue J3
 U 1 1 614DC058
 P 7760 8875
 F 0 "J3" H 7788 8851 50  0000 L CNN
@@ -1772,7 +1772,7 @@ F 6 "Mouser" H 13170 7660 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C36
+L CatSniffer-rescue:C-Device-CatStick-rescue C36
 U 1 1 58C3FE5B
 P 1050 8235
 F 0 "C36" V 1195 8160 50  0000 L CNN
@@ -1786,7 +1786,7 @@ F 6 "C472782" H 1050 8235 50  0001 C CNN "LCSC#"
 	0    1    1    0   
 $EndComp
 $Comp
-L CatStick-rescue:SW_Push-Switch SW1
+L CatSniffer-rescue:SW_Push-Switch-CatStick-rescue SW1
 U 1 1 60AC93F3
 P 9925 1285
 F 0 "SW1" H 9925 1570 50  0000 C CNN
@@ -1800,7 +1800,7 @@ F 6 "LCSC" H 9925 1285 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C30
+L CatSniffer-rescue:C-Device-CatStick-rescue C30
 U 1 1 60977E80
 P 19370 7335
 F 0 "C30" V 19325 7125 50  0000 L CNN
@@ -1814,7 +1814,7 @@ F 6 "CC0603FRNPO9BN470" H 19370 7335 50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C28
+L CatSniffer-rescue:C-Device-CatStick-rescue C28
 U 1 1 60977A2F
 P 19360 7135
 F 0 "C28" V 19505 6965 50  0000 L CNN
@@ -1828,7 +1828,7 @@ F 6 "CC0603FRNPO9BN470" H 19360 7135 50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:SW_Push-Switch BOOT1
+L CatSniffer-rescue:SW_Push-Switch-CatStick-rescue BOOT1
 U 1 1 60C2B98F
 P 8185 1965
 F 0 "BOOT1" H 8185 2250 50  0000 C CNN
@@ -1842,7 +1842,7 @@ F 6 "LCSC" H 8185 1965 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C1
+L CatSniffer-rescue:C-Device-CatStick-rescue C1
 U 1 1 58C79871
 P 4470 2100
 F 0 "C1" H 4495 2200 50  0000 L CNN
@@ -1856,7 +1856,7 @@ F 6 "C108343" H 4470 2100 50  0001 C CNN "LCSC#"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C2
+L CatSniffer-rescue:C-Device-CatStick-rescue C2
 U 1 1 58C7992F
 P 5720 2150
 F 0 "C2" H 5745 2250 50  0000 L CNN
@@ -1870,7 +1870,7 @@ F 6 "CC0603KRX7R9BB104" H 5720 2150 50  0001 C CNN "manf#"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CatStick-rescue:AP2112K-1.2-Regulator_Linear-CatStick-rescue U1
+L CatSniffer-rescue:AP2112K-1.2-Regulator_Linear-CatStick-rescue-CatStick-rescue U1
 U 1 1 5F56F04D
 P 5200 2050
 F 0 "U1" H 5200 2392 50  0000 C CNN
@@ -1885,7 +1885,7 @@ F 7 "621-AP7365-33WG-7 " H 5200 2050 50  0001 C CNN "Mouser#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue U8
+L CatSniffer-rescue:CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue-CatStick-rescue U8
 U 1 1 5B86A9A7
 P 2850 7785
 F 0 "U8" H 2800 7735 50  0000 L CNN
@@ -1900,7 +1900,7 @@ F 7 "Mouser" H 2850 7785 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:R-Device R6
+L CatSniffer-rescue:R-Device-CatStick-rescue R6
 U 1 1 608CB095
 P 4575 7145
 F 0 "R6" V 4655 7145 50  0000 C CNN
@@ -1914,7 +1914,7 @@ F 6 "LCSC" H 4575 7145 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C32
+L CatSniffer-rescue:C-Device-CatStick-rescue C32
 U 1 1 608CAAE2
 P 4575 7550
 F 0 "C32" H 4690 7596 50  0000 L CNN
@@ -1929,7 +1929,7 @@ F 7 "81-GRM155R61H104KE9D " H 4575 7550 50  0001 C CNN "Mouser#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C37
+L CatSniffer-rescue:C-Device-CatStick-rescue C37
 U 1 1 5B9B4BB0
 P 3350 9235
 F 0 "C37" H 3465 9281 50  0000 L CNN
@@ -1943,7 +1943,7 @@ F 6 "C108343" H 3350 9235 50  0001 C CNN "LCSC#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:Conn_01x06_Female-Connector J2
+L CatSniffer-rescue:Conn_01x06_Female-Connector-CatStick-rescue J2
 U 1 1 60AB064F
 P 18000 4190
 F 0 "J2" H 18028 4166 50  0000 L CNN
@@ -1954,7 +1954,7 @@ F 3 "~" H 18000 4190 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C5
+L CatSniffer-rescue:C_Small-Device-CatStick-rescue C5
 U 1 1 60F84D56
 P 12310 2410
 F 0 "C5" H 12165 2360 50  0000 C CNN
@@ -1968,7 +1968,7 @@ F 6 "LCSC" H 12310 2410 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C4
+L CatSniffer-rescue:C_Small-Device-CatStick-rescue C4
 U 1 1 60E51F71
 P 11945 2295
 F 0 "C4" H 11805 2220 50  0000 C CNN
@@ -1982,7 +1982,7 @@ F 6 "LCSC" H 11945 2295 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C3
+L CatSniffer-rescue:C_Small-Device-CatStick-rescue C3
 U 1 1 60D6C661
 P 11720 2195
 F 0 "C3" V 11491 2195 50  0000 C CNN
@@ -1996,7 +1996,7 @@ F 6 "LCSC" H 11720 2195 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:R_Small-Device R3
+L CatSniffer-rescue:R_Small-Device-CatStick-rescue R3
 U 1 1 60C4376C
 P 17880 2300
 F 0 "R3" H 17760 2260 50  0000 C CNN
@@ -2010,7 +2010,7 @@ F 6 "LCSC" H 17880 2300 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CatStick-rescue:LED_Small-Device D1
+L CatSniffer-rescue:LED_Small-Device-CatStick-rescue D1
 U 1 1 60C43107
 P 17880 1985
 F 0 "D1" V 17926 1915 50  0000 R CNN
@@ -2024,7 +2024,7 @@ F 6 "LCSC" H 17880 1985 50  0001 C CNN "provedor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:Crystal_GND24-Device Y1
+L CatSniffer-rescue:Crystal_GND24-Device-CatStick-rescue Y1
 U 1 1 5B86AD1A
 P 1330 6020
 F 0 "Y1" H 1220 5845 50  0000 L CNN
@@ -2038,7 +2038,7 @@ F 6 "LCSC" H 1330 6020 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CatStick-rescue:ATSAMD21E18A-electroniccats U3
+L CatSniffer-rescue:ATSAMD21E18A-electroniccats-CatStick-rescue U3
 U 1 1 60DB2372
 P 13115 3205
 F 0 "U3" H 13480 5059 45  0000 C CNN
@@ -2052,7 +2052,7 @@ F 6 "ATSAMD21E18A-MUT" H 13115 3205 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:Conn_Coaxial-Connector J1
+L CatSniffer-rescue:Conn_Coaxial-Connector-CatStick-rescue J1
 U 1 1 5BA656F9
 P 22395 3060
 F 0 "J1" H 22494 3036 50  0000 L CNN
@@ -2066,7 +2066,7 @@ F 6 "LCSC" H 22395 3060 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:Jumper_3_Bridged12-Jumper JP1
+L CatSniffer-rescue:Jumper_3_Bridged12-Jumper-CatStick-rescue JP1
 U 1 1 60AA3251
 P 21715 7890
 F 0 "JP1" H 21715 8094 50  0000 C CNN
@@ -2077,7 +2077,7 @@ F 3 "~" H 21715 7890 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:R_Small-Device R9
+L CatSniffer-rescue:R_Small-Device-CatStick-rescue R9
 U 1 1 6092BA07
 P 1315 9455
 F 0 "R9" H 1195 9415 50  0000 C CNN
@@ -2091,7 +2091,7 @@ F 6 "LCSC" H 1315 9455 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CatStick-rescue:LED_Small-Device D4
+L CatSniffer-rescue:LED_Small-Device-CatStick-rescue D4
 U 1 1 6092B5D1
 P 1315 9150
 F 0 "D4" V 1361 9080 50  0000 R CNN
@@ -2105,7 +2105,7 @@ F 6 "LCSC" H 1315 9150 50  0001 C CNN "provedor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:R_Small-Device R4
+L CatSniffer-rescue:R_Small-Device-CatStick-rescue R4
 U 1 1 6092AF39
 P 17475 2315
 F 0 "R4" H 17365 2280 50  0000 C CNN
@@ -2119,7 +2119,7 @@ F 6 "LCSC" H 17475 2315 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CatStick-rescue:LED_Small-Device D2
+L CatSniffer-rescue:LED_Small-Device-CatStick-rescue D2
 U 1 1 6092AB5A
 P 17475 2000
 F 0 "D2" V 17521 1930 50  0000 R CNN
@@ -2133,7 +2133,7 @@ F 6 "LCSC" H 17475 2000 50  0001 C CNN "provedor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:R_Small-Device R5
+L CatSniffer-rescue:R_Small-Device-CatStick-rescue R5
 U 1 1 60877B07
 P 17085 2325
 F 0 "R5" H 16965 2285 50  0000 C CNN
@@ -2147,7 +2147,7 @@ F 6 "LCSC" H 17085 2325 50  0001 C CNN "provedor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CatStick-rescue:LED_Small-Device D3
+L CatSniffer-rescue:LED_Small-Device-CatStick-rescue D3
 U 1 1 6087770B
 P 17085 2010
 F 0 "D3" V 17131 1940 50  0000 R CNN
@@ -2161,7 +2161,7 @@ F 6 "LCSC" H 17085 2010 50  0001 C CNN "provedor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:Fuse_Small-Device F1
+L CatSniffer-rescue:Fuse_Small-Device-CatStick-rescue F1
 U 1 1 60BA6CB5
 P 2255 1365
 F 0 "F1" H 2255 1550 50  0000 C CNN
@@ -2175,7 +2175,7 @@ F 6 "Mouser" H 2255 1365 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:R_Small-Device R2
+L CatSniffer-rescue:R_Small-Device-CatStick-rescue R2
 U 1 1 60AD852A
 P 2370 1665
 F 0 "R2" V 2440 1615 50  0000 L CNN
@@ -2189,7 +2189,7 @@ F 6 "LCSC" H 2370 1665 50  0001 C CNN "provedor"
 	0    1    1    0   
 $EndComp
 $Comp
-L CatStick-rescue:R_Small-Device R1
+L CatSniffer-rescue:R_Small-Device-CatStick-rescue R1
 U 1 1 60AD7135
 P 2115 1565
 F 0 "R1" V 1990 1455 50  0000 L CNN
@@ -2203,7 +2203,7 @@ F 6 "LCSC" H 2115 1565 50  0001 C CNN "provedor"
 	0    1    1    0   
 $EndComp
 $Comp
-L CatStick-rescue:USB_C_Plug_USB2.0-Connector P1
+L CatSniffer-rescue:USB_C_Plug_USB2.0-Connector-CatStick-rescue P1
 U 1 1 609EE31D
 P 1275 1965
 F 0 "P1" H 1382 2832 50  0000 C CNN
@@ -2217,7 +2217,7 @@ F 6 "LCSC" H 1275 1965 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C25
+L CatSniffer-rescue:C-Device-CatStick-rescue C25
 U 1 1 60A2FA32
 P 21735 6755
 F 0 "C25" H 21485 6820 50  0000 L CNN
@@ -2231,7 +2231,7 @@ F 6 "C162225" H 21735 6755 50  0001 C CNN "LCSC#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C20
+L CatSniffer-rescue:C-Device-CatStick-rescue C20
 U 1 1 60A2D10F
 P 20910 6565
 F 0 "C20" H 21035 6585 50  0000 L CNN
@@ -2245,7 +2245,7 @@ F 6 "CL10C101JB8NNNC" H 20910 6565 50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:L-Device L3
+L CatSniffer-rescue:L-Device-CatStick-rescue L3
 U 1 1 609D5E2C
 P 21450 6565
 F 0 "L3" V 21610 6565 50  0000 C CNN
@@ -2260,7 +2260,7 @@ F 7 "LCSC" H 21450 6565 50  0001 C CNN "provedor"
 	0    1    -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C26
+L CatSniffer-rescue:C-Device-CatStick-rescue C26
 U 1 1 609D5615
 P 21235 6765
 F 0 "C26" H 20985 6830 50  0000 L CNN
@@ -2274,7 +2274,7 @@ F 6 "C162225" H 21235 6765 50  0001 C CNN "LCSC#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C27
+L CatSniffer-rescue:C-Device-CatStick-rescue C27
 U 1 1 60865A23
 P 9075 6920
 F 0 "C27" H 9090 6840 50  0000 L CNN
@@ -2288,7 +2288,7 @@ F 6 "CL10C101JB8NNNC" H 9075 6920 50  0001 C CNN "manf#"
 	1    0    0    1   
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C23
+L CatSniffer-rescue:C-Device-CatStick-rescue C23
 U 1 1 6086464D
 P 9295 6650
 F 0 "C23" V 9230 6735 50  0000 L CNN
@@ -2302,7 +2302,7 @@ F 6 "CL10C101JB8NNNC" H 9295 6650 50  0001 C CNN "manf#"
 	0    1    -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C9
+L CatSniffer-rescue:C-Device-CatStick-rescue C9
 U 1 1 6106C6E9
 P 21705 3060
 F 0 "C9" V 21775 2875 50  0000 L CNN
@@ -2316,7 +2316,7 @@ F 6 "CL10C101JB8NNNC" H 21705 3060 50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C8
+L CatSniffer-rescue:C-Device-CatStick-rescue C8
 U 1 1 60FCB41C
 P 19915 3050
 F 0 "C8" V 19960 2840 50  0000 L CNN
@@ -2330,7 +2330,7 @@ F 6 "CL10C101JB8NNNC" H 19915 3050 50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C7
+L CatSniffer-rescue:C-Device-CatStick-rescue C7
 U 1 1 60FCA2D7
 P 20005 2785
 F 0 "C7" V 20070 2590 50  0000 L CNN
@@ -2344,7 +2344,7 @@ F 6 "CL10C101JB8NNNC" H 20005 2785 50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C6
+L CatSniffer-rescue:C-Device-CatStick-rescue C6
 U 1 1 60FC860A
 P 19640 2605
 F 0 "C6" V 19860 2575 50  0000 L CNN
@@ -2358,7 +2358,7 @@ F 6 "CL10C101JB8NNNC" H 19640 2605 50  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C31
+L CatSniffer-rescue:C_Small-Device-CatStick-rescue C31
 U 1 1 60CF4963
 P 21050 7405
 F 0 "C31" H 21142 7451 50  0000 L CNN
@@ -2372,7 +2372,7 @@ F 6 "CL10B102KB8NNNC" H 21050 7405 50  0001 C CNN "manf#"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:R_Small-Device R7
+L CatSniffer-rescue:R_Small-Device-CatStick-rescue R7
 U 1 1 60CF4518
 P 21270 7280
 F 0 "R7" V 21205 7280 50  0000 C CNN
@@ -2386,7 +2386,7 @@ F 6 "LCSC" H 21270 7280 50  0001 C CNN "provedor"
 	0    -1   1    0   
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C35
+L CatSniffer-rescue:C_Small-Device-CatStick-rescue C35
 U 1 1 60C3194C
 P 20540 8020
 F 0 "C35" H 20632 8066 50  0000 L CNN
@@ -2400,7 +2400,7 @@ F 6 "CL10B102KB8NNNC" H 20540 8020 50  0001 C CNN "manf#"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:R_Small-Device R8
+L CatSniffer-rescue:R_Small-Device-CatStick-rescue R8
 U 1 1 60C3106A
 P 20780 7875
 F 0 "R8" V 20715 7875 50  0000 C CNN
@@ -2414,7 +2414,7 @@ F 6 "LCSC" H 20780 7875 50  0001 C CNN "provedor"
 	0    -1   1    0   
 $EndComp
 $Comp
-L CatStick-rescue:RFSW8006QTR7-electroniccats U2
+L CatSniffer-rescue:RFSW8006QTR7-electroniccats-CatStick-rescue U2
 U 1 1 609FAC26
 P 20960 2460
 F 0 "U2" H 20985 2525 50  0000 C CNN
@@ -2429,7 +2429,7 @@ F 7 "Mouser" H 20960 2460 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:MASWSS0115-RF_Switch U6
+L CatSniffer-rescue:MASWSS0115-RF_Switch-CatStick-rescue U6
 U 1 1 60FA8E32
 P 20070 7335
 F 0 "U6" H 20070 7760 50  0000 C CNN
@@ -2443,7 +2443,7 @@ F 6 "LCSC" H 20070 7335 50  0001 C CNN "provedor"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C24
+L CatSniffer-rescue:C_Small-Device-CatStick-rescue C24
 U 1 1 60F4B84E
 P 14300 6750
 F 0 "C24" H 14392 6796 50  0000 L CNN
@@ -2457,7 +2457,7 @@ F 6 "CC0603KRX7R9BB104" H 14300 6750 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C33
+L CatSniffer-rescue:C_Small-Device-CatStick-rescue C33
 U 1 1 60EF23CD
 P 14490 7685
 F 0 "C33" H 14582 7731 50  0000 L CNN
@@ -2472,7 +2472,7 @@ F 7 "CL10A474KB8NNNC" H 14490 7685 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:L_Small-Device L5
+L CatSniffer-rescue:L_Small-Device-CatStick-rescue L5
 U 1 1 60ED94D0
 P 14160 7560
 F 0 "L5" V 14345 7560 50  0000 C CNN
@@ -2486,7 +2486,7 @@ F 6 "LCSC" H 14160 7560 50  0001 C CNN "provedor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C29
+L CatSniffer-rescue:C_Small-Device-CatStick-rescue C29
 U 1 1 60EA4035
 P 11735 7155
 F 0 "C29" H 11827 7201 50  0000 L CNN
@@ -2500,7 +2500,7 @@ F 6 "LCSC" H 11735 7155 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:L_Small-Device L4
+L CatSniffer-rescue:L_Small-Device-CatStick-rescue L4
 U 1 1 60CDE29A
 P 15205 6585
 F 0 "L4" H 15253 6631 50  0000 L CNN
@@ -2514,7 +2514,7 @@ F 6 "LCSC" H 15205 6585 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C22
+L CatSniffer-rescue:C_Small-Device-CatStick-rescue C22
 U 1 1 60CDC9AC
 P 14935 6585
 F 0 "C22" H 15027 6631 50  0000 L CNN
@@ -2528,7 +2528,7 @@ F 6 "CC0603FRNPO9BN470" H 14935 6585 50  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C_Small-Device C21
+L CatSniffer-rescue:C_Small-Device-CatStick-rescue C21
 U 1 1 60CDB4D1
 P 14720 6585
 F 0 "C21" H 14475 6650 50  0000 L CNN
@@ -2542,7 +2542,7 @@ F 6 "LCSC" H 14720 6585 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:SW_Push-Switch RESET1
+L CatSniffer-rescue:SW_Push-Switch-CatStick-rescue RESET1
 U 1 1 5FD003C3
 P 9750 2005
 F 0 "RESET1" H 9750 2290 50  0000 C CNN
@@ -2556,7 +2556,7 @@ F 6 "LCSC" H 9750 2005 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C19
+L CatSniffer-rescue:C-Device-CatStick-rescue C19
 U 1 1 6075538A
 P 1025 6285
 F 0 "C19" H 730 6355 50  0000 L CNN
@@ -2570,7 +2570,7 @@ F 6 "C170132" H 1025 6285 50  0001 C CNN "LCSC#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C18
+L CatSniffer-rescue:C-Device-CatStick-rescue C18
 U 1 1 6072341E
 P 1605 6275
 F 0 "C18" H 1760 6335 50  0000 L CNN
@@ -2584,7 +2584,7 @@ F 6 "C170132" H 1605 6275 50  0001 C CNN "LCSC#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:0900FM15D0039-Electronic_Cats U5
+L CatSniffer-rescue:0900FM15D0039-Electronic_Cats-CatStick-rescue U5
 U 1 1 5F83FECE
 P 17225 7115
 F 0 "U5" H 17125 7430 50  0000 C CNN
@@ -2598,7 +2598,7 @@ F 6 "Mouser" H 17225 7115 50  0001 C CNN "provedor"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:0900PC15A0036-Electronic_Cats U4
+L CatSniffer-rescue:0900PC15A0036-Electronic_Cats-CatStick-rescue U4
 U 1 1 5F76883F
 P 7970 6600
 F 0 "U4" H 7870 6915 50  0000 C CNN
@@ -2612,7 +2612,7 @@ F 6 "Mouser" H 7970 6600 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C16
+L CatSniffer-rescue:C-Device-CatStick-rescue C16
 U 1 1 5B83C423
 P 8260 4265
 F 0 "C16" H 8375 4311 50  0000 L CNN
@@ -2627,7 +2627,7 @@ F 7 "81-GRM155R61H104KE9D " H 8260 4265 50  0001 C CNN "Mouser#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C15
+L CatSniffer-rescue:C-Device-CatStick-rescue C15
 U 1 1 5B83C352
 P 7765 4265
 F 0 "C15" H 7880 4311 50  0000 L CNN
@@ -2642,7 +2642,7 @@ F 7 "81-GRM155R61H104KE9D " H 7765 4265 50  0001 C CNN "Mouser#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C17
+L CatSniffer-rescue:C-Device-CatStick-rescue C17
 U 1 1 5B83C159
 P 7100 4275
 F 0 "C17" H 7215 4321 50  0000 L CNN
@@ -2656,7 +2656,7 @@ F 6 "LCSC" H 7100 4275 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:L-Device L2
+L CatSniffer-rescue:L-Device-CatStick-rescue L2
 U 1 1 5B83C026
 P 6740 4080
 F 0 "L2" V 6930 4080 50  0000 C CNN
@@ -2671,7 +2671,7 @@ F 7 "MLZ1608M6R8WT000 " H 6740 4080 50  0001 C CNN "Mouser#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C13
+L CatSniffer-rescue:C-Device-CatStick-rescue C13
 U 1 1 5B7CD2DA
 P 4480 4255
 F 0 "C13" H 4595 4301 50  0000 L CNN
@@ -2686,7 +2686,7 @@ F 7 "81-GRM155R61H104KE9D " H 4480 4255 50  0001 C CNN "Mouser#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C14
+L CatSniffer-rescue:C-Device-CatStick-rescue C14
 U 1 1 5B7CD218
 P 4010 4265
 F 0 "C14" H 4125 4311 50  0000 L CNN
@@ -2700,7 +2700,7 @@ F 6 "LCSC" H 4010 4265 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C12
+L CatSniffer-rescue:C-Device-CatStick-rescue C12
 U 1 1 5B7C7B7E
 P 3530 4250
 F 0 "C12" H 3645 4296 50  0000 L CNN
@@ -2715,7 +2715,7 @@ F 7 "81-GRM155R61H104KE9D " H 3530 4250 50  0001 C CNN "Mouser#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C11
+L CatSniffer-rescue:C-Device-CatStick-rescue C11
 U 1 1 5B7C7AC3
 P 3080 4245
 F 0 "C11" H 3195 4291 50  0000 L CNN
@@ -2730,7 +2730,7 @@ F 7 "81-GRM155R61H104KE9D " H 3080 4245 50  0001 C CNN "Mouser#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C10
+L CatSniffer-rescue:C-Device-CatStick-rescue C10
 U 1 1 5B7C7538
 P 2620 4240
 F 0 "C10" H 2735 4286 50  0000 L CNN
@@ -2745,7 +2745,7 @@ F 7 "81-GRM155R61H104KE9D " H 2620 4240 50  0001 C CNN "Mouser#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:SW_Push-Switch RESET_CC1
+L CatSniffer-rescue:SW_Push-Switch-CatStick-rescue RESET_CC1
 U 1 1 5BAA6E6C
 P 8130 1290
 F 0 "RESET_CC1" H 8130 1575 50  0000 C CNN
@@ -2759,7 +2759,7 @@ F 6 "LCSC" H 8130 1290 50  0001 C CNN "provedor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CatStick-rescue:Ferrite_Bead-Device L1
+L CatSniffer-rescue:Ferrite_Bead-Device-CatStick-rescue L1
 U 1 1 58C5CF90
 P 1855 4050
 F 0 "L1" V 1705 4075 50  0000 C CNN
@@ -2773,7 +2773,7 @@ F 6 "Mouser" H 1855 4050 50  0001 C CNN "provedor"
 	0    1    1    0   
 $EndComp
 $Comp
-L CatStick-rescue:C-Device C34
+L CatSniffer-rescue:C-Device-CatStick-rescue C34
 U 1 1 58C3FE11
 P 1050 7735
 F 0 "C34" V 820 7665 50  0000 L CNN
@@ -2788,7 +2788,7 @@ F 7 "" H 1050 7735 50  0001 C CNN "Mouser#"
 	0    1    1    0   
 $EndComp
 $Comp
-L CatStick-rescue:Crystal-Device Y2
+L CatSniffer-rescue:Crystal-Device-CatStick-rescue Y2
 U 1 1 58C3FC84
 P 1300 7985
 F 0 "Y2" V 1260 7720 50  0000 C CNN
@@ -2882,7 +2882,7 @@ Tx to ANT
 Text Notes 20055 8910 0    50   ~ 0
 Rx to ANT
 $Comp
-L CatStick-rescue:Crystal_GND24-Device Y3
+L CatSniffer-rescue:Crystal_GND24-Device-CatStick-rescue Y3
 U 1 1 60D9622F
 P 11485 8845
 F 0 "Y3" H 11655 8895 50  0000 L CNN
@@ -2916,7 +2916,7 @@ Wire Wire Line
 Wire Wire Line
 	11790 8845 11635 8845
 $Comp
-L CatStick-rescue:GND-power #PWR0101
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR0101
 U 1 1 60D2D5BC
 P 975 2950
 F 0 "#PWR0101" H 975 2700 50  0001 C CNN
@@ -2929,7 +2929,7 @@ $EndComp
 Wire Wire Line
 	975  2950 975  2865
 $Comp
-L CatStick-rescue:GND-power #PWR0102
+L CatSniffer-rescue:GND-power-CatStick-rescue #PWR0102
 U 1 1 60D8DF02
 P 1990 8605
 F 0 "#PWR0102" H 1990 8355 50  0001 C CNN

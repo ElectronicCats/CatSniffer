@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# CatStick-rescue_+3V3-power
+# CatSniffer-rescue_+3V3-power-CatStick-rescue
 #
-DEF CatStick-rescue_+3V3-power #PWR 0 0 Y Y 1 F P
+DEF CatSniffer-rescue_+3V3-power-CatStick-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "CatStick-rescue_+3V3-power" 0 140 50 H V C CNN
+F1 "CatSniffer-rescue_+3V3-power-CatStick-rescue" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -16,11 +16,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_0900FM15D0039-Electronic_Cats
+# CatSniffer-rescue_0900FM15D0039-Electronic_Cats-CatStick-rescue
 #
-DEF CatStick-rescue_0900FM15D0039-Electronic_Cats U 0 40 Y Y 1 F N
+DEF CatSniffer-rescue_0900FM15D0039-Electronic_Cats-CatStick-rescue U 0 40 Y Y 1 F N
 F0 "U" 500 200 50 H V C CNN
-F1 "CatStick-rescue_0900FM15D0039-Electronic_Cats" -550 200 50 H V C CNN
+F1 "CatSniffer-rescue_0900FM15D0039-Electronic_Cats-CatStick-rescue" -550 200 50 H V C CNN
 F2 "" -750 0 50 H I C CNN
 F3 "" -750 0 50 H I C CNN
 DRAW
@@ -38,11 +38,11 @@ X GND 9 -1000 -250 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_0900PC15A0036-Electronic_Cats
+# CatSniffer-rescue_0900PC15A0036-Electronic_Cats-CatStick-rescue
 #
-DEF CatStick-rescue_0900PC15A0036-Electronic_Cats U 0 40 Y Y 1 F N
+DEF CatSniffer-rescue_0900PC15A0036-Electronic_Cats-CatStick-rescue U 0 40 Y Y 1 F N
 F0 "U" 500 200 50 H V C CNN
-F1 "CatStick-rescue_0900PC15A0036-Electronic_Cats" -550 200 50 H V C CNN
+F1 "CatSniffer-rescue_0900PC15A0036-Electronic_Cats-CatStick-rescue" -550 200 50 H V C CNN
 F2 "" -750 0 50 H I C CNN
 F3 "" -750 0 50 H I C CNN
 DRAW
@@ -60,11 +60,11 @@ X BP_2_4_GHZ_RF_P 9 -1000 -250 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_AP2112K-1.2-Regulator_Linear-CatStick-rescue
+# CatSniffer-rescue_AP2112K-1.2-Regulator_Linear-CatStick-rescue-CatStick-rescue
 #
-DEF CatStick-rescue_AP2112K-1.2-Regulator_Linear-CatStick-rescue U 0 10 Y Y 1 F N
+DEF CatSniffer-rescue_AP2112K-1.2-Regulator_Linear-CatStick-rescue-CatStick-rescue U 0 10 Y Y 1 F N
 F0 "U" -200 225 50 H V L CNN
-F1 "CatStick-rescue_AP2112K-1.2-Regulator_Linear-CatStick-rescue" 0 225 50 H V L CNN
+F1 "CatSniffer-rescue_AP2112K-1.2-Regulator_Linear-CatStick-rescue-CatStick-rescue" 0 225 50 H V L CNN
 F2 "Package_TO_SOT_SMD:SOT-23-5" 0 325 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 $FPLIST
@@ -80,11 +80,11 @@ X VOUT 5 300 100 100 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_ATSAMD21E18A-electroniccats
+# CatSniffer-rescue_ATSAMD21E18A-electroniccats-CatStick-rescue
 #
-DEF CatStick-rescue_ATSAMD21E18A-electroniccats U 0 40 Y Y 1 F N
+DEF CatSniffer-rescue_ATSAMD21E18A-electroniccats-CatStick-rescue U 0 40 Y Y 1 F N
 F0 "U" -470 1710 45 H V L BNN
-F1 "CatStick-rescue_ATSAMD21E18A-electroniccats" 820 1730 45 H V L BNN
+F1 "CatSniffer-rescue_ATSAMD21E18A-electroniccats-CatStick-rescue" 820 1730 45 H V L BNN
 F2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" 30 150 20 H I C CNN
 F3 "" 0 0 60 H I C CNN
 $FPLIST
@@ -128,11 +128,11 @@ X VDDA 9 -670 1210 200 R 40 40 1 1 W
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_C-Device
+# CatSniffer-rescue_C-Device-CatStick-rescue
 #
-DEF CatStick-rescue_C-Device C 0 10 N Y 1 F N
+DEF CatSniffer-rescue_C-Device-CatStick-rescue C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "CatStick-rescue_C-Device" 25 -100 50 H V L CNN
+F1 "CatSniffer-rescue_C-Device-CatStick-rescue" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -146,11 +146,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue
+# CatSniffer-rescue_CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue-CatStick-rescue
 #
-DEF CatStick-rescue_CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue U 0 40 Y Y 1 F N
+DEF CatSniffer-rescue_CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue-CatStick-rescue U 0 40 Y Y 1 F N
 F0 "U" -50 -250 50 V V C CNN
-F1 "CatStick-rescue_CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue" 100 -250 50 V V C CNN
+F1 "CatSniffer-rescue_CC1352R1F3RGZR-cc1352-cc1352-swim-thermo-rescue-CatStick-rescue-CatStick-rescue" 100 -250 50 V V C CNN
 F2 "" 400 -750 50 H I C CNN
 F3 "" 400 -750 50 H I C CNN
 DRAW
@@ -207,11 +207,11 @@ X DIO_4 9 -850 -250 200 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_C_Small-Device
+# CatSniffer-rescue_C_Small-Device-CatStick-rescue
 #
-DEF CatStick-rescue_C_Small-Device C 0 10 N N 1 F N
+DEF CatSniffer-rescue_C_Small-Device-CatStick-rescue C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "CatStick-rescue_C_Small-Device" 10 -80 50 H V L CNN
+F1 "CatSniffer-rescue_C_Small-Device-CatStick-rescue" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -225,11 +225,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_Conn_01x06_Female-Connector
+# CatSniffer-rescue_Conn_01x06_Female-Connector-CatStick-rescue
 #
-DEF CatStick-rescue_Conn_01x06_Female-Connector J 0 40 Y N 1 F N
+DEF CatSniffer-rescue_Conn_01x06_Female-Connector-CatStick-rescue J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "CatStick-rescue_Conn_01x06_Female-Connector" 0 -400 50 H V C CNN
+F1 "CatSniffer-rescue_Conn_01x06_Female-Connector-CatStick-rescue" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -257,11 +257,11 @@ X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_Conn_Coaxial-Connector
+# CatSniffer-rescue_Conn_Coaxial-Connector-CatStick-rescue
 #
-DEF CatStick-rescue_Conn_Coaxial-Connector J 0 40 Y N 1 F N
+DEF CatSniffer-rescue_Conn_Coaxial-Connector-CatStick-rescue J 0 40 Y N 1 F N
 F0 "J" 10 120 50 H V C CNN
-F1 "CatStick-rescue_Conn_Coaxial-Connector" 115 0 50 V V C CNN
+F1 "CatSniffer-rescue_Conn_Coaxial-Connector-CatStick-rescue" 115 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -282,11 +282,11 @@ X Ext 2 0 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_Crystal-Device
+# CatSniffer-rescue_Crystal-Device-CatStick-rescue
 #
-DEF CatStick-rescue_Crystal-Device Y 0 40 N N 1 F N
+DEF CatSniffer-rescue_Crystal-Device-CatStick-rescue Y 0 40 N N 1 F N
 F0 "Y" 0 150 50 H V C CNN
-F1 "CatStick-rescue_Crystal-Device" 0 -150 50 H V C CNN
+F1 "CatSniffer-rescue_Crystal-Device-CatStick-rescue" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -303,11 +303,11 @@ X 2 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_Crystal_GND24-Device
+# CatSniffer-rescue_Crystal_GND24-Device-CatStick-rescue
 #
-DEF CatStick-rescue_Crystal_GND24-Device Y 0 40 Y N 1 F N
+DEF CatSniffer-rescue_Crystal_GND24-Device-CatStick-rescue Y 0 40 Y N 1 F N
 F0 "Y" 125 200 50 H V L CNN
-F1 "CatStick-rescue_Crystal_GND24-Device" 125 125 50 H V L CNN
+F1 "CatSniffer-rescue_Crystal_GND24-Device-CatStick-rescue" 125 125 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -330,11 +330,11 @@ X 4 4 0 -200 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_Ferrite_Bead-Device
+# CatSniffer-rescue_Ferrite_Bead-Device-CatStick-rescue
 #
-DEF CatStick-rescue_Ferrite_Bead-Device FB 0 0 N Y 1 F N
+DEF CatSniffer-rescue_Ferrite_Bead-Device-CatStick-rescue FB 0 0 N Y 1 F N
 F0 "FB" -150 25 50 V V C CNN
-F1 "CatStick-rescue_Ferrite_Bead-Device" 150 0 50 V V C CNN
+F1 "CatSniffer-rescue_Ferrite_Bead-Device-CatStick-rescue" 150 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -351,11 +351,11 @@ X ~ 2 0 -150 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_Fuse_Small-Device
+# CatSniffer-rescue_Fuse_Small-Device-CatStick-rescue
 #
-DEF CatStick-rescue_Fuse_Small-Device F 0 10 N N 1 F N
+DEF CatSniffer-rescue_Fuse_Small-Device-CatStick-rescue F 0 10 N N 1 F N
 F0 "F" 0 -60 50 H V C CNN
-F1 "CatStick-rescue_Fuse_Small-Device" 0 60 50 H V C CNN
+F1 "CatSniffer-rescue_Fuse_Small-Device-CatStick-rescue" 0 60 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -369,11 +369,11 @@ X ~ 2 100 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_GND-power
+# CatSniffer-rescue_GND-power-CatStick-rescue
 #
-DEF CatStick-rescue_GND-power #PWR 0 0 Y Y 1 F P
+DEF CatSniffer-rescue_GND-power-CatStick-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "CatStick-rescue_GND-power" 0 -150 50 H V C CNN
+F1 "CatSniffer-rescue_GND-power-CatStick-rescue" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -382,11 +382,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_Jumper_3_Bridged12-Jumper
+# CatSniffer-rescue_Jumper_3_Bridged12-Jumper-CatStick-rescue
 #
-DEF CatStick-rescue_Jumper_3_Bridged12-Jumper JP 0 0 Y N 1 F N
+DEF CatSniffer-rescue_Jumper_3_Bridged12-Jumper-CatStick-rescue JP 0 0 Y N 1 F N
 F0 "JP" -100 -100 50 H V C CNN
-F1 "CatStick-rescue_Jumper_3_Bridged12-Jumper" 0 110 50 H V C CNN
+F1 "CatSniffer-rescue_Jumper_3_Bridged12-Jumper-CatStick-rescue" 0 110 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -406,11 +406,11 @@ X B 3 250 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_L-Device
+# CatSniffer-rescue_L-Device-CatStick-rescue
 #
-DEF CatStick-rescue_L-Device L 0 40 N N 1 F N
+DEF CatSniffer-rescue_L-Device-CatStick-rescue L 0 40 N N 1 F N
 F0 "L" -50 0 50 V V C CNN
-F1 "CatStick-rescue_L-Device" 75 0 50 V V C CNN
+F1 "CatSniffer-rescue_L-Device-CatStick-rescue" 75 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -429,11 +429,11 @@ X 2 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_LED_Small-Device
+# CatSniffer-rescue_LED_Small-Device-CatStick-rescue
 #
-DEF CatStick-rescue_LED_Small-Device D 0 10 N N 1 F N
+DEF CatSniffer-rescue_LED_Small-Device-CatStick-rescue D 0 10 N N 1 F N
 F0 "D" -50 125 50 H V L CNN
-F1 "CatStick-rescue_LED_Small-Device" -175 -100 50 H V L CNN
+F1 "CatSniffer-rescue_LED_Small-Device-CatStick-rescue" -175 -100 50 H V L CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 $FPLIST
@@ -452,11 +452,11 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_L_Small-Device
+# CatSniffer-rescue_L_Small-Device-CatStick-rescue
 #
-DEF CatStick-rescue_L_Small-Device L 0 10 N N 1 F N
+DEF CatSniffer-rescue_L_Small-Device-CatStick-rescue L 0 10 N N 1 F N
 F0 "L" 30 40 50 H V L CNN
-F1 "CatStick-rescue_L_Small-Device" 30 -40 50 H V L CNN
+F1 "CatSniffer-rescue_L_Small-Device-CatStick-rescue" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -475,11 +475,11 @@ X ~ 2 0 -100 20 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_MASWSS0115-RF_Switch
+# CatSniffer-rescue_MASWSS0115-RF_Switch-CatStick-rescue
 #
-DEF CatStick-rescue_MASWSS0115-RF_Switch U 0 20 Y Y 1 F N
+DEF CatSniffer-rescue_MASWSS0115-RF_Switch-CatStick-rescue U 0 20 Y Y 1 F N
 F0 "U" -300 300 50 H V C CNN
-F1 "CatStick-rescue_MASWSS0115-RF_Switch" 150 300 50 H V C CNN
+F1 "CatSniffer-rescue_MASWSS0115-RF_Switch-CatStick-rescue" 150 300 50 H V C CNN
 F2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" 0 100 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 $FPLIST
@@ -509,11 +509,11 @@ X V1 6 -400 -100 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_PWR_FLAG-power
+# CatSniffer-rescue_PWR_FLAG-power-CatStick-rescue
 #
-DEF CatStick-rescue_PWR_FLAG-power #FLG 0 0 N N 1 F P
+DEF CatSniffer-rescue_PWR_FLAG-power-CatStick-rescue #FLG 0 0 N N 1 F P
 F0 "#FLG" 0 75 50 H I C CNN
-F1 "CatStick-rescue_PWR_FLAG-power" 0 150 50 H V C CNN
+F1 "CatSniffer-rescue_PWR_FLAG-power-CatStick-rescue" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -522,11 +522,11 @@ X pwr 1 0 0 0 U 50 50 0 0 w
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_R-Device
+# CatSniffer-rescue_R-Device-CatStick-rescue
 #
-DEF CatStick-rescue_R-Device R 0 0 N Y 1 F N
+DEF CatSniffer-rescue_R-Device-CatStick-rescue R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "CatStick-rescue_R-Device" 0 0 50 V V C CNN
+F1 "CatSniffer-rescue_R-Device-CatStick-rescue" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -539,11 +539,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_RFSW8006QTR7-electroniccats
+# CatSniffer-rescue_RFSW8006QTR7-electroniccats-CatStick-rescue
 #
-DEF CatStick-rescue_RFSW8006QTR7-electroniccats U 0 40 Y Y 1 F N
+DEF CatSniffer-rescue_RFSW8006QTR7-electroniccats-CatStick-rescue U 0 40 Y Y 1 F N
 F0 "U" 0 50 50 H V C CNN
-F1 "CatStick-rescue_RFSW8006QTR7-electroniccats" 0 -50 50 H V C CNN
+F1 "CatSniffer-rescue_RFSW8006QTR7-electroniccats-CatStick-rescue" 0 -50 50 H V C CNN
 F2 "Package_DFN_QFN:DFN-8-1EP_2x2mm_P0.5mm_EP0.9x1.3mm" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -559,11 +559,11 @@ X RF2 8 -450 -300 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_R_Small-Device
+# CatSniffer-rescue_R_Small-Device-CatStick-rescue
 #
-DEF CatStick-rescue_R_Small-Device R 0 10 N N 1 F N
+DEF CatSniffer-rescue_R_Small-Device-CatStick-rescue R 0 10 N N 1 F N
 F0 "R" 30 20 50 H V L CNN
-F1 "CatStick-rescue_R_Small-Device" 30 -40 50 H V L CNN
+F1 "CatSniffer-rescue_R_Small-Device-CatStick-rescue" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -576,11 +576,11 @@ X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_SW_Push-Switch
+# CatSniffer-rescue_SW_Push-Switch-CatStick-rescue
 #
-DEF CatStick-rescue_SW_Push-Switch SW 0 40 N N 1 F N
+DEF CatSniffer-rescue_SW_Push-Switch-CatStick-rescue SW 0 40 N N 1 F N
 F0 "SW" 50 100 50 H V L CNN
-F1 "CatStick-rescue_SW_Push-Switch" 0 -60 50 H V C CNN
+F1 "CatSniffer-rescue_SW_Push-Switch-CatStick-rescue" 0 -60 50 H V C CNN
 F2 "" 0 200 50 H I C CNN
 F3 "" 0 200 50 H I C CNN
 DRAW
@@ -593,11 +593,11 @@ X 2 2 200 0 100 L 50 50 0 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_USB_C_Plug_USB2.0-Connector
+# CatSniffer-rescue_USB_C_Plug_USB2.0-Connector-CatStick-rescue
 #
-DEF CatStick-rescue_USB_C_Plug_USB2.0-Connector P 0 40 Y Y 1 F N
+DEF CatSniffer-rescue_USB_C_Plug_USB2.0-Connector-CatStick-rescue P 0 40 Y Y 1 F N
 F0 "P" -400 750 50 H V L CNN
-F1 "CatStick-rescue_USB_C_Plug_USB2.0-Connector" 500 750 50 H V R CNN
+F1 "CatSniffer-rescue_USB_C_Plug_USB2.0-Connector-CatStick-rescue" 500 750 50 H V R CNN
 F2 "" 150 0 50 H I C CNN
 F3 "" 150 0 50 H I C CNN
 $FPLIST
@@ -643,11 +643,11 @@ X SHIELD S1 -300 -900 200 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# CatStick-rescue_VCC-power
+# CatSniffer-rescue_VCC-power-CatStick-rescue
 #
-DEF CatStick-rescue_VCC-power #PWR 0 0 Y Y 1 F P
+DEF CatSniffer-rescue_VCC-power-CatStick-rescue #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "CatStick-rescue_VCC-power" 0 150 50 H V C CNN
+F1 "CatSniffer-rescue_VCC-power-CatStick-rescue" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
