@@ -1,4 +1,6 @@
-# Documentos o links de referencia
+# Reference documents or links
+
+We appreciate the work of those who make chat sniffer possible
 
 ## Sniffers
 
