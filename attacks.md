@@ -1,8 +1,10 @@
-# Ataques a protocolos IoT
+# Attacks on IoT protocols
+
+list of possible attacks and available audits
 
 ## LoRa/LoRaWAN
 
-- Bit flipping:
+- Bit flipping
 
 ## BLE
 - Handler enumeration
