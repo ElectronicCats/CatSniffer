@@ -1,29 +1,38 @@
 /*
-  SerialPassthrough - Use tool to flash the CC1352 module
+  SerialPassthrough - Use SerialPassthrough for communication with the CC1352 module
+  Andres Sabas @ Electronic Cats
+  Original Creation Date: Jal 23, 2021
 
-  Copyright (c) 2018 Electronic Cats SAPI de CV. All rights reserved.
-
-  This library is free software; you can redistribute it and/or
-  modify it under the terms of the GNU Lesser General Public
-  License as published by the Free Software Foundation; either
-  version 2.1 of the License, or (at your option) any later version.
-
-  This library is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-  Lesser General Public License for more details.
-
-  You should have received a copy of the GNU Lesser General Public
-  License along with this library; if not, write to the Free Software
-  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+  This code is beerware; if you see me (or any other Electronic Cats
+  member) at the local, and you've found our code helpful,
+  please buy us a round!
+  Distributed as-is; no warranty is given.
 */
 unsigned long baud = 921600;//Baud for SmartRF Sniffer 2 also works with Smart RF Flash Programmer 2
 //unsigned long baud = 115200;//Baud for Zigbee2MQTT
+
+#define CTF1 14
+#define CTF2 11
+#define CTF3 10
 
 void setup() {
   //Begin Serial ports
   Serial.begin(baud);
   Serial1.begin(baud);
+
+  pinMode(CTF1, OUTPUT);
+  pinMode(CTF2, OUTPUT);
+  pinMode(CTF3, OUTPUT);
+  
+  //Switch Radio for 2.4Ghz BLE/WIFI
+  digitalWrite(CTF1,  LOW);
+  digitalWrite(CTF2,  HIGH);
+  digitalWrite(CTF3,  LOW);
+
+  //Switch Radio for 1Ghz-Sub
+  //digitalWrite(CTF1,  LOW);
+  //digitalWrite(CTF2,  LOW);
+  //digitalWrite(CTF3,  HIGH);
   
 }
 
