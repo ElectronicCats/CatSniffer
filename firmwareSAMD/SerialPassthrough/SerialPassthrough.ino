@@ -8,7 +8,8 @@
   please buy us a round!
   Distributed as-is; no warranty is given.
 */
-unsigned long baud = 921600;//Baud for SmartRF Sniffer 2 also works with Smart RF Flash Programmer 2
+//unsigned long baud = 921600;//Baud for SmartRF Sniffer 2 also works with Smart RF Flash Programmer 2
+unsigned long baud = 2000000;//Baud for Sniffle
 //unsigned long baud = 115200;//Baud for Zigbee2MQTT
 
 #define CTF1 14
