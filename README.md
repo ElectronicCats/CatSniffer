@@ -2,7 +2,7 @@
 
 CatSniffer is an original multiprotocol board made for IoT (Internet of Things). It has a design type "usb stick" that allows the easy transport and use it anytime anywhere. It integrates a CC1352 chip from TI, SX1276 and SAMD21E17 all of new generation.
 
-This board is an auditing tool for wireless network devices, that allows the user detect high bandwidht consumptions and then take early actions against malicious agents. 
+This board is an auditing tool for wireless network devices, that allows the user to detect high bandwidht consumptions and then take early actions against malicious agents. 
 
 This work was inspired by our friend's work [Michael Ossmann](https://twitter.com/michaelossmann) as a tribute of his great job in [Greatscott Gadgets](https://greatscottgadgets.com/), making devices like YardStick, GreatFET, HackRF y Ubertooth, Thank you.
 
