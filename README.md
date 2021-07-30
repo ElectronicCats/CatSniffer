@@ -8,12 +8,14 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 
 
 ## Protocols
-- Thread,Zigbee, 
-- Bluetooth 5 Low Energy (BLE), 
-- IEEE 802.15.4g, 
-- 6LoWPAN (IPv6 over Low power Wireless Personal Area Networks), 
-- Sub 1GHz and patented systems,
-- LoRa y LoRaWAN
+- Thread
+- Zigbee 
+- Bluetooth 5 Low Energy (BLE)
+- IEEE 802.15.4g 
+- 6LoWPAN (IPv6 over Low power Wireless Personal Area Networks) 
+- Sub 1GHz and patented systems
+- LoRa
+- LoRaWAN
     
 
 ## Features
