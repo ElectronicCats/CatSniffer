@@ -20,12 +20,12 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 
 ## Features
 - "The SimpleLink™ CC1352P device is a multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless microcontroller (MCU) supporting Thread, Zigbee®, Bluetooth® 5.2 Low Energy, IEEE 802.15.4g, IPv6-enabled smart objects (6LoWPAN), MIOTY®, Wi-SUN®, proprietary systems".
-- CatSniffer use SAMD21E17 as a USB-UART bridge to communicate with CC1352 chip, it's not neccessary manual driver installation (exceptions could exist).
--  Compatible OS: Windows y Linux.
--  Autoprogram through the bootloader from TI CC (as long as it's not disable in the code). No need external programer and it can be debugged with cJTAG through the default pin.
-- Antenna SMA port, for an Antenna of your choice
-- LEDs of general purpose
-- Reset button for SAMD21 & CC1352, Boot of CC1352 and one more for general purpose.
+- CatSniffer uses SAMD21E17 as a USB-UART bridge to communicate with the CC1352 chip; it's not necessary for a manual driver installation (exceptions could exist).
+- Compatible OS: Windows and Linux.
+- Auto program through the bootloader from TI CC (as long as it's not disabled in the code). No need for an external programmer, and it can be debugged with cJTAG through the default pin.
+- Antenna SMA port for an Antenna of your choice.
+- LEDs of general-purpose
+- Reset button for SAMD21 & CC1352, Boot of CC1352, and one more for general purpose.
 
 
 ## Compatible Software
