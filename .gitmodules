@@ -3,4 +3,4 @@
 	url = https://github.com/JelmerT/cc2538-bsl
 [submodule "Sniffle"]
 	path = Sniffle
-	url = https://github.com/nccgroup/Sniffle
+	url = https://github.com/ElectronicCats/Sniffle
