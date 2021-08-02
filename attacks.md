@@ -40,4 +40,6 @@ practical realization](http://www.cic.ipn.mx/~pescamilla/MS/papers_2014/Durechan
 Learned from an Attack on Thread](https://tches.iacr.org/index.php/TCHES/article/download/833/785/)
 
 ## IEEE 802.15.4g
--
+- [Security considerations](https://people.eecs.berkeley.edu/~daw/papers/15.4-wise04.pdf)
+- [Attacks and Defenses in Short-Range
+Wireless Technologies for IoT](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9090905)
