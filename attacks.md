@@ -36,6 +36,8 @@ practical realization](http://www.cic.ipn.mx/~pescamilla/MS/papers_2014/Durechan
 
 ## Thread
 - [Thread fundamentals](https://www.silabs.com/documents/public/user-guides/ug103-11-fundamentals-thread.pdf)
+- [EM Analysis in the IoT Context: Lessons
+Learned from an Attack on Thread](https://tches.iacr.org/index.php/TCHES/article/download/833/785/)
 
 ## IEEE 802.15.4g
 -
