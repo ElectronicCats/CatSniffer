@@ -17,13 +17,17 @@ This page intends to document the techniques and attacks applicable to the IoT p
 - Fuzzing handler values
 
 ## Zigbee
-- https://www.opencve.io/cve?vendor=mi&product=dgnwg03lm
+- [ZigBee vulnerabilities in Xiaomi devices](https://www.opencve.io/cve?vendor=mi&product=dgnwg03lm)
+- [Security attacks to ZigBee technology and their
+practical realization](http://www.cic.ipn.mx/~pescamilla/MS/papers_2014/DurechandFranekova2014.pdf)
 
 ## Thread
-- 
+- [Thread fundamentals](https://www.silabs.com/documents/public/user-guides/ug103-11-fundamentals-thread.pdf)
 
-## IEEE 802.15.4g,
+## IEEE 802.15.4g
 -
 
 ### 6LoWPAN
+- [Attacks on RPL and 6LoWPAN in IoT](https://ieeexplore.ieee.org/document/7087034)
+- [Selective forwarding attack](http://oa.upm.es/65423/1/TFM_JOSE_LUIS_CASTANON_REMY.pdf)
 - 
