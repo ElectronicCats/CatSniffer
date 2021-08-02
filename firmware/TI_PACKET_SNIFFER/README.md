@@ -2,7 +2,7 @@
 
 ## Prerequisites
 - CCS version: The packet sniffer firmware has been tested with CCS 10.2.
-- [SimpleLink CC13x2 and CC26x2 SDK 4.40.04.04](https://www.ti.com/tool/download/SIMPLELINK-CC13X2-26X2-SDK/4.40.04.04)
+- [SimpleLink CC13X2 and CC26x2 SDK 3.40.00.02](https://www.ti.com/tool/download/SIMPLELINK-CC13X2-26X2-SDK/3.40.00.02)
 
 ## Protocolo de TI sniffer 
 - [Sniffer Oficial de TI](https://www.ti.com/tool/download/PACKET-SNIFFER-2)
