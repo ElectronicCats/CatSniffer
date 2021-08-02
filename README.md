@@ -1,6 +1,6 @@
 # CatSniffer
 
-CatSniffer is an original multiprotocol and multiband board made for sniffing and communicating with IoT (Internet of Things) devices. It was designed as an USB stick that is highly portable integrating the new generation of the chips TI CC1352, Semtech SX1262, and Microchip SAMD21E17. 
+CatSniffer is an original multiprotocol and multiband board made for sniffing and communicating with IoT (Internet of Things) devices. It was designed as a highly portable USB stick that integrates the new generation of the chips TI CC1352, Semtech SX1262, and Microchip SAMD21E17. 
 
 This board is an auditing tool for security researchers looking into IoT security. The board can be used with different types of software including third-party sniffers such as [SmartRF Packet Sniffer](https://www.ti.com/tool/PACKET-SNIFFER), [Sniffle](https://github.com/nccgroup/Sniffle), [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt), [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware), our custom firmware images, or you can even write your own firmware for your hacking needs.
 
@@ -39,7 +39,6 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 - Python 3
 - CCS version: The packet sniffer firmware has been tested with CCS 10.2.
 - SimpleLink CC13x2 and CC26x2 SDK 3.40.00.02
-
 
 
 ## Note
