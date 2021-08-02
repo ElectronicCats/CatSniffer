@@ -4,11 +4,6 @@ CatSniffer is an original multiprotocol and multiband board made for sniffing an
 
 This board is an auditing tool for security researchers looking into IoT security. The board can be used with different types of software including third-party sniffers such as [SmartRF Packet Sniffer](https://www.ti.com/tool/PACKET-SNIFFER), [Sniffle](https://github.com/nccgroup/Sniffle), [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt), [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware), our custom firmware images, or you can even write your own firmware for your hacking needs.
 
-CatSniffer integrates a switch that allows the user to work between 3 different frequencies:
-* LoRa
-* Sub 1 GHz
-* 2.4 GHz
-
 This work was inspired by our friend's work [Michael Ossmann](https://twitter.com/michaelossmann) as a tribute to his outstanding job in [Greatscott Gadgets](https://greatscottgadgets.com/), making devices like the YardStick, GreatFET, HackRF, and Ubertooth.
 
 
