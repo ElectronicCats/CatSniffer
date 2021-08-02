@@ -28,7 +28,7 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 
 
 ## Compatible Software
-- [Oficial TI PACKET-SNIFFER-2 v1.9](https://www.ti.com/tool/download/PACKET-SNIFFER-2)
+- [TI PACKET-SNIFFER-2 v1.8](https://www.ti.com/tool/download/PACKET-SNIFFER-2)
 - [Sniffle](https://github.com/nccgroup/Sniffle)
 - [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt)
 - [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware)
