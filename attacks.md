@@ -6,6 +6,8 @@ This page intends to document the techniques and attacks applicable to the IoT p
 
 - Bit flipping
 - [DoS in ABP mode](https://ieeexplore.ieee.org/document/8366983/authors#authors)
+- [ACK Spoofing](https://ieeexplore.ieee.org/document/8366983/authors#authors)
+- [LoRa Class B Attacks](https://arxiv.org/pdf/2005.11555.pdf)
 
 
 ## BLE
