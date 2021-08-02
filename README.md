@@ -1,10 +1,10 @@
 # CatSniffer
 
-CatSniffer is an original multiprotocol board made for IoT (Internet of Things). It has a design type "USB stick" that allows easy transport and use anytime, anywhere. It integrates a CC1352 chip from TI, SX1262, and SAMD21E17, all of the new generation.
+CatSniffer is an original multiprotocol and multiband board made for sniffing and communicating with IoT (Internet of Things) devices. It was designed as a highly portable USB stick that integrates the new generation of the chips TI CC1352, Semtech SX1262, and Microchip SAMD21E17. 
 
-This board is an auditing tool for wireless network devices that allows the user to detect high bandwidth consumptions and take early actions against malicious agents.
+This board is an auditing tool for security researchers looking into IoT security. The board can be used with different types of software including third-party sniffers such as [SmartRF Packet Sniffer](https://www.ti.com/tool/PACKET-SNIFFER), [Sniffle](https://github.com/nccgroup/Sniffle), [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt), [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware), our custom firmware images, or you can even write your own firmware for your hacking needs.
 
-This work was inspired by our friend's work [Michael Ossmann](https://twitter.com/michaelossmann) as a tribute to his outstanding job in [Greatscott Gadgets](https://greatscottgadgets.com/), making devices like YardStick, GreatFET, HackRF, and Ubertooth.
+This work was inspired by our friend's work [Michael Ossmann](https://twitter.com/michaelossmann) as a tribute to his outstanding job in [Greatscott Gadgets](https://greatscottgadgets.com/), making devices like the YardStick, GreatFET, HackRF, and Ubertooth.
 
 
 ## Protocols
@@ -14,8 +14,7 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 - IEEE 802.15.4g 
 - 6LoWPAN (IPv6 over Low power Wireless Personal Area Networks) 
 - Sub 1GHz and patented systems
-- LoRa
-- LoRaWAN
+- LoRa/LoRaWAN
     
 
 ## Features
@@ -40,7 +39,6 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 - Python 3
 - CCS version: The packet sniffer firmware has been tested with CCS 10.2.
 - SimpleLink CC13x2 and CC26x2 SDK 3.40.00.02
-
 
 
 ## Note

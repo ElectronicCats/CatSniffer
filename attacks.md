@@ -1,10 +1,27 @@
 # Attacks on IoT protocols
 
-list of possible attacks and available audits
+This page intends to document the analysis techniques and attacks applicable to the IoT protocols supported by CatSniffer.
 
 ## LoRa/LoRaWAN
 
-- Bit flipping
+- [Bit flipping](https://ieeexplore.ieee.org/document/7899554)
+- [DoS in ABP mode](https://ieeexplore.ieee.org/document/8366983/authors#authors)
+- [ACK Spoofing](https://ieeexplore.ieee.org/document/8366983/authors#authors)
+- [LoRa Class B Attacks](https://arxiv.org/pdf/2005.11555.pdf)
+
+
+### 6LoWPAN
+- [Attacks on RPL and 6LoWPAN in IoT](https://ieeexplore.ieee.org/document/7087034)
+- [Selective forwarding attack](http://oa.upm.es/65423/1/TFM_JOSE_LUIS_CASTANON_REMY.pdf)
+- [Sinkhole attack](http://oa.upm.es/65423/1/TFM_JOSE_LUIS_CASTANON_REMY.pdf)
+- [Clone ID attack](http://oa.upm.es/65423/1/TFM_JOSE_LUIS_CASTANON_REMY.pdf)
+- [Sybil attack](http://oa.upm.es/65423/1/TFM_JOSE_LUIS_CASTANON_REMY.pdf)
+- [Hello flooding](http://oa.upm.es/65423/1/TFM_JOSE_LUIS_CASTANON_REMY.pdf)
+- [Wormhole attack](http://oa.upm.es/65423/1/TFM_JOSE_LUIS_CASTANON_REMY.pdf)
+- [Blackhole attack](http://oa.upm.es/65423/1/TFM_JOSE_LUIS_CASTANON_REMY.pdf)
+- [Denial Of Service](http://oa.upm.es/65423/1/TFM_JOSE_LUIS_CASTANON_REMY.pdf)
+- [Alteration and Spoofing attack](http://oa.upm.es/65423/1/TFM_JOSE_LUIS_CASTANON_REMY.pdf)
+
 
 ## BLE
 - Handler enumeration
@@ -13,13 +30,16 @@ list of possible attacks and available audits
 - Fuzzing handler values
 
 ## Zigbee
-- https://www.opencve.io/cve?vendor=mi&product=dgnwg03lm
+- [ZigBee vulnerabilities in Xiaomi devices](https://www.opencve.io/cve?vendor=mi&product=dgnwg03lm)
+- [Security attacks to ZigBee technology and their
+practical realization](http://www.cic.ipn.mx/~pescamilla/MS/papers_2014/DurechandFranekova2014.pdf)
 
 ## Thread
-- 
+- [Thread fundamentals](https://www.silabs.com/documents/public/user-guides/ug103-11-fundamentals-thread.pdf)
+- [EM Analysis in the IoT Context: Lessons
+Learned from an Attack on Thread](https://tches.iacr.org/index.php/TCHES/article/download/833/785/)
 
-## IEEE 802.15.4g,
--
-
-### 6LoWPAN
-- 
+## IEEE 802.15.4g
+- [Security considerations](https://people.eecs.berkeley.edu/~daw/papers/15.4-wise04.pdf)
+- [Attacks and Defenses in Short-Range
+Wireless Technologies for IoT](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9090905)
