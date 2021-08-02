@@ -6,4 +6,4 @@ All CatSniffer versions.
 
 ## Reporting a Vulnerability
 
-Please submit an issue for reporting vulnerabilities
+Please submit a new issue to report security vulnerabilities.
