@@ -1,10 +1,12 @@
 # Attacks on IoT protocols
 
-list of possible attacks and available audits
+This page intends to document the techniques and attacks applicable to the IoT protocols supported by CatSniffer.
 
 ## LoRa/LoRaWAN
 
 - Bit flipping
+- [DoS in ABP mode](https://ieeexplore.ieee.org/document/8366983/authors#authors)
+
 
 ## BLE
 - Handler enumeration
