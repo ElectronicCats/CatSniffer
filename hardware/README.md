@@ -2,4 +2,4 @@
 
 - Schematic
 - PCB Gerbers
-- Hardware Librarys
+- Hardware Libraries
