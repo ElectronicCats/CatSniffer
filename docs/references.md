@@ -1,6 +1,6 @@
 # Reference documents or links
 
-We appreciate the work of those who make chat sniffer possible
+We appreciate the work of those who make cat sniffer possible
 
 ## Sniffers
 
@@ -25,7 +25,7 @@ https://www.ti.com/lit/an/swra466c/swra466c.pdf
 ## CC1352 PINMAP
 https://energia.nu/pinmaps/launchxl-cc1352/
 
-## Flash con uniflash
+## Flashing with uniflash
 - https://electrolama.com/projects/zig-a-zig-ah/#flashing-using-bsl
 - https://github.com/JelmerT/cc2538-bsl
 
