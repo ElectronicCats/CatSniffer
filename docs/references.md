@@ -1,6 +1,6 @@
 # Reference documents or links
 
-We appreciate the work of those who make cat sniffer possible
+We appreciate the work of those who make CatSniffer possible
 
 ## Sniffers
 
