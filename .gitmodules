@@ -4,3 +4,6 @@
 [submodule "Sniffle"]
 	path = Sniffle
 	url = https://github.com/ElectronicCats/Sniffle
+[submodule "ot-cc13x2-cc26x2"]
+	path = ot-cc13x2-cc26x2
+	url = https://github.com/openthread/ot-cc13x2-cc26x2
