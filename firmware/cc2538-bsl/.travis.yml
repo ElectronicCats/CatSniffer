@@ -1,0 +1,15 @@
+language: python
+
+python:
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+
+# command to install dependencies
+install:
+  - "pip install pyserial"
+  - "pip install scripttest"
+
+# command to run tests
+script: nosetests -v ./tests/test_cc2538-bsl.py
