@@ -1,8 +1,8 @@
 # CatSniffer
 
-CatSniffer is an original multiprotocol and multiband board made for sniffing and communicating with IoT (Internet of Things) devices. It was designed as a highly portable USB stick that integrates the new generation of the chips TI CC1352, Semtech SX1262, and Microchip SAMD21E17. 
+CatSniffer (:smirk_cat:) is an original multiprotocol, and multiband board made for sniffing, communicating, and attacking IoT (Internet of Things) devices. It was designed as a highly portable USB stick that integrates the new chips TI CC1352, Semtech SX1262, and Microchip SAMD21E17.
 
-This board is an auditing tool for security researchers looking into IoT security. The board can be used with different types of software including third-party sniffers such as [SmartRF Packet Sniffer](https://www.ti.com/tool/PACKET-SNIFFER), [Sniffle](https://github.com/nccgroup/Sniffle), [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt), [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware), [our custom firmware](https://github.com/ElectronicCats/CatSniffer/tree/master/firmware), or you can even write your own firmware for your hacking needs.
+This board is a swiss army for IoT security researchers, developers and enthusiasts. The board can be used with different types of software including third-party sniffers such as [SmartRF Packet Sniffer](https://www.ti.com/tool/PACKET-SNIFFER), [Sniffle](https://github.com/nccgroup/Sniffle), [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt), [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware), [our custom firmware](https://github.com/ElectronicCats/CatSniffer/tree/master/firmware), or you can even write your own software for your specific needs.
 
 CatSniffer integrates a switch that allows the user to work between 3 different frequencies:
 * LoRa
@@ -26,7 +26,7 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
     
 
 ## Features
-- "The SimpleLink™ CC1352P device is a multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless microcontroller (MCU) supporting Thread, Zigbee®, Bluetooth® 5.2 Low Energy, IEEE 802.15.4g, IPv6-enabled smart objects (6LoWPAN), MIOTY®, Wi-SUN®, proprietary systems".
+- "The SimpleLink™ [CC1352P1F3RGZ](https://www.ti.com/lit/ds/symlink/cc1352p.pdf?ts=1631314674885) device is a multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless microcontroller (MCU) supporting Thread, Zigbee®, Bluetooth® 5.2 Low Energy, IEEE 802.15.4g, IPv6-enabled smart objects (6LoWPAN), MIOTY®, Wi-SUN®, proprietary systems".
 - CatSniffer uses SAMD21E17 as a USB-UART bridge to communicate with the CC1352 chip; it's not necessary for a manual driver installation (exceptions could exist).
 - Compatible OS: Windows and Linux.
 - Auto program through the bootloader from TI CC (as long as it's not disabled in the code). No need for an external programmer, and it can be debugged with cJTAG through the default pin.
