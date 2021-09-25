@@ -44,12 +44,10 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 * [Sniffle](https://github.com/nccgroup/Sniffle) 1.6
 * [Ubiqua Protocol Analyzer](https://www.ubilogix.com/ubiqua/)
 
-## Prerequisites
-- Git
-- Python 3
-- CCS version: The packet sniffer firmware has been tested with CCS 10.2.
-- SimpleLink CC13x2 and CC26x2 SDK 3.40.00.02
-
+## Pre-requisites for building firmware
+* CCS version: The packet sniffer firmware has been tested with CCS 10.2.
+* SimpleLink CC13x2 and CC26x2 SDK 
+* Python 3
 
 ## Note
 This kit is designed to allow Product developers to evaluate electronic components, circuit, or software associated with the kit to determine whether to incorporate such items in a finished product and Software developers to write software applications for use with the end product. This kit is a developer product and when assembled may not be resold or otherwise marketed unless all required FCC (or any other local authority) equipment authorizations are first obtained. Operation is subject to the condition that this product not cause harmful interference to licensed radio stations and that this product accept harmful interference.
