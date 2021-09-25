@@ -2,9 +2,9 @@
 
 CatSniffer (:smirk_cat:) is an original multiprotocol, and multiband board made for sniffing, communicating, and attacking IoT (Internet of Things) devices. It was designed as a highly portable USB stick that integrates the new chips TI CC1352, Semtech SX1262, and Microchip SAMD21E17.
 
-This board is a swiss army for IoT security researchers, developers, and enthusiasts. The board can be used with different types of software including third-party sniffers such as [SmartRF Packet Sniffer](https://www.ti.com/tool/PACKET-SNIFFER), [Sniffle](https://github.com/nccgroup/Sniffle), [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt), [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware), [our custom firmware](https://github.com/ElectronicCats/CatSniffer/tree/master/firmware), or you can even write your own software for your specific needs.
+This board is a swiss army for IoT security researchers, developers and enthusiasts. The board can be used with different types of software including third-party sniffers such as [SmartRF Packet Sniffer](https://www.ti.com/tool/PACKET-SNIFFER), [Sniffle](https://github.com/nccgroup/Sniffle), [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt), [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware), [Ubiqua Protocol Analyzer](https://www.ubilogix.com/ubiqua/), [our custom firmware](https://github.com/ElectronicCats/CatSniffer/tree/master/firmware), or you can even write your own software for your specific needs.
 
-CatSniffer integrates a switch that allows the user to work between 3 different frequencies:
+CatSniffer can operate in 3 different frequencies:
 * LoRa
 * Sub 1 GHz
 * 2.4 GHz
@@ -37,11 +37,12 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 <img src="https://raw.githubusercontent.com/wiki/ElectronicCats/CatSniffer/assets/CatSniffer-Bottons.png" />
 
 ## Compatible Software
-- [TI PACKET-SNIFFER-2 v1.8](https://www.ti.com/tool/download/PACKET-SNIFFER-2)
-- [Sniffle](https://github.com/nccgroup/Sniffle)
-- [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt)
-- [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware)
-
+* [TI PACKET-SNIFFER-2 v1.8](https://www.ti.com/tool/download/PACKET-SNIFFER-2)
+* Flash Programmer 2 and Uniflash from TI
+* [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt)
+* [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware)
+* [Sniffle](https://github.com/nccgroup/Sniffle) 1.6
+* [Ubiqua Protocol Analyzer](https://www.ubilogix.com/ubiqua/)
 
 ## Prerequisites
 - Git
