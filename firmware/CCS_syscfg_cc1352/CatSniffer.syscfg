@@ -1,0 +1,68 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --board "/ti/boards/CC1352P1_LAUNCHXL" --rtos "tirtos" --product "simplelink_cc13xx_cc26xx_sdk@6.10.00.29"
+ * @versions {"tool":"1.12.0+2406"}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const CCFG     = scripting.addModule("/ti/devices/CCFG");
+const rfdesign = scripting.addModule("/ti/devices/radioconfig/rfdesign");
+const Board    = scripting.addModule("/ti/drivers/Board");
+const GPIO     = scripting.addModule("/ti/drivers/GPIO");
+const GPIO1    = GPIO.addInstance();
+const GPIO2    = GPIO.addInstance();
+const Power    = scripting.addModule("/ti/drivers/Power");
+const RF       = scripting.addModule("/ti/drivers/RF");
+const Timer    = scripting.addModule("/ti/drivers/Timer", {}, false);
+const Timer1   = Timer.addInstance();
+const UART2    = scripting.addModule("/ti/drivers/UART2", {}, false);
+const UART21   = UART2.addInstance();
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+CCFG.enableBootloader         = true;
+CCFG.enableBootloaderBackdoor = true;
+CCFG.dioBootloaderBackdoor    = 15;
+CCFG.levelBootloaderBackdoor  = "Active low";
+CCFG.forceVddr                = true;
+CCFG.xoscCapArray             = true;
+CCFG.xoscCapArrayDelta        = 0xC1;
+CCFG.ccfgTemplate.$name       = "ti_devices_CCFG_CCFGCC26XXTemplate0";
+
+rfdesign.pa20 = "fb24g";
+
+GPIO1.mode                          = "Output";
+GPIO1.$name                         = "CONFIG_GPIO_LED_0";
+GPIO1.gpioPin.$assignAllowConflicts = "boosterpack.6";
+scripting.suppress("Resource conflict,@@@.+?@@@ is also in use by @@@.+?@@@", GPIO1, "gpioPin");
+
+GPIO2.$name                         = "CONFIG_GPIO_RLED";
+GPIO2.mode                          = "Output";
+GPIO2.gpioPin.$assignAllowConflicts = "boosterpack.6";
+scripting.suppress("Resource conflict,@@@.+?@@@ is also in use by @@@.+?@@@", GPIO2, "gpioPin");
+
+RF.$hardware = system.deviceData.board.components["SKY13317-373LF"];
+
+Timer1.$name               = "CONFIG_TIMER_0";
+Timer1.timerType           = "32 Bits";
+Timer1.timerInstance.$name = "CONFIG_GPTIMER_0";
+
+UART21.$name     = "CONFIG_UART2_0";
+UART21.$hardware = system.deviceData.board.components.XDS110UART;
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+RF.rfAntennaPin0.$suggestSolution           = "ball.41";
+RF.rfAntennaPin1.$suggestSolution           = "ball.42";
+RF.rfAntennaPin2.$suggestSolution           = "ball.43";
+Timer1.timerInstance.timer.$suggestSolution = "GPTM0";
+UART21.uart.$suggestSolution                = "UART0";
+UART21.uart.txPin.$suggestSolution          = "boosterpack.4";
+UART21.uart.rxPin.$suggestSolution          = "boosterpack.3";
