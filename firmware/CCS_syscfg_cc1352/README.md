@@ -7,7 +7,10 @@
 ## Instructions 
 - Open CCS
 - Using the Resource Explorer follow the path:
+    Blinker:
         "Software"_ "SimpleLink CC13xx CC26xx SDK - 6.10.00.29" _ "CC1352P-2 LaunchPad" _ "TI Drivers" _ "empty" _ "TI-RTOS" _ "CCS Compiler" _ "empty"
+    Beacon (BLE):
+        "Software"_ "SimpleLink CC13xx CC26xx SDK - 6.10.00.29" _ "CC1352P-2 LaunchPad" _ "BLE5-Stack" _ "simple_broadcaster" _ "TI-RTOS7" _ "TI Clang Compiler" _ "simple_broadcaster"
   and import the example.
-- Inside the "empty_CC1352P_2_LAUNCHXL_tirtos_ccs" files, delete the "empty.syscfg" file and replace with "catsniffer.syscfg"
-- Compile
+- Inside the imported project files, delete the file with the ".syscfg" extention and replace it with the catsniffer ".syscfg".
+- Compile and program.
