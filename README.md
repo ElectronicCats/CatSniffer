@@ -34,7 +34,12 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 - LEDs of general-purpose
 - Reset button for SAMD21 & CC1352, Boot of CC1352, and one more for general purpose.
 
+## Wiki and Getting Started
+
+[Getting Started in our Wiki](https://github.com/ElectronicCats/CatSniffer/wiki)
+
 <img src="https://raw.githubusercontent.com/wiki/ElectronicCats/CatSniffer/assets/CatSniffer-Bottons.png" />
+
 
 ## Compatible Software
 * [TI PACKET-SNIFFER-2 v1.8](https://www.ti.com/tool/download/PACKET-SNIFFER-2)
