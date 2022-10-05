@@ -8,6 +8,7 @@ exemptLabels:
 - Quality
 - Feedback
 - Libraries
+- Feature request
 # Label to use when marking an issue as stale
 staleLabel: First warning
 # Comment to post when marking an issue as stale. Set to `false` to disable
