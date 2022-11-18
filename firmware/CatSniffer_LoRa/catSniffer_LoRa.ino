@@ -43,7 +43,7 @@ void setup() {
   Serial.print(F("[SX1262] Initializing ... "));
   //debing(float freq, float bw, uint8_t sf, uint8_t cr, uint8_t syncWord, int8_t power, uint16_t preambleLength, float tcxoVoltage, bool useRegulatorLDO)
   int state = radio.begin(915.0, 250, 7, 5, 0x34, 20, 10, 0, false);
-  if (state == ERR_NONE) {
+  if (state == RADIOLIB_ERR_NONE) {
     Serial.println(F("success!"));
   } else {
     Serial.print(F("failed, code "));
@@ -78,7 +78,7 @@ void loop() {
     int state = radio.transmit(byteArr, 8);
   */
 
-  if (state == ERR_NONE) {
+  if (state == RADIOLIB_ERR_NONE) {
     // the packet was successfully transmitted
     Serial.println(F("success!"));
 
@@ -87,11 +87,11 @@ void loop() {
     Serial.print(radio.getDataRate());
     Serial.println(F(" bps"));
 
-  } else if (state == ERR_PACKET_TOO_LONG) {
+  } else if (state == RADIOLIB_ERR_PACKET_TOO_LONG) {
     // the supplied packet was longer than 256 bytes
     Serial.println(F("too long!"));
 
-  } else if (state == ERR_TX_TIMEOUT) {
+  } else if (state == RADIOLIB_ERR_RX_TIMEOUT) {
     // timeout occured while transmitting packet
     Serial.println(F("timeout!"));
 
