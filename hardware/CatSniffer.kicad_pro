@@ -412,8 +412,6 @@
         "microvia_drill": 0.1,
         "name": "source",
         "nets": [
-          "+1V2",
-          "+3V3",
           "GND"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
