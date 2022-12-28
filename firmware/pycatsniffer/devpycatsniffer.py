@@ -2,6 +2,7 @@ import serial
 import time
 import sys
 
+import argparse
 import binascii
 import threading
 import logging.handlers
@@ -21,6 +22,13 @@ defaults = {
 
 logger = logging.getLogger(__name__)
 stats = {}
+
+ping = bytearray([0x40, 0x53, 0x40, 0x00, 0x00, 0x40, 0x40, 0x45])
+stop = bytearray([0x40, 0x53, 0x42, 0x00, 0x00, 0x42, 0x40, 0x45])
+cfgphy = bytearray([0x40, 0x53, 0x47, 0x01, 0x00, 0x09, 0x51, 0x40, 0x45])
+cfgfreq = bytearray([0x40, 0x53, 0x45, 0x04, 0x00, 0x62, 0x09, 0x00, 0x00, 0xb4, 0x40, 0x45])
+initiator = bytearray([0x40, 0x53, 0x70, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x76, 0x40, 0x45])
+start = bytearray([0x40, 0x53, 0x41, 0x00, 0x00, 0x41, 0x40, 0x45])
 
 class CC1352:
 
@@ -43,18 +51,37 @@ class CC1352:
     HEARTBEAT_FRAME = 0x01
     COMMAND_FRAME = 0x00
 
-    def __init__(self, callback, port):
+    def __init__(self, port, callback):
 
         stats['Captured'] = 0
         stats['Non-Frame'] = 0
 
-        self.callback = callback
+        #self.callback = callback
         self.thread = None
         self.running = False
         self.serial_port = serial.Serial(port, 921600, 8, 'N', 1, timeout=1)
         
     def close(self):
         self.serial_port.close()
+
+    def pingc(self):
+        self.serial_port.write(ping)
+        
+    def stopc(self):
+        self.serial_port.write(stop) 
+        
+    def cfgphyc(self):
+        self.serial_port.write(cfgphy)
+        
+    def cfgfreqc(self):
+        self.serial_port.write(cfgfreq)
+
+    def initiatorc(self):
+        self.serial_port.write(initiator)        
+
+    def startc(self):
+        self.serial_port.write(start)
+                               
 
     def start(self):
         # start sniffing
@@ -95,7 +122,8 @@ class CC1352:
                         frame = payload[5:]
 
                         if len(frame) == pktLen:
-                            self.callback(timestamp, frame.tobytes())
+                            pass
+                            #self.callback(timestamp, frame.tobytes())
                         else:
                             logger.warning(
                                 f'Received a frame with incorrect length, pktLen:{pktLen}, len(frame):{len(frame)}'
@@ -144,3 +172,53 @@ class CC1352:
             return "%s <Channel: %d>" % (self.name, self.channel)
         else:
             return "Not connected"
+
+
+#cc1352.pingc()   
+#cc1352.stopc()       
+#cc1352.cfgphyc()        
+#cc1352.cfgfreqc()
+#cc1352.initiatorc()
+#cc1352.startc()
+#print ("start")
+#cc1352.close()
+
+class Packet:
+
+    def __init__(self, timestamp, channel, header, payload, rssi, crc_ok, correlation):
+        self.timestamp = timestamp
+        self.channel = channel
+        self.header = header
+        self.payload = payload
+        self.rssi = rssi
+        self.crc_ok = crc_ok
+        self.correlation = correlation
+
+    def __repr__(self):
+        
+        ret = []
+        ret.append("Channel:     %d" % self.channel)
+        ret.append("Timestamp:   %s" % time.strftime("%H:%M:%S", self.timestamp))
+        ret.append("Header:      %s" % binascii.hexlify(self.header))
+        ret.append("RSSI:        %d" % self.rssi)
+        ret.append("CRC OK:      %s" % self.crc_ok)
+        ret.append("Correlation: %d" % self.correlation)
+        ret.append("Payload:     %s" % binascii.hexlify(self.payload))
+
+        return "\n".join(ret)
+
+if __name__ == "__main__":
+
+    def callback(packet):
+        print("-"*30)
+        #print(packet)
+        print("-"*30)
+        
+    sniffer = CC1352('/dev/ttyACM0', callback)
+    #sniffer = CC1352(callback)
+    
+    #print(sniffer)
+    #sniffer.startc()
+    sniffer.pingc()
+    time.sleep(2)
+    sniffer.stopc()
