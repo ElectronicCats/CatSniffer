@@ -127,17 +127,38 @@ class CC1352:
 
 
     def recv(self):
-
+	
         while self.running:
             if self.serial_port.in_waiting > 0:
-                bytesteam = self.serial_port.read(self.serial_port.in_waiting)
-                print ("RECV>> %s" % binascii.hexlify(bytesteam))
-            time.sleep(0.05)
+                bytestream = self.serial_port.read(self.serial_port.in_waiting)
+                print ("RECV>> %s" % binascii.hexlify(bytestream))
+            time.sleep(0.5)
+            start_index = 0
             
-            #if ret[0] == 0:
-            #    packet = self.parse_packet(ret)
-            #    if packet:
-            #        self.callback(packet)   
+            while True:
+                # Find the index of the next occurrence of 0x40 0x53
+                start_index = bytestream.find(b'\x40\x53', start_index)
+                # If not found, break out of the loop
+                if start_index == -1:
+                    break
+                # Find the index of the next occurrence of 0x40 0x45 after the start index
+                end_index = bytestream.find(b'\x40\x45', start_index)
+                # If not found, break out of the loop
+                if end_index == -1:
+                    break
+                # Get the substring between start_index and end_index
+                substring = bytestream[start_index:end_index+2]
+                # Do something with the substring
+                #print(substring)
+                print ("SUBSRECV>> %s" % binascii.hexlify(substring))
+                # Set the start index to end_index + 2 (to skip over the 0x40 0x45 bytes)
+                start_index = end_index + 2
+            
+            
+            #if bytestream[0:2] == bytes([0x40, 0x53]):
+            #    packet = self.parse_packet(bytestream)
+                #if packet:
+                #    self.callback(packet)   
                              
 
     def set_channel(self, channel):
@@ -165,6 +186,43 @@ class CC1352:
 
     def get_channel(self):
         return self.channel
+        
+    def parse_packet(self, packet):
+
+        packetlen = packet[1]
+
+        if len(packet) - 3 != packetlen:
+            return None
+
+        # unknown header produced by the radio chip
+        header = packet[3:7].tostring()
+
+        # the data in the payload
+        payload = packet[8:-2].tostring()
+
+        # length of the payload
+        payloadlen = packet[7] - 2 # without fcs
+
+        if len(payload) != payloadlen:
+            return None
+
+        # current time
+        timestamp = time.gmtime()
+
+        # used to derive other values
+        fcs1, fcs2 = packet[-2:]
+
+        # rssi is the signed value at fcs1
+        rssi    = (fcs1 + 2**7) % 2**8 - 2**7  - 73
+
+        # crc ok is the 7th bit in fcs2
+        crc_ok  = fcs2 & (1 << 7) > 0
+
+        # correlation value is the unsigned 0th-6th bit in fcs2
+        corr    = fcs2 & 0x7f
+
+        return Packet(timestamp, self.channel, header, payload, rssi, crc_ok, corr)
+        
 
     def __repr__(self):
 
@@ -220,6 +278,6 @@ if __name__ == "__main__":
     sniffer.initiatorc()
     sniffer.startc()
     print ("start")
-    time.sleep(10)
+    time.sleep(5)
     sniffer.stop() 
     sniffer.close()
