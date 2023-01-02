@@ -50,6 +50,8 @@ class CC1352:
 
     HEARTBEAT_FRAME = 0x01
     COMMAND_FRAME = 0x00
+    
+    BYTE_STREAM = 0
 
     def __init__(self, port, callback):
 
@@ -127,11 +129,10 @@ class CC1352:
     def recv(self):
 
         while self.running:
-
             if self.serial_port.in_waiting > 0:
-	            bytesteam = self.serial_port.read(self.serial_port.in_waiting)
-	        #print(bytesteam.hex())
-            print ("RECV>> %s" % binascii.hexlify(bytesteam))
+                bytesteam = self.serial_port.read(self.serial_port.in_waiting)
+                print ("RECV>> %s" % binascii.hexlify(bytesteam))
+            time.sleep(0.05)
             
             #if ret[0] == 0:
             #    packet = self.parse_packet(ret)
@@ -219,4 +220,6 @@ if __name__ == "__main__":
     sniffer.initiatorc()
     sniffer.startc()
     print ("start")
-    #sniffer.close()
+    time.sleep(10)
+    sniffer.stop() 
+    sniffer.close()
