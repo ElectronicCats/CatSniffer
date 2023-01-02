@@ -28,7 +28,7 @@ stop = bytearray([0x40, 0x53, 0x42, 0x00, 0x00, 0x42, 0x40, 0x45])
 cfgphy = bytearray([0x40, 0x53, 0x47, 0x01, 0x00, 0x09, 0x51, 0x40, 0x45])
 cfgfreq = bytearray([0x40, 0x53, 0x45, 0x04, 0x00, 0x62, 0x09, 0x00, 0x00, 0xb4, 0x40, 0x45])
 initiator = bytearray([0x40, 0x53, 0x70, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x76, 0x40, 0x45])
-start = bytearray([0x40, 0x53, 0x41, 0x00, 0x00, 0x41, 0x40, 0x45])
+letsgo = bytearray([0x40, 0x53, 0x41, 0x00, 0x00, 0x41, 0x40, 0x45])
 
 class CC1352:
 
@@ -53,13 +53,33 @@ class CC1352:
 
     def __init__(self, port, callback):
 
+        baudrate = 921600
+        rts_cts = False
+        
         stats['Captured'] = 0
         stats['Non-Frame'] = 0
 
-        #self.callback = callback
+        self.callback = callback
         self.thread = None
         self.running = False
-        self.serial_port = serial.Serial(port, 921600, 8, 'N', 1, timeout=1)
+        
+        try:
+            #self.serial_port = serial.Serial(port, baudrate, 8, 'N', 1, timeout=1)
+            self.serial_port = serial.Serial(port = port,
+                                      baudrate = baudrate,
+                                      bytesize = serial.EIGHTBITS,
+                                      parity = serial.PARITY_NONE,
+                                      stopbits = serial.STOPBITS_ONE,
+                                      xonxoff = False,
+                                      rtscts = rts_cts,
+                                      timeout = 0.1)
+            self.serial_port.flushInput()
+            self.serial_port.flushOutput()
+        except (serial.SerialException, ValueError, IOError, OSError) as e:
+            logger.error('Error opening port: %s' % (port,))
+            logger.error('The error was: %s' % (e.args,))
+            sys.exit(1)
+        logger.info('Serial port %s opened' % (self.serial_port.name))
         
     def close(self):
         self.serial_port.close()
@@ -79,16 +99,19 @@ class CC1352:
     def initiatorc(self):
         self.serial_port.write(initiator)        
 
-    def startc(self):
-        self.serial_port.write(start)
+    #def startc(self):
+    #    self.serial_port.write(letsgo)
                                
 
-    def start(self):
+    def startc(self):
         # start sniffing
         self.running = True
         #self.dev.ctrl_transfer(CC2531.DIR_OUT, CC2531.SET_START)
+        
+        self.serial_port.write(letsgo)
+        
         self.thread = threading.Thread(target=self.recv)
-        self.thread.daemon = True
+        #self.thread.daemon = True
         self.thread.start()
 
     def stop(self):
@@ -98,7 +121,8 @@ class CC1352:
         #self.dev.ctrl_transfer(CC2531.DIR_OUT, CC2531.SET_STOP)
 
     def isRunning(self):
-        return self.running
+        return self.running	
+
 
     def recv(self):
 
@@ -108,37 +132,12 @@ class CC1352:
 	            bytesteam = self.serial_port.read(self.serial_port.in_waiting)
 	        #print(bytesteam.hex())
             print ("RECV>> %s" % binascii.hexlify(bytesteam))
-
-            if len(bytesteam) >= 3:
-                (cmd, cmdLen) = struct.unpack_from("<BH", bytesteam)
-                payload = bytesteam[3:]
-                if len(payload) == cmdLen:
-                    # buffer contains the correct number of bytes
-                    if CC1352.COMMAND_FRAME == cmd:
-                        logger.info(f'Read a frame of size {cmdLen}')
-                        stats['Captured'] += 1
-                        (timestamp,
-                         pktLen) = struct.unpack_from("<IB", payload)
-                        frame = payload[5:]
-
-                        if len(frame) == pktLen:
-                            pass
-                            #self.callback(timestamp, frame.tobytes())
-                        else:
-                            logger.warning(
-                                f'Received a frame with incorrect length, pktLen:{pktLen}, len(frame):{len(frame)}'
-                            )
-
-                    # elif cmd == CC2531.COMMAND_CHANNEL:
-                    #     logger.info('Received a command response: [%02x %02x]' % (cmd, payload[0]))
-                    #     # We'll only ever see this if the user asked for it, so we are
-                    #     # running interactive.
-                    elif CC1352.HEARTBEAT_FRAME == cmd:
-                        logger.debug(f'Heartbeat - {payload[0]}')
-                    else:
-                        logger.warning(
-                            'Received a command response with unknown code - CMD:{:02x} byte:{}'
-                            .format(cmd, bytesteam))
+            
+            #if ret[0] == 0:
+            #    packet = self.parse_packet(ret)
+            #    if packet:
+            #        self.callback(packet)   
+                             
 
     def set_channel(self, channel):
         was_running = self.running
@@ -173,16 +172,6 @@ class CC1352:
         else:
             return "Not connected"
 
-
-#cc1352.pingc()   
-#cc1352.stopc()       
-#cc1352.cfgphyc()        
-#cc1352.cfgfreqc()
-#cc1352.initiatorc()
-#cc1352.startc()
-#print ("start")
-#cc1352.close()
-
 class Packet:
 
     def __init__(self, timestamp, channel, header, payload, rssi, crc_ok, correlation):
@@ -211,7 +200,7 @@ if __name__ == "__main__":
 
     def callback(packet):
         print("-"*30)
-        #print(packet)
+        print(packet)
         print("-"*30)
         
     sniffer = CC1352('/dev/ttyACM0', callback)
@@ -219,6 +208,15 @@ if __name__ == "__main__":
     
     #print(sniffer)
     #sniffer.startc()
-    sniffer.pingc()
-    time.sleep(2)
-    sniffer.stopc()
+    #sniffer.pingc()
+    #time.sleep(2)
+    #sniffer.stopc()
+    
+    sniffer.pingc()   
+    sniffer.stopc()       
+    sniffer.cfgphyc()        
+    sniffer.cfgfreqc()
+    sniffer.initiatorc()
+    sniffer.startc()
+    print ("start")
+    #sniffer.close()
