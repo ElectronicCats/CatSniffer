@@ -6174,7 +6174,7 @@
     (uuid 00000000-0000-0000-0000-0000609fac26)
     (property "Reference" "U2" (id 0) (at 533.019 60.833 0))
     (property "Value" "RFSW8006QTR7" (id 1) (at 533.019 63.1444 0))
-    (property "Footprint" "Package_DFN_QFN:DFN-8-1EP_2x2mm_P0.5mm_EP0.9x1.3mm" (id 2) (at 532.384 62.484 0)
+    (property "Footprint" "CatSniffer:SON50P200X200X90-9N" (id 2) (at 532.384 62.484 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.mouser.mx/datasheet/2/412/fsw8006q_product_data_sheet-1307843.pdf" (id 3) (at 532.384 62.484 0)
@@ -8090,7 +8090,7 @@
       (reference "U1") (unit 1) (value "AP2112K-3.3") (footprint "Package_TO_SOT_SMD:SOT-23-5")
     )
     (path "/00000000-0000-0000-0000-0000609fac26"
-      (reference "U2") (unit 1) (value "RFSW8006QTR7") (footprint "Package_DFN_QFN:DFN-8-1EP_2x2mm_P0.5mm_EP0.9x1.3mm")
+      (reference "U2") (unit 1) (value "RFSW8006QTR7") (footprint "CatSniffer:SON50P200X200X90-9N")
     )
     (path "/00000000-0000-0000-0000-000060db2372"
       (reference "U3") (unit 1) (value "ATSAMD21E18A") (footprint "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.65x3.65mm")
