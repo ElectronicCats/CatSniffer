@@ -1,9 +1,0 @@
-[submodule "cc2538-bsl"]
-	path = firmware/cc2538-bsl
-	url = https://github.com/JelmerT/cc2538-bsl
-[submodule "ot-cc13x2-cc26x2"]
-	path = firmware/ot-cc13x2-cc26x2
-	url = https://github.com/openthread/ot-cc13x2-cc26x2
-[submodule "firmware/Sniffle"]
-	path = firmware/Sniffle
-	url = https://github.com/ElectronicCats/Sniffle.git
