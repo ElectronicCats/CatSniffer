@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP RFSW8006QTR7
+D RF Switch ICs 100-4000MHz SP3T 802.11b/g/n/ac
+K
+F https://www.mouser.in/datasheet/2/412/fsw8006q_product_data_sheet-1307843.pdf
+$ENDCMP
+#
+#End Doc Library
