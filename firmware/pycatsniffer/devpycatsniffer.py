@@ -263,7 +263,7 @@ class CC1352:
     SET_CHAN = 0xd2  # 0x0d (idx 0) + data)0x00 (idx 1)
 
     HEARTBEAT_FRAME = 0x01
-    COMMAND_FRAME = 0x00
+    START_FRAME = 0x5340
     
     BYTE_STREAM = 0
 
@@ -374,22 +374,20 @@ class CC1352:
                 print ("SUBSRECV>> %s" % binascii.hexlify(substream))
 
                 if len(substream) >= 3:
-                    (cmd, cmdLen) = struct.unpack_from("<BH", substream)
-                    payload = substream[3:]
-                    if len(payload) == cmdLen:
-                        # buffer contains the correct number of bytes
-                        if CC1352.COMMAND_FRAME == cmd:
-                            logger.info(f'Read a frame of size {cmdLen}')
-                            stats['Captured'] += 1
-                            (timestamp, pktLen) = struct.unpack_from("<IB", payload)
-                            frame = payload[5:]
+                    (sFrame, pInfo, pLength) = struct.unpack_from("<HBH", substream)
+                    payload = substream[5:-2]
+                    #print ("sframe>>", hex(sFrame))
+                    #print ("pInfo>>", hex(pInfo))
+                    #print ("pLength>>", hex(pLength))
 
-                            if len(frame) == pktLen:
-                                self.callback(timestamp, frame.tobytes())
-                            else:
-                                logger.warning(
-                                    f'Received a frame with incorrect length, pktLen:{pktLen}, len(frame):{len(frame)}'
-                                )
+                    if len(payload) == pLength:
+                    # buffer contains the correct number of bytes
+                        if sFrame == CC1352.START_FRAME:
+                            (timestamp,) = struct.unpack_from("<Q", payload)
+                            timestamp = timestamp & 0x0000FFFFFFFFFFFF
+
+                            frame = payload[6:]
+                            self.callback(timestamp, frame)
                 else:
                     logger.warning(
                         'Received a command response with unknown code - CMD:{:02x} byte:{}'
@@ -505,33 +503,6 @@ class Packet:
         ret.append("Payload:     %s" % binascii.hexlify(self.payload))
 
         return "\n".join(ret)
-
-# if __name__ == "__main__":
-
-#     def callback(packet):
-#         print("-"*30)
-#         print(packet)
-#         print("-"*30)
-        
-#     sniffer = CC1352('/dev/ttyACM0', callback)
-#     #sniffer = CC1352(callback)
-    
-#     #print(sniffer)
-#     #sniffer.startc()
-#     #sniffer.pingc()
-#     #time.sleep(2)
-#     #sniffer.stopc()
-    
-#     sniffer.pingc()   
-#     sniffer.stopc()       
-#     sniffer.cfgphyc()        
-#     sniffer.cfgfreqc()
-#     sniffer.initiatorc()
-#     sniffer.startc()
-#     print ("start")
-#     time.sleep(1)
-#     sniffer.stop() 
-#     sniffer.close()
 
 def arg_parser():
     debug_choices = ('DEBUG', 'INFO', 'WARNING', 'ERROR')
@@ -716,7 +687,16 @@ if __name__ == '__main__':
         while 1:
             if args.headless is True:
                 if not snifferDev.isRunning():
-                    snifferDev.start()
+
+                    snifferDev.pingc()   
+                    snifferDev.stopc()       
+                    snifferDev.cfgphyc()        
+                    snifferDev.cfgfreqc()
+                    snifferDev.initiatorc()
+                    snifferDev.startc()
+                    print ("start")
+
+                #    snifferDev.start()
                 # block until terminated (Ctrl+C or killed)
                 snifferDev.thread.join()
             else:
@@ -743,7 +723,7 @@ if __name__ == '__main__':
                             if snifferDev.isRunning():
                                 snifferDev.stop()
                             else:
-                                snifferDev.start()
+                                snifferDev.startc()
                         elif int(cmd) in range(11, 27):
                             snifferDev.set_channel(int(cmd))
                         else:
@@ -764,3 +744,30 @@ if __name__ == '__main__':
             snifferDev.stop()
         dump_stats()
         sys.exit(0)
+
+# if __name__ == "__main__":
+
+#     def callback(packet):
+#         print("-"*30)
+#         print(packet)
+#         print("-"*30)
+        
+#     sniffer = CC1352('/dev/ttyACM0', callback)
+#     #sniffer = CC1352(callback)
+    
+#     #print(sniffer)
+#     #sniffer.startc()
+#     #sniffer.pingc()
+#     #time.sleep(2)
+#     #sniffer.stopc()
+    
+#     sniffer.pingc()   
+#     sniffer.stopc()       
+#     sniffer.cfgphyc()        
+#     sniffer.cfgfreqc()
+#     sniffer.initiatorc()
+#     sniffer.startc()
+#     print ("start")
+#     time.sleep(1)
+#     sniffer.stop() 
+#     sniffer.close()        
