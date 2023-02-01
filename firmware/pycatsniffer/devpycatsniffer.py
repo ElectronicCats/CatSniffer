@@ -21,7 +21,7 @@ defaults = {
     'debug_level': 'WARNING',
     'log_level': 'INFO',
     'log_file': 'ccsniffpiper.log',
-    'channel': 11,
+    'channel': 37,
 }
 
 logger = logging.getLogger(__name__)
@@ -34,6 +34,12 @@ cfgfreq = bytearray([0x40, 0x53, 0x45, 0x04, 0x00, 0x62, 0x09, 0x00, 0x00, 0xb4,
 initiator = bytearray([0x40, 0x53, 0x70, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x76, 0x40, 0x45])
 letsgo = bytearray([0x40, 0x53, 0x41, 0x00, 0x00, 0x41, 0x40, 0x45])
 
+# channel:<frequency
+channeldict = {
+  37: [0x62, 0x09],
+  38: [0x7a, 0x09],
+  39: [0xb0, 0x09]
+}
 
 class Frame(object):
     PCAP_FRAME_HDR_FMT = '<LLLL'
@@ -246,26 +252,9 @@ class HexdumpHandler(object):
 
 class CC1352:
 
-    DEFAULT_CHANNEL = 0x0B  # 11
+    DEFAULT_CHANNEL = 0x25  # 371
 
-    DATA_EP = 0x83
-    DATA_TIMEOUT = 2500
-
-    DIR_OUT = 0x40
-    DIR_IN = 0xc0
-
-    GET_IDENT = 0xc0
-    SET_POWER = 0xc5
-    GET_POWER = 0xc6
-
-    SET_START = 0xd0  # bulk in starts
-    SET_STOP = 0xd1  # bulk in stops
-    SET_CHAN = 0xd2  # 0x0d (idx 0) + data)0x00 (idx 1)
-
-    HEARTBEAT_FRAME = 0x01
     START_FRAME = 0x5340
-    
-    BYTE_STREAM = 0
 
     def __init__(self, port, callback, channel=DEFAULT_CHANNEL):
 
@@ -315,11 +304,7 @@ class CC1352:
         self.serial_port.write(cfgfreq)
 
     def initiatorc(self):
-        self.serial_port.write(initiator)        
-
-    #def startc(self):
-    #    self.serial_port.write(letsgo)
-                               
+        self.serial_port.write(initiator)                              
 
     def startc(self):
         # start sniffing
@@ -349,7 +334,7 @@ class CC1352:
             if self.serial_port.in_waiting > 0:
                 bytestream = self.serial_port.read(self.serial_port.in_waiting)
                 
-#        print ("RECV>> %s" % binascii.hexlify(bytestream))
+                #print ("RECV>> %s" % binascii.hexlify(bytestream))
 
             time.sleep(0.5)
             start_index = 0
@@ -393,116 +378,42 @@ class CC1352:
                         'Received a command response with unknown code - CMD:{:02x} byte:{}'
                         .format(cmd, substream))
 
-                #packet = self.parse_packet(substream)
-                #if packet:
-                    #print("HELL O WORLD!")
-                #    self.callback(packet)
-
                 # Set the start index to end_index + 2 (to skip over the 0x40 0x45 bytes)
-                start_index = end_index + 2
-            
-            
-            #if bytestream[0:2] == bytes([0x40, 0x53]):
-            #    packet = self.parse_packet(bytestream)
-                #if packet:
-                #    self.callback(packet)   
+                start_index = end_index + 2 
                              
 
     def set_channel(self, channel):
         was_running = self.running
 
-        if channel >= 11 and channel <= 26:
+        if channel >= 37 and channel <= 39:
             if self.running:
                 self.stop()
 
-            self.channel = channel
+            chann = channeldict[channel]
 
-            # set channel command
-            #self.dev.ctrl_transfer(CC2531.DIR_OUT, CC2531.SET_CHAN, 0, 0,
-            #                       [channel])
-            #self.dev.ctrl_transfer(CC2531.DIR_OUT, CC2531.SET_CHAN, 0, 1,
-            #                       [0x00])
+            cfgfreq[5:7] = bytearray(chann)
+
+            #Add all bytes in these fields: Packet Info, Packet Length and Payload.
+            #AND the result from step 1 with 0xFF.
+
+            fcs = 0
+            for x in cfgfreq[2:-3]:
+                fcs = fcs + x
+            fcs = fcs & 0xFF
+            cfgfreq[-3] = fcs
+
+            self.channel = channel
 
             self.get_channel()
 
             if was_running:
-                self.start()
+                self.startc()
 
         else:
             raise ValueError("Channel must be between 11 and 26")
 
     def get_channel(self):
-        return self.channel
-        
-    def parse_packet(self, packet):
-
-        #print("***HELL***")
-
-        packetlen = packet[3:5]
-
-        #if len(packet) - 3 != packetlen:
-        #    return None
-
-        # unknown header produced by the radio chip
-        header = packet[0:2]
-
-        # the data in the payload
-        payload = packet[11:-4]
-
-        # length of the payload
-        #payloadlen = packet[7] - 2 # without fcs
-
-        #if len(payload) != payloadlen:
-        #    return None
-
-        # current time
-        timestamp = time.gmtime()
-
-        # used to derive other values
-        fcs1, fcs2 = packet[-4:-2]
-
-        # rssi is the signed value at fcs1
-        rssi    = (fcs1 + 2**7) % 2**8 - 2**7  - 73
-
-        # crc ok is the 7th bit in fcs2
-        crc_ok  = fcs2 & (1 << 7) > 0
-
-        # correlation value is the unsigned 0th-6th bit in fcs2
-        corr    = fcs2 & 0x7f
-
-        return Packet(timestamp, self.channel, header, payload, rssi, crc_ok, corr)
-        
-
-    def __repr__(self):
-
-        if self.dev:
-            return "%s <Channel: %d>" % (self.name, self.channel)
-        else:
-            return "Not connected"
-
-class Packet:
-
-    def __init__(self, timestamp, channel, header, payload, rssi, crc_ok, correlation):
-        self.timestamp = timestamp
-        self.channel = channel
-        self.header = header
-        self.payload = payload
-        self.rssi = rssi
-        self.crc_ok = crc_ok
-        self.correlation = correlation
-
-    def __repr__(self):
-        
-        ret = []
-        ret.append("Channel:     %d" % self.channel)
-        ret.append("Timestamp:   %s" % time.strftime("%H:%M:%S", self.timestamp))
-        ret.append("Header:      %s" % binascii.hexlify(self.header))
-        ret.append("RSSI:        %d" % self.rssi)
-        ret.append("CRC OK:      %s" % self.crc_ok)
-        ret.append("Correlation: %d" % self.correlation)
-        ret.append("Payload:     %s" % binascii.hexlify(self.payload))
-
-        return "\n".join(ret)
+        return self.channel        
 
 def arg_parser():
     debug_choices = ('DEBUG', 'INFO', 'WARNING', 'ERROR')
@@ -672,7 +583,7 @@ if __name__ == '__main__':
         h.write('c: Print current RF Channel\n')
         h.write('n: Trigger new pcap header before the next frame\n')
         h.write('h,?: Print this message\n')
-        h.write('[11,26]: Change RF channel\n')
+        h.write('[37,39]: Change RF channel\n')
         h.write('s: Start/stop the packet capture\n')
         h.write('q: Quit')
         h = h.getvalue()
@@ -723,9 +634,17 @@ if __name__ == '__main__':
                             if snifferDev.isRunning():
                                 snifferDev.stop()
                             else:
+                                snifferDev.pingc()   
+                                snifferDev.stopc()       
+                                snifferDev.cfgphyc()        
+                                snifferDev.cfgfreqc()
+                                snifferDev.initiatorc()
                                 snifferDev.startc()
-                        elif int(cmd) in range(11, 27):
+                                print ("start")
+                        elif int(cmd) in range(37, 40):
                             snifferDev.set_channel(int(cmd))
+                            snifferDev.cfgfreqc()
+                            #print(cfgfreq.hex())
                         else:
                             raise ValueError
 #                    else:
@@ -744,30 +663,3 @@ if __name__ == '__main__':
             snifferDev.stop()
         dump_stats()
         sys.exit(0)
-
-# if __name__ == "__main__":
-
-#     def callback(packet):
-#         print("-"*30)
-#         print(packet)
-#         print("-"*30)
-        
-#     sniffer = CC1352('/dev/ttyACM0', callback)
-#     #sniffer = CC1352(callback)
-    
-#     #print(sniffer)
-#     #sniffer.startc()
-#     #sniffer.pingc()
-#     #time.sleep(2)
-#     #sniffer.stopc()
-    
-#     sniffer.pingc()   
-#     sniffer.stopc()       
-#     sniffer.cfgphyc()        
-#     sniffer.cfgfreqc()
-#     sniffer.initiatorc()
-#     sniffer.startc()
-#     print ("start")
-#     time.sleep(1)
-#     sniffer.stop() 
-#     sniffer.close()        
