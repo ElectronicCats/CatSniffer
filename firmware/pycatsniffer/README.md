@@ -36,7 +36,6 @@ To run in headless mode and pipe using /tmp/ccsniffpiper
 `sudo python pycatsniffer.py -d -f /tmp/ccsniffpiper`
 
 
-
 Run Wireshark
 -------------
 To receive the packets from **pycatsniffer** you need to use Wireshark to start a capture using a FIFO file as the 'interface'. By default, **pycatsniffer** will use `/tmp/ccsniffpiper`. 
@@ -45,16 +44,11 @@ To setup Wireshark correctly, perform the following steps:
  * Go to Capture -> options -> Manage Interfaces -> New (under Pipes) -> type `/tmp/ccsniffpiper` and save.
  * The pipe will then appear as an interface. Start a capture on it.
 
-Additional settings that might be important include:
- * Open Wireshark's preferences and select 'TI CC24xx FCS format' under Protocols -> IEEE 802.15.4.
- * Enable/disable the protocols you need.
-
-
-TI's Packet Sniffer Payload Definition
-======================================
-This is just documentation of the packet format from the TI firmware on CatSniffer.
 
 General packet format
+======================================
+This is just * **[documentation](https://software-dl.ti.com/lprf/packet_sniffer_2/docs/user_guide/html/sniffer_fw/firmware/command_interface.html)** of the packet format from the TI firmware on CatSniffer.
+
 The UART packet format is shown in the table below. 
 
     0       1       2       3       4       5       6       7            -2       -1     EOF
