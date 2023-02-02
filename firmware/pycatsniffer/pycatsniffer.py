@@ -1,3 +1,43 @@
+#!/usr/bin/env python
+"""
+   pycatsniffer - a python module to connect to the CatSniffer
+                 and pipe the sniffed packets to wireshark!
+
+   Copyright (c) 2023, Raul Vargas (raul.vargas@electroniccats.com)
+                 2013, Andrew Dodd (andrew.john.dodd@gmail.com)
+                 
+
+   This is essentially a mashup and extension of three existing sniffers:
+   1. ccsniffpiper.py
+   ------------
+   Copyright (c) 2013, Andrew Dodd (andrew.john.dodd@gmail.com)
+   2. ccsniffer
+   ------------
+   Copyright (c) 2012, George Oikonomou (oikonomou@users.sf.net)
+   3. sensniffer
+   -------------
+   Copyright (C) 2012 Christian Panton <christian@panton.org>
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 3 of the License, or
+   (at your option) any later version.
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software Foundation,
+   Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+"""
+"""
+   Functionality
+   -------------
+   Read IEEE802.15.4 frames from the default CC1352 sniffer firmware
+   and pipe them to wireshark via a FIFO/named pipe. At the same time, the
+   frames can be logged to a file for subsequent offline processing.
+   In interactive mode, the user can also input commands from stdin.
+"""
+
 import serial
 import argparse
 import binascii
@@ -22,6 +62,8 @@ defaults = {
     'log_level': 'INFO',
     'log_file': 'ccsniffpiper.log',
     'channel': 37,
+    'initiator_address':0x000000000000,
+    'port':'/dev/ttyACM0'
 }
 
 logger = logging.getLogger(__name__)
@@ -309,7 +351,6 @@ class CC1352:
     def startc(self):
         # start sniffing
         self.running = True
-        #self.dev.ctrl_transfer(CC2531.DIR_OUT, CC2531.SET_START)
         
         self.serial_port.write(letsgo)
         
@@ -322,7 +363,6 @@ class CC1352:
         self.serial_port.write(stop) 
         self.running = False
         self.thread.join()
-        #self.dev.ctrl_transfer(CC2531.DIR_OUT, CC2531.SET_STOP)
 
     def isRunning(self):
         return self.running	
@@ -356,7 +396,7 @@ class CC1352:
                 # Do something with the substream
                 #print(substream)
 
-                print ("SUBSRECV>> %s" % binascii.hexlify(substream))
+                print ("RECV>> %s" % binascii.hexlify(substream))
 
                 if len(substream) >= 3:
                     (sFrame, pInfo, pLength) = struct.unpack_from("<HBH", substream)
@@ -431,10 +471,19 @@ def arg_parser():
         '--channel',
         type=int,
         action='store',
-        choices=list(range(11, 27)),
+        choices=list(range(37, 40)),
         default=defaults['channel'],
-        help='Set the sniffer\'s CHANNEL. Valid range: 11-26. \
+        help='Set the sniffer\'s CHANNEL. Valid range: 37-39. \
                                   (Default: %s)' % (defaults['channel'], ))
+    in_group.add_argument(
+        '-a',
+        '--address',
+        type=int,
+        action='store',
+        #choices=list(range(37, 40)),
+        default=defaults['initiator_address'],
+        help='Connect to Initiator Address. \
+                                  (Default: %s)' % (defaults['initiator_address'], ))                              
     out_group = parser.add_argument_group('Output Options')
     out_group.add_argument(
         '-f',
@@ -592,7 +641,7 @@ if __name__ == '__main__':
 
         print(h)
 
-    snifferDev = CC1352('/dev/ttyACM0', handlerDispatcher, args.channel)
+    snifferDev = CC1352(defaults['port'], handlerDispatcher, args.channel)
     try:
 
         while 1:
@@ -633,6 +682,7 @@ if __name__ == '__main__':
                         elif cmd == 's':
                             if snifferDev.isRunning():
                                 snifferDev.stop()
+                                print("stop")
                             else:
                                 snifferDev.pingc()   
                                 snifferDev.stopc()       
