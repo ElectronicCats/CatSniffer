@@ -31,14 +31,14 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 - Compatible OS: Windows and Linux.
 - Auto program through the bootloader from TI CC (as long as it's not disabled in the code). No need for an external programmer, and it can be debugged with cJTAG through the default pin.
 - Antenna SMA port for an Antenna of your choice.
-- LEDs of general-purpose
+- LEDs of general-purpose.
 - Reset button for SAMD21 & CC1352, Boot of CC1352, and one more for general purpose.
 
 ## Wiki and Getting Started
 
 [Getting Started in our Wiki](https://github.com/ElectronicCats/CatSniffer/wiki)
 
-<img src="https://raw.githubusercontent.com/wiki/ElectronicCats/CatSniffer/assets/CatSniffer-Bottons.png" />
+[![WIKI](https://user-images.githubusercontent.com/40640735/217364175-6e3af8df-e6b4-4fcd-9515-09ff02639f64.jpg)](https://github.com/ElectronicCats/CatSniffer/wiki)
 
 
 ## Compatible Software
@@ -50,7 +50,7 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 * [Ubiqua Protocol Analyzer](https://www.ubilogix.com/ubiqua/)
 
 ## Pre-requisites for building firmware
-* CCS version: The packet sniffer firmware has been tested with CCS 10.2.
+* CCS version: The packet sniffer firmware has been tested with CCS 10.2
 * SimpleLink CC13x2 and CC26x2 SDK 
 * Python 3
 
@@ -65,6 +65,6 @@ Designed by Electronic Cats.
 
 Firmware released under an GNU AGPL v3.0 license. See the LICENSE file for more information.
 
-Hardware released under an CERN Open Hardware Licence v1.2. See the LICENSE_HARDWARE file for more3 april 2021Electronic Cats is a registered trademark, please do not use if you sell these PCBs.
+Hardware released under an CERN Open Hardware [Licence v1.2](https://github.com/ElectronicCats/CatSniffer/blob/master/LICENSE.md) See the LICENSE_HARDWARE file for more "3 april 2021 Electronic Cats" is a registered trademark, please do not use if you sell these PCBs.
 
 3 April 2021
