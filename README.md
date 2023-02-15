@@ -65,6 +65,7 @@ Designed by Electronic Cats.
 
 Firmware released under an GNU AGPL v3.0 license. See the LICENSE file for more information.
 
-Hardware released under an CERN Open Hardware [Licence v1.2](https://github.com/ElectronicCats/CatSniffer/blob/master/LICENSE.md) See the LICENSE_HARDWARE file for more "3 april 2021 Electronic Cats" is a registered trademark, please do not use if you sell these PCBs.
+Hardware released under an CERN Open Hardware [Licence v1.2](https://github.com/ElectronicCats/CatSniffer/blob/master/LICENSE.md) See the LICENSE_HARDWARE file for more.
+Electronic Cats is a registered trademark, please do not use if you sell these PCBs.
 
 3 April 2021
