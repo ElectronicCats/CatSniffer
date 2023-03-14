@@ -38,6 +38,8 @@
    In interactive mode, the user can also input commands from stdin.
 """
 
+# CC1352P1
+
 import serial
 import argparse
 import binascii
@@ -62,7 +64,7 @@ defaults = {
     'log_level': 'INFO',
     'log_file': 'ccsniffpiper.log',
     'channel': 37,
-    'initiator_address':0x000000000000,
+    'initiator_address':'000000000000',
     'port':'/dev/ttyACM0'
 }
 
@@ -478,12 +480,11 @@ def arg_parser():
     in_group.add_argument(
         '-a',
         '--address',
-        type=int,
+        type=str,
         action='store',
-        #choices=list(range(37, 40)),
         default=defaults['initiator_address'],
         help='Connect to Initiator Address. \
-                                  (Default: %s)' % (defaults['initiator_address'], ))                              
+                                  (Default: %s)' % (defaults['initiator_address'], ))               
     out_group = parser.add_argument_group('Output Options')
     out_group.add_argument(
         '-f',
@@ -625,10 +626,22 @@ if __name__ == '__main__':
         handlers.append(HexdumpHandler(args.hex_file))
     if args.pcap_file is not False:
         handlers.append(PcapDumpHandler(args.pcap_file))
+    if args.address != '000000000000':
+        print('Initiator: %s\n' % args.address)
+        address_bytes = bytearray.fromhex(args.address)
+        address_bytes.reverse()
+        initiator[5:11] = address_bytes
+        #adjust FCS
+        total = 0
+        for i in range(len(address_bytes)):
+            total += address_bytes[i]   
+        initiator[11] = (total + 0x76) & 0xff
+            
 
     if args.headless is False:
         h = io.StringIO()
-        h.write('Commands:\n')
+        h.write('HELL Commands:\n')
+        #h.write('Initiator: %s\n' % defaults['initiator_address'])
         h.write('c: Print current RF Channel\n')
         h.write('n: Trigger new pcap header before the next frame\n')
         h.write('h,?: Print this message\n')
