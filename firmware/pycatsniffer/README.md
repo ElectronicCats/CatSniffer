@@ -24,12 +24,12 @@ How to Use
 ==========
 Run pycatsniffer
 ----------------
-**pycatsniffer**'s main role it to read packets captured from the CatSniffer board and pipe the packets in PCAP format to a named pipe (by default "/tmp/ccsniffpiper").
+**pycatsniffer**'s main role it to read packets captured from the CatSniffer board and pipe the packets in PCAP format to a named pipe (by default `/tmp/ccsniffpiper`).
 
 Default mode starts with Bluetooth Low Energy configuration.
-For BLE, the advertising channel (37, 38 or 39) must be selected, the deafult is 37.
+For BLE, the advertising channel (`37`, `38` or `39`) must be selected, the deafult is `37`.
 
-The capture device can be configured to follow a data connection between a specific Bluetooth Low Energy Master (Initiator) and Slave device. Type `a` in the options menu and write the address of the Initiator (Master) device. If this option is not setted, the capture device will start to follow the first data connection that appears on the selected advertising channel.
+The capture device can be configured to follow a data connection between a specific Bluetooth Low Energy Master (Initiator) and Slave device. Type `-a` in the options menu and write the address of the Initiator (Master) device next. If this option is not setted, the capture device will start to follow the first data connection that appears on the selected advertising channel.
 
 To get this default behaviour, just run the command:
 `python pycatsniffer.py`
@@ -37,21 +37,21 @@ To get this default behaviour, just run the command:
 The following options will be available
 
 Commands:
-c: Print current RF Channel
-n: Trigger new pcap header before the next frame
-h,?: Print this message
-[37,39]: Change RF channel
-s: Start/stop the packet capture
-q: Quit
+  *  `c: Print current RF Channel`
+  *  `n: Trigger new pcap header before the next frame`
+  *  `h,?: Print this message`
+  *  `[37,39]: Change RF channel`
+  *  `s: Start/stop the packet capture`
+  *  `q: Quit`
 
 In this mode the output of captured packets will only be displayed on the terminal.
 
-You can start packet capture by pressing the s key followed by the Enter key.
-To stop, press the s key again followed by the Enter key again.
+You can start packet capture by pressing the `s` key followed by the `Enter` key.
+To stop, press the `s` key again followed by the `Enter` key again.
 
 To run in normal mode and pipe using `/tmp/ccsniffpiper` type `sudo python pycatsniffer.py -f /tmp/ccsniffpiper` in the terminal
 
-Start the packet capture by pressing the s key and then the Enter key in the terminal where pycatsniffer is running.
+Start the packet capture by pressing the `s` key and then the `Enter` key in the terminal where pycatsniffer is running.
 In headless mode use `sudo python pycatsniffer.py -d -f /tmp/ccsniffpiper`
 
 To see further information, run the help command:
@@ -63,15 +63,15 @@ To receive the packets from **pycatsniffer** you need to use Wireshark to start 
 
 To setup Wireshark correctly, perform the following steps:
 
-*Start Wireshark using sudo wireshark (linux)
-*Add new pipe interface: Capture -> Options -> Manage Interfaces -> Pipes-> click on + to add new pipe -> type `/tmp/ccsniffpiper` and apply.
+* Start Wireshark using sudo wireshark (linux)
+* Add new pipe interface: Capture -> Options -> Manage Interfaces -> Pipes-> click on + to add new pipe -> type `/tmp/ccsniffpiper` and apply.
 Note - The capture interface will not be saved.
-*Click the start button to start a capture.
+* Click the start button to start a capture.
 * The pipe will then appear as an interface.
 
 General packet format
 ======================================
-This is just * **[documentation](https://software-dl.ti.com/lprf/packet_sniffer_2/docs/user_guide/html/sniffer_fw/firmware/command_interface.html)** of the packet format from the TI firmware on CatSniffer.
+This is just **[documentation](https://software-dl.ti.com/lprf/packet_sniffer_2/docs/user_guide/html/sniffer_fw/firmware/command_interface.html)** of the packet format from the TI firmware on CatSniffer.
 
 The UART packet format is shown in the table below. 
 
