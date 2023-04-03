@@ -3301,7 +3301,7 @@
     (property "provedor" "LCSC")
     (path "/00000000-0000-0000-0000-00005b7cd218")
     (attr smd)
-    (fp_text reference "C14" (at -1.68 -1.48 90) (layer "F.SilkS")
+    (fp_text reference "C14" (at 0 0.9 180) (layer "F.SilkS")
         (effects (font (size 0.5 0.5) (thickness 0.1)))
       (tstamp af347946-e3da-4427-87ab-77b747929f50)
     )
