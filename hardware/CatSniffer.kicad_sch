@@ -7870,7 +7870,7 @@
     )
   )
 
-  (symbol (lib_id "CatSniffer-rescue:Jumper_3_Bridged12-Jumper-CatStick-rescue-CatSniffer-rescue") (at 551.561 200.406 0) (mirror y) (unit 1)
+  (symbol (lib_id "CatSniffer-rescue:Jumper_3_Bridged12-Jumper-CatStick-rescue-CatSniffer-rescue") (at 551.561 200.406 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000060aa3251)
     (property "Reference" "JP1" (at 551.561 195.2244 0)
