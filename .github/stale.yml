@@ -1,0 +1,27 @@
+# Number of days of inactivity before an issue becomes stale
+daysUntilStale: 5
+# Number of days of inactivity before a stale issue is closed
+daysUntilClose: 3
+# Issues with these labels will never be considered stale
+exemptLabels:
+- Bug
+- Quality
+- Feedback
+- Libraries
+- Feature request
+# Label to use when marking an issue as stale
+staleLabel: First warning
+# Comment to post when marking an issue as stale. Set to `false` to disable
+markComment: >
+  This is a message to remind you that your request has been pending for 5 days and awaits your comments. 
+  
+  Our agent would like to hear from you about your previous request to see if the difficulty
+  you were facing has been resolved or if we can provide further assistance.
+  Otherwise, if we do not hear back from you within the next three days, the issue will be closed.
+  
+  Kind regards,
+  Electronic Cats Support Team
+# Comment to post when closing a stale issue. Set to `false` to disable
+closeComment: false
+# Limit to only `issues` or `pulls`
+only: issues
