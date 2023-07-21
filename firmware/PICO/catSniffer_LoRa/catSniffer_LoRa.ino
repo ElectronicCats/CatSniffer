@@ -18,14 +18,10 @@
 
 // SX1262 has the following connections:
 // NSS pin:   17
-// DIO1 pin:  3
-// NRST pin:  8
-// BUSY pin:  2
-SX1262 radio = new Module(17, 3, 8, 2);
-
-// or using RadioShield
-// https://github.com/jgromes/RadioShield
-//SX1262 radio = RadioShield.ModuleA;
+// DIO1 pin:  5
+// NRST pin:  24
+// BUSY pin:  4
+SX1262 radio = new Module(17, 5, 24, 4);
 
 void setup() {
   Serial.begin(9600);
@@ -58,7 +54,7 @@ void setup() {
   // RX enable:   4
   // TX enable:   5
   
-  radio.setRfSwitchPins(16, 15);
+  //radio.setRfSwitchPins(16, 15);
   
 }
 
