@@ -805,7 +805,7 @@ class CC26xx(Chip):
                     (device_id[2] << 8) +
                     (device_id[1] & 0xF0)) >> 4
         pg_rev = (device_id[3] & 0xF0) >> 4
-
+        
         # Read FCFG1_USER_ID to get the package and supported protocols
         user_id = self.command_interface.cmdMemReadCC26xx(FCFG_USER_ID)
         package = {0x00: '4x4mm',
@@ -824,6 +824,10 @@ class CC26xx(Chip):
         elif wafer_id == 0xB9BE:
             chip = self._identify_cc13xx(pg_rev, protocols)
         elif wafer_id == 0xBB41:
+            chip = self._identify_cc13xx(pg_rev, protocols)
+            self.page_size = 8192
+        elif wafer_id == 0xBB77:
+            pg_rev=3
             chip = self._identify_cc13xx(pg_rev, protocols)
             self.page_size = 8192
 
@@ -864,10 +868,9 @@ class CC26xx(Chip):
         }
 
         chip_str = chips_dict.get(protocols & CC26xx.PROTO_MASK_BOTH, "Unknown")
-
         if pg == 1:
             pg_str = "PG1.0"
-        elif pg == 3:
+        elif pg == 3 | pg == 2:
             pg_str = "PG2.0"
         elif pg == 7:
             pg_str = "PG2.1"
