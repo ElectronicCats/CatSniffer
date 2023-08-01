@@ -12,7 +12,6 @@
   
 */
 
-
 //unsigned long baud = 57600;//Baud for Zigbee2MQTT
 //unsigned long baud = 115200;//Baud for Zigbee2MQTT
 

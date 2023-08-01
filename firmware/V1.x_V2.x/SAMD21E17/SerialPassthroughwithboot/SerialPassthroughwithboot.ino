@@ -1,5 +1,5 @@
 /*
-  SerialPassthrough - Use tool to flash the CC1352 module
+  SerialPassthrough - Use tool to flash the CC1352 module with the SAMD21E17
 
   Andres Sabas @ Electronic Cats
   Eduardo Contreras @ Electronic Cats
@@ -35,14 +35,14 @@ unsigned long previousMillis = 0;  // will store last time blink happened
 void setup() {
   unsigned long baud;
   pinMode(Pin_Button, INPUT_PULLUP);
+  pinMode(Pin_Boot, INPUT_PULLUP);
   pinMode(Pin_Reset, OUTPUT);
-  pinMode(Pin_Boot, OUTPUT);
   pinMode(LED1,OUTPUT);
   pinMode(LED2,OUTPUT);
   pinMode(LED3,OUTPUT);
 
   //Select mode and speed
-  if(!digitalRead(Pin_Button)){
+  if(!digitalRead(Pin_Boot)){
     interval = 200;
     baud  = 500000;
     MODE_FLAG=1;
@@ -52,6 +52,8 @@ void setup() {
     baud = 115200;
     MODE_FLAG=0;
   }
+
+  pinMode(Pin_Boot, OUTPUT);
 
   //Begin Serial ports
   Serial.begin(baud);
@@ -67,6 +69,7 @@ void setup() {
     delay(100);
     digitalWrite(Pin_Boot, HIGH);
   }
+
   digitalWrite(LED1, 0);
   digitalWrite(LED2, 0);
   digitalWrite(LED3, MODE_FLAG);
