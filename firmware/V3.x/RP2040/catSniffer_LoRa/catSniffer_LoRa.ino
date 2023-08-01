@@ -54,7 +54,7 @@ void setup() {
   // RX enable:   4
   // TX enable:   5
   
-  //radio.setRfSwitchPins(16, 15);
+  radio.setRfSwitchPins(21, 20);
   
 }
 
