@@ -1,4 +1,4 @@
-unsigned long baud = 115200;
+unsigned long baud = 921600;
 
 void setup() {
   //Begin Serial ports

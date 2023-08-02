@@ -2,6 +2,7 @@
   CatSniffer - Use LoRa for communication with the SX1262 module
   
   Andres Sabas @ Electronic Cats
+  Eduardo Contreras @ Electronic Cats
   Original Creation Date: Jal 23, 2021
 
   This code is beerware; if you see me (or any other Electronic Cats

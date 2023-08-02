@@ -17,6 +17,7 @@
 
 //Pin declaration to enter bootloader mode on CC1352
 #define Pin_Reset (15)
+#define Pin_Reset_Viewer (3)
 #define Pin_Boot (2)
 #define Pin_Button (2)
 #define LED1 (27)
@@ -36,6 +37,7 @@ void setup() {
   pinMode(Pin_Button, INPUT_PULLUP);
   pinMode(Pin_Boot, INPUT_PULLUP);
   pinMode(Pin_Reset, OUTPUT);
+  pinMode(Pin_Reset_Viewer, INPUT);
   
   pinMode(LED1,OUTPUT);
   pinMode(LED2,OUTPUT);
@@ -54,9 +56,11 @@ void setup() {
   }
   else{
     interval = 1000; 
-    baud = 115200;
+    baud = 921600;
     MODE_FLAG=0;
+    pinMode(Pin_Reset, INPUT);
   }
+  while(!digitalRead(Pin_Boot));
 
 
   //Begin Serial ports
@@ -64,6 +68,7 @@ void setup() {
   Serial1.begin(baud);
 
   if(MODE_FLAG){
+    
     pinMode(Pin_Boot, OUTPUT);
     //Enter bootloader mode function
     digitalWrite(Pin_Boot, LOW);
@@ -81,6 +86,7 @@ void setup() {
 
 void loop() {
   //SerialPassthrough
+
   if (Serial.available()) {      // If anything comes in Serial (USB),
     Serial1.write(Serial.read());   // read it and send it out Serial1 (pins 0 & 1)
   }
@@ -88,7 +94,7 @@ void loop() {
   if (Serial1.available()) {     // If anything comes in Serial1 (pins 0 & 1)
     Serial.write(Serial1.read());   // read it and send it out Serial (USB)
   }
-  
+
   if(millis() - previousMillis > interval) {
     previousMillis = millis(); 
     if(MODE_FLAG){
