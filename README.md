@@ -4,7 +4,7 @@ CatSniffer (:smirk_cat:) is an original multiprotocol, and multiband board made 
 
 This board is a swiss army knife for IoT security researchers, developers, and enthusiasts. The board can be used with different types of software including third-party sniffers such as [SmartRF Packet Sniffer](https://www.ti.com/tool/PACKET-SNIFFER), [Sniffle](https://github.com/ElectronicCats/Sniffle), [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt), [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware), [Ubiqua Protocol Analyzer](https://www.ubilogix.com/ubiqua/), [our custom firmware](https://github.com/ElectronicCats/CatSniffer/tree/master/firmware), or you can even write your own software for your specific needs.
 
-CatSniffer can operate in 3 different frequencies:
+CatSniffer can operate in 3 different technologies:
 * LoRa
 * Sub 1 GHz
 * 2.4 GHz
@@ -14,6 +14,20 @@ This work was inspired by our friend's work [Michael Ossmann](https://twitter.co
 <a href="https://electroniccats.com/store/catsniffer/">
   <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
 </a>
+
+## Versions
+
+The CatSniffer has been evolving since its first release:
+
+- CatSniffer v1.2
+- CatSniffer v1.3
+- CatSniffer v2.0
+- CatSniffer v2.1
+- CatSniffer v3.1
+
+We as an pro-open-source companies decided to keep the support for each version, but having in mind that newer versions will have more features than the first versions.
+
+The different firmwares are inside the repository and not in the realese section to keep a propper track of the compiled and source files.
 
 ## Protocols
 - Thread
