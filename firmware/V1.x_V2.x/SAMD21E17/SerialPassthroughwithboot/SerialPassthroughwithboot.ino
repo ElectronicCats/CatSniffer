@@ -12,10 +12,6 @@
   
 */
 
-
-//unsigned long baud = 57600;//Baud for Zigbee2MQTT
-//unsigned long baud = 115200;//Baud for Zigbee2MQTT
-
 //Pin declaration to enter bootloader mode on CC1352
 #define Pin_Reset (1)
 #define Pin_Boot (7)
@@ -24,7 +20,7 @@
 #define LED2 (28)
 #define LED3 (0)
 //Mode flag = 1; for bootloader options @ 500000 bauds
-//Mode flag = 0; for passthrough @ 115200 bauds
+//Mode flag = 0; for passthrough @ 921600 bauds
 bool MODE_FLAG = 0;
 uint8_t LEDs[3]={0,27,28};
 int i=0;
@@ -49,7 +45,7 @@ void setup() {
   }
   else{
     interval = 1000; 
-    baud = 115200;
+    baud = 921600;
     MODE_FLAG=0;
   }
 
