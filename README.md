@@ -71,6 +71,10 @@ The different firmwares are inside the repository and not in the realese section
 ## Note
 This kit is designed to allow Product developers to evaluate electronic components, circuit, or software associated with the kit to determine whether to incorporate such items in a finished product and Software developers to write software applications for use with the end product. This kit is a developer product and when assembled may not be resold or otherwise marketed unless all required FCC (or any other local authority) equipment authorizations are first obtained. Operation is subject to the condition that this product not cause harmful interference to licensed radio stations and that this product accept harmful interference.
 
+## Workshops
+
+We have been doing worshops held in different security related events the material avaible is public and can be found [here](https://drive.google.com/drive/folders/1G3v-2CfkqfrdCpSST1b0W_9A_G2I_XbE)  
+
 ## License
 
 Electronic Cats invests time and resources providing this open source design, please support Electronic Cats and open-source hardware by purchasing products from Electronic Cats!
