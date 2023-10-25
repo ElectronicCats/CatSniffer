@@ -73,7 +73,7 @@ This kit is designed to allow Product developers to evaluate electronic componen
 
 ## Workshops
 
-We have been doing worshops held in different security related events the material avaible is public and can be found [here]([https://drive.google.com/drive/folders/1G3v-2CfkqfrdCpSST1b0W_9A_G2I_XbE](https://drive.google.com/drive/folders/1SxkF2-uWVFw2BZa5lym5f42ivyW23bVV))  
+We have been doing worshops held in different security related events the material avaible is public and can be found [here](https://drive.google.com/drive/folders/1SxkF2-uWVFw2BZa5lym5f42ivyW23bVV)
 
 ## License
 
