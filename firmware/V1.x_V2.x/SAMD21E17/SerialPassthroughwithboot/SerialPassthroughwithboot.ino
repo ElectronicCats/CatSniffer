@@ -27,9 +27,13 @@ int i=0;
 
 unsigned long interval = 0;    // interval to blink LED
 unsigned long previousMillis = 0;  // will store last time blink happened
+unsigned long baud;
+
+#define CTF1 14
+#define CTF2 11
+#define CTF3 10
 
 void setup() {
-  unsigned long baud;
   pinMode(Pin_Button, INPUT_PULLUP);
   pinMode(Pin_Boot, INPUT_PULLUP);
   pinMode(Pin_Reset, OUTPUT);
@@ -64,6 +68,15 @@ void setup() {
     digitalWrite(Pin_Reset, HIGH);
     delay(100);
     digitalWrite(Pin_Boot, HIGH);
+  }else{
+  pinMode(CTF1, OUTPUT);
+  pinMode(CTF2, OUTPUT);
+  pinMode(CTF3, OUTPUT);
+  
+  //Switch Radio for 2.4Ghz BLE/WIFI
+  digitalWrite(CTF1,  LOW);
+  digitalWrite(CTF2,  HIGH);
+  digitalWrite(CTF3,  LOW);
   }
 
   digitalWrite(LED1, 0);
@@ -81,6 +94,10 @@ void loop() {
     Serial.write(Serial1.read());   // read it and send it out Serial (USB)
   }
   
+  if(Serial.baud() != baud){//Check if the Serial port needs a new baud rate
+    baud = Serial.baud();
+    Serial1.begin(baud);}
+  
   if(millis() - previousMillis > interval) {
     previousMillis = millis(); 
     if(MODE_FLAG){
@@ -89,9 +106,6 @@ void loop() {
       if(i>2)i=0;
     }else{
       digitalWrite(LED3, !digitalRead(LED3));
-    }
-    
+    } 
   }
-
-
 }
