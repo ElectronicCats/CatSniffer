@@ -32,6 +32,10 @@ int i=0;
 unsigned long interval = 0;    // interval to blink LED
 unsigned long previousMillis = 0;  // will store last time blink happened
 
+#define CTF1 8
+#define CTF2 9
+#define CTF3 10
+
 void setup() {
   unsigned long baud;
   pinMode(Pin_Button, INPUT_PULLUP);
@@ -78,7 +82,17 @@ void setup() {
     digitalWrite(Pin_Reset, HIGH);
     delay(100);
     digitalWrite(Pin_Boot, HIGH);
+  }else{
+  pinMode(CTF1, OUTPUT);
+  pinMode(CTF2, OUTPUT);
+  pinMode(CTF3, OUTPUT);
+  
+  //Switch Radio for 2.4Ghz BLE/WIFI
+  digitalWrite(CTF1,  LOW);
+  digitalWrite(CTF2,  HIGH);
+  digitalWrite(CTF3,  LOW);
   }
+  
   digitalWrite(LED1, 0);
   digitalWrite(LED2, 0);
   digitalWrite(LED3, MODE_FLAG);
