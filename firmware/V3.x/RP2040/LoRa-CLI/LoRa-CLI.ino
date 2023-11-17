@@ -716,6 +716,7 @@ void set_rx(){
     frequency = atof(arg);
     if (radio.setFrequency(frequency) == RADIOLIB_ERR_INVALID_FREQUENCY) {
       Serial.println(F("Selected frequency is invalid for this module!"));
+      rx_status = false;
       return;
     }
 
@@ -728,7 +729,6 @@ void set_rx(){
     } else {
       Serial.print(F("failed, code "));
       Serial.println(state);
-      //while (true);
       rx_status = false;
     }  
   } 
