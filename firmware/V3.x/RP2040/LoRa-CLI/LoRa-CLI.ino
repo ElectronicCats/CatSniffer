@@ -116,7 +116,7 @@ void setup() {
   // RX enable:   4
   // TX enable:   5
   
-  radio.setRfSwitchPins(16, 15);
+  radio.setRfSwitchPins(21, 20);
   
 }
 
@@ -416,21 +416,13 @@ void set_freq(){
   arg = SCmd.next();
   frequency = atof(arg);
   if (arg != NULL){
-    if(frequency > 902 && frequency < 923){
-
         if (radio.setFrequency(frequency) == RADIOLIB_ERR_INVALID_FREQUENCY) {
           Serial.println(F("Selected frequency is invalid for this module!"));
           return;
         }
-  
       Serial.println("Frequency set to " + String(frequency) + " MHz");
       rx_status = false;
-    }
-    else{
-      Serial.println("Error setting the frequency");
-      Serial.println("Value must be between 902 MHz and 923 MHz");
-    }
-  } 
+    } 
   else {
     Serial.println("No argument"); 
   }
@@ -736,9 +728,9 @@ void set_rx(){
     } else {
       Serial.print(F("failed, code "));
       Serial.println(state);
-      while (true);
+      //while (true);
+      rx_status = false;
     }  
-    rx_status = true;
   } 
   else {
     Serial.println("LoRa radio receiving at " + String(frequency) + " MHz");

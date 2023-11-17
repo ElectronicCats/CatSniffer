@@ -97,7 +97,7 @@ void setup() {
 
   int state = radio.begin(915.0, 250, 7, 5, 0x12, 20, 8, 0, false);
 
-  if (state == ERR_NONE) {
+  if (state == RADIOLIB_ERR_NONE) {
     Serial.println(F("success!"));
   } else {
     Serial.print(F("failed, code "));
@@ -125,16 +125,16 @@ void setup() {
 // flag to indicate that a packet was received
 volatile bool receivedFlag = false;
 
-// disable interrupt when it's not needed
-volatile bool enableInterrupt = true;
+// disable intRADIOLIB_ERRupt when it's not needed
+volatile bool enableIntRADIOLIB_ERRupt = true;
 
 // this function is called when a complete packet
 // is received by the module
 // IMPORTANT: this function MUST be 'void' type
 //            and MUST NOT have any arguments!
 void setFlag(void) {
-  // check if the interrupt is enabled
-  if(!enableInterrupt) {
+  // check if the intRADIOLIB_ERRupt is enabled
+  if(!enableIntRADIOLIB_ERRupt) {
     return;
   }
 
@@ -148,9 +148,9 @@ void loop() {
 
   // check if the flag is set
   if(receivedFlag && rx_status) {
-    // disable the interrupt service routine while
+    // disable the intRADIOLIB_ERRupt service routine while
     // processing the data
-    enableInterrupt = false;
+    enableIntRADIOLIB_ERRupt = false;
 
     // reset flag
     receivedFlag = false;
@@ -165,7 +165,7 @@ void loop() {
       int state = radio.readData(byteArr, 8);
     */
 
-    if (state == ERR_NONE) {
+    if (state == RADIOLIB_ERR_NONE) {
       // packet was successfully received
       Serial.println(F("[SX1262] Received packet!"));
 
@@ -183,12 +183,12 @@ void loop() {
       Serial.print(radio.getSNR());
       Serial.println(F(" dB"));
 
-    } else if (state == ERR_CRC_MISMATCH) {
+    } else if (state == RADIOLIB_ERR_CRC_MISMATCH) {
       // packet was received, but is malformed
-      Serial.println(F("CRC error!"));
+      Serial.println(F("CRC RADIOLIB_ERRor!"));
 
     } else {
-      // some other error occurred
+      // some other RADIOLIB_ERRor occurred
       Serial.print(F("failed, code "));
       Serial.println(state);
 
@@ -198,8 +198,8 @@ void loop() {
     radio.startReceive();
 
     // we're ready to receive more packets,
-    // enable interrupt service routine
-    enableInterrupt = true;
+    // enable intRADIOLIB_ERRupt service routine
+    enableIntRADIOLIB_ERRupt = true;
   }
 
 }
@@ -260,7 +260,7 @@ void set_tx0(){
           
     int state = radio.transmit(data, i);
 
-    if (state == ERR_NONE) {
+    if (state == RADIOLIB_ERR_NONE) {
       // the packet was successfully transmitted
       Serial.println(F("success!"));
   
@@ -269,16 +269,16 @@ void set_tx0(){
       Serial.print(radio.getDataRate());
       Serial.println(F(" bps"));
   
-    } else if (state == ERR_PACKET_TOO_LONG) {
+    } else if (state == RADIOLIB_ERR_PACKET_TOO_LONG) {
       // the supplied packet was longer than 256 bytes
       Serial.println(F("too long!"));
   
-    } else if (state == ERR_TX_TIMEOUT) {
+    } else if (state == RADIOLIB_ERR_TX_TIMEOUT) {
       // timeout occured while transmitting packet
       Serial.println(F("timeout!"));
   
     } else {
-      // some other error occurred
+      // some other RADIOLIB_ERRor occurred
       Serial.print(F("failed, code "));
       Serial.println(state);
   
@@ -324,7 +324,7 @@ void set_tx1(){
 
     int state = radio.transmit(data, i);
 
-    if (state == ERR_NONE) {
+    if (state == RADIOLIB_ERR_NONE) {
       // the packet was successfully transmitted
       Serial.println(F("success!"));
   
@@ -333,16 +333,16 @@ void set_tx1(){
       Serial.print(radio.getDataRate());
       Serial.println(F(" bps"));
   
-    } else if (state == ERR_PACKET_TOO_LONG) {
+    } else if (state == RADIOLIB_ERR_PACKET_TOO_LONG) {
       // the supplied packet was longer than 256 bytes
       Serial.println(F("too long!"));
   
-    } else if (state == ERR_TX_TIMEOUT) {
+    } else if (state == RADIOLIB_ERR_TX_TIMEOUT) {
       // timeout occured while transmitting packet
       Serial.println(F("timeout!"));
   
     } else {
-      // some other error occurred
+      // some other RADIOLIB_ERRor occurred
       Serial.print(F("failed, code "));
       Serial.println(state);
   
@@ -372,7 +372,7 @@ void set_tx2(){
     // you can transmit C-string or Arduino string up to
     // 256 characters long
     // NOTE: transmit() is a blocking method!
-    //       See example SX126x_Transmit_Interrupt for details
+    //       See example SX126x_Transmit_IntRADIOLIB_ERRupt for details
     //       on non-blocking transmission method.
     int state = radio.transmit("Hello World!");
     
@@ -382,7 +382,7 @@ void set_tx2(){
       int state = radio.transmit(byteArr, 8);
     */
   
-    if (state == ERR_NONE) {
+    if (state == RADIOLIB_ERR_NONE) {
       // the packet was successfully transmitted
       Serial.println(F(" Success!, ASCII message sent"));
   
@@ -391,16 +391,16 @@ void set_tx2(){
       Serial.print(radio.getDataRate());
       Serial.println(F(" bps"));
   
-    } else if (state == ERR_PACKET_TOO_LONG) {
+    } else if (state == RADIOLIB_ERR_PACKET_TOO_LONG) {
       // the supplied packet was longer than 256 bytes
       Serial.println(F("too long!"));
   
-    } else if (state == ERR_TX_TIMEOUT) {
+    } else if (state == RADIOLIB_ERR_TX_TIMEOUT) {
       // timeout occured while transmitting packet
       Serial.println(F("timeout!"));
   
     } else {
-      // some other error occurred
+      // some other RADIOLIB_ERRor occurred
       Serial.print(F("failed, code "));
       Serial.println(state);
   
@@ -420,7 +420,7 @@ void set_freq(){
   if (arg != NULL){
     if(frequency > 902 && frequency < 923){
 
-        if (radio.setFrequency(frequency) == ERR_INVALID_FREQUENCY) {
+        if (radio.setFrequency(frequency) == RADIOLIB_ERR_INVALID_FREQUENCY) {
           Serial.println(F("Selected frequency is invalid for this module!"));
           return;
         }
@@ -429,7 +429,7 @@ void set_freq(){
       rx_status = false;
     }
     else{
-      Serial.println("Error setting the frequency");
+      Serial.println("RADIOLIB_ERRor setting the frequency");
       Serial.println("Value must be between 902 MHz and 923 MHz");
     }
   } 
@@ -448,7 +448,7 @@ void set_chann(){
     frequency = (float)freq/1000000;
     
     //LoRa.setFrequency(freq);
-    if (radio.setFrequency(frequency) == ERR_INVALID_FREQUENCY) {
+    if (radio.setFrequency(frequency) == RADIOLIB_ERR_INVALID_FREQUENCY) {
       Serial.println(F("Selected frequency is invalid for this module!"));
       return;
     }    
@@ -460,7 +460,7 @@ void set_chann(){
     long freq = 903000000 + (channel - 64)*500000;
     frequency = (float)freq/1000000;
 
-    if (radio.setFrequency(frequency) == ERR_INVALID_FREQUENCY) {
+    if (radio.setFrequency(frequency) == RADIOLIB_ERR_INVALID_FREQUENCY) {
       Serial.println(F("Selected frequency is invalid for this module!"));
       return;
     }    
@@ -469,7 +469,7 @@ void set_chann(){
     rx_status = false;
     }
     else{
-      Serial.println("Error setting the channel");
+      Serial.println("RADIOLIB_ERRor setting the channel");
       Serial.println("Value must be between 0 and 63");
     }
   }  
@@ -485,13 +485,13 @@ void set_sf(){
   if (arg != NULL){
     spreadFactor = atoi(arg);
     if(spreadFactor < 6 || spreadFactor > 12){
-      Serial.println("Error setting the Spreading factor");
+      Serial.println("RADIOLIB_ERRor setting the Spreading factor");
       Serial.println("Value must be between 6 and 12");
       return;
     }
     else{
 
-        if (radio.setSpreadingFactor(spreadFactor) == ERR_INVALID_SPREADING_FACTOR) {
+        if (radio.setSpreadingFactor(spreadFactor) == RADIOLIB_ERR_INVALID_SPREADING_FACTOR) {
           Serial.println(F("Selected spreading factor is invalid for this module!"));
           return;
         }
@@ -511,13 +511,13 @@ void set_cr(){
   if (arg != NULL){
     codingRate = atoi(arg);
     if(codingRate > 8 || codingRate < 5){
-      Serial.println("Error setting the Coding Rate");
+      Serial.println("RADIOLIB_ERRor setting the Coding Rate");
       Serial.println("Value must be between 5 and 8");
       return;
     }
     else{
 
-        if (radio.setCodingRate(codingRate) == ERR_INVALID_CODING_RATE) {
+        if (radio.setCodingRate(codingRate) == RADIOLIB_ERR_INVALID_CODING_RATE) {
           Serial.println(F("Selected coding rate is invalid for this module!"));
           return;
         }
@@ -539,7 +539,7 @@ void set_bw(){
   if (arg != NULL){
       switch (bwReference){
         case 0:
-          if (radio.setBandwidth(7.8) == ERR_INVALID_BANDWIDTH) {
+          if (radio.setBandwidth(7.8) == RADIOLIB_ERR_INVALID_BANDWIDTH) {
             Serial.println(F("Selected bandwidth is invalid for this module!"));
             return;
           }
@@ -547,7 +547,7 @@ void set_bw(){
           Serial.println("Bandwidth set to 7.8 kHz");
           break;
         case 1:
-          if (radio.setBandwidth(10.4) == ERR_INVALID_BANDWIDTH) {
+          if (radio.setBandwidth(10.4) == RADIOLIB_ERR_INVALID_BANDWIDTH) {
             Serial.println(F("Selected bandwidth is invalid for this module!"));
             return;
           }          
@@ -556,7 +556,7 @@ void set_bw(){
           break;
         case 2:
           //LoRa.setSignalBandwidth(15.6E3);
-          if (radio.setBandwidth(15.6) == ERR_INVALID_BANDWIDTH) {
+          if (radio.setBandwidth(15.6) == RADIOLIB_ERR_INVALID_BANDWIDTH) {
             Serial.println(F("Selected bandwidth is invalid for this module!"));
             return;
           }          
@@ -564,7 +564,7 @@ void set_bw(){
           Serial.println("Bandwidth set to 15.6 kHz");
           break;
         case 3:
-          if (radio.setBandwidth(20.8) == ERR_INVALID_BANDWIDTH) {
+          if (radio.setBandwidth(20.8) == RADIOLIB_ERR_INVALID_BANDWIDTH) {
             Serial.println(F("Selected bandwidth is invalid for this module!"));
             return;
           }          
@@ -572,7 +572,7 @@ void set_bw(){
           Serial.println("Bandwidth set to 20.8 kHz");
           break;
         case 4:
-          if (radio.setBandwidth(31.25) == ERR_INVALID_BANDWIDTH) {
+          if (radio.setBandwidth(31.25) == RADIOLIB_ERR_INVALID_BANDWIDTH) {
             Serial.println(F("Selected bandwidth is invalid for this module!"));
             return;
           }          
@@ -580,7 +580,7 @@ void set_bw(){
           Serial.println("Bandwidth set to 31.25 kHz");
           break;
         case 5:
-          if (radio.setBandwidth(41.7) == ERR_INVALID_BANDWIDTH) {
+          if (radio.setBandwidth(41.7) == RADIOLIB_ERR_INVALID_BANDWIDTH) {
             Serial.println(F("Selected bandwidth is invalid for this module!"));
             return;
           }          
@@ -588,7 +588,7 @@ void set_bw(){
           Serial.println("Bandwidth set to 41.7 kHz");
           break;
         case 6:
-          if (radio.setBandwidth(62.5) == ERR_INVALID_BANDWIDTH) {
+          if (radio.setBandwidth(62.5) == RADIOLIB_ERR_INVALID_BANDWIDTH) {
             Serial.println(F("Selected bandwidth is invalid for this module!"));
             return;
           }          
@@ -596,7 +596,7 @@ void set_bw(){
           Serial.println("Bandwidth set to 62.5 kHz");
           break;
         case 7:
-          if (radio.setBandwidth(125) == ERR_INVALID_BANDWIDTH) {
+          if (radio.setBandwidth(125) == RADIOLIB_ERR_INVALID_BANDWIDTH) {
             Serial.println(F("Selected bandwidth is invalid for this module!"));
             return;
           }          
@@ -604,7 +604,7 @@ void set_bw(){
           Serial.println("Bandwidth set to 125 kHz");
           break;
         case 8:
-          if (radio.setBandwidth(250.0) == ERR_INVALID_BANDWIDTH) {
+          if (radio.setBandwidth(250.0) == RADIOLIB_ERR_INVALID_BANDWIDTH) {
             Serial.println(F("Selected bandwidth is invalid for this module!"));
             return;
           }          
@@ -613,7 +613,7 @@ void set_bw(){
           break;
 
         default:
-          Serial.println("Error setting the bandwidth value must be between 0-8");
+          Serial.println("RADIOLIB_ERRor setting the bandwidth value must be between 0-8");
           bwReference = bwRefResp; //if there's no valid data restore previous value
           break;
       }
@@ -629,13 +629,13 @@ void set_op(){
   if (arg != NULL){
     outputPower = atoi(arg);
     if(outputPower > -16 || outputPower < 23){
-      Serial.println("Error setting the output power");
+      Serial.println("RADIOLIB_ERRor setting the output power");
       Serial.println("Value must be between -17 and 22 dBm");
       return;
     }
     else{
 
-        if (radio.setOutputPower(outputPower) == ERR_INVALID_OUTPUT_POWER) {
+        if (radio.setOutputPower(outputPower) == RADIOLIB_ERR_INVALID_OUTPUT_POWER) {
           Serial.println(F("Selected output power is invalid for this module!"));
           return;
         }
@@ -676,7 +676,7 @@ void set_sw(){
           data = 0;
           data = nibble(*(arg))<<4;
           data = data|nibble(*(arg + 1));
-          if (radio.setSyncWord(data) != ERR_NONE) {
+          if (radio.setSyncWord(data) != RADIOLIB_ERR_NONE) {
             Serial.println(F("Unable to set sync word!"));
             return;
           }
@@ -698,13 +698,13 @@ void set_pl(){
   if (arg != NULL){
     preambleLength = atoi(arg);
     if(preambleLength > -1 || preambleLength < 65536){
-      Serial.println("Error setting the preamble length");
+      Serial.println("RADIOLIB_ERRor setting the preamble length");
       Serial.println("Value must be between 0 and 65535");
       return;
     }
     else{
 
-        if (radio.setPreambleLength(preambleLength) == ERR_INVALID_CODING_RATE) {
+        if (radio.setPreambleLength(preambleLength) == RADIOLIB_ERR_INVALID_CODING_RATE) {
           Serial.println(F("Selected preamble length is invalid for this module!"));
           return;
         }
@@ -726,7 +726,7 @@ void set_rx(){
     frequency = atof(arg);
     if(frequency > 902 && frequency < 923){
 
-      if (radio.setFrequency(frequency) == ERR_INVALID_FREQUENCY) {
+      if (radio.setFrequency(frequency) == RADIOLIB_ERR_INVALID_FREQUENCY) {
         Serial.println(F("Selected frequency is invalid for this module!"));
         return;
       }
@@ -736,7 +736,7 @@ void set_rx(){
       // start listening for LoRa packets
       Serial.print(F("[SX1262] Starting to listen ... "));
       int state = radio.startReceive();
-      if (state == ERR_NONE) {
+      if (state == RADIOLIB_ERR_NONE) {
         Serial.println(F("success!"));
       } else {
         Serial.print(F("failed, code "));
@@ -747,7 +747,7 @@ void set_rx(){
       rx_status = true;
     }
     else{
-      Serial.println("Error setting the frequency");
+      Serial.println("RADIOLIB_ERRor setting the frequency");
       Serial.println("Value must be between 902 MHz and 923 MHz");
     }
   } 
@@ -756,7 +756,7 @@ void set_rx(){
     // start listening for LoRa packets
     Serial.print(F("[SX1262] Starting to listen ... "));
     int state = radio.startReceive();
-    if (state == ERR_NONE) {
+    if (state == RADIOLIB_ERR_NONE) {
       Serial.println(F("success!"));
     } else {
       Serial.print(F("failed, code "));
@@ -830,7 +830,7 @@ void get_bw(){
       Serial.println("250 kHz");
       break;
     default:
-      Serial.println("Error setting the bandwidth value must be between 0-8");
+      Serial.println("RADIOLIB_ERRor setting the bandwidth value must be between 0-8");
       break;
   }
 }
