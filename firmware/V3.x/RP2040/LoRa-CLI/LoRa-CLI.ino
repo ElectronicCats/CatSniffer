@@ -1,7 +1,7 @@
 /*
-  CatSniffer - Use LoRa for communication with the SX1262 module
+  LoRa-CLI - Use LoRa for communication with the SX1262 module
   
-  Eduardo Contreras @ Electronic Cats
+  Andres Sabas @ Electronic Cats
   Original Creation Date: Jal 23, 2021
   This code is beerware; if you see me (or any other Electronic Cats
   member) at the local, and you've found our code helpful,
