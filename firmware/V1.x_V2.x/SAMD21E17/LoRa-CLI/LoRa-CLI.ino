@@ -1,5 +1,5 @@
 /*
-  CatSniffer - Use LoRa for communication with the SX1262 module
+  LoRa-CLI - Use LoRa for communication with the SX1262 module
   
   Andres Sabas @ Electronic Cats
   Original Creation Date: Jal 23, 2021
@@ -11,7 +11,7 @@
 
 #define SERIALCOMMAND_HARDWAREONLY
  
-#include <SerialCommand.h>
+#include <SerialCommand.h> //https://github.com/kroimon/Arduino-SerialCommand
 #include <RadioLib.h>
 
 #define CTF1 14
@@ -21,9 +21,9 @@
 SerialCommand SCmd;
 
 float fwVersion= 0.1;
-
+float region = 915;
 float frequency = 915;
-int spreadFactor = 8;
+int spreadFactor = 7;
 int bwReference = 7;
 int codingRate = 5;
 byte syncWord = 0x12;
@@ -50,15 +50,17 @@ void setup() {
   Serial.println("Welcome to the LoRa Sniffer CLI " + String(fwVersion,1) + "v\n");
   Serial.println("With this sketch you can scan the LoRa spectrum");
   Serial.println("Changing the Frequency, Spreading Factor, BandWidth or the IQ signals of the radio.");
+  Serial.println("Default parameters:");
+  Serial.println("freq:915.0, bw:125.0, sf:7, cr:5, syncWord:0x12, power:20, preableLength:8");
   Serial.println("Type help to get the available commands.");
   Serial.println("Electronic Cats ® 2020");
 
   // Setup callbacks for SerialCommand commands 
   SCmd.addCommand("help",help); 
   SCmd.addCommand("set_rx",set_rx);
-  SCmd.addCommand("set_tx",set_tx0);
-  SCmd.addCommand("set_tx_hex",set_tx1);
-  SCmd.addCommand("set_tx_ascii",set_tx2);
+  SCmd.addCommand("set_tx",set_tx);
+  SCmd.addCommand("set_tx_hex",set_tx_hex);
+  SCmd.addCommand("set_tx_ascii",set_tx_ascii);
   SCmd.addCommand("set_freq",set_freq);
   SCmd.addCommand("set_sf",set_sf);
   SCmd.addCommand("set_bw",set_bw);
@@ -95,7 +97,7 @@ void setup() {
   Serial.print(F("[SX1262] Initializing ... "));
   //debing(float freq, float bw, uint8_t sf, uint8_t cr, uint8_t syncWord, int8_t power, uint16_t preambleLength, float tcxoVoltage, bool useRegulatorLDO)
 
-  int state = radio.begin(915.0, 250, 7, 5, 0x12, 20, 8, 0, false);
+  int state = radio.begin(915.0, 125.0, 7, 5, 0x12, 20, 8, 0, false);
 
   if (state == RADIOLIB_ERR_NONE) {
     Serial.println(F("success!"));
@@ -210,6 +212,7 @@ void help(){
   Serial.println("\tset_tx");
   Serial.println("\tset_tx_hex");
   Serial.println("\tset_tx_ascii");
+  Serial.println("\tset_region");
   Serial.println("\tset_chann");
   Serial.println("\tset_freq");
   Serial.println("\tset_sf");
@@ -233,7 +236,7 @@ void help(){
 
 }
 
-void set_tx0(){
+void set_tx(){
   char *arg;
   byte data[64];
   int i;
@@ -295,7 +298,7 @@ void set_tx0(){
   }
 }
 
-void set_tx1(){
+void set_tx_hex(){
   char *arg;  
   byte data[64];
   int i;
@@ -304,7 +307,10 @@ void set_tx1(){
   if(arg != NULL){
     for(i = 0; arg != NULL; i++){ 
       
-      if((arg[0] > 64 && arg[0]< 71 || arg[0] > 47 && arg[0]< 58) && (arg[1] > 64 && arg[1]< 71 || arg[1] > 47 && arg[1]< 58) && arg[2] == 0){
+       if(((arg[0] > 64 && arg[0] < 71) || (arg[0] > 96 && arg[0] < 103) || (arg[0] > 47 && arg[0] < 58)) && 
+         ((arg[1] > 64 && arg[1] < 71) || (arg[1] > 96 && arg[1] < 103) || (arg[1] > 47 && arg[1] < 58)) && 
+         arg[2] == 0)
+      {
   
           data[i] = 0;
           data[i] = nibble(*(arg))<<4;
@@ -362,19 +368,19 @@ void set_tx1(){
 }
 
 
-void set_tx2(){
+void set_tx_ascii(){
   char *arg;  
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   if (arg != NULL){
           
-     Serial.print(F("[SX1262] Transmitting packet ... "));
+     Serial.print(F("[SX1262] Transmitting ASCII ... "));
   
     // you can transmit C-string or Arduino string up to
     // 256 characters long
     // NOTE: transmit() is a blocking method!
     //       See example SX126x_Transmit_IntRADIOLIB_ERRupt for details
     //       on non-blocking transmission method.
-    int state = radio.transmit("Hello World!");
+    int state = radio.transmit(arg);
     
     // you can also transmit byte array up to 256 bytes long
     /*
@@ -408,6 +414,23 @@ void set_tx2(){
     
     rx_status = false;
   } 
+  else {
+    Serial.println("No argument"); 
+  }
+}
+
+void set_region(){
+  char *arg;  
+  arg = SCmd.next();
+  region = atof(arg);
+  if (arg != NULL){
+        if (0){//radio.setFrequency(frequency) == RADIOLIB_ERR_INVALID_FREQUENCY) {
+          Serial.println(F("Selected region is invalid for this module!"));
+          return;
+        }
+      Serial.println("Region set to " + String(region) + " MHz");
+      rx_status = false;
+    } 
   else {
     Serial.println("No argument"); 
   }
