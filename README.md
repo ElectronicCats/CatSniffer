@@ -11,9 +11,18 @@ CatSniffer can operate in 3 different technologies:
 
 This work was inspired by our friend's work [Michael Ossmann](https://twitter.com/michaelossmann) as a tribute to his outstanding job in [Greatscott Gadgets](https://greatscottgadgets.com/), making devices like the YardStick, GreatFET, HackRF, and Ubertooth.
 
-<a href="https://electroniccats.com/store/catsniffer/">
+<a href="<(https://github.com/ElectronicCats/CatSniffer/wiki)>">
+  <img src="<(https://drive.google.com/drive/folders/1Mt8YJYPg6ehhOe8sOe2aTjoPUMejI_3n)>" />
+</a>
+
+<p align=center>
+<a href="<(https://electroniccats.com/store/catsniffer/)>">
   <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
 </a>
+<a href="<(https://github.com/ElectronicCats/CatSniffer/wiki)>">
+  <img src="https://github.com/ElectronicCats/flipper-shields/assets/44976441/6aa7f319-3256-442e-a00d-33c8126833ec" width="200" height="104" />
+</a>
+</p>
 
 ## Versions
 
