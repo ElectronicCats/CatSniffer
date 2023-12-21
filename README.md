@@ -1,6 +1,19 @@
 # CatSniffer
 
-CatSniffer (:smirk_cat:) is an original multiprotocol, and multiband board made for sniffing, communicating, and attacking IoT (Internet of Things) devices. It was designed as a highly portable USB stick that integrates the new chips TI CC1352, Semtech SX1262, Microchip SAMD21E17 V2 or previous and RP2040 V3 or later.
+<a href="https://github.com/ElectronicCats/CatSniffer/wiki">
+  <img src="https://github.com/ElectronicCats/CatSniffer/assets/139595394/8ec74cfa-f5e9-42d0-aa6f-9f2a7513a761" />
+</a>
+
+<p align=center>
+<a href="https://electroniccats.com/store/catsniffer/">
+  <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
+</a>
+<a href="https://github.com/ElectronicCats/CatSniffer/wiki">
+  <img src="https://github.com/ElectronicCats/flipper-shields/assets/44976441/6aa7f319-3256-442e-a00d-33c8126833ec" width="200" height="104" />
+</a>
+</p>
+
+CatSniffer (:smirk_cat:) is an original multiprotocol, and multiband board made for sniffing, communicating, and attacking IoT (Internet of Things) devices. It was designed as a highly portable USB stick that integrates the new chips TI CC1352, Semtech SX1262, and an RP2040 for V3 or a Microchip SAMD21E17 for V2.
 
 This board is a swiss army knife for IoT security researchers, developers, and enthusiasts. The board can be used with different types of software including third-party sniffers such as [SmartRF Packet Sniffer](https://www.ti.com/tool/PACKET-SNIFFER), [Sniffle](https://github.com/ElectronicCats/Sniffle), [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt), [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware), [Ubiqua Protocol Analyzer](https://www.ubilogix.com/ubiqua/), [our custom firmware](https://github.com/ElectronicCats/CatSniffer/tree/master/firmware), or you can even write your own software for your specific needs.
 
@@ -31,12 +44,15 @@ The different firmwares are inside the repository and not in the realese section
 
 ## Protocols
 - Thread
-- Zigbee 
+- Zigbee
 - Bluetooth 5 Low Energy (BLE)
-- IEEE 802.15.4g 
-- 6LoWPAN (IPv6 over Low power Wireless Personal Area Networks) 
-- Sub 1GHz and patented systems
+- IEEE 802.15.4g
+- 6LoWPAN (IPv6 over Low power Wireless Personal Area Networks)
+- Sub 1Ghz and patented systems
 - LoRa/LoRaWAN
+- Wi-SUN
+- Amazon Sidewalk
+- mioty®
     
 
 ## Features
@@ -56,12 +72,13 @@ The different firmwares are inside the repository and not in the realese section
 
 
 ## Compatible Software
-* [TI PACKET-SNIFFER-2 v1.8](https://www.ti.com/tool/download/PACKET-SNIFFER-2)
-* Flash Programmer 2 and Uniflash from TI
+* [Smart RF Packet Sniffer 2](https://github.com/ElectronicCats/CatSniffer/wiki/05.-Supported-Software#smart-rf-packet-sniffer-2)
+* [Wireshark](https://github.com/ElectronicCats/CatSniffer/wiki/05.-Supported-Software#wireshark)
+* [pycatsniffer tool (BETA)](https://github.com/ElectronicCats/CatSniffer/wiki/05.-Supported-Software#pycatsniffer-tool-beta)
+* [Sniffle](https://github.com/ElectronicCats/CatSniffer/wiki/05.-Supported-Software#sniffle)
+* [Ubiqua Protocol Analyzer](https://github.com/ElectronicCats/CatSniffer/wiki/05.-Supported-Software#ubiqua-protocol-analyzer)
 * [zigbee2mqtt](https://github.com/Koenkk/zigbee2mqtt)
 * [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware)
-* [Sniffle](https://github.com/nccgroup/Sniffle) 1.6
-* [Ubiqua Protocol Analyzer](https://www.ubilogix.com/ubiqua/)
 
 ## Pre-requisites for building firmware
 * CCS version: The packet sniffer firmware has been tested with CCS 10.2
