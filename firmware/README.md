@@ -8,7 +8,7 @@ For programming your CatSniffer you need to review what version do you own this 
 
 `IF YOU SELECT A DIFFERENT FIRMWARE VERSION THAN YOUR CATSNIFFER YOU WILL BIRCK IT`
 
-If you have a bricked CatSniffer you can read the [wiki part to recover it](https://github.com/ElectronicCats/CatSniffer/wiki/08.-Restore-the-CC1352-firmware).
+If you have a bricked CatSniffer you can read the [wiki part to recover it](https://github.com/ElectronicCats/CatSniffer/wiki/10.-Restore-CC1352).
 
 Each firmware folder includes the examples that are compatible with your board: 
 
