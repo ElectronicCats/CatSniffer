@@ -70,6 +70,17 @@ The different firmwares are inside the repository and not in the realese section
 
 [![WIKI](https://user-images.githubusercontent.com/40640735/217364175-6e3af8df-e6b4-4fcd-9515-09ff02639f64.jpg)](https://github.com/ElectronicCats/CatSniffer/wiki)
 
+## Firmware Repository
+All Catsniffer Firmware has been moved to a different repository, to have a better version control, and issue tracking you will find it here:
+
+https://github.com/ElectronicCats/CatSniffer-Firmware
+
+All catsniffer versions are supported in this repository, you will need to check what version you own and select the proper branch to develop or release for just program your board.
+
+## Software Repository
+All Catsniffer Software has been moved to a different repository, to have a better version control, and issue tracking you will find it here:
+
+https://github.com/ElectronicCats/CatSniffer-Tools
 
 ## Compatible Software
 * [Smart RF Packet Sniffer 2](https://github.com/ElectronicCats/CatSniffer/wiki/05.-Supported-Software#smart-rf-packet-sniffer-2)
@@ -81,6 +92,7 @@ The different firmwares are inside the repository and not in the realese section
 * [Z-Stack-firmware](https://github.com/Koenkk/Z-Stack-firmware)
 
 ## Pre-requisites for building firmware
+* Arduino IDE for RP2040 or SAMD21E17
 * CCS version: The packet sniffer firmware has been tested with CCS 10.2
 * SimpleLink CC13x2 and CC26x2 SDK 
 * Python 3
