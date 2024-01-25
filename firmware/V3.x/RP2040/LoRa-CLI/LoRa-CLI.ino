@@ -31,6 +31,7 @@ int preambleLength = 8; //20
 int outputPower = 20;
 int channel = 0;
 bool rx_status = false;
+int inv_iq = 0;
 
 // SX1262 has the following connections:
 // NSS pin:   17
@@ -70,6 +71,7 @@ void setup() {
   SCmd.addCommand("set_sw", set_sw);
   SCmd.addCommand("set_op", set_op);
   SCmd.addCommand("set_pl", set_pl);
+  SCmd.addCommand("set_inv_iq",set_inv_iq);
 
   SCmd.addCommand("get_config", get_config);
   SCmd.addCommand("get_freq", get_freq);
@@ -218,6 +220,7 @@ void help() {
   Serial.println("\tset_sw");
   Serial.println("\tset_pl");
   Serial.println("\tset_op");
+  Serial.println("\tset_inv_iq");
 
   Serial.println("Monitor commands:");
   Serial.println("\tget_freq");
@@ -731,6 +734,35 @@ void set_pl() {
   }
 }
 
+void set_inv_iq(){
+  char *arg;  
+  arg = SCmd.next();  
+  if (arg != NULL){
+    inv_iq = atoi(arg);
+    if(inv_iq != 0 && inv_iq != 1){
+      Serial.println("Error setting the InvertIQ parameter");
+      Serial.println("Value must be 0 or 1");
+      return;
+    }
+    else{
+      if(inv_iq){
+        radio.invertIQ(true);
+        Serial.println("InvertIQ enabled ");
+        rx_status = false;
+      }
+      else {
+        radio.invertIQ(false);
+        Serial.println("InvertIQ disabled");
+        rx_status = false;
+      }
+    }
+
+  } 
+  else {
+    Serial.println("No argument"); 
+  }
+}
+
 void set_rx() {
   char *arg;
   arg = SCmd.next();
@@ -881,6 +913,8 @@ void get_config() {
   Serial.print("Sync Word = 0x");
   Serial.println(syncWord, HEX);
   Serial.println("Preamble Length = " + String(preambleLength));
+  Serial.print("InvertIQ = ");
+  Serial.println(inv_iq?"enabled":"disabled");
   Serial.println("Output Power = " + String(outputPower));
   Serial.println("Rx active = " + String(rx_status));
 }
