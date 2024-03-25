@@ -1,12 +1,28 @@
+# Content
+- [Conociendo el Hardware](#conociendo-el-hardware)
+  - [Hardware - CatSniffer](#hardware---catsniffer)
+  - [Hardware - CatSniffer - Features](#hardware---catsniffer---features)
+  - [Hardware - CatSniffer - Funcionamiento](#hardware---catsniffer---funcionamiento)
+- [Bluetooth Low Energy (BLE)](#bluetooth-low-energy-ble)
+  - [BLE - Conociendo el protocolo](#ble---conociendo-el-protocolo)
+  - [BLE - Generic Access Profile (GAP)](#ble---generic-access-profile-gap)
+  - [BLE - Generic Attribute Profile (GATT)](#ble---generic-attribute-profile-gatt)
+- [PyCatSniffer](#pycatsniffer)
+  - [PyCatSniffer - Demo - Sniffeando Conexion BLE](#pycatsniffer---demo---sniffeando-conexion-ble)
+  - [PyCatSniffer - PCAP - BLE](#pycatsniffer---pcap---ble)
+- [ZigBee](#zigbee)
+  - [ZigBee - Arquitectura](#zigbee---arquitectura)
+  - [ZigBee - Application Profiles](#zigbee---application-profiles)
+  - [ZigBee - Device Descriptor](#zigbee---device-descriptor)
+  - [ZigBee - Cluster Identifiers](#zigbee---cluster-identifiers)
+  - [ZigBee - Network Security Model](#zigbee---network-security-model)
+  - [PyCatSniffer - Demo - Sniffeando Conexion ZigBee Centralizada](#pycatsniffer---demo---sniffeando-conexion-zigbee-centralizada)
+  - [PyCatSniffer - Demo - Sniffeando Conexion ZigBee Distribuida](#pycatsniffer---demo---sniffeando-conexion-zigbee-distribuida)
+  - [PyCatSniffer - Demo - PCAP - Analizando la informacion](#pycatsniffer---demo---pcap---analizando-la-informacion)
+- [HackGDL](#hackgdl)
+- [Bibliografía](#bibliografía)
 
- ```table-of-contents
-title: 
-style: nestedList # TOC style (nestedList|inlineFirstLevel)
-minLevel: 0 # Include headings from the specified level
-maxLevel: 0 # Include headings up to the specified level
-includeLinks: true # Make headings clickable
-debugInConsole: false # Print debug info in Obsidian console
-```
+
 
 # Conociendo el Hardware
 
@@ -118,7 +134,8 @@ Al usar Wireshark nos permite realizar tratamiento de datos como:
 - Exportar informacion
 
 ## PyCatSniffer - Demo - Sniffeando Conexion BLE
-[Link del video](https://drive.google.com/file/d/1jlcbzr7mgL-YRLy2PL6r9TJBW2bPensH/view?usp=sharing)
+<iframe width="720" height="480" src="https://www.youtube.com/embed/oOcJloXW9dI?si=CUnorBsKGtlgDLta" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ## PyCatSniffer - PCAP - BLE
 En el siguiente PCAP podemos ver que encontramos un paquete de datos de **CONNECT_IND**, esto indica que una conexion ha sido solicitada y establecida entre un dispositivo BLE y un central device.
@@ -188,9 +205,10 @@ Este tipo de red no tiene nodo central/trust center, el router es el encargado d
 En esta comunicacion la llave de red es compartida por cada end device hacia el nodo en donde se realice la conexion.
 
 ## PyCatSniffer - Demo - Sniffeando Conexion ZigBee Centralizada
-[Link del video a Google drive](https://drive.google.com/file/d/18-z8SLEV42wPjbo1H1KyQbPA6Z7Bx8Vu/view?usp=sharing)
+<iframe width="720" height="480" src="https://www.youtube.com/embed/Nl8MkhRTczk?si=z3UCTXmmP0Yl9aw1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## PyCatSniffer - Demo - Sniffeando Conexion ZigBee Distribuida
-[Link del video a Google drive](https://drive.google.com/file/d/1Jo0XI_zJ2PGliBTz5FbD9M1-M3t8yLJs/view?usp=sharing)
+<iframe width="720" height="480" src="https://www.youtube.com/embed/eAaMv7jrr0I?si=fLrv8p-naG7Fl1H8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## PyCatSniffer - Demo - PCAP - Analizando la informacion
 
