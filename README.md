@@ -5,12 +5,21 @@
 </a>
 
 <p align=center>
-<a href="https://electroniccats.com/store/catsniffer/">
-  <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
-</a>
-<a href="https://github.com/ElectronicCats/CatSniffer/wiki">
-  <img src="https://github.com/ElectronicCats/flipper-shields/assets/44976441/6aa7f319-3256-442e-a00d-33c8126833ec" width="200" height="104" />
-</a>
+  <a href="https://electroniccats.com/store/catsniffer/">
+    <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
+  </a>
+  <a href="https://github.com/ElectronicCats/CatSniffer/wiki">
+    <img src="https://github.com/ElectronicCats/flipper-shields/assets/44976441/6aa7f319-3256-442e-a00d-33c8126833ec" width="200" height="104" />
+  </a>
+</p>
+
+<p align=center>
+    Also available at distributors:
+  </p>
+<p align=center>
+  <a href="https://labs.ksec.co.uk/product-category/electronic-cat/">
+    <img src="https://cdn.ksec.co.uk/ksec-solutions/ksec-W-BW-MV-small-clipped.png" width="200" />
+  </a>
 </p>
 
 CatSniffer (:smirk_cat:) is an original multiprotocol, and multiband board made for sniffing, communicating, and attacking IoT (Internet of Things) devices. It was designed as a highly portable USB stick that integrates the new chips TI CC1352, Semtech SX1262, and an RP2040 for V3 or a Microchip SAMD21E17 for V2.
