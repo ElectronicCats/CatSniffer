@@ -74,8 +74,7 @@ The different firmwares are inside the repository and not in the realese section
 - Reset button for RP2040, SAMD21 & CC1352, Boot of CC1352, and one more for general purpose.
 
 ## Wiki and Getting Started
-
-[Getting Started in our Wiki](https://github.com/ElectronicCats/CatSniffer/wiki)
+Check out our Wiki for better information about how CatSniffer works and how to use our firmwares and tools. [Getting Started in our Wiki](https://github.com/ElectronicCats/CatSniffer/wiki)
 
 [![WIKI](https://user-images.githubusercontent.com/40640735/217364175-6e3af8df-e6b4-4fcd-9515-09ff02639f64.jpg)](https://github.com/ElectronicCats/CatSniffer/wiki)
 
@@ -90,6 +89,10 @@ All catsniffer versions are supported in this repository, you will need to check
 All Catsniffer Software has been moved to a different repository, to have a better version control, and issue tracking you will find it here:
 
 https://github.com/ElectronicCats/CatSniffer-Tools
+
+## Quick Getting starter with our Catnip
+If you want to use our lasted tool **catnip** this post is for you: 
+[Unleashing the Power of Catsniffer: Dive Deeper with Catnip](https://www.hackster.io/electronic-cats/unleashing-the-power-of-catsniffer-dive-deeper-with-catnip-82e1e4)
 
 ## Compatible Software
 * [Smart RF Packet Sniffer 2](https://github.com/ElectronicCats/CatSniffer/wiki/05.-Supported-Software#smart-rf-packet-sniffer-2)
