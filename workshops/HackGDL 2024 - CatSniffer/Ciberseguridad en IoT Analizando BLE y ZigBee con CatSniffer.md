@@ -134,7 +134,8 @@ Al usar Wireshark nos permite realizar tratamiento de datos como:
 - Exportar informacion
 
 ## PyCatSniffer - Demo - Sniffeando Conexion BLE
-<iframe width="720" height="480" src="https://www.youtube.com/embed/oOcJloXW9dI?si=CUnorBsKGtlgDLta" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[![PyCatSniffer - Demo - Sniffeando Conexion BLE](https://img.youtube.com/vi/oOcJloXW9dI/0.jpg)](https://www.youtube.com/watch?v=oOcJloXW9dI)
 
 
 ## PyCatSniffer - PCAP - BLE
@@ -205,10 +206,12 @@ Este tipo de red no tiene nodo central/trust center, el router es el encargado d
 En esta comunicacion la llave de red es compartida por cada end device hacia el nodo en donde se realice la conexion.
 
 ## PyCatSniffer - Demo - Sniffeando Conexion ZigBee Centralizada
-<iframe width="720" height="480" src="https://www.youtube.com/embed/Nl8MkhRTczk?si=z3UCTXmmP0Yl9aw1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[![PyCatSniffer - Demo - Sniffeando Conexion ZigBee Centralizada](https://img.youtube.com/vi/Nl8MkhRTczk/0.jpg)](https://www.youtube.com/watch?v=Nl8MkhRTczk)
 
 ## PyCatSniffer - Demo - Sniffeando Conexion ZigBee Distribuida
-<iframe width="720" height="480" src="https://www.youtube.com/embed/eAaMv7jrr0I?si=fLrv8p-naG7Fl1H8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[![PyCatSniffer - Demo - Sniffeando Conexion ZigBee Centralizada](https://img.youtube.com/vi/eAaMv7jrr0I/0.jpg)](https://www.youtube.com/watch?v=eAaMv7jrr0I)
 
 ## PyCatSniffer - Demo - PCAP - Analizando la informacion
 
