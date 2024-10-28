@@ -111,7 +111,7 @@ This kit is designed to allow Product developers to evaluate electronic componen
 
 ## Workshops
 
-We have been doing worshops held in different security related events the material avaible is public and can be found [here](https://drive.google.com/drive/folders/1SxkF2-uWVFw2BZa5lym5f42ivyW23bVV)
+We have been doing workshops held in different security related events the material avaible is public and can be found [here](https://drive.google.com/drive/folders/1SxkF2-uWVFw2BZa5lym5f42ivyW23bVV)
 
 ## How to contribute <img src="https://electroniccats.com/wp-content/uploads/2018/01/fav.png" height="35"><img src="https://raw.githubusercontent.com/gist/ManulMax/2d20af60d709805c55fd784ca7cba4b9/raw/bcfeac7604f674ace63623106eb8bb8471d844a6/github.gif" height="30">
  Contributions are welcome! 
