@@ -287,7 +287,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -299,7 +299,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810311132_Murata-Electronics-GRM1885C1H3R3CA01D_C162225.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -371,7 +371,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060a2fa32")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -543,7 +545,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -555,7 +557,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810161109_FH--Guangdong-Fenghua-Advanced-Tech-0603F105M500NT_C108343.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -627,7 +629,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000058c79871")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -810,7 +814,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -822,7 +826,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2211101700_YAGEO-CC0603KRX7R9BB104_C14663.pdf"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -894,7 +898,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060cdb4d1")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1077,7 +1083,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1089,7 +1095,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811071810_Samsung-Electro-Mechanics-CL10B102KB8NNNC_C1588.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1161,7 +1167,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060cf4963")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1333,7 +1341,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1345,7 +1353,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2006011837_TONYU-DY-0603HBC-L-SMG_C524045.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1417,7 +1425,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/00000000-0000-0000-0000-00006087770b")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1622,7 +1632,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1634,7 +1644,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2006011837_TONYU-DY-0603HBC-L-SMG_C524045.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1706,7 +1716,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/00000000-0000-0000-0000-00006092ab5a")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -1911,7 +1923,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1923,7 +1935,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2006011837_TONYU-DY-0603HBC-L-SMG_C524045.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1995,7 +2007,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/00000000-0000-0000-0000-00006092b5d1")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2200,7 +2214,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2212,7 +2226,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2006011837_TONYU-DY-0603HBC-L-SMG_C524045.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2284,7 +2298,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/00000000-0000-0000-0000-000060c43107")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2489,7 +2505,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -2501,7 +2517,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_FH--Guangdong-Fenghua-Advanced-Tech-VHF160808H9N1JT_C395094.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -2585,7 +2601,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/00000000-0000-0000-0000-0000609d5e2c")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -2770,7 +2788,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -2782,7 +2800,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2008061235_YAGEO-RT0603DRD07100RL_C700506.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -2854,7 +2872,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000060c3106a")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3037,7 +3057,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -3049,7 +3069,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Viking-Tech-AR03DTCX5101_C319561.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -3121,7 +3141,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000060ad852a")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3304,7 +3326,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3316,7 +3338,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Viking-Tech-AR03BTB3300_C408915.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3388,7 +3410,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-00006092ba07")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3571,7 +3595,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3583,7 +3607,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Viking-Tech-AR03BTB3300_C408915.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3655,7 +3679,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-00006092af39")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -3838,7 +3864,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3850,7 +3876,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Viking-Tech-AR03BTB3300_C408915.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3922,7 +3948,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000060877b07")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -4105,7 +4133,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4117,7 +4145,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Viking-Tech-AR03BTB3300_C408915.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4189,7 +4217,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000060c4376c")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -4372,7 +4402,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4384,7 +4414,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811151136_Samsung-Electro-Mechanics-CL10C101JB8NNNC_C14858.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4456,7 +4486,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060a2d10f")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -4847,7 +4879,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4859,7 +4891,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811151136_Samsung-Electro-Mechanics-CL10C101JB8NNNC_C14858.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4931,7 +4963,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060fc860a")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5103,7 +5137,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5115,7 +5149,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5199,7 +5233,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SOT?23?5*")
 		(path "/00000000-0000-0000-0000-00005f56f04d")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5492,7 +5528,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -5504,7 +5540,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2110081230_Sunlord-SDFL1608T150KTF_C57838.pdf"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -5576,7 +5612,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/00000000-0000-0000-0000-000060ed94d0")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -5759,7 +5797,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -5771,7 +5809,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2211101700_YAGEO-CC0603KRX7R9BB104_C14663.pdf"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -5843,7 +5881,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060ea4035")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6026,7 +6066,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -6038,7 +6078,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810191213_Samsung-Electro-Mechanics-CL10A474KB8NNNC_C170149.pdf"
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -6110,7 +6150,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060ef23cd")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6293,7 +6335,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Crystal:Crystal_SMD_2520-4Pin_2.5x2.0mm"
 			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
@@ -6305,7 +6347,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810171117_Seiko-Epson-Q24FA20H0021700_C255969.pdf"
 			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
@@ -6377,7 +6419,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Crystal*")
 		(path "/00000000-0000-0000-0000-000060d9622f")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -6642,7 +6686,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.65x2.65mm"
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -6654,7 +6698,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/761/SEMT_S_A0008596633_1-2575829.pdf"
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -6727,6 +6771,7 @@
 			)
 		)
 		(path "/00000000-0000-0000-0000-000060bf3807")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7239,7 +7284,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -7251,7 +7296,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2006011835_YAGEO-CC0603FRNPO9BN470_C519486.pdf"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -7323,7 +7368,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060cdc9ac")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7506,7 +7553,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7518,7 +7565,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811071810_Samsung-Electro-Mechanics-CL10B102KB8NNNC_C1588.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7590,7 +7637,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060c3194c")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -7773,7 +7822,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -7785,7 +7834,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811151136_Samsung-Electro-Mechanics-CL10C101JB8NNNC_C14858.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -7857,7 +7906,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060865a23")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8040,7 +8091,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8052,7 +8103,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811151136_Samsung-Electro-Mechanics-CL10C101JB8NNNC_C14858.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8124,7 +8175,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060fca2d7")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8307,7 +8360,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8319,7 +8372,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811151136_Samsung-Electro-Mechanics-CL10C101JB8NNNC_C14858.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8391,7 +8444,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060fcb41c")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8574,7 +8629,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -8586,7 +8641,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811151136_Samsung-Electro-Mechanics-CL10C101JB8NNNC_C14858.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -8658,7 +8713,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00006086464d")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -8839,7 +8896,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CatSniffer:0900FM15D0039E"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8851,7 +8908,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/611/0900PC15A0036-1524528.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -8924,6 +8981,7 @@
 			)
 		)
 		(path "/00000000-0000-0000-0000-00005f76883f")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -9177,7 +9235,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CatSniffer:SON50P200X200X90-9N"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -9189,7 +9247,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/412/fsw8006q_product_data_sheet-1307843.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -9262,6 +9320,7 @@
 			)
 		)
 		(path "/00000000-0000-0000-0000-0000609fac26")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -9505,7 +9564,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9517,7 +9576,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811151136_Samsung-Electro-Mechanics-CL10C101JB8NNNC_C14858.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9589,7 +9648,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00006106c6e9")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -9772,7 +9833,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -9784,7 +9845,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2008061235_YAGEO-RT0603DRD07100RL_C700506.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -9856,7 +9917,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000060cf4518")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10037,7 +10100,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CatSniffer:0900FM15D0039E"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -10049,7 +10112,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/611/0900PC15A0036-1524528.pdf"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -10122,6 +10185,7 @@
 			)
 		)
 		(path "/00000000-0000-0000-0000-00005f83fece")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -10374,7 +10438,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -10386,7 +10450,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2006221409_Yanchuang-SCHF160808H47NJT_C578001.pdf"
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -10458,7 +10522,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/00000000-0000-0000-0000-000060cde29a")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10641,7 +10707,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10653,7 +10719,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810261547_Samsung-Electro-Mechanics-CL10C220JB81PNC_C170132.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10725,7 +10791,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00006072341e")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -10908,7 +10976,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -10920,7 +10988,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2005201834_Samsung-Electro-Mechanics-CL10C100DB81PNC_C472782.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11004,7 +11072,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000058c3fe11")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -11187,7 +11257,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11199,7 +11269,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2005201834_Samsung-Electro-Mechanics-CL10C100DB81PNC_C472782.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -11271,7 +11341,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000058c3fe5b")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -11454,7 +11526,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11466,7 +11538,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/427/mfuserie-1762582.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11538,7 +11610,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SM*")
 		(path "/00000000-0000-0000-0000-000060ba6cb5")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -11721,7 +11795,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -11733,7 +11807,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/281/ENFA0004-1915711.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -11805,7 +11879,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Inductor_* L_* *Ferrite*")
 		(path "/00000000-0000-0000-0000-000058c5cf90")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -11988,7 +12064,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12000,7 +12076,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://product.tdk.com/system/files/dam/doc/product/inductor/inductor/smd/catalog/inductor_commercial_decoupling_mlz1608_en.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12084,7 +12160,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
 		(path "/00000000-0000-0000-0000-00005b83c026")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12269,7 +12347,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12281,7 +12359,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_XTY-7325-4800A1620-00_C389928.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12353,7 +12431,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Crystal*")
 		(path "/00000000-0000-0000-0000-00005b86ad1a")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -12564,7 +12644,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Crystal:Crystal_SMD_2012-2Pin_2.0x1.2mm"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12576,7 +12656,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811151444_Seiko-SC-20S-32-768kHz-20PPM-9pF_C97603.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -12648,7 +12728,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Crystal*")
 		(path "/00000000-0000-0000-0000-000058c3fc84")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_circle
@@ -12895,7 +12977,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12907,7 +12989,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810261547_Samsung-Electro-Mechanics-CL10C220JB81PNC_C170132.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -12979,7 +13061,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00006075538a")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13162,7 +13246,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13174,7 +13258,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811082125_YAGEO-RT0603FRD07100KL_C179820.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13246,7 +13330,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-0000608cb095")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13429,7 +13515,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13441,7 +13527,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Murata-Electronics-GRM155R62A104ME14D_C162179.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -13525,7 +13611,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00005b7c7538")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13708,7 +13796,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -13720,7 +13808,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Murata-Electronics-GRM155R62A104ME14D_C162179.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -13804,7 +13892,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00005b7c7ac3")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -13987,7 +14077,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -13999,7 +14089,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Murata-Electronics-GRM155R62A104ME14D_C162179.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -14083,7 +14173,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00005b7cd2da")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14266,7 +14358,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -14278,7 +14370,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811082126_YAGEO-CC0603MRX5R6BB226_C109447.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -14350,7 +14442,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00005b7cd218")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14533,7 +14627,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14545,7 +14639,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Murata-Electronics-GRM155R62A104ME14D_C162179.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -14629,7 +14723,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00005b83c352")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -14812,7 +14908,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14824,7 +14920,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Murata-Electronics-GRM155R62A104ME14D_C162179.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14908,7 +15004,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00005b83c423")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15091,7 +15189,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -15103,7 +15201,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811082126_YAGEO-CC0603MRX5R6BB226_C109447.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -15175,7 +15273,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00005b83c159")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15358,7 +15458,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -15370,7 +15470,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Murata-Electronics-GRM155R62A104ME14D_C162179.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -15454,7 +15554,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-0000608caae2")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -15637,7 +15739,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -15649,7 +15751,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810161109_FH--Guangdong-Fenghua-Advanced-Tech-0603F105M500NT_C108343.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -15721,7 +15823,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00005b9b4bb0")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17214,7 +17318,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17226,7 +17330,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2211101700_YAGEO-CC0603KRX7R9BB104_C14663.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17298,7 +17402,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000058c7992f")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17481,7 +17587,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17493,7 +17599,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Murata-Electronics-GRM155R62A104ME14D_C162179.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17577,7 +17683,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-00005b7c7b7e")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -17760,7 +17868,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17772,7 +17880,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1810311132_Murata-Electronics-GRM1885C1H3R3CA01D_C162225.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -17844,7 +17952,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-0000609d5615")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18016,7 +18126,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -18028,7 +18138,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2211101700_YAGEO-CC0603KRX7R9BB104_C14663.pdf"
 			(at 0 0 -45)
 			(layer "F.Fab")
 			(hide yes)
@@ -18100,7 +18210,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/00000000-0000-0000-0000-000060f4b84e")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18272,7 +18384,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -18284,7 +18396,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_Viking-Tech-AR03DTCX5101_C319561.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -18356,7 +18468,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/00000000-0000-0000-0000-000060ad7135")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -18904,7 +19018,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connectors:C393939"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -18916,7 +19030,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2009111434_Shenzhen-Kinghelm-Elec-KH-TYPE-C-16P_C709357.pdf"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -18988,7 +19102,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "USB*C*Plug*")
 		(path "/00000000-0000-0000-0000-0000609ee31d")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -19224,7 +19340,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CatSniffer:TS1088R02026"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19236,7 +19352,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_XUNPU-TS-1088R-02526_C455281.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19309,6 +19425,7 @@
 			)
 		)
 		(path "/00000000-0000-0000-0000-000060ac93f3")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19481,7 +19598,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CatSniffer:TS1088R02026"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19493,7 +19610,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_XUNPU-TS-1088R-02526_C455281.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19566,6 +19683,7 @@
 			)
 		)
 		(path "/00000000-0000-0000-0000-00005fd003c3")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19738,7 +19856,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CatSniffer:TS1088R02026"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19750,7 +19868,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_XUNPU-TS-1088R-02526_C455281.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19823,6 +19941,7 @@
 			)
 		)
 		(path "/00000000-0000-0000-0000-00005baa6e6c")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -19995,7 +20114,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CatSniffer:TS1088R02026"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -20007,7 +20126,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1912111437_XUNPU-TS-1088R-02526_C455281.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -20080,6 +20199,7 @@
 			)
 		)
 		(path "/00000000-0000-0000-0000-000060c2b98f")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -20251,7 +20371,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "bast-wan:SMA_EDGE"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -20263,7 +20383,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2005121202_Shenzhen-Kinghelm-Elec-KH-SMA-KE8-G_C530661.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -20335,7 +20455,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "*BNC* *SMA* *SMB* *SMC* *Cinch*")
 		(path "/00000000-0000-0000-0000-00005ba656f9")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr through_hole)
 		(fp_poly
@@ -20980,7 +21102,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DFN_QFN:VQFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm_ThermalVias"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -20992,7 +21114,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cc1352p.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1675977182049&ref_url=https%253A%252F%252Fwww.mouser.com%252F"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -21065,6 +21187,7 @@
 			)
 		)
 		(path "/00000000-0000-0000-0000-0000612275c1")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22081,7 +22204,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 -135)
 			(layer "F.Fab")
 			(hide yes)
@@ -22093,7 +22216,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/427/mcx0x0xpre-1762843.pdf"
 			(at 0 0 -135)
 			(layer "F.Fab")
 			(hide yes)
@@ -22105,7 +22228,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 -135)
 			(layer "F.Fab")
 			(hide yes)
@@ -22177,7 +22300,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/db841d2a-d757-4fb0-9200-06cfa1a938ac")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22349,7 +22474,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22361,7 +22486,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/TaiyoYuden_MSAST1L3YB5104KFNA01_SS-3009733.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22373,7 +22498,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22445,7 +22570,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/144cefa3-ce49-48f5-abdc-069ffe2ba5a9")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22617,7 +22744,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -22629,7 +22756,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/TaiyoYuden_MSAST1L3YB5104KFNA01_SS-3009733.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -22641,7 +22768,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -22713,7 +22840,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/9d6b5388-ae93-402c-9110-c29adaa27502")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -22885,7 +23014,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22897,7 +23026,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22909,7 +23038,7 @@
 				)
 			)
 		)
-		(property "Description" "A microcontroller by Raspberry Pi"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -22969,7 +23098,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "QFN*7x7mm?P0.4mm?EP3.2x3.2mm*")
 		(path "/aa0ffc82-ac04-4d0c-acef-b136b502cce4")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -23780,7 +23911,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -23792,7 +23923,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2210101630_HCI-XC32M4-12-000-F20NJDT_C2848217.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -23804,7 +23935,7 @@
 				)
 			)
 		)
-		(property "Description" "Four pin crystal, GND on pins 2 and 3, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -23864,7 +23995,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "Crystal*")
 		(path "/8640b6bd-3a85-4e04-bfcd-a54fc955be99")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24064,7 +24197,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -24076,7 +24209,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/Taiyo_Yuden_MSRLJ103SB5105MFNA01_SS-3011293.pdf"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -24088,7 +24221,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -24160,7 +24293,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/067b2818-f9fa-4ccd-b0b4-a86ca09d2563")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24332,7 +24467,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -24344,7 +24479,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/TaiyoYuden_MSAST1L3YB5104KFNA01_SS-3009733.pdf"
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -24356,7 +24491,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 135)
 			(layer "F.Fab")
 			(hide yes)
@@ -24428,7 +24563,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/cf475060-56b2-408a-9ce6-8dd4020fee0a")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24600,7 +24737,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -24612,7 +24749,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/TaiyoYuden_MSAST1L3YB5104KFNA01_SS-3009733.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -24624,7 +24761,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -24696,7 +24833,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/f17ba1f2-4331-4eae-a163-e73e666d21b7")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -24868,7 +25007,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -24880,7 +25019,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/TaiyoYuden_MSAST1L3YB5104KFNA01_SS-3009733.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -24892,7 +25031,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -24964,7 +25103,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/97395940-ae35-4067-b5ba-94738cd76ab7")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25136,7 +25277,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25148,7 +25289,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/348/esr_e-3009601.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25160,7 +25301,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25232,7 +25373,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/32cef483-a0d5-411b-89ae-ad41039a7efe")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -25402,7 +25545,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CatSniffer:W25Q16JVUUIQ"
 			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
@@ -25414,7 +25557,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "http://www.winbond.com/resource-files/w25q128jv_dtr%20revc%2003272018%20plus.pdf"
 			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
@@ -25426,7 +25569,7 @@
 				)
 			)
 		)
-		(property "Description" "128Mb Serial Flash Memory, Standard/Dual/Quad SPI, SOIC-8"
+		(property "Description" ""
 			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
@@ -25486,7 +25629,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SOIC*5.23x5.23mm*P1.27mm*")
 		(path "/9ab4176e-acb9-4cec-a4ad-637f192fd19f")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -25999,7 +26144,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -26011,7 +26156,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/TaiyoYuden_MSAST1L3YB5104KFNA01_SS-3009733.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -26023,7 +26168,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -26095,7 +26240,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/b6bf4aa8-0541-483e-be37-d2d3396843dc")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -26267,7 +26414,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -26279,7 +26426,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/TaiyoYuden_MSAST1L3YB5104KFNA01_SS-3009733.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -26291,7 +26438,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -26363,7 +26510,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/dffd1e80-352c-49dd-9d35-bbbd3d3b19ef")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -26535,7 +26684,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -26547,7 +26696,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/TaiyoYuden_MSAST1L3YB5104KFNA01_SS-3009733.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -26559,7 +26708,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -26631,7 +26780,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/bf94dc45-a06a-4a87-817c-80f756c61dca")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -26803,7 +26954,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26815,7 +26966,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/348/esr_e-3009601.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26827,7 +26978,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26899,7 +27050,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/d271ccf5-b5bb-4bc6-9f3c-01741c423d73")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27071,7 +27224,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
@@ -27083,7 +27236,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/TaiyoYuden_MSAST1L3YB5104KFNA01_SS-3009733.pdf"
 			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
@@ -27095,7 +27248,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 45)
 			(layer "F.Fab")
 			(hide yes)
@@ -27167,7 +27320,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/823c0c4b-6920-405e-9e69-74287efffeee")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27339,7 +27494,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27351,7 +27506,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/TaiyoYuden_MSAST1L3YB5104KFNA01_SS-3009733.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27363,7 +27518,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27435,7 +27590,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/14558f47-3703-41c7-a039-d9f5f1af4f7b")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27607,7 +27764,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27619,7 +27776,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/396/Taiyo_Yuden_MSRLJ103SB5105MFNA01_SS-3011293.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27631,7 +27788,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -27703,7 +27860,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/1a57296e-8367-4bf1-92fc-6c0fcd0752f6")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -27875,7 +28034,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27887,7 +28046,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/281/pe42421ds-1671115.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27971,7 +28130,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "SOT*363*")
 		(path "/00000000-0000-0000-0000-000060fa8e32")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -28189,7 +28350,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28201,7 +28362,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/427/mcat_pro-1762117.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28213,7 +28374,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28285,7 +28446,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "R_*")
 		(path "/f90cb3bb-de07-4f9f-b027-6f310b3b5ee1")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -28457,7 +28620,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28469,7 +28632,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/281/GJM1555C1H270FB01_01-1973006.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28481,7 +28644,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -28553,7 +28716,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/113630cf-605e-4175-88f6-ebc334c2f27b")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -28725,7 +28890,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -28737,7 +28902,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.mouser.mx/datasheet/2/281/GJM1555C1H270FB01_01-1973006.pdf"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -28749,7 +28914,7 @@
 				)
 			)
 		)
-		(property "Description" "Unpolarized capacitor, small symbol"
+		(property "Description" ""
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -28821,7 +28986,9 @@
 				)
 			)
 		)
+		(property ki_fp_filters "C_*")
 		(path "/b92d69c4-88de-4afa-9c00-39dd2875b5c6")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
 		(attr smd)
 		(fp_line
@@ -28995,7 +29162,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels"
 			(at 0 0 -90)
 			(layer "F.Fab")
 			(hide yes)
@@ -29044,9 +29211,11 @@
 				(justify mirror)
 			)
 		)
+		(property ki_fp_filters "Jumper* TestPoint*3Pads* TestPoint*Bridge*")
 		(path "/00000000-0000-0000-0000-000060aa3251")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files dnp)
 		(fp_poly
 			(pts
 				(xy -0.9 0.3) (xy -0.4 0.3) (xy -0.4 -0.3) (xy -0.9 -0.3)
@@ -29318,7 +29487,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -29367,9 +29536,11 @@
 				(justify mirror)
 			)
 		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/00000000-0000-0000-0000-0000614dc058")
+		(sheetname "Root")
 		(sheetfile "CatSniffer.kicad_sch")
-		(attr exclude_from_pos_files)
+		(attr exclude_from_pos_files dnp)
 		(fp_line
 			(start -1.27 -1.27)
 			(end -1.905 -1.27)
