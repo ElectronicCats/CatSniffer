@@ -2,9 +2,9 @@
 
 ## Security Research
 
-Have you used the Catsniffer to demonstrate IoT attack types or vulnerabilities? Submit a PR with the PoC or firmware developed, and you will earn up to $1337 USD reward.
+Have you used the Catsniffer to demonstrate IoT attack types or vulnerabilities? Submit a PR with the PoC or firmware developed, and you will earn up to USD 1337.
 
-Our team will review the submissions and award . 
+Our team will review the submissions and award a price according to how much effort was put into the new feature. 
 
 ### Need Ideas?
 
