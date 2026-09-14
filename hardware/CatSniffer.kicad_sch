@@ -8830,7 +8830,7 @@
 		)
 		(uuid "24fd922c-d488-4d61-b6dc-9d3e359ccc82")
 	)
-	(text "CRF2"
+	(text "CTF2"
 		(exclude_from_sim no)
 		(at 518.922 93.726 0)
 		(effects
@@ -8962,7 +8962,7 @@
 		)
 		(uuid "8313e187-c805-4927-8002-313a51839243")
 	)
-	(text "CRF1"
+	(text "CTF1"
 		(exclude_from_sim no)
 		(at 512.826 93.853 0)
 		(effects
@@ -9171,7 +9171,7 @@
 		)
 		(uuid "c8b93f12-bc5c-4ce5-b954-377d903895f1")
 	)
-	(text "CRF3"
+	(text "CTF3"
 		(exclude_from_sim no)
 		(at 525.526 93.726 0)
 		(effects
@@ -12111,7 +12111,7 @@
 	)
 	(polyline
 		(pts
-			(xy 407.543 43.053) (xy 480.949 43.053)
+			(xy 407.67 74.295) (xy 478.79 74.295)
 		)
 		(stroke
 			(width 0)
