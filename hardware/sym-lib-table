@@ -1,5 +1,7 @@
 (sym_lib_table
-  (lib (name CatStick-rescue)(type Legacy)(uri ${KIPRJMOD}/CatStick-rescue.lib)(options "")(descr ""))
-  (lib (name SX1262IMLTRT)(type Legacy)(uri ${KIPRJMOD}/SX1262IMLTRT.lib)(options "")(descr ""))
-  (lib (name CatSniffer-rescue)(type Legacy)(uri ${KIPRJMOD}/CatSniffer-rescue.lib)(options "")(descr ""))
+  (version 7)
+  (lib (name "CatStick-rescue")(type "Legacy")(uri "${KIPRJMOD}/CatStick-rescue.lib")(options "")(descr ""))
+  (lib (name "SX1262IMLTRT")(type "Legacy")(uri "${KIPRJMOD}/SX1262IMLTRT.lib")(options "")(descr ""))
+  (lib (name "CatSniffer-rescue")(type "Legacy")(uri "${KIPRJMOD}/CatSniffer-rescue.lib")(options "")(descr ""))
+  (lib (name "Radio")(type "KiCad")(uri "${KIPRJMOD}/Library/Radio.kicad_sym")(options "")(descr ""))
 )
