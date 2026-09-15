@@ -25438,7 +25438,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100pF"
+		(property "Value" "47pF"
 			(at 507.238 62.611 90)
 			(effects
 				(font
@@ -25483,7 +25483,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C14858"
+		(property "LCSC#" "C519486"
 			(at 504.19 66.04 0)
 			(effects
 				(font
@@ -25543,7 +25543,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100pF"
+		(property "Value" "47pF"
 			(at 516.763 79.121 90)
 			(effects
 				(font
@@ -25588,7 +25588,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C14858"
+		(property "LCSC#" "C519486"
 			(at 509.27 77.47 0)
 			(effects
 				(font
@@ -25648,7 +25648,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100pF"
+		(property "Value" "47pF"
 			(at 517.906 73.025 90)
 			(effects
 				(font
@@ -25693,7 +25693,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C14858"
+		(property "LCSC#" "C519486"
 			(at 510.54 71.12 0)
 			(effects
 				(font
