@@ -4663,7 +4663,7 @@
 				)
 			)
 		)
-		(property "Value" "100pF"
+		(property "Value" "47pF"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "494d4ce3-60c4-4021-8bd1-ab41a12b14ed")
@@ -4698,7 +4698,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C14858"
+		(property "LCSC#" "C519486"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7754,7 +7754,7 @@
 				)
 			)
 		)
-		(property "Value" "100pF"
+		(property "Value" "47pF"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "e3dff7df-084e-4f90-b88d-fbe313ab0666")
@@ -7789,7 +7789,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C14858"
+		(property "LCSC#" "C519486"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8012,7 +8012,7 @@
 				)
 			)
 		)
-		(property "Value" "100pF"
+		(property "Value" "47pF"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "7f35ce41-7fde-4ba5-82c1-b578831c1caa")
@@ -8047,7 +8047,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C14858"
+		(property "LCSC#" "C519486"
 			(at 264.52 -40.84 0)
 			(layer "F.Fab")
 			(hide yes)
