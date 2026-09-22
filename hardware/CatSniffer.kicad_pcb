@@ -30454,7 +30454,7 @@
 			)
 		)
 	)
-	(gr_text "CatSniffer\nV3.2"
+	(gr_text "CatSniffer\nV3.3"
 		(at 152.37 106.28 0)
 		(layer "F.SilkS")
 		(uuid "de588ed9-a530-46f0-aa03-e0307ff72286")
@@ -30501,7 +30501,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "CatSniffer\nv3.2"
+	(gr_text "CatSniffer\nv3.3"
 		(at 98.298 110.236 0)
 		(layer "B.SilkS")
 		(uuid "27e3c71f-5a63-4710-8adf-b600b805ce02")
