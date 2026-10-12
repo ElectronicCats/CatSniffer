@@ -15,7 +15,7 @@
 
 <p align=center>
   <a href="https://electroniccats.com/distributors/">
-    <img src="https://electroniccats.com/wp-content/uploads/2026/10/official-distributors-banner.png" width="600" alt="Buy from an official Electronic Cats distributor" />
+    <img src="https://electroniccats.com/wp-content/uploads/2026/10/official-distributors-button.png" width="200" alt="Official distributors" />
   </a>
 </p>
 
