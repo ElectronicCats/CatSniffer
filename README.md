@@ -4,6 +4,7 @@
   <img src="https://github.com/ElectronicCats/CatSniffer/assets/139595394/8ec74cfa-f5e9-42d0-aa6f-9f2a7513a761" />
 </a>
 
+<p align=center><b>Where to buy and learn more</b></p>
 <p align=center>
   <a href="https://electroniccats.com/store/catsniffer/">
     <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
@@ -14,11 +15,8 @@
 </p>
 
 <p align=center>
-    Also available at distributors:
-  </p>
-<p align=center>
-  <a href="https://labs.ksec.co.uk/product-category/electronic-cat/">
-    <img src="https://cdn.ksec.co.uk/ksec-solutions/ksec-W-BW-MV-small-clipped.png" width="200" />
+  <a href="https://electroniccats.com/distributors/">
+    <img src="https://electroniccats.com/wp-content/uploads/2026/10/official-distributors-button-v2.png" width="200" alt="Official distributors" />
   </a>
 </p>
 
