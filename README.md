@@ -31,10 +31,6 @@ CatSniffer can operate in 3 different technologies:
 
 This work was inspired by our friend's work [Michael Ossmann](https://twitter.com/michaelossmann) as a tribute to his outstanding job in [Greatscott Gadgets](https://greatscottgadgets.com/), making devices like the YardStick, GreatFET, HackRF, and Ubertooth.
 
-<a href="https://electroniccats.com/store/catsniffer-v3/">
-  <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
-</a>
-
 ## Versions
 
 The CatSniffer has been evolving since its first release:
