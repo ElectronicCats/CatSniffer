@@ -6,7 +6,7 @@
 
 <p align=center><b>Where to buy and learn more</b></p>
 <p align=center>
-  <a href="https://electroniccats.com/store/catsniffer/">
+  <a href="https://electroniccats.com/store/catsniffer-v3/">
     <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
   </a>
   <a href="https://github.com/ElectronicCats/CatSniffer/wiki">
@@ -31,7 +31,7 @@ CatSniffer can operate in 3 different technologies:
 
 This work was inspired by our friend's work [Michael Ossmann](https://twitter.com/michaelossmann) as a tribute to his outstanding job in [Greatscott Gadgets](https://greatscottgadgets.com/), making devices like the YardStick, GreatFET, HackRF, and Ubertooth.
 
-<a href="https://electroniccats.com/store/catsniffer/">
+<a href="https://electroniccats.com/store/catsniffer-v3/">
   <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" width="200" height="104" />
 </a>
 
